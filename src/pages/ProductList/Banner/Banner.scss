@@ -1,0 +1,17 @@
+@import '../../../styles/mixin.scss';
+
+.banner {
+  @include flex(space-between, center);
+  position: fixed;
+  width: 90%;
+  padding: 50px;
+
+  .functionWrapper {
+    @include flex(space-between, center);
+    gap: 40px;
+
+    span {
+      margin-right: 10px;
+    }
+  }
+}

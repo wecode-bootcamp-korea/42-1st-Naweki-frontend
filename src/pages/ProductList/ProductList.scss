@@ -1,0 +1,15 @@
+@import '../../styles/mixin.scss';
+
+.contentWrapper {
+  @include flex(space-between, null);
+  gap: 30px;
+
+  .productWrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 0.8fr);
+    grid-template-rows: repeat(3, 1.5fr);
+    grid-gap: 10px;
+    margin-left: 400px;
+    margin-top: 150px;
+  }
+}
