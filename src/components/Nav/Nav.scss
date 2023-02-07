@@ -1,16 +1,1 @@
-@import '../../styles/mixin.scss';
 
-.nav {
-  @include flex(space-between, center);
-  padding: 25px 50px;
-
-  .menuLists {
-    @include flex(space-between, center);
-    gap: 25px;
-    list-style: none;
-
-    .menuList {
-      float: left;
-    }
-  }
-}
