@@ -13,7 +13,7 @@ import Footer from './components/Footer/Footer';
 const Router = () => {
   return (
     <BrowserRouter>
-      <Nav />
+      {/* <Nav /> */}
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/signup" element={<SignUp />} />
@@ -23,7 +23,7 @@ const Router = () => {
         <Route path="/cart" element={<Cart />} />
         <Route path="/payment" element={<Payment />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </BrowserRouter>
   );
 };
