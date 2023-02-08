@@ -2,10 +2,9 @@ import React from 'react';
 import { provinceData } from '../data/provinceData';
 import './PaymentOptionInput.scss';
 
-const PaymentOptionInput = () => {
+const PaymentOption = () => {
   return (
     <div className="paymentOptionInput">
-      <p className="paymentTitle">배송 옵션</p>
       <div className="infoWrapper">
         <input className="infoInput" type="text" placeholder="성*"></input>
         <input className="infoInput" type="text" placeholder="이름*"></input>
@@ -69,4 +68,4 @@ const PaymentOptionInput = () => {
   );
 };
 
-export default PaymentOptionInput;
+export default PaymentOption;

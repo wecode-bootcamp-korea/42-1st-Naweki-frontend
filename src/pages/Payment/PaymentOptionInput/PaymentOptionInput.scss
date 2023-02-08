@@ -4,13 +4,8 @@
   @include flex(flex-start, left);
   flex-direction: column;
   width: 660px;
-  height: 770px;
+  height: 74ß0px;
   gap: 20px;
-
-  .paymentTitle {
-    @include paymentTitle;
-    padding-bottom: 20px;
-  }
 
   .paymentInput {
     width: 660px;
@@ -42,13 +37,8 @@
     @include flex(right, center);
 
     .paymentOptionBtn {
+      @include btn;
       width: 120px;
-      padding: 15px;
-      border-radius: 30px;
-      background-color: black;
-      border: none;
-      color: white;
-      cursor: pointer;
     }
   }
 }

@@ -13,6 +13,10 @@
     .paymentTitle {
       @include paymentTitle;
     }
+
+    .edit {
+      @include edit;
+    }
   }
 
   .cartDescWrapper {

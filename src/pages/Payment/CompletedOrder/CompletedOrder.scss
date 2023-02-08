@@ -1,0 +1,29 @@
+@import '../../../styles/mixin.scss';
+
+.completedOrder {
+  @include flex(center, flex-start);
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+
+  .paymentTitle {
+    @include paymentTitle;
+    margin-bottom: 50px;
+  }
+
+  .termsForm {
+    .terms {
+      text-decoration: underline;
+    }
+  }
+
+  .orderBtnWrapper {
+    @include flex(right, center);
+    width: 630px;
+
+    .orderBtn {
+      @include btn;
+      width: 100px;
+    }
+  }
+}

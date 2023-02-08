@@ -6,7 +6,7 @@ const PaymentAside = () => {
     <aside className="paymentAside">
       <div className="cartWrapper">
         <p className="paymentTitle">장바구니</p>
-        <p>편집</p>
+        <p className="edit">편집</p>
       </div>
       <div>
         <div className="cartDescWrapper">
