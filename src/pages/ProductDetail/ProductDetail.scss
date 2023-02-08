@@ -1,0 +1,43 @@
+.productDetail {
+  .productDetailImges {
+    width: 45%;
+    margin-left: 15%;
+    overflow: hidden;
+
+    .productImgTopLeft {
+      width: 55%;
+      float: left;
+    }
+
+    .productVideoTopRight {
+      width: 40%;
+      margin-left: 10px;
+      float: left;
+    }
+
+    .productImgSecondLineLeft {
+      width: 55%;
+      margin-top: -260px;
+      float: left;
+    }
+
+    .productImgSecondLineRight {
+      width: 47%;
+      margin-top: 10px;
+      float: left;
+    }
+
+    .productImgThirdLineLeft {
+      width: 47%;
+      margin-top: 10px;
+      margin-left: 20px;
+      float: left;
+    }
+  }
+
+  .productName {
+    margin-right: 10px;
+    font-size: 30px;
+    vertical-align: ㅡ;
+  }
+}
