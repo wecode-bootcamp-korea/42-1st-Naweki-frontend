@@ -4,13 +4,38 @@
   @include flex(space-between, center);
   padding: 25px 50px;
 
+  .logo {
+    width: 60px;
+  }
+
   .menuLists {
     @include flex(space-between, center);
+    position: relative;
     gap: 25px;
     list-style: none;
 
     .menuList {
       float: left;
+
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .functionWrapper {
+    @include flex(center, center);
+    gap: 20px;
+
+    .searchBar {
+      width: 180px;
+      height: 40px;
+      padding: 0px 10px 0px 60px;
+      border-radius: 100px;
+      border: none;
+      background-color: #eeeeee;
+      outline-style: none;
     }
   }
 }

@@ -1,0 +1,26 @@
+@import '../../../styles/mixin.scss';
+
+.menuBox {
+  @include flex(space-around, flex-start);
+  flex-direction: row;
+  position: absolute;
+  top: 10%;
+  left: 0%;
+  width: 100vw;
+  padding: 40px 50px;
+  background-color: #eeeeee;
+
+  .itemWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .itemList {
+      cursor: pointer;
+
+      &[id='0'] {
+        font-weight: bold;
+      }
+    }
+  }
+}
