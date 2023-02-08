@@ -1,0 +1,53 @@
+@mixin flex($justify: center, $align: center) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin spacing {
+  letter-spacing: 1px;
+  word-spacing: 1px;
+}
+
+.communityBox {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  @include flex();
+
+  .communityImage {
+    width: 95%;
+    height: 500px;
+    border: 1px solid black;
+  }
+  .communityInfo {
+    width: 100%;
+    max-width: 600px;
+    .communityTitle {
+      margin: 20px 0px;
+      padding: 0px 20px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .communityPara {
+      max-width: 500px;
+      padding: 0px 20px;
+      @include spacing();
+      line-height: 130%;
+    }
+
+    .communityBtn {
+      padding: 10.5px 20px;
+      border: none;
+      border-radius: 30px;
+      background-color: black;
+      color: white;
+      font-size: medium;
+    }
+
+    .communityBtn:hover {
+      background-color: gray;
+      cursor: pointer;
+    }
+  }
+}

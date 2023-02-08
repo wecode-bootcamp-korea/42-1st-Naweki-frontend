@@ -1,5 +1,8 @@
 import React from 'react';
 import './SignUp.scss';
+import Benefits from './Benefits/Benefits';
+import MoreBenefits from './Benefits/MoreBenefits';
+import Community from './Benefits/Community';
 
 const SignUp = () => {
   return (
@@ -23,19 +26,43 @@ const SignUp = () => {
       <div className="videoBox">
         <div className="video" />
       </div>
-      <div className="memBenefitBox">
-        <div className="memBenefit">나이키 멤버 혜택</div>
-        <section className="welcomeCoupon">
-          <div className="welcomeImage" /> {/* TODO: img로 변경 */}
-          <div className="welcomeInfo">
-            <h2 className="welcomeTitle">웰컴 쿠폰</h2>
-            <p className="welcomePara">
-              나이키 신규 멤버에게 문자로 발급되는 웰컴 쿠폰(1만원 할인코드)을
-              통해 <br /> 첫 구매부터 할인 혜택까지 만나보세요.
+      <div className="memBenefit">
+        <div className="memBenefitTitle">나이키 멤버 혜택</div>
+        <span className="benefitsBoxes">
+          <Benefits />
+        </span>
+      </div>
+      <div className="moreBenefit">
+        <div className="moreBenefitTitle">더 많은 혜택</div>
+        <div className="moreBenefitBoxes">
+          <MoreBenefits />
+        </div>
+      </div>
+      <div className="shopInfo">
+        <h1 className="shopInfoTitle">주요 매장 서비스 안내</h1>
+        <div className="shopInfoBoxes">
+          <div className="shopInfoTexts">
+            <p className="shopInfoPara">
+              제품 커스텀부터 스타일링까지. <br /> 나이키 매장에서 제공하는
+              특별하고 <br /> 다양한 서비스를 만나보세요.
             </p>
-            <button className="welcomeDetailBtn">자세히 보기</button>
+            <button className="shopInfoBtn">자세히 보기</button>
           </div>
-        </section>
+          <div className="shopInfoImage" />
+        </div>
+      </div>
+      <div className="community">
+        <h1 className="communityTitle">나이키 커뮤니티와 함께하기</h1>
+        <p className="communityPara">
+          NRC, NTC 앱을 통해 커뮤니티에 함께하세요.
+        </p>
+        <div className="communityBoxes">
+          <Community />
+        </div>
+      </div>
+      <div className="joinMemebership">
+        <div className="joinMembershipImage" />
+        <button className="joinBtn">멤버 가입하기</button>
       </div>
     </div>
   );
