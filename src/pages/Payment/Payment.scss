@@ -1,0 +1,16 @@
+@import '../../styles/mixin.scss';
+
+.payment {
+  @include flex(center, center);
+  flex-direction: column;
+
+  .paymentParagraph {
+    @include paymentTitle;
+    padding-bottom: 50px;
+  }
+
+  .contentWrapper {
+    @include flex(space-around, flex-start);
+    width: 100%;
+  }
+}

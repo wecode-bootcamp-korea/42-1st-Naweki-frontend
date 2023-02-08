@@ -22,7 +22,7 @@ const Nav = () => {
       <div className="functionWrapper">
         <input className="searchBar" type="text" placeholder="검색" />
         <i className="far fa-heart" />
-        <i class="fas fa-shopping-bag" />
+        <i className="fas fa-shopping-bag" />
       </div>
     </nav>
   );

@@ -3,3 +3,13 @@
   justify-content: $justify;
   align-items: $align;
 }
+
+@mixin paymentTitle {
+  font-size: 23px;
+  font-weight: bold;
+}
+
+@mixin edit {
+  font-weight: bold;
+      border-bottom: 1px solid black;
+}
