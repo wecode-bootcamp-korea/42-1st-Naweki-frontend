@@ -1,0 +1,214 @@
+.footer {
+  min-height: 58vh;
+  margin-top: 80%;
+  background-color: black;
+  text-align: center;
+
+  .footerTextBox {
+    display: flex;
+    justify-content: space-between;
+
+    .footerLeftBox {
+      display: inline-block;
+      width: 6%;
+      margin-top: 3%;
+      margin-left: 13%;
+      color: white;
+      font-size: 13px;
+      line-height: 250%;
+    }
+
+    .footerMiddleBox {
+      display: inline-block;
+      width: 6%;
+      margin-top: 3%;
+      margin-right: 28px;
+      color: rgba(220, 220, 220, 0.71);
+      font-size: 12px;
+      line-height: 250%;
+      text-align: center;
+
+      .help {
+        color: white;
+        font-size: 13px;
+      }
+    }
+
+    .footerRightBox {
+      margin-top: 3%;
+      margin-right: 55%;
+      font-size: 12px;
+      line-height: 250%;
+
+      .aboutNike {
+        color: white;
+        font-size: 13px;
+      }
+
+      .news {
+        color: rgba(220, 220, 220, 0.71);
+      }
+
+      .require {
+        color: rgba(220, 220, 220, 0.71);
+      }
+
+      .investor {
+        color: rgba(220, 220, 220, 0.71);
+      }
+
+      .sustainability {
+        color: rgba(220, 220, 220, 0.71);
+      }
+    }
+  }
+
+  .iconBox {
+    display: flex;
+    justify-content: space-between;
+    width: 9%;
+    margin-top: -11.5%;
+    margin-left: 75.5%;
+
+    .twitter {
+      width: 28px;
+      height: 28px;
+    }
+
+    .facebook {
+      width: 28px;
+      height: 28px;
+    }
+
+    .youtube {
+      width: 28px;
+      height: 28px;
+    }
+
+    .instagram {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  .footerRow {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin-top: 14%;
+    margin-left: 47%;
+    font-size: 12px;
+
+    .mapIcon {
+      width: 15px;
+      height: 15px;
+      margin-top: -2.5px;
+      margin-left: -55%;
+    }
+
+    .footerRowLeftWrapper {
+      display: flex;
+      justify-content: space-between;
+      width: 28%;
+      margin-left: 1%;
+      .country {
+        color: white;
+      }
+
+      .copyright {
+        color: rgba(220, 220, 220, 0.71);
+      }
+    }
+
+    .footerRowRightWrapper {
+      display: flex;
+      justify-content: space-between;
+      width: 17%;
+      margin-left: 71.6%;
+      .termsOfService {
+        color: rgba(220, 220, 220, 0.71);
+      }
+
+      .privacyPolicy {
+        color: white;
+      }
+    }
+  }
+
+  // .line {
+  //   // position: absolute;
+  //   width: 72%;
+  //   margin-top: 1.5%;
+  //   margin-left: -525px;
+  //   color: rgba(220, 220, 220, 0.71);
+  // }
+
+  .footerInfoSectionFirst {
+    display: flex;
+    justify-content: space-between;
+    width: 72%;
+    margin-top: 2%;
+    margin-left: 14%;
+    color: rgba(220, 220, 220, 0.71);
+    font-size: 12px;
+    line-height: 20px;
+    text-align: left;
+
+    .footerBusinessInfo {
+      width: 50%;
+      margin-right: 40px;
+
+      .proprietorInfo {
+        margin-left: 7px;
+        color: rgb(222, 222, 222);
+        text-decoration: underline;
+      }
+    }
+
+    .footerPaymentInfo {
+      width: 50%;
+
+      .deposit {
+        color: rgb(222, 222, 222);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .footerInfoSectionSecond {
+    width: 72%;
+    margin-top: 30px;
+    margin-left: 14%;
+    color: rgba(220, 220, 220, 0.71);
+    font-size: 12px;
+    line-height: 20px;
+    text-align: left;
+
+    .footerServiceInfo {
+      width: 47.2%;
+      text-align: left;
+
+      .serviceNum {
+        margin-right: 7px;
+        margin-left: 7px;
+        color: rgb(222, 222, 222);
+        text-decoration: underline;
+      }
+    }
+
+    .footerLegalInfo {
+      position: absolute;
+      width: 18%;
+      margin-top: -2.5%;
+      margin-left: 37.4%;
+    }
+
+    .seeDetails {
+      position: absolute;
+      margin-top: -2.5%;
+      margin-left: 50.5%;
+      color: rgb(222, 222, 222);
+      text-decoration: underline;
+    }
+  }
+}
