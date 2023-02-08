@@ -40,23 +40,23 @@
 
   .topBtnContainer {
     @include flex(center, center);
-  }
 
-  .topDetailBtn {
-    width: 90px;
-    height: 35px;
-    border-radius: 50px;
-    background-color: black;
-    color: white;
-  }
+    .topDetailBtn {
+      width: 90px;
+      height: 35px;
+      border-radius: 50px;
+      background-color: black;
+      color: white;
+    }
 
-  .topBuyBtn {
-    width: 70px;
-    height: 35px;
-    margin-left: 10px;
-    border-radius: 50px;
-    background-color: black;
-    color: white;
+    .topBuyBtn {
+      width: 70px;
+      height: 35px;
+      margin-left: 10px;
+      border-radius: 50px;
+      background-color: black;
+      color: white;
+    }
   }
 
   .leggingsImg {
