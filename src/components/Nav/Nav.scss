@@ -4,6 +4,10 @@
   @include flex(space-between, center);
   padding: 25px 50px;
 
+  .logo {
+    width: 50px;
+  }
+
   .menuLists {
     @include flex(space-between, center);
     gap: 25px;

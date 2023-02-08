@@ -1,8 +1,13 @@
 import React from 'react';
+import Guest from './Guest/Guest';
 import './Payment.scss';
 
 const Payment = () => {
-  return <p>안녕하세요</p>;
+  return (
+    <div className="payment">
+      <Guest />
+    </div>
+  );
 };
 
 export default Payment;

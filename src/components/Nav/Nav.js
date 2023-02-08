@@ -21,8 +21,8 @@ const Nav = () => {
       </div>
       <div className="functionWrapper">
         <input className="searchBar" type="text" placeholder="검색" />
-        <i className="fa-light fa-heart" />
-        <i className="fa-light fa-cart-shopping" />
+        <i className="far fa-heart" />
+        <i class="fas fa-shopping-bag" />
       </div>
     </nav>
   );
