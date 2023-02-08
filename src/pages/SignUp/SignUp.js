@@ -24,7 +24,13 @@ const SignUp = () => {
         </div>
       </div>
       <div className="videoBox">
-        <div className="video" />
+        <video
+          src="images/nike_signup.mp4"
+          autoplay="autoplay"
+          muted="muted"
+          loop
+          className="nikeVideo"
+        />
       </div>
       <div className="memBenefit">
         <div className="memBenefitTitle">나이키 멤버 혜택</div>
