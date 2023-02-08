@@ -1,7 +1,7 @@
 @mixin flex($justify: center, $align: center) {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: $align;
+  justify-content: $justify;
 }
 
 @mixin spacing {
@@ -10,10 +10,8 @@
 }
 
 .moreBenefitBox {
-  display: flex;
   flex-direction: column;
-  width: 33%;
-  @include flex();
+  @include flex(start);
 
   .moreBenefitImage {
     width: 95%;

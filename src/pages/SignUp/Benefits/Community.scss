@@ -1,7 +1,7 @@
 @mixin flex($justify: center, $align: center) {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: $align;
+  justify-content: $justify;
 }
 
 @mixin spacing {
@@ -10,10 +10,8 @@
 }
 
 .communityBox {
-  display: flex;
+  @include flex(start);
   flex-direction: column;
-  width: 50%;
-  @include flex();
 
   .communityImage {
     width: 95%;
@@ -24,6 +22,7 @@
     width: 100%;
     max-width: 600px;
     .communityTitle {
+      justify-content: start;
       margin: 20px 0px;
       padding: 0px 20px;
       font-size: 20px;
@@ -46,8 +45,8 @@
     }
 
     .communityBtn:hover {
+      transition: 0.5s;
       background-color: gray;
-      cursor: pointer;
     }
   }
 }
