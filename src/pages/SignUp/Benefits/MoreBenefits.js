@@ -6,11 +6,13 @@ const moreBenefits = () => {
     <>
       {moreBenefitData.map(moreBenefit => (
         <section key={moreBenefit.id} className="moreBenefitBox">
-          <img
-            url={moreBenefit.image}
-            alt="something"
-            className="moreBenefitImage"
-          />
+          <div className="imageWrapper">
+            <img
+              src={moreBenefit.image}
+              alt="something"
+              className="moreBenefitImage"
+            />
+          </div>
           <div className="moreBenefitInfo">
             <h2 className="moreBenefitTitle">{moreBenefit.title}</h2>
             <p className="moreBenefitPara">{moreBenefit.paragraph}</p>

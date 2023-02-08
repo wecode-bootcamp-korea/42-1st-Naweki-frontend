@@ -7,7 +7,7 @@ const Benefits = () => {
       {benefitData.map(benefit => (
         <article className="benefitBox" key={benefit.id}>
           <div className="imageWrapper">
-            <img className="benefitImage" url={benefit.image} alt="something" />
+            <img className="benefitImage" src={benefit.image} alt="something" />
           </div>
           <div className="benefitInfo">
             <h2 className="benefitTitle">{benefit.title}</h2>

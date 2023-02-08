@@ -6,11 +6,13 @@ const Community = () => {
     <>
       {communityData.map(community => (
         <section key={community.id} className="communityBox">
-          <img
-            url={community.image}
-            alt="something"
-            className="communityImage"
-          />
+          <div className="imageWrapper">
+            <img
+              src={community.image}
+              alt="something"
+              className="communityImage"
+            />
+          </div>
           <div className="communityInfo">
             <h2 className="communityTitle">{community.title}</h2>
             <p className="communityPara">{community.paragraph}</p>

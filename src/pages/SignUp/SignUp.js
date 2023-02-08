@@ -25,7 +25,7 @@ const SignUp = () => {
       </div>
       <div className="videoBox">
         <video
-          src="images/nike_signup.mp4"
+          src="images/signup/nike_signup.mp4"
           autoplay="autoplay"
           muted="muted"
           loop
@@ -54,7 +54,15 @@ const SignUp = () => {
             </p>
             <button className="shopInfoBtn">자세히 보기</button>
           </div>
-          <div className="shopInfoImage" />
+          <div className="videoWrapper">
+            <video
+              src="images/signup/nike_signup_store.mp4"
+              autoplay="autoplay"
+              muted="muted"
+              loop
+              className="nikeStoreVideo"
+            />
+          </div>
         </div>
       </div>
       <div className="community">
@@ -67,7 +75,11 @@ const SignUp = () => {
         </div>
       </div>
       <div className="joinMemebership">
-        <div className="joinMembershipImage" />
+        <img
+          src="images/signup/nike_signup_join.png"
+          alt="something"
+          className="joinMemberImage"
+        />
         <button className="joinBtn">멤버 가입하기</button>
       </div>
     </div>
