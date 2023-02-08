@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "image": "images/mockdata/nike_cart_mock1.jpg",
+    "name": "나이키 에어 포스 1 스컬프트",
+    "category": "여성 신발",
+    "detail": "화이트/세일/스타디움 그린",
+    "originPrice": "",
+    "reducedPrice": "169,000원",
+    "delivery": "무료 배송",
+    "date": "2월 15일 (수)"
+  },
+  {
+    "id": 2,
+    "image": "images/mockdata/nike_cart_mock2.jpg",
+    "name": "나이키 스포츠웨어 써마 핏 시티 시리즈",
+    "category": "여성 합성 필 샤인 재킷",
+    "detail": "블랙/블랙/화이트",
+    "originPrice": "279,000원",
+    "reducedPrice": "223,200원",
+    "delivery": "무료 배송",
+    "date": "2월 15일 (수)"
+  },
+  {
+    "id": 3,
+    "image": "images/mockdata/nike_cart_mock3.jpg",
+    "name": "나이키 블레이저 로우 '77 점보",
+    "category": "남성 신발",
+    "detail": "화이트/화이트/세일/블랙",
+    "originPrice": "109,000원",
+    "reducedPrice": "87,200원",
+    "delivery": "무료 배송",
+    "date": "2월 15일 (수)"
+  }
+]

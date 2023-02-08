@@ -1,0 +1,168 @@
+@mixin flex($justify: center, $align: center) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+.cartPage {
+  width: 100%;
+  margin-top: 50px;
+  @include flex(center, start);
+  gap: 50px;
+
+  .cart {
+    width: 55%;
+
+    .freeShipping {
+      margin-bottom: 20px;
+      padding: 15px 20px;
+      border: 1px solid lightgray;
+      line-height: 30px;
+
+      .freeShip {
+        color: #fa5c19;
+        font-size: 20px;
+        font-weight: 600;
+      }
+      .freeShipDescript {
+        color: gray;
+
+        .signup,
+        .signup:visited {
+          color: gray;
+          font-weight: 500;
+        }
+        .login,
+        .login:visited {
+          color: gray;
+          font-weight: 500;
+        }
+      }
+    }
+    .cartTitle {
+      font-size: 22px;
+    }
+
+    .wishListBox {
+      padding: 20px 0px;
+
+      .wishList {
+        font-size: 22px;
+      }
+
+      .wishListDescript {
+        padding: 10px 0px;
+        color: gray;
+
+        .signup,
+        .singup:visited,
+        .login,
+        .login:visited {
+          color: gray;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .payment {
+    width: 25%;
+    .payList {
+      margin: 20px 0px;
+      font-size: 140%;
+    }
+    .promotionSelect {
+      margin-top: 35px;
+    }
+
+    .selectWrapper {
+      display: flex;
+      align-items: center;
+      padding: 15px 0px;
+
+      .promotionInput {
+        padding: 8px 16px;
+        border: 1px solid gray;
+        border-radius: 8px;
+      }
+
+      .promotionBtn {
+        margin-left: 8px;
+        padding: 10px 24px;
+        border: 1px solid gray;
+        border-radius: 20px;
+        background-color: transparent;
+        color: gray;
+        font-size: medium;
+        white-space: nowrap;
+      }
+    }
+    .productPriceBox {
+      display: flex;
+      margin-top: 10px;
+
+      .productPrice {
+      }
+      .questionIcon:hover {
+        cursor: pointer;
+      }
+
+      .questionIcon {
+        width: 12px;
+        height: 13px;
+        padding: 0px 5px;
+      }
+      .productPriceNumber {
+        margin-left: auto;
+      }
+    }
+
+    .shipPriceBox {
+      display: flex;
+      margin-top: 10px;
+      padding: 10px 0px;
+
+      .shipPrice {
+      }
+      .shipPriceNumber {
+        margin-left: auto;
+      }
+    }
+
+    .totalPriceBox {
+      display: flex;
+      margin-top: 10px;
+      padding: 20px 0px;
+      border-top: 1px solid lightgray;
+      border-bottom: 1px solid lightgray;
+      .totalPrice {
+      }
+      .totalPriceNumber {
+        margin-left: auto;
+      }
+    }
+
+    .btnWrapper {
+      @include flex();
+      padding: 30px 0px;
+
+      .paymentBtn:hover {
+        transition: 0.4s;
+        background-color: gray;
+        cursor: pointer;
+      }
+
+      .paymentBtn {
+        width: 100%;
+        padding: 18px 24px;
+        border: none;
+        border-radius: 30px;
+        background-color: black;
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
+        white-space: nowrap;
+      }
+    }
+  }
+}
