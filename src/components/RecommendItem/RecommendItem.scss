@@ -1,6 +1,10 @@
 .recommendItem {
   font-size: 14px;
 
+  .arrowBtn {
+    background-color: gray;
+  }
+
   .shoesImg {
     width: 500px;
     height: 500px;
@@ -18,3 +22,5 @@
     color: rgb(105, 104, 104);
   }
 }
+
+// overflow:hidden;
