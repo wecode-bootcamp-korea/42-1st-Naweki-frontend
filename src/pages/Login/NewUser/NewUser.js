@@ -1,8 +1,9 @@
+import { Link } from 'react-router-dom';
 import './NewUser.scss';
 
 const NewUser = () => {
   return (
-    <div className="newUserContainer">
+    <div className="newUser">
       <div className="newUserBox">
         <header className="header">
           <div className="logoBox">
@@ -84,19 +85,20 @@ const NewUser = () => {
             <input type="checkbox" className="agreeCheck" />
             <span className="agreeGuide">
               나이키의{' '}
-              <a
-                className="personalInfo"
-                href="https://agreementservice.svs.nike.com/rest/agreement?agreementType=privacyPolicy&country=KR&language=ko&requestType=redirect&uxId=4fd2d5e7db76e0f85a6bb56721bd51df"
+              <Link
+                to="https://agreementservice.svs.nike.com/rest/agreement?agreementType=privacyPolicy&country=KR&language=ko&requestType=redirect&uxId=4fd2d5e7db76e0f85a6bb56721bd51df"
+                className="personalInfoAgreement"
               >
                 개인 정보 처리 방침
-              </a>{' '}
+              </Link>
               및{' '}
-              <a
+              <Link
+                to="https://agreementservice.svs.nike.com/rest/agreement?agreementType=termsOfUse&country=KR&language=ko&requestType=redirect&uxId=4fd2d5e7db76e0f85a6bb56721bd51df"
                 className="usingAgreement"
-                href="https://agreementservice.svs.nike.com/rest/agreement?agreementType=termsOfUse&country=KR&language=ko&requestType=redirect&uxId=4fd2d5e7db76e0f85a6bb56721bd51df"
               >
+                {' '}
                 이용약관
-              </a>
+              </Link>
               에 동의합니다.
             </span>
           </section>
