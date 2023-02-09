@@ -1,7 +1,7 @@
 import React from 'react';
-import './Email.scss';
+import './Login.scss';
 
-const Email = () => {
+const Login = () => {
   return (
     <div className="loginContainer">
       <div className="loginBox">
@@ -63,4 +63,4 @@ const Email = () => {
   );
 };
 
-export default Email;
+export default Login;
