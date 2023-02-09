@@ -20,7 +20,7 @@ function Footer() {
           <li>문의하기</li>
         </ul>
         <ul className="footerRightBox">
-          <li className="aboutNike">ABOUT NIKE</li>
+          <li className="aboutNike">ABOUT Naweki</li>
           <li className="news">소식</li>
           <li className="require">채용</li>
           <li className="investor">투자자</li>
