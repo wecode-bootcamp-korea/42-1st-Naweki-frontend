@@ -5,7 +5,7 @@ import RecommendItem from '../../components/RecommendItem/RecommendItem';
 import './Main.scss';
 
 function Main() {
-  const [featuredShoes, setFeaturedShoes] = useState([]);
+  const [recommendItem, setRecommendItem] = useState([]);
 
   const productNavigate = useNavigate();
 
@@ -16,7 +16,7 @@ function Main() {
   useEffect(() => {
     fetch('/data/shoesData.json')
       .then(res => res.json())
-      .then(data => setFeaturedShoes(data));
+      .then(data => setRecommendItem(data));
   }, []);
 
   return (
@@ -139,7 +139,7 @@ function Main() {
         </div>
       </div>
       <div className="recommendItemTitle">Recommend Items</div>
-      {featuredShoes.map(shoes => {
+      {recommendItem.map(shoes => {
         return <RecommendItem key={shoes.id} {...shoes} />;
       })}
 
