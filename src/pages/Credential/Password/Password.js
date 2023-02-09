@@ -3,7 +3,7 @@ import './Password.scss';
 
 const Password = () => {
   return (
-    <div className="passwordContainer">
+    <div className="password">
       <div className="passwordBox">
         <header className="header">
           <div className="logoBox">

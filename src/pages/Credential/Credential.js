@@ -7,8 +7,8 @@ import Password from './Password/Password';
 function Credential() {
   return (
     <div>
-      <Email />
-      {/* <NewUser /> */}
+      {/* <Email /> */}
+      <NewUser />
       {/* <Password /> */}
     </div>
   );
