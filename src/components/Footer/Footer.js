@@ -65,7 +65,7 @@ function Footer() {
           <div className="termsOfService">이용약관</div>
           <div className="privacyPolicy">개인정보처리방침</div>
         </div>
-        {/* <hr className="line" /> */}
+        <hr className="line" />
       </div>
       <div className="footerInfoSectionFirst">
         <div className="footerBusinessInfo">
