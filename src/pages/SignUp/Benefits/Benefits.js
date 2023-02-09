@@ -1,10 +1,10 @@
 import './Benefits.scss';
-import { benefitData } from './data/benefitData';
+import { BENEFIT_DATA } from './data/benefitData';
 
 const Benefits = () => {
   return (
     <>
-      {benefitData.map(benefit => (
+      {BENEFIT_DATA.map(benefit => (
         <article className="benefitBox" key={benefit.id}>
           <div className="imageWrapper">
             <img className="benefitImage" src={benefit.image} alt="something" />

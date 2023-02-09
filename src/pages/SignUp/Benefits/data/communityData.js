@@ -1,6 +1,6 @@
-export const communityData = [
+export const COMMUNITY_DATA = [
   {
-    id: 11,
+    id: 1,
     image: 'images/signup/nike_signup_training.jpg',
     title: 'NIKE TRAINING CLUB',
     paragraph:
@@ -8,7 +8,7 @@ export const communityData = [
     btn: '앱 다운로드',
   },
   {
-    id: 12,
+    id: 2,
     image: 'images/signup/nike_signup_run.jpg',
     title: 'NIKE RUN CLUB',
     paragraph:

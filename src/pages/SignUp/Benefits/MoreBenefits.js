@@ -1,10 +1,10 @@
 import './MoreBenefits.scss';
-import { moreBenefitData } from './data/moreBenefitData';
+import { MORE_BENEFIT_DATA } from './data/moreBenefitData';
 
 const moreBenefits = () => {
   return (
     <>
-      {moreBenefitData.map(moreBenefit => (
+      {MORE_BENEFIT_DATA.map(moreBenefit => (
         <section key={moreBenefit.id} className="moreBenefitBox">
           <div className="imageWrapper">
             <img

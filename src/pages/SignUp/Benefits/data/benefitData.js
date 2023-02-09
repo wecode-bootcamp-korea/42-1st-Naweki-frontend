@@ -1,4 +1,4 @@
-export const benefitData = [
+export const BENEFIT_DATA = [
   {
     id: 1,
     image: 'images/signup/nike_signup_welcome.jpg',

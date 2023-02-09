@@ -1,10 +1,10 @@
 import './Community.scss';
-import { communityData } from './data/communityData';
+import { COMMUNITY_DATA } from './data/communityData';
 
 const Community = () => {
   return (
     <>
-      {communityData.map(community => (
+      {COMMUNITY_DATA.map(community => (
         <section key={community.id} className="communityBox">
           <div className="imageWrapper">
             <img

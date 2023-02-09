@@ -1,6 +1,6 @@
-export const moreBenefitData = [
+export const MORE_BENEFIT_DATA = [
   {
-    id: 7,
+    id: 1,
     image: 'images/signup/nike_signup_refund.jpg',
     title: '무료 반품 서비스',
     paragraph:
@@ -8,7 +8,7 @@ export const moreBenefitData = [
     btn: '',
   },
   {
-    id: 8,
+    id: 2,
     image: 'images/signup/nike_signup_event.jpg',
     title: 'SPECIAL EVENT & SERVICE',
     paragraph:
@@ -16,7 +16,7 @@ export const moreBenefitData = [
     btn: '',
   },
   {
-    id: 9,
+    id: 3,
     image: 'images/signup/nike_signup_assist.jpg',
     title: 'ASSIST SERVICE',
     paragraph:
