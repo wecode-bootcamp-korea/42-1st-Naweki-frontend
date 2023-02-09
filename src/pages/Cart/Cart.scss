@@ -1,16 +1,12 @@
-@mixin flex($justify: center, $align: center) {
-  display: flex;
-  align-items: $align;
-  justify-content: $justify;
-}
+@import 'mixin';
 
-.cartPage {
+.cart {
   width: 100%;
   margin-top: 50px;
   @include flex(center, start);
   gap: 50px;
 
-  .cart {
+  .cartContainer {
     width: 55%;
 
     .freeShipping {

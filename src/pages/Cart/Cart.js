@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-import './Cart.scss';
+import { Link } from 'react-router-dom';
 import { CartList } from './CartList/CartList';
+import './Cart.scss';
 
 const Cart = () => {
   const [cartList, setCartList] = useState([]);
@@ -11,37 +12,37 @@ const Cart = () => {
   }, []);
 
   return (
-    <main className="cartPage">
-      <section className="cart">
+    <main className="cart">
+      <section className="cartContainer">
         <div className="freeShipping">
           <h1 className="freeShip">멤버에게 제공되는 무료 배송 서비스</h1>
           <h3 className="freeShipDescript">
             나이키 멤버가 되어 무료배송 서비스를 비롯한 다양한 혜택을
             누려보세요.{' '}
-            <a href="#" className="signup">
+            <Link to="#" className="signup">
               가입하기
-            </a>{' '}
+            </Link>{' '}
             또는{' '}
-            <a href="#" className="login">
+            <Link to="#" className="login">
               로그인
-            </a>
+            </Link>
           </h3>
         </div>
         <div className="cartTitle">장바구니</div>
         {cartList.map(list => {
-          return <CartList list={list} />;
+          return <CartList key={list.id} list={list} />;
         })}
         <div className="wishListBox">
           <div className="wishList">위시리스트</div>
           <div className="wishListDescript">
             위시리스트 상품을 보시겠습니까?{' '}
-            <a href="#" className="signup">
+            <Link to="#" className="signup">
               가입하기
-            </a>{' '}
+            </Link>{' '}
             또는{' '}
-            <a href="#" className="login">
+            <Link to="#" className="login">
               로그인
-            </a>{' '}
+            </Link>{' '}
           </div>
         </div>
       </section>

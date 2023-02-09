@@ -1,4 +1,5 @@
 import './CartList.scss';
+import { HOW_MANY_LIST } from '../data/howManyData';
 
 export const CartList = ({ list }) => {
   return (
@@ -21,16 +22,13 @@ export const CartList = ({ list }) => {
             </select>
             <div className="number">수량</div>
             <select name="howMany" id="howMany" className="howManyProduct">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
+              {HOW_MANY_LIST.map(data => {
+                return (
+                  <option key={data.id} value={data.many}>
+                    {data.many}
+                  </option>
+                );
+              })}
             </select>
           </div>
           <div className="btnWrapper">

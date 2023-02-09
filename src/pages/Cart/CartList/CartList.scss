@@ -1,8 +1,4 @@
-@mixin flex($justify: center, $align: center) {
-  display: flex;
-  align-items: $align;
-  justify-content: $justify;
-}
+@import '../mixin';
 
 .cartList {
   display: flex;
