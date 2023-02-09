@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useNavigate } from 'react';
 import Benefits from './Benefits/Benefits';
 import MoreBenefits from './Benefits/MoreBenefits';
 import Community from './Benefits/Community';

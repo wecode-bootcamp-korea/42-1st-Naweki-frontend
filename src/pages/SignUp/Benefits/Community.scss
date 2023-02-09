@@ -46,11 +46,11 @@
       background-color: black;
       color: white;
       font-size: medium;
-    }
-
-    .communityBtn:hover {
-      transition: 0.5s;
-      background-color: gray;
+      &:hover {
+        transition: 0.5s;
+        background-color: gray;
+        cursor: pointer;
+      }
     }
   }
 }
