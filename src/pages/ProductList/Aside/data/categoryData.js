@@ -1,4 +1,4 @@
-export const categoryData = [
+export const CATEGORY_DATA = [
   { id: 1, name: '라이프스타일' },
   { id: 2, name: '마이클' },
   { id: 3, name: '러닝' },

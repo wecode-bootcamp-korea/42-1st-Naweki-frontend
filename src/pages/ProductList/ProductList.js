@@ -7,13 +7,13 @@ import './ProductList.scss';
 const ProductList = () => {
   const [products, setProducts] = useState([]);
 
-  const getProducts = async () => {
-    const json = await (await fetch(`/data/productData.json`)).json();
+  const getProducts = async api => {
+    const response = await fetch(api);
+    const json = await response.json();
     setProducts(json);
   };
-
   useEffect(() => {
-    getProducts();
+    getProducts(`/data/productData.json`);
   }, []);
 
   return (

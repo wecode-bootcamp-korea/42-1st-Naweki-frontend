@@ -1,4 +1,4 @@
-export const colorData = [
+export const COLOR_DATA = [
   { id: 1, src: '/images/black.png', alt: 'black', name: '블랙' },
   { id: 2, src: '/images/black.png', alt: 'blue', name: '블루' },
   { id: 3, src: '/images/black.png', alt: 'brown', name: '브라운' },

@@ -1,6 +1,6 @@
 import React from 'react';
-import { categoryData } from './data/categoryData';
-import { colorData } from './data/colorData';
+import { CATEGORY_DATA } from './data/categoryData';
+import { COLOR_DATA } from './data/colorData';
 import './Aside.scss';
 
 const Aside = () => {
@@ -8,7 +8,7 @@ const Aside = () => {
     <aside className="aside">
       <div className="categoryWrapper">
         <ul className="categorylists">
-          {categoryData.map(category => (
+          {CATEGORY_DATA.map(category => (
             <li key={category.id} className="categoryList">
               {category.name}
             </li>
@@ -27,7 +27,7 @@ const Aside = () => {
         </div>
         <div>
           <input name="women" type="checkbox" />
-          <label htmlFor="men">여성</label>
+          <label htmlFor="women">여성</label>
         </div>
         <div>
           <input name="unisex" type="checkbox" />

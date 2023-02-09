@@ -3,7 +3,7 @@ import './Product.scss';
 
 const Product = ({ product }) => {
   return (
-    <div key={product.id} className="product">
+    <div className="product">
       <img className="productImg" alt={product.alt} src={product.img} />
       <div className="productDesc">
         {product.new === true && <span>신상품</span>}
