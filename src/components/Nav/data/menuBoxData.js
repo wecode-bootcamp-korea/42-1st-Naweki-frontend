@@ -35,7 +35,7 @@ export const kidsItems = [
 ];
 
 export const accItems = [
-  { id: 0, name: '용픔' },
+  { id: 0, name: '용품' },
   { id: 1, name: '모자 & 헤드밴드' },
   { id: 2, name: '가방' },
   { id: 3, name: '워치' },

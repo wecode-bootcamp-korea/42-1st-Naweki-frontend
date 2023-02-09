@@ -1,15 +1,20 @@
 @import '../../../styles/mixin.scss';
 
 .menuBox {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 60%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  margin: auto;
+
   .menuBoxWrapper {
     @include flex(space-around, flex-start);
     flex-direction: row;
-    position: absolute;
-    top: 10%;
-    left: 0%;
     width: 100vw;
-    padding: 40px 50px;
-    background-color: #eeeeee;
+    padding: 80px 50px;
 
     .itemWrapper {
       display: flex;

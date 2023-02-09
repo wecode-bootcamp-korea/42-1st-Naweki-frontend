@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "나위키 마이클",
+    "price": 279000,
+    "reduced_price": 219000,
+    "created_at": true,
+    "gender": "남성",
+    "category_id": 1,
+    "style_id": 1,
+    "color_id": 1,
+    "img": "images/logo.jpg"
+  },
+  {
+    "id": 2,
+    "name": "나위키 블레이저",
+    "price": 279000,
+    "reduced_price": 219000,
+    "created_at": true,
+    "gender": "남성",
+    "category_id": 1,
+    "style_id": 1,
+    "color_id": 1,
+    "img": "images/logo.jpg"
+  },
+  {
+    "id": 3,
+    "name": "나위키 맥스",
+    "price": 279000,
+    "reduced_price": 219000,
+    "created_at": true,
+    "gender": "남성",
+    "category_id": 1,
+    "style_id": 1,
+    "color_id": 1,
+    "img": "images/logo.jpg"
+  },
+  {
+    "id": 4,
+    "name": "나위키 에어",
+    "price": 279000,
+    "reduced_price": 219000,
+    "created_at": true,
+    "gender": "남성",
+    "category_id": 1,
+    "style_id": 1,
+    "color_id": 1,
+    "img": "images/logo.jpg"
+  },
+  {
+    "id": 5,
+    "name": "나위키 프리미엄",
+    "price": 279000,
+    "reduced_price": 219000,
+    "created_at": true,
+    "gender": "남성",
+    "category_id": 1,
+    "style_id": 1,
+    "color_id": 1,
+    "img": "images/logo.jpg"
+  }
+]

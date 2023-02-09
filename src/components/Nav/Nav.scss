@@ -2,25 +2,43 @@
 
 .nav {
   @include flex(space-between, center);
-  padding: 25px 50px;
+  padding: 0px 50px;
+  height: 80px;
+  margin-bottom: 70px;
 
-  .logo {
-    width: 60px;
+  .logoWrapper {
+    .logo {
+      width: 60px;
+      cursor: pointer;
+    }
   }
 
-  .menuLists {
+  .menuWrapper {
     @include flex(space-between, center);
     position: relative;
-    gap: 25px;
-    list-style: none;
+    width: 750px;
+    height: 80px;
+    margin-left: 80px;
 
-    .menuList {
-      float: left;
+    .menuLists {
+      @include flex(space-between, center);
+      gap: 25px;
+      list-style: none;
 
-      &:hover {
-        padding-bottom: 5px;
-        border-bottom: 2px solid black;
-        cursor: pointer;
+      .toProductList {
+        color: black;
+
+        .menuList {
+          float: left;
+          padding: 10px;
+          font-weight: bold;
+          cursor: pointer;
+
+          &:hover {
+            padding-bottom: 5px;
+            border-bottom: 2px solid black;
+          }
+        }
       }
     }
   }
@@ -35,8 +53,23 @@
       padding: 0px 10px 0px 60px;
       border-radius: 100px;
       border: none;
-      background-color: #eeeeee;
+      background: url(./Search/images/search.png) center no-repeat;
+      background-position: 10px;
+      background-color: #f5f5f5;
       outline-style: none;
+      font-size: 17px;
+
+      &::placeholder {
+        font-size: 17px;
+      }
+
+      &:hover {
+        background-color: #e5e5e5;
+      }
+    }
+
+    .navIcon {
+      cursor: pointer;
     }
   }
 }

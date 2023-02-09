@@ -1,0 +1,87 @@
+@import '../../../styles/mixin.scss';
+
+.search {
+  @include flex(space-between, center);
+  width: 100vw;
+  height: 400px;
+
+  .searchBarWide {
+    position: relative;
+    align-items: center;
+    width: 670px;
+    height: 40px;
+    padding: 0px 10px 0px 50px;
+    border-radius: 100px;
+    border: none;
+    background: url(../Search/images/search.png) center no-repeat;
+    background-position: 10px;
+    background-color: #f5f5f5;
+    outline-style: none;
+    font-size: 17px;
+
+    &::placeholder {
+      font-size: 17px;
+    }
+
+    &:hover {
+      background-color: #e5e5e5;
+    }
+  }
+
+  .filteredListWrapper {
+    @include flex(space-around, center);
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    padding: 50px 70px;
+
+    .filteredItem {
+      @include flex(center, left);
+      flex-direction: column;
+      width: 20%;
+      height: 60%;
+      gap: 10px;
+
+      .productImg {
+        width: 50%;
+        padding-bottom: 40px;
+      }
+
+      .productImg .productPrice {
+        font-weight: bold;
+        font-size: 13px;
+      }
+
+      .productGender {
+        color: gray;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .mostSearchedWrapper {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+
+    .mostSearchedTerm {
+      margin-bottom: 15px;
+      font-size: 15px;
+      color: gray;
+    }
+
+    .term {
+      margin-bottom: 15px;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+
+  .back {
+    background-color: white;
+    border: none;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}

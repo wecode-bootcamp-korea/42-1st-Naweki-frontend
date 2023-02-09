@@ -8,9 +8,13 @@ import {
 } from '../data/menuBoxData';
 import './MenuBox.scss';
 
-const MenuBox = ({ isShown }) => {
+const MenuBox = ({ isShown, onMouseEnter, onMouseLeave }) => {
   return (
-    <div className="menuBox">
+    <div
+      className="menuBox"
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+    >
       {isShown ? (
         <div className="menuBoxWrapper">
           <div className="itemWrapper">
