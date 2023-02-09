@@ -57,7 +57,7 @@ function Main() {
       <button className="leggingsBuyBtn" type="button" onClick={onClickBtn}>
         구매하기
       </button>
-      <video className="infiteVideo" autoplay="autoplay" muted="muted" loop>
+      <video className="infiniteVideo" autoplay="autoplay" muted="muted" loop>
         <source src="images/downnike4.mp4" type="video/mp4" />
       </video>
       <div className="experiment">끝없는 실험</div>
