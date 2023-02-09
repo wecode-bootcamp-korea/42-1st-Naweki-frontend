@@ -47,6 +47,7 @@
       border-radius: 50px;
       background-color: black;
       color: white;
+      cursor: pointer;
     }
 
     .topBuyBtn {
@@ -56,6 +57,7 @@
       border-radius: 50px;
       background-color: black;
       color: white;
+      cursor: pointer;
     }
   }
 
@@ -87,9 +89,10 @@
     border-radius: 50px;
     background-color: black;
     color: white;
+    cursor: pointer;
   }
 
-  .invincibleVideo {
+  .infiniteVideo {
     display: block;
     width: 85%;
     height: 30%;
@@ -102,7 +105,7 @@
     text-align: center;
   }
 
-  .invincibleText {
+  .infiniteText {
     margin-top: 15px;
     margin-bottom: 20px;
     font-size: 50px;
@@ -110,39 +113,40 @@
     text-align: center;
   }
 
-  .invincibleTextDetailFirst {
+  .infiniteTextDetailFirst {
     margin-bottom: 8px;
     text-align: center;
   }
 
-  .invincibleTextDetailSecond {
+  .infiniteTextDetailSecond {
     margin-bottom: 35px;
     text-align: center;
   }
 
-  .invincibleBuyBtn {
+  .infiniteBuyBtn {
     width: 70px;
     height: 35px;
     margin-left: 48%;
     border-radius: 50px;
     background-color: black;
     color: white;
+    cursor: pointer;
   }
 
-  .metconImg {
+  .methconImg {
     margin-top: 80px;
     text-align: center;
   }
 
-  .metconImgLeft {
+  .methconImgLeft {
     width: 43.6%;
   }
 
-  .metconImgRight {
+  .methconImgRight {
     width: 40.2%;
   }
 
-  .metconText {
+  .methconText {
     margin-top: 50px;
     margin-bottom: 20px;
     font-size: 50px;
@@ -150,32 +154,33 @@
     text-align: center;
   }
 
-  .metconTextDetailFirst {
+  .methconTextDetailFirst {
     margin-bottom: 8px;
     text-align: center;
   }
 
-  .metconTextDetailSecond {
+  .methconTextDetailSecond {
     margin-bottom: 35px;
     text-align: center;
   }
 
-  .metconBuyBtn {
+  .methconBuyBtn {
     width: 70px;
     height: 35px;
     margin-left: 48%;
     border-radius: 50px;
     background-color: black;
     color: white;
+    cursor: pointer;
   }
 
-  .jordanParis {
+  .danParis {
     width: 85%;
     margin-top: 80px;
     margin-left: 8%;
   }
 
-  .jordanText {
+  .danText {
     margin-top: 50px;
     margin-bottom: 20px;
     font-size: 50px;
@@ -183,18 +188,19 @@
     text-align: center;
   }
 
-  .jordanTextDetail {
+  .danTextDetail {
     margin-bottom: 35px;
     text-align: center;
   }
 
-  .jordanParisBuyBtn {
+  .danParisBuyBtn {
     width: 70px;
     height: 35px;
     margin-left: 48%;
     border-radius: 50px;
     background-color: black;
     color: white;
+    cursor: pointer;
   }
 
   .trendingText {
@@ -202,7 +208,6 @@
     margin-bottom: 20px;
     margin-left: 8%;
     font-size: 25px;
-    font-weight: bold;
   }
 
   .trendingImgContainer {
@@ -223,6 +228,7 @@
       border-color: white;
       background-color: white;
       color: rgb(96, 96, 96);
+      cursor: pointer;
     }
 
     .comfortTop {
@@ -242,6 +248,7 @@
       border-color: white;
       background-color: white;
       color: rgb(96, 96, 96);
+      cursor: pointer;
     }
 
     .blazer {
@@ -254,11 +261,6 @@
     .trendingImgRight {
       width: 39.7%;
     }
-  }
-
-  .shoesFirst {
-    width: 500px;
-    height: 500px;
   }
 
   .bottomCategory {

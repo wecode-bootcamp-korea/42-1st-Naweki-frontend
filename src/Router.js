@@ -9,6 +9,7 @@ import Cart from './pages/Cart/Cart';
 import Payment from './pages/Payment/Payment';
 import Nav from './components/Nav/Nav';
 import Footer from './components/Footer/Footer';
+import RecommendItem from './components/RecommendItem/RecommendItem';
 
 const Router = () => {
   return (
@@ -22,6 +23,7 @@ const Router = () => {
         <Route path="/product-detail" element={<ProductDetail />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/payment" element={<Payment />} />
+        <Route path="/recommend-item" element={<RecommendItem />} />
       </Routes>
       <Footer />
     </BrowserRouter>

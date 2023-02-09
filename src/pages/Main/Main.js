@@ -1,9 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import FeaturedShoes from './FeaturedShoes/FeaturedShoes';
+import { useNavigate } from 'react-router-dom';
+import RecommendItem from '../../components/RecommendItem/RecommendItem';
+
 import './Main.scss';
 
 function Main() {
   const [featuredShoes, setFeaturedShoes] = useState([]);
+
+  const productNavigate = useNavigate();
+
+  const onClickBtn = () => {
+    productNavigate('/productList');
+  };
 
   useEffect(() => {
     fetch('/data/shoesData.json')
@@ -33,70 +41,70 @@ function Main() {
         <button className="topDetailBtn" type="button">
           자세히 보기
         </button>
-        <button className="topBuyBtn" type="button">
+        <button className="topBuyBtn" type="submit" onClick={onClickBtn}>
           구매하기
         </button>
       </div>
       <img
         className="leggingsImg"
         src="https://images.unsplash.com/photo-1552196527-bffef41ef674?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1452&q=80"
-        alt="나이키 젠비 레깅스"
+        alt="나위키 컴피 레깅스"
       />
-      <div className="leggingsText">나이키 젠비 레깅스</div>
+      <div className="leggingsText">나위키 컴피 레깅스</div>
       <div className="leggingsTextDetail">
         다리를 숨쉬게 하는 편안함을 만나보세요.
       </div>
-      <button className="leggingsBuyBtn" type="button">
+      <button className="leggingsBuyBtn" type="button" onClick={onClickBtn}>
         구매하기
       </button>
-      <video className="invincibleVideo" autoplay="autoplay" muted="muted" loop>
+      <video className="infiteVideo" autoplay="autoplay" muted="muted" loop>
         <source src="images/downnike4.mp4" type="video/mp4" />
       </video>
       <div className="experiment">끝없는 실험</div>
-      <div className="invincibleText">나이키 인빈서블 런</div>
-      <div className="invincibleTextDetailFirst">
+      <div className="infiniteText">나위키 인피니트 런</div>
+      <div className="infiniteTextDetailFirst">
         믿을 수 없을 만큼 놀라운 쿠셔닝과 부드러운 착화감을 하나의 신발에 결합한
-        인빈서블 런 3.
+        인피니티 런 7.
       </div>
-      <div className="invincibleTextDetailSecond">
+      <div className="infiniteTextDetailSecond">
         매 순간 최상의 러닝을 경험해보세요.
       </div>
-      <button className="invincibleBuyBtn" type="button">
+      <button className="infiniteBuyBtn" type="submit" onClick={onClickBtn}>
         구매하기
       </button>
-      <div className="metconImg">
+      <div className="methconImg">
         <img
-          className="metconImgLeft"
+          className="methconImgLeft"
           src="https://images.unsplash.com/photo-1499083773823-5000fa2b23e4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=804&q=80"
-          alt="나이키 프리 메트콘 4 보드"
+          alt="나위키 하드 메스콘 3 보드"
         />
         <img
-          className="metconImgRight"
+          className="methconImgRight"
           src="https://images.unsplash.com/photo-1620371350502-999e9a7d80a4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8JUVDJUE0JTgwJUVCJUI5JTg0JTIwJUVDJTlBJUI0JUVCJThGJTk5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
-          alt="나이키 프리 메트콘 4"
+          alt="나위키 하드 메스콘 3"
         />
       </div>
-      <div className="metconText">나이키 프리 메트콘 4</div>
-      <div className="metconTextDetailFirst">
+      <div className="methconText">나위키 하드 메스콘 3</div>
+      <div className="methconTextDetailFirst">
         더 무거운 중량, 더 높은 점프, 더 빠른 방향 전환.
       </div>
-      <div className="metconTextDetailSecond">
+      <div className="methconTextDetailSecond">
         유연하고 안정적인 트레이닝화로 매 순간 최고의 퍼포먼스를 발휘해 보세요.
       </div>
-      <button className="metconBuyBtn" type="button">
+      <button className="methconBuyBtn" type="button" onClick={onClickBtn}>
         구매하기
       </button>
       <img
-        className="jordanParis"
+        className="danParis"
         src="https://images.unsplash.com/photo-1543728069-a3f97c5a2f32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80"
-        alt="조던 X 파리 생제르망"
+        alt="댄 X 밀라노 생제르망"
       />
-      <div className="jordanText">조던 X 파리 생제르망</div>
-      <div className="jordanTextDetail">
-        세계 무대에서 빛나고 있는 파리를 조명한 새로운 조던 x 파리 생제르망
+      <div className="danText">댄 X 파리 생제르망</div>
+      <div className="danTextDetail">
+        세계 무대에서 빛나고 있는 파리를 조명한 새로운 댄 x 파리 생제르망
         컬렉션을 지금 만나보세요.
       </div>
-      <button className="jordanParisBuyBtn" type="button">
+      <button className="danParisBuyBtn" type="button" onClick={onClickBtn}>
         구매하기
       </button>
       <div className="trendingContainer">
@@ -108,7 +116,11 @@ function Main() {
             alt="트렌딩 스타일 이미지"
           />
           <div className="comfortTop">Comfort Top</div>
-          <button className="trendingBuyBtnLeft" type="button">
+          <button
+            className="trendingBuyBtnLeft"
+            type="button"
+            onClick={onClickBtn}
+          >
             구매하기
           </button>
           <img
@@ -117,14 +129,18 @@ function Main() {
             alt="트렌딩 신발 이미지"
           />
           <div className="blazer">Blazer</div>
-          <button className="trendingBuyBtnRight" type="button">
+          <button
+            className="trendingBuyBtnRight"
+            type="button"
+            onClick={onClickBtn}
+          >
             구매하기
           </button>
         </div>
       </div>
-      <div className="featuredShoes">Featured Shoes</div>
+      <div className="recommendItemTitle">Recommend Items</div>
       {featuredShoes.map(shoes => {
-        return <FeaturedShoes key={shoes.id} {...shoes} />;
+        return <RecommendItem key={shoes.id} {...shoes} />;
       })}
 
       <div className="bottomCategory">
