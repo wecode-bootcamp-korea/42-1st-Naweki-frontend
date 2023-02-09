@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { CartList } from './CartList/CartList';
 import './Cart.scss';
 
@@ -19,13 +19,13 @@ const Cart = () => {
           <h3 className="freeShipDescript">
             나이키 멤버가 되어 무료배송 서비스를 비롯한 다양한 혜택을
             누려보세요.{' '}
-            <Link to="#" className="signup">
+            <NavLink to="#" className="signup">
               가입하기
-            </Link>{' '}
+            </NavLink>{' '}
             또는{' '}
-            <Link to="#" className="login">
+            <NavLink to="#" className="login">
               로그인
-            </Link>
+            </NavLink>
           </h3>
         </div>
         <div className="cartTitle">장바구니</div>
@@ -36,13 +36,13 @@ const Cart = () => {
           <div className="wishList">위시리스트</div>
           <div className="wishListDescript">
             위시리스트 상품을 보시겠습니까?{' '}
-            <Link to="#" className="signup">
+            <NavLink to="#" className="signup">
               가입하기
-            </Link>{' '}
+            </NavLink>{' '}
             또는{' '}
-            <Link to="#" className="login">
+            <NavLink to="#" className="login">
               로그인
-            </Link>{' '}
+            </NavLink>{' '}
           </div>
         </div>
       </section>
