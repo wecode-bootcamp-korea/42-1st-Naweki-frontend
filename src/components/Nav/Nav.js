@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import MenuBox from './MenuBox/MenuBox';
 import { menuData } from './data/menuData';
 import './Nav.scss';
 
 const Nav = () => {
+  const [isShown, setIsShown] = useState(false);
+  const onListHover = () => {
+    setIsShown(prev => {
+      return !prev;
+    });
+  };
+
+  console.log(isShown);
+
   return (
     <nav className="nav">
       <div className="logoWrapper">
@@ -14,14 +23,19 @@ const Nav = () => {
         <ul className="menuLists">
           {menuData.map(menu => {
             return (
-              <li className="menuList" key={menu.id}>
+              <li
+                className="menuList"
+                key={menu.id}
+                onMouseOver={onListHover}
+                onMouseOut={onListHover}
+              >
                 {menu.name}
               </li>
             );
           })}
         </ul>
 
-        <MenuBox className="menubox" />
+        <MenuBox className="menubox" isShown={isShown} />
       </div>
 
       <div className="functionWrapper">
