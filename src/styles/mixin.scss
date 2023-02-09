@@ -12,6 +12,7 @@
 @mixin edit {
   font-weight: bold;
   border-bottom: 1px solid black;
+  cursor: pointer;
 }
 
 @mixin btn {
@@ -25,4 +26,10 @@
 
 @mixin labelMargin {
   margin-right: 10px;
+}
+
+@mixin inputCheck {
+  padding-top: 10px;
+  padding-left: 10px;
+  font-size: 12px;
 }

@@ -8,10 +8,10 @@
 
   .paymentTitle {
     @include paymentTitle;
-    margin-bottom: 50px;
   }
 
   .termsForm {
+    padding: 40px 0px;
     .terms {
       text-decoration: underline;
     }

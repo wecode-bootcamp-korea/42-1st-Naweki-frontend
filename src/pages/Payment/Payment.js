@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Guest from './Guest/Guest';
 import PaymentOption from './PaymentOption/PaymentOption';
 import PaymentOptionInput from './PaymentOptionInput/PaymentOptionInput';
@@ -8,6 +8,20 @@ import CompletedOrder from './CompletedOrder/CompletedOrder';
 import './Payment.scss';
 
 const Payment = () => {
+  const [showData, setShowData] = useState(false);
+  const [userData, setUserData] = useState([]);
+  const [clickPayment, setClickPayment] = useState(true);
+  const [clickOrder, setClickOrder] = useState(true);
+
+  useEffect(() => {
+    (async () => {
+      const res = await fetch('data/userData.json');
+      const data = await res.json();
+      setShowData(true);
+      setUserData(data);
+    })();
+  }, []);
+
   return (
     <div className="payment">
       {/* <Guest /> */}
@@ -18,8 +32,12 @@ const Payment = () => {
             <p className="paymentTitle">배송 옵션</p>
             <p className="edit">편집</p>
           </div>
-          <PaymentOptionInput />
-          <PaymentOption />
+          {showData ? (
+            <PaymentOption data={userData} />
+          ) : (
+            <PaymentOptionInput />
+          )}
+          {/* <PaymentOptionInput /> */}
           <hr />
           <PaymentBox />
           <hr />
