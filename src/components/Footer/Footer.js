@@ -29,29 +29,9 @@ function Footer() {
         </ul>
       </div>
       <div className="iconBox">
-        {/* {ICON_DATA.map(icon => {
-          return <Footer key={icon.id} {...icon}
-        })} */}
-        {/* <img
-          className="twitter"
-          src="https://cdn-icons-png.flaticon.com/128/3670/3670151.png"
-          alt="트위터 바로가기"
-        />
-        <img
-          className="facebook"
-          src="https://cdn-icons-png.flaticon.com/128/145/145802.png"
-          alt="페이스북 바로가기"
-        />
-        <img
-          className="youtube"
-          src="https://cdn-icons-png.flaticon.com/128/3670/3670147.png"
-          alt="유튜브 바로가기"
-        />
-        <img
-          className="instagram"
-          src="https://cdn-icons-png.flaticon.com/128/3955/3955024.png"
-          alt="인스타그램 바로가기"
-        /> */}
+        {ICON_DATA.map(icon => (
+          <img className="icon" key={icon.id} src={icon.src} alt={icon.alt} />
+        ))}
       </div>
       <div className="footerRow">
         <div className="countryBox">
