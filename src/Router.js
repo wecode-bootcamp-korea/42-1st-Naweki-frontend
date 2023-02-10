@@ -3,11 +3,13 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Container from './components/Container/Container';
 import Main from './pages/Main/Main';
 import SignUp from './pages/SignUp/SignUp';
-import Login from './pages/Login/Login';
+import Login from './pages/Login/Login/Login';
 import ProductList from './pages/ProductList/ProductList';
 import ProductDetail from './pages/ProductDetail/ProductDetail';
 import Cart from './pages/Cart/Cart';
 import Payment from './pages/Payment/Payment';
+import NewUser from './pages/Login/NewUser/NewUser';
+import Password from './pages/Login/Password/Password';
 
 const Router = () => {
   return (
@@ -22,7 +24,11 @@ const Router = () => {
         </Route>
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/newuser" element={<NewUser />} />
+        <Route path="/password" element={<Password />} />
       </Routes>
     </BrowserRouter>
   );
 };
+
+export default Router;

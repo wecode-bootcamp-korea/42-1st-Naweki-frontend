@@ -1,8 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import './Login.scss';
 
 const Login = () => {
+  const onChange = e => {
+    setUserEmail(e.target.value);
+  };
+  const [userEmail, setUserEmail] = useState('');
+  const navigate = useNavigate();
+
+  const sendEmail = () => {
+    fetch('http://10.58.52.165:3000/users/lookup', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+      },
+      body: JSON.stringify({ email: userEmail }),
+    })
+      .then(res => res.json())
+      .then(response => {
+        if (response.message === 'EAMIL_IS_VERIFIED') {
+          navigate('/newuser');
+        }
+      });
+  };
+
   return (
     <div className="login">
       <div className="loginBox">
@@ -27,15 +50,16 @@ const Login = () => {
               </option>
             </select>
           </div>
-          <div className="emailInputBox">
+          <form className="emailInputBox">
             <input
               type="text"
               className="emailInput"
               id="email"
               placeholder="이메일"
+              onChange={onChange}
             />
             <label htmlFor="email" />
-          </div>
+          </form>
           <div className="agreementBox">
             <div className="agreement">
               계속 진행하면 나이키의{' '}
@@ -57,7 +81,9 @@ const Login = () => {
             </div>
           </div>
           <div className="continueBtnBox">
-            <button className="continueBtn">계속</button>
+            <button onClick={sendEmail} type="submit" className="continueBtn">
+              계속
+            </button>
           </div>
         </div>
       </div>
