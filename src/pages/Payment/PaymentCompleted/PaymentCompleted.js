@@ -1,9 +1,9 @@
 import React from 'react';
-import './CompletedOrder.scss';
+import './PaymentCompleted.scss';
 
-const CompletedOrder = () => {
+const PaymentCompleted = ({ onClickToMain }) => {
   return (
-    <div className="completedOrder">
+    <div className="paymentCompleted">
       <p className="paymentTitle">주문 완료</p>
       <form className="termsForm">
         <input className="termsInput" type="checkbox" />
@@ -12,10 +12,12 @@ const CompletedOrder = () => {
         </label>
       </form>
       <div className="orderBtnWrapper">
-        <button className="orderBtn">주문하기</button>
+        <button className="orderBtn" onClick={onClickToMain}>
+          주문하기
+        </button>
       </div>
     </div>
   );
 };
 
-export default CompletedOrder;
+export default PaymentCompleted;

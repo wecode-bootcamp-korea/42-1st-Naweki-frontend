@@ -1,9 +1,8 @@
-@import '../../../styles/mixin.scss';
+@import '../../../../styles/mixin.scss';
 
-.guest {
+.guestStart {
   @include flex(center, center);
   flex-direction: column;
-  padding-top: 150px;
   gap: 40px;
 
   h1 {
@@ -17,7 +16,7 @@
       @include flex(flex-start, center);
       flex-direction: column;
       width: 400px;
-      height: 300px;
+      height: 370px;
       padding: 20px 20px;
       gap: 40px;
       border-right: 1px solid lightgray;
@@ -31,7 +30,7 @@
       @include flex(flex-start, center);
       flex-direction: column;
       width: 400px;
-      height: 300px;
+      height: 370px;
       padding: 20px 20px;
       border-bottom: 60px;
       gap: 40px;
@@ -46,18 +45,25 @@
       padding: 0px 30px;
     }
 
+    .guestTitle {
+      font-weight: 400;
+      font-size: 23px;
+    }
+
+    .guestDesc {
+      text-align: center;
+      line-height: 25px;
+    }
+
     .guestBtn {
+      @include btn;
       width: 338px;
       height: 60px;
       margin-bottom: 20px;
-      background-color: black;
-      border-radius: 30px;
-      color: white;
-    }
 
-    .guestBtn:hover {
-      opacity: 0.3;
-      cursor: pointer;
+      &:hover {
+        @include btnHover;
+      }
     }
   }
 }

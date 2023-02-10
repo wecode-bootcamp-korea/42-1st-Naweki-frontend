@@ -10,6 +10,7 @@ const Nav = () => {
       </div>
       <div className="menuWrapper">
         <ul className="menuLists">
+          {/* 상수데이터 처리하기*/}
           <li className="menuList">New Releases</li>
           <li className="menuList">Men</li>
           <li className="menuList">Women</li>

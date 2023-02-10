@@ -1,50 +1,80 @@
-import React, { useState, useEffect } from 'react';
-import Guest from './Guest/Guest';
-import PaymentOption from './PaymentOption/PaymentOption';
-import PaymentOptionInput from './PaymentOptionInput/PaymentOptionInput';
-import PaymentAside from './PaymentAside/PaymentAside';
-import PaymentBox from './PaymentBox/PaymentBox';
-import CompletedOrder from './CompletedOrder/CompletedOrder';
-import './Payment.scss';
+// import React, { useState, useEffect } from 'react';
+// import Guest from './GuestPayment/GuestStart/GuestStart';
+// import PaymentOption from './PaymentOption/PaymentOption';
+// import PaymentOptionInput from './GuestPayment/GuestDeliveryOptionInput/GusetDeliveryOptionInput';
+// import PaymentAside from './PaymentAside/PaymentAside';
+// import PaymentBox from './PaymentSelect/PaymentSelect';
+// import PaymentCompleted from './GuestPayment/PaymentCompleted/PaymentCompleted';
+// import './Payment.scss';
+
+// const Payment = () => {
+//   const [showData, setShowData] = useState(false);
+//   const [userData, setUserData] = useState([]);
+//   const [clickPayment, setClickPayment] = useState(true);
+//   const [clickOrder, setClickOrder] = useState(true);
+
+//   useEffect(() => {
+//     (async () => {
+//       const res = await fetch('data/userData.json');
+//       const data = await res.json();
+//       setUserData(data);
+//     })();
+//   }, []);
+
+//   const [userData, setUserData] = useState({
+//     first_name: '',
+//     last_name: '',
+//     email: '',
+//     phone_number: '',
+//     province: '',
+//     city: '',
+//     zip_code: '',
+//   });
+
+//   const onChangePaymentInput = event => {
+//     const { name, value } = event.target;
+//     setUserData(prev => {
+//       return { ...prev, [name]: value };
+//     });
+//   };
+
+//   return (
+//     <div className="payment">
+//       {userData.id === null ? (
+//         <Guest />
+//       ) : (
+//         <>
+//           <p className="paymentParagraph">결제하기</p>
+//           <div className="contentWrapper">
+//               {showData ? (
+//                 <PaymentOption data={userData} />
+//               ) : (
+//                 <PaymentOptionInput setShowData={setShowData} />
+//               )}
+//               <hr />
+//               <PaymentBox />
+//               <hr />
+//               <PaymentCompleted />
+//             </div>
+//             <PaymentAside />
+//           </div>
+//         </>
+//       )}
+//     </div>
+//   );
+// };
+
+// export default Payment;
+
+import React from 'react';
+import GuestPayment from './GuestPayment/GuestPayment';
+import MemberPayment from './MemberPayment/MemberPayment';
 
 const Payment = () => {
-  const [showData, setShowData] = useState(false);
-  const [userData, setUserData] = useState([]);
-  const [clickPayment, setClickPayment] = useState(true);
-  const [clickOrder, setClickOrder] = useState(true);
-
-  useEffect(() => {
-    (async () => {
-      const res = await fetch('data/userData.json');
-      const data = await res.json();
-      setShowData(true);
-      setUserData(data);
-    })();
-  }, []);
-
   return (
     <div className="payment">
-      {/* <Guest /> */}
-      <p className="paymentParagraph">결제하기</p>
-      <div className="contentWrapper">
-        <div>
-          <div className="titleWrapper">
-            <p className="paymentTitle">배송 옵션</p>
-            <p className="edit">편집</p>
-          </div>
-          {showData ? (
-            <PaymentOption data={userData} />
-          ) : (
-            <PaymentOptionInput />
-          )}
-          {/* <PaymentOptionInput /> */}
-          <hr />
-          <PaymentBox />
-          <hr />
-          <CompletedOrder />
-        </div>
-        <PaymentAside />
-      </div>
+      {/* <GuestPayment /> */}
+      <MemberPayment />
     </div>
   );
 };

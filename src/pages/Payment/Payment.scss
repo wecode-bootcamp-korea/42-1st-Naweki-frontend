@@ -1,9 +1,6 @@
 @import '../../styles/mixin.scss';
 
 .payment {
-  @include flex(center, center);
-  flex-direction: column;
-
   .paymentParagraph {
     @include paymentTitle;
     padding-bottom: 50px;

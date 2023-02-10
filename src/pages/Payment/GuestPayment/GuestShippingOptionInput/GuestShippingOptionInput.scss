@@ -1,11 +1,24 @@
-@import '../../../styles/mixin.scss';
+@import '../../../../styles/mixin.scss';
 
-.paymentOptionInput {
+.guestShippingOptionInput {
   @include flex(flex-start, left);
   flex-direction: column;
   width: 660px;
-  height: 74ß0px;
   gap: 20px;
+  padding-bottom: 20px;
+
+  .titleWrapper {
+    @include flex(space-between, center);
+
+    .paymentTitle {
+      @include paymentTitle;
+      padding-bottom: 20px;
+    }
+
+    .edit {
+      @include edit;
+    }
+  }
 
   .paymentInput {
     width: 660px;
@@ -47,6 +60,10 @@
     .paymentOptionBtn {
       @include btn;
       width: 120px;
+
+      &:hover {
+        @include btnHover;
+      }
     }
   }
 }

@@ -1,4 +1,4 @@
-export const provinceData = [
+export const PROVINCE_DATA = [
   { id: 'default', name: '도/광역시*' },
   { id: 1, name: '부산광역시' },
   { id: 2, name: '충청도' },

@@ -24,6 +24,10 @@
   cursor: pointer;
 }
 
+@mixin btnHover {
+  opacity: 0.3;
+}
+
 @mixin labelMargin {
   margin-right: 10px;
 }

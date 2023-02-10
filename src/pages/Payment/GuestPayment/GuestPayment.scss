@@ -1,0 +1,17 @@
+@import '../../../styles/mixin.scss';
+
+.guestPayment {
+  @include flex(center, center);
+  flex-direction: column;
+
+  .paymentParagraph {
+    @include paymentTitle;
+    padding-bottom: 50px;
+  }
+
+  .guestPaymentWrapper {
+    @include flex(center, flex-start);
+    width: 100vw;
+    gap: 50px;
+  }
+}

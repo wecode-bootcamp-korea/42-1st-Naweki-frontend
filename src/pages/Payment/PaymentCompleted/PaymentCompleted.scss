@@ -1,6 +1,6 @@
 @import '../../../styles/mixin.scss';
 
-.completedOrder {
+.paymentCompleted {
   @include flex(center, flex-start);
   flex-direction: column;
   padding: 20px;
