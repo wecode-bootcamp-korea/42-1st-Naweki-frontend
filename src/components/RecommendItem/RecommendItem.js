@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import './RecommendItem.scss';
 
 function RecommendItem({ shoesImg, shoesName, category, price }) {
-  // const [recommendItem, setRecommendItem] = useState([]);
+  const onClickBtn = () => {
+    d;
+  };
 
   // useEffect(() => {
   //   fetch('/data/shoesData.json')
