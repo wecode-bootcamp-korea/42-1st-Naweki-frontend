@@ -2,19 +2,16 @@
 
 .menuBox {
   position: absolute;
-  transform: translate(-50%, -50%);
-  top: 60%;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 100%;
+  left: -31%;
   width: 100vw;
   margin: auto;
 
   .menuBoxWrapper {
     @include flex(space-around, flex-start);
     flex-direction: row;
-    width: 100vw;
-    padding: 80px 50px;
+    width: 100%;
+    padding: 40px 50px;
 
     .itemWrapper {
       display: flex;
