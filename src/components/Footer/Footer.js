@@ -21,11 +21,11 @@ function Footer() {
           <li>문의하기</li>
         </ul>
         <ul className="footerRightBox">
-          <li className="aboutNike">ABOUT Naweki</li>
-          <li className="news">소식</li>
-          <li className="require">채용</li>
-          <li className="investor">투자자</li>
-          <li className="sustainability">지속가능성</li>
+          <li className="aboutNikeContainer">ABOUT Naweki</li>
+          <li className="aboutNike">소식</li>
+          <li className="aboutNike">채용</li>
+          <li className="aboutNike">투자자</li>
+          <li className="aboutNike">지속가능성</li>
         </ul>
       </div>
       <div className="iconBox">

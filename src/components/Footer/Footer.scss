@@ -16,7 +16,7 @@ $color: rgba(220, 220, 220, 0.71);
       margin-top: 3%;
       margin-left: 13%;
       color: white;
-      font-size: 13px;
+      font-size: 14px;
       line-height: 250%;
     }
 
@@ -26,40 +26,28 @@ $color: rgba(220, 220, 220, 0.71);
       margin-top: 3%;
       margin-right: 28px;
       color: $color;
-      font-size: 12px;
+      font-size: 13px;
       line-height: 250%;
       text-align: center;
 
       .help {
         color: white;
-        font-size: 13px;
+        font-size: 14px;
       }
     }
 
     .footerRightBox {
       margin-top: 3%;
       margin-right: 55%;
-      font-size: 12px;
+      font-size: 13px;
       line-height: 250%;
 
-      .aboutNike {
+      .aboutNikeContainer {
         color: white;
-        font-size: 13px;
+        font-size: 14px;
       }
 
-      .news {
-        color: $color;
-      }
-
-      .require {
-        color: $color;
-      }
-
-      .investor {
-        color: $color;
-      }
-
-      .sustainability {
+      .aboutNike {
         color: $color;
       }
     }
