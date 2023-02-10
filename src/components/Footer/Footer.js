@@ -1,4 +1,5 @@
 import React from 'react';
+import { ICON_DATA } from './data/iconData';
 import './Footer.scss';
 
 function Footer() {
@@ -28,7 +29,10 @@ function Footer() {
         </ul>
       </div>
       <div className="iconBox">
-        <img
+        {/* {ICON_DATA.map(icon => {
+          return <Footer key={icon.id} {...icon}
+        })} */}
+        {/* <img
           className="twitter"
           src="https://cdn-icons-png.flaticon.com/128/3670/3670151.png"
           alt="트위터 바로가기"
@@ -47,26 +51,29 @@ function Footer() {
           className="instagram"
           src="https://cdn-icons-png.flaticon.com/128/3955/3955024.png"
           alt="인스타그램 바로가기"
-        />
+        /> */}
       </div>
       <div className="footerRow">
-        <img
-          className="mapIcon"
-          src="https://cdn-icons-png.flaticon.com/128/2642/2642502.png"
-          alt="위치"
-        />
-        <div className="footerRowLeftWrapper">
-          <div className="country">대한민국</div>
+        <div className="countryBox">
+          <div className="country">
+            <img
+              className="mapIcon"
+              src="https://cdn-icons-png.flaticon.com/128/2642/2642502.png"
+              alt="위치"
+            />
+            <div className="korea">대한민국</div>
+          </div>
           <div className="copyright">
             © 2023 Naweki, Inc. All Rights Reserved
           </div>
         </div>
-        <div className="footerRowRightWrapper">
+
+        <div className="service">
           <div className="termsOfService">이용약관</div>
           <div className="privacyPolicy">개인정보처리방침</div>
         </div>
-        <hr className="line" />
       </div>
+      <hr className="line" />
       <div className="footerInfoSectionFirst">
         <div className="footerBusinessInfo">
           (유)나위키코리아 대표 Yujinlee, 유진리 | 서울 강남구 나위키로 137

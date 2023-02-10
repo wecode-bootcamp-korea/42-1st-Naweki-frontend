@@ -1,6 +1,6 @@
 .footer {
-  min-height: 58vh;
-  margin-top: 80%;
+  min-height: 50vh;
+  margin-top: 77%;
   background-color: black;
   text-align: center;
 
@@ -67,8 +67,9 @@
     display: flex;
     justify-content: space-between;
     width: 9%;
-    margin-top: -11.5%;
-    margin-left: 75.5%;
+    margin-top: -8.5%;
+    margin-left: 74%;
+    text-align: right;
 
     .twitter {
       width: 28px;
@@ -95,24 +96,30 @@
     display: flex;
     justify-content: space-between;
     width: 60%;
-    margin-top: 14%;
-    margin-left: 47%;
+    margin-top: 12%;
+    margin-left: 20%;
     font-size: 12px;
 
     .mapIcon {
       width: 15px;
       height: 15px;
       margin-top: -2.5px;
-      margin-left: -55%;
+      margin-left: -9%;
     }
 
-    .footerRowLeftWrapper {
+    .countryBox {
       display: flex;
       justify-content: space-between;
-      width: 28%;
-      margin-left: 1%;
+      width: 23%;
+      margin-left: -8%;
+
       .country {
-        color: white;
+        display: flex;
+        justify-content: space-between;
+
+        .korea {
+          color: white;
+        }
       }
 
       .copyright {
@@ -120,11 +127,11 @@
       }
     }
 
-    .footerRowRightWrapper {
+    .service {
       display: flex;
       justify-content: space-between;
-      width: 17%;
-      margin-left: 71.6%;
+      width: 13%;
+      margin-right: -5%;
       .termsOfService {
         color: rgba(220, 220, 220, 0.71);
       }
@@ -136,10 +143,9 @@
   }
 
   .line {
-    // position: absolute;
     width: 72%;
     margin-top: 1.5%;
-    margin-left: -525px;
+    margin-left: 13%;
     color: rgba(220, 220, 220, 0.71);
   }
 
