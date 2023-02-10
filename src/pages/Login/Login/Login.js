@@ -26,6 +26,13 @@ const Login = () => {
       });
   };
 
+  const [error, setError] = useState(true);
+  const isValid = () => {
+    return userEmail.includes('@') && userEmail.length >= 5
+      ? setError(true)
+      : setError(false);
+  };
+
   return (
     <div className="login">
       <div className="loginBox">
@@ -52,13 +59,17 @@ const Login = () => {
           </div>
           <form className="emailInputBox">
             <input
+              required
               type="text"
-              className="emailInput"
+              onClick={isValid}
+              onKeyUp={isValid}
+              className={error ? 'emailInputValid' : 'emailInputInvalid'}
               id="email"
               placeholder="이메일"
               onChange={onChange}
             />
             <label htmlFor="email" />
+            <div className={error ? 'valid' : 'required'}>필수</div>
           </form>
           <div className="agreementBox">
             <div className="agreement">
@@ -81,7 +92,12 @@ const Login = () => {
             </div>
           </div>
           <div className="continueBtnBox">
-            <button onClick={sendEmail} type="submit" className="continueBtn">
+            <button
+              disabled={error ? false : true}
+              onClick={sendEmail}
+              type="submit"
+              className="continueBtn"
+            >
               계속
             </button>
           </div>

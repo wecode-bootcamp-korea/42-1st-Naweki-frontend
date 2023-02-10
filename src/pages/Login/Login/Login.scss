@@ -59,6 +59,10 @@
           -webkit-appearance: none;
           -moz-appearance: none;
           appearance: none;
+
+          &:hover {
+            cursor: pointer;
+          }
         }
 
         .changeRegion:focus {
@@ -71,7 +75,7 @@
         min-height: 84px;
         padding-top: 20px;
 
-        .emailInput {
+        .emailInputValid {
           width: 98%;
           height: 50px;
           padding: 1px 2px;
@@ -79,10 +83,34 @@
           border-width: 1px;
           border-radius: 8px;
           font-size: medium;
+          &:focus {
+            outline: none;
+          }
         }
 
-        .emailInput:focus {
-          outline: none;
+        .emailInputInvalid {
+          width: 98%;
+          height: 50px;
+          padding: 1px 2px;
+          padding-left: 10px;
+          border-width: 1px;
+          border-radius: 8px;
+          border-color: red;
+          font-size: medium;
+          &:focus {
+            outline: none;
+          }
+          &::placeholder {
+            color: red;
+          }
+        }
+        .required {
+          padding: 10px 10px;
+          color: red;
+          font-size: small;
+        }
+        .valid {
+          display: none;
         }
       }
 

@@ -1,7 +1,45 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import './NewUser.scss';
 
 const NewUser = () => {
+  const navigate = useNavigate();
+  const goToLogin = () => {
+    navigate('/login');
+  };
+
+  const [userName, setUserName] = useState('');
+  const onChangeName = e => {
+    setUserName(e.target.value);
+  };
+
+  const [userSurname, setUserSurname] = useState('');
+  const onChangeSurname = e => {
+    setUserSurname(e.target.value);
+  };
+
+  // const [pw, setPw] = useState('');
+  // const onChangePw = e => {
+  //   setPw(e.target.value);
+  // };
+
+  const [nameError, setNameError] = useState(true);
+  const [surnameError, setSurnameError] = useState(true);
+
+  const isName = () => {
+    return userName.length > 0 ? setNameError(true) : setNameError(false);
+  };
+
+  const isSurname = () => {
+    return userSurname.length > 1
+      ? setSurnameError(true)
+      : setSurnameError(false);
+  };
+
+  // const isPw = () => {
+  //   return pw
+  // }
+
   return (
     <div className="newUser">
       <div className="newUserBox">
@@ -18,34 +56,39 @@ const NewUser = () => {
         </header>
         <div className="newUserEmailBox">
           <span className="newUserEmail">wecode@naver.com</span>
-          <button className="edit">편집</button>
+          <button onClick={goToLogin} className="edit">
+            편집
+          </button>
         </div>
         <form className="newUserInfoContainer">
           <section className="newUserInputBox">
-            <div className="codeBox">
-              <input
-                type="text"
-                className="newUserCodeInput"
-                id="newUserCode"
-                placeholder="코드"
-              />
-              <label htmlFor="newUserCode" />
-            </div>
             <div className="newUserNameBox">
               <input
                 type="text"
-                className="newUserSurnameInput"
+                className={
+                  nameError
+                    ? 'newUserNameInputValid'
+                    : 'newUserNameInputInvalid'
+                }
                 id="newUserSurname"
                 placeholder="성"
-              />
-              <label htmlFor="newUserSurname" />
-              <input
-                type="text"
-                className="newUserNameInput"
-                id="newUserName"
-                placeholder="이름"
+                onChange={onChangeName}
+                onKeyUp={isName}
               />
               <label htmlFor="newUserName" />
+              <input
+                type="text"
+                className={
+                  surnameError
+                    ? 'newUserSurnameInputValid'
+                    : 'newUserSurnameInputInvalid'
+                }
+                id="newUserName"
+                placeholder="이름"
+                onChange={onChangeSurname}
+                onKeyUp={isSurname}
+              />
+              <label htmlFor="newUserSurname" />
             </div>
             <div className="newUserPwdBox">
               <input
@@ -73,7 +116,6 @@ const NewUser = () => {
               <input
                 type="date"
                 className="newUserBirthInput"
-                required
                 placeholder="생년월일"
               />
               <div className="getReward">

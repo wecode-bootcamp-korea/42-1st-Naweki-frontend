@@ -71,34 +71,15 @@
         flex-direction: column;
         justify-content: space-around;
         width: auto;
-        height: 450px;
+        height: 380px;
         padding-top: 5px;
-
-        .newUserCodeInput {
-          width: 88%;
-          height: 50px;
-          padding: 1px 2px;
-          padding-right: 40px;
-          padding-left: 10px;
-          border-width: 1px;
-          border-radius: 8px;
-          background-image: url(/assets/arrows-rotate-solid.png);
-          background-repeat: no-repeat;
-          background-position: 98%;
-          background-size: 20px;
-          font-size: medium;
-        }
-
-        .newUserCodeInput:focus {
-          outline: none;
-        }
 
         .newUserNameBox {
           display: flex;
           justify-content: space-between;
           width: 99%;
 
-          .newUserSurnameInput {
+          .newUserNameInputValid {
             width: 37%;
             height: 50px;
             padding-right: 40px;
@@ -111,7 +92,21 @@
             }
           }
 
-          .newUserNameInput {
+          .newUserNameInputInvalid {
+            width: 37%;
+            height: 50px;
+            padding-right: 40px;
+            padding-left: 10px;
+            border-width: 1px;
+            border-radius: 8px;
+            border-color: red;
+            font-size: medium;
+            &:focus {
+              outline: none;
+            }
+          }
+
+          .newUserSurnameInputValid {
             width: 37%;
             height: 50px;
             margin-left: auto;
@@ -119,6 +114,21 @@
             padding-left: 10px;
             border-width: 1px;
             border-radius: 8px;
+            font-size: medium;
+            &:focus {
+              outline: none;
+            }
+          }
+
+          .newUserSurnameInputInvalid {
+            width: 37%;
+            height: 50px;
+            margin-left: auto;
+            padding-right: 40px;
+            padding-left: 10px;
+            border-width: 1px;
+            border-radius: 8px;
+            border-color: red;
             font-size: medium;
             &:focus {
               outline: none;
@@ -176,9 +186,9 @@
             -webkit-appearance: none;
             -moz-appearance: none;
             appearance: none;
-          }
-          &:focus {
-            outline: none;
+            &:focus {
+              outline: none;
+            }
           }
         }
 
@@ -241,7 +251,7 @@
         }
 
         .agreeGuide {
-          .personalInfo:visited,
+          .personalInfoAgreement:visited,
           .usingAgreement:visited {
             color: black;
           }
