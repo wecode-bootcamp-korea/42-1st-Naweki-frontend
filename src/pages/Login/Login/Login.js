@@ -61,7 +61,7 @@ const Login = () => {
             <input
               required
               type="text"
-              onClick={isValid}
+              // onClick={isValid}
               onKeyUp={isValid}
               className={error ? 'emailInputValid' : 'emailInputInvalid'}
               id="email"
