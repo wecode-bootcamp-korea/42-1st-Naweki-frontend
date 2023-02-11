@@ -10,6 +10,7 @@ import Payment from './pages/Payment/Payment';
 import Nav from './components/Nav/Nav';
 import Footer from './components/Footer/Footer';
 import RecommendItem from './components/RecommendItem/RecommendItem';
+// import RecommendItem from './components/RecommendItem/RecommendItem';
 
 const Router = () => {
   return (

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import RecommendItem from '../../components/RecommendItem/RecommendItem';
-
+// import RecommendItem from '../../components/RecommendItem/RecommendItem';
 import './Main.scss';
 
 function Main() {
@@ -140,7 +140,8 @@ function Main() {
       </div>
       <div className="recommendItemTitle">Recommend Items</div>
       {featuredShoes.map(shoes => {
-        return <RecommendItem key={shoes.id} {...shoes} />;
+        console.log(shoes);
+        return <RecommendItem key={shoes.id} shoes={shoes} />;
       })}
 
       <div className="bottomCategory">
@@ -151,6 +152,13 @@ function Main() {
           <li className="categoryName">Kids</li>
         </ul>
       </div>
+
+      {/* <RecommendItem
+        shoesImg={shoesImg}
+        shoesName={shoesName}
+        category={category}
+        price={price}
+      /> */}
     </div>
   );
 }
