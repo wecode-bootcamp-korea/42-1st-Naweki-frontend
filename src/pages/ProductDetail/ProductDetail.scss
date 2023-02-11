@@ -68,6 +68,7 @@
         display: flex;
         justify-content: space-between;
         width: 25%;
+
         .productPrice {
           font-size: 14px;
         }
@@ -230,23 +231,41 @@
       }
 
       .detailService {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         margin-top: 10%;
+
         .freeDelivery {
           padding-top: 7%;
-          border-top: 1px solid gray;
-          font-size: 21px;
+          padding-bottom: 7%;
+          border-top: 1px solid rgba(128, 128, 128, 0.601);
+          border-right: transparent;
+          border-bottom: transparent;
+          border-left: transparent;
+          background-color: transparent;
+          font-size: 17px;
         }
 
         .review {
-          // margin-top: 1.7%;
-
-          font-size: 21px;
+          padding-top: 7%;
+          padding-bottom: 7%;
+          border-top: 1px solid rgba(128, 128, 128, 0.601);
+          border-right: transparent;
+          border-bottom: transparent;
+          border-left: transparent;
+          background-color: transparent;
+          font-size: 17px;
         }
 
         .moreInfo {
-          // margin-top: 1.7%;
-
-          font-size: 21px;
+          padding-top: 7%;
+          border-top: 1px solid rgba(128, 128, 128, 0.601);
+          border-right: transparent;
+          border-bottom: transparent;
+          border-left: transparent;
+          background-color: transparent;
+          font-size: 17px;
         }
       }
     }

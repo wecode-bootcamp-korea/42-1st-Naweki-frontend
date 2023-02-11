@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
+import FreeDelivery from './FreeDelivery/FreeDelivery';
 import './ProductDetail.scss';
 
 function ProductDetail() {
+  const [visible, setVisible] = useState(false);
+
   return (
     <div className="productDetail">
       <div className="productDetailImges">
@@ -110,7 +113,15 @@ function ProductDetail() {
           </ul>
           <div className="detailDescription">상품 상세 정보 보기</div>
           <div className="detailService">
-            <button className="freeDelivery">무료 배송 및 반품</button>
+            <button
+              className="freeDelivery"
+              onClick={() => {
+                setVisible(!visible);
+              }}
+            >
+              {visible ? '무료 배송 및 반품' : '안눌렀을때'}
+              {visible && <FreeDelivery />}
+            </button>
             <button className="review">리뷰 (3712) </button>
             <button className="moreInfo">추가 정보</button>
           </div>
