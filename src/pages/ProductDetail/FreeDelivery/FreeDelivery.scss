@@ -1,13 +1,30 @@
 .freeDelivery {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  .delivery {
+  line-height: 26px;
+  text-align: left;
+
+  .deliveryInfo {
+    margin-bottom: 7%;
+    font-size: 14px;
+
+    .deliveryDetail {
+      text-decoration: underline;
+    }
   }
 
-  .todayService {
+  .todayDeliveryInfo {
+    margin-bottom: 7%;
+    font-size: 14px;
+
+    .todayDeliveryDetail {
+      text-decoration: underline;
+    }
   }
 
-  .afterService {
+  .afterServiceInfo {
+    font-size: 14px;
+
+    .serviceDetail {
+      text-decoration: underline;
+    }
   }
 }
