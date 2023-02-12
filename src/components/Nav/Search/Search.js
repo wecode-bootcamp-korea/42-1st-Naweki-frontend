@@ -21,9 +21,6 @@ const Search = ({ searchClicked }) => {
     product.name.includes(keyword)
   );
 
-  console.log(products);
-  console.log(keyword);
-
   return (
     <div className="search">
       <div className="logoWrapper">

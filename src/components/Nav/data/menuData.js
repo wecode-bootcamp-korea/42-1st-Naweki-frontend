@@ -1,4 +1,4 @@
-export const menuData = [
+export const MENU_DATA = [
   { id: 1, name: 'New Releases' },
   { id: 2, name: 'Men' },
   { id: 3, name: 'Women' },

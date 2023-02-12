@@ -1,4 +1,4 @@
-export const newItems = [
+export const NEW_ITEMS = [
   { id: 0, name: 'New & Featured' },
   { id: 1, name: '신상품 전체보기' },
   { id: 2, name: 'SNEAKERS' },
@@ -10,7 +10,7 @@ export const newItems = [
   { id: 8, name: 'NawekiLab' },
 ];
 
-export const menItems = [
+export const MEN_ITEMS = [
   { id: 0, name: '남성' },
   { id: 1, name: '신발' },
   { id: 2, name: '의류' },
@@ -18,7 +18,7 @@ export const menItems = [
   { id: 4, name: '전체보기' },
 ];
 
-export const womenItems = [
+export const WOMEN_ITEMS = [
   { id: 0, name: '여성' },
   { id: 1, name: '신발' },
   { id: 2, name: '의류' },
@@ -26,7 +26,7 @@ export const womenItems = [
   { id: 4, name: '전체보기' },
 ];
 
-export const kidsItems = [
+export const KIDS_ITEMS = [
   { id: 0, name: '키즈' },
   { id: 1, name: '신발' },
   { id: 2, name: '의류' },
@@ -34,7 +34,7 @@ export const kidsItems = [
   { id: 4, name: '전체보기' },
 ];
 
-export const accItems = [
+export const ACC_ITEMS = [
   { id: 0, name: '용품' },
   { id: 1, name: '모자 & 헤드밴드' },
   { id: 2, name: '가방' },

@@ -1,0 +1,30 @@
+@import '../../../styles/mixin.scss';
+
+.otherMenuBox {
+  position: absolute;
+  top: 100%;
+  left: -31%;
+  width: 100vw;
+  margin: auto;
+
+  .otherMenuBoxWrapper {
+    @include flex(space-around, flex-start);
+    flex-direction: row;
+    width: 100%;
+    padding: 40px 50px;
+
+    .itemWrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .itemList {
+        cursor: pointer;
+
+        &[id='0'] {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
