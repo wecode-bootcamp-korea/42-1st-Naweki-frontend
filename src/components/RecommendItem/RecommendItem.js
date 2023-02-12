@@ -4,22 +4,29 @@ import './RecommendItem.scss';
 function RecommendItem() {
   const [recommendItem, setRecommendItem] = useState([]);
 
-  const [count, setCount] = useState(0);
+  const [showStartIdx, setShowStartIdx] = useState(0);
 
-  const nextBtn = () => {
-    setCount(count => (count < 8 ? count + 1 : (count = 0)));
+  const numOfShownCard = 3;
+  const checkLeftBtnActive = () => showStartIdx > 0;
+  const checkRightBtnActive = () =>
+    showStartIdx < recommendItem.length - numOfShownCard;
+
+  const onClickLeftBtn = () => {
+    if (checkLeftBtnActive()) {
+      setShowStartIdx(showStartIdx - 1);
+    }
   };
 
-  const prevBtn = () => {
-    setCount(count => (count > 0 ? count - 1 : null));
+  const onClickRightBtn = () => {
+    if (checkRightBtnActive()) {
+      setShowStartIdx(showStartIdx + 1);
+    }
   };
 
-  // useEffect(() => {
-  //   const interval = setTimtout(() => {
-  //     nextBtn();
-  //   }, 3000);
-  //   return () => clearTimeout(interval);
-  // });
+  const showImgs = recommendItem.slice(
+    showStartIdx,
+    showStartIdx + numOfShownCard
+  );
 
   useEffect(() => {
     fetch('/data/shoesData.json')
@@ -28,47 +35,45 @@ function RecommendItem() {
   }, []);
 
   return (
-    <div>
-      {recommendItem.map(shoes => {
-        return (
-          <div
-            key={shoes.id}
-            className="itemBox"
-            style={{ transform: `translateX(${count * -1080}px)` }}
-          >
-            <button className="prev" onClick={prevBtn}>
-              〈
-            </button>
-            <button className="next" onClick={nextBtn}>
-              〉
-            </button>
-            <img
-              className="shoesImg"
-              src={shoes.shoesImg}
-              alt="{shoes.shoesName}"
-            />
-            <div className="shoesInfo">
-              <div className="shoesName">{shoes.shoesName}</div>
-              <div className="price">{shoes.price} 원</div>
-            </div>
-            <div className="category">{shoes.category}</div>
+    <div className="container">
+      <div className="titleWrapper">
+        <div className="title">You Might Also Like</div>
+        <div className="buttonWrapper">
+          <button onClick={onClickLeftBtn} disabled={!checkLeftBtnActive()}>
+            {'<'}
+          </button>
+          <button onClick={onClickRightBtn} disabled={!checkRightBtnActive()}>
+            {'>'}
+          </button>
+        </div>
+      </div>
+      <div className="image-wrapper">
+        {showImgs.map(img => (
+          <div className="image">
+            <img src={img} />
           </div>
-        );
-      })}
+        ))}
+      </div>
     </div>
+    // <div>
+    //   {recommendItem.map(shoes => {
+    //     return (
+    //       <div key={shoes.id} className="itemBox">
+    //         <img
+    //           className="shoesImg"
+    //           src={shoes.shoesImg}
+    //           alt="{shoes.shoesName}"
+    //         />
+    //         <div className="shoesInfo">
+    //           <div className="shoesName">{shoes.shoesName}</div>
+    //           <div className="price">{shoes.price} 원</div>
+    //         </div>
+    //         <div className="category">{shoes.category}</div>
+    //       </div>
+    //     );
+    //   })}
+    // </div>
   );
 }
 
-/* <div className="arrowBtn">
-        <img
-          className="leftBtn"
-          src="https://cdn-icons-png.flaticon.com/128/2722/2722991.png"
-          alt="왼쪽 화살표"
-        />
-        <img
-          className="rightBtn"
-          src="https://cdn-icons-png.flaticon.com/128/2722/2722985.png"
-          alt="오른쪽 화살표"
-        />
-      </div> */
 export default RecommendItem;
