@@ -6,7 +6,7 @@ function FullHeartBtn() {
     <div className="fullHeartBtn">
       <button className="cartBtn">장바구니</button>
       <button className="wishListBtn">
-        위시리스트
+        <div>위시리스트</div>
         <button className="fullHeartBtn">
           <img
             className="fullHeartImg"
