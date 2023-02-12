@@ -65,7 +65,7 @@ function Footer() {
       <div className="footerInfoSectionFirst">
         <div className="footerBusinessInfo">
           (유)나위키코리아 대표 Yujinlee, 유진리 | 서울 강남구 나위키로 137
-          강남파이낸셜센터 26층 | 통신판매업신고번호 2003-서울강남-03791 |
+          강남파이낸셜센터 26층 | 통신판매업신고번호 2003-서울강남-03721 |
           등록번호 123-45-6789
           <span className="proprietorInfo">사업자 정보 확인</span>
         </div>
