@@ -1,0 +1,21 @@
+.modal {
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  // position: absolute;
+  width: 300px;
+  height: 500px;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+  border-radius: 8px;
+
+  /* 모달창 디자인 */
+  background-color: gray;
+
+  .modalClose {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}

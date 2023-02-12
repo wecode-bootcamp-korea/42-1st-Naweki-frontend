@@ -1,4 +1,5 @@
 $color: rgba(220, 220, 220, 0.71);
+$cursor: pointer;
 
 .footer {
   min-height: 50vh;
@@ -18,6 +19,7 @@ $color: rgba(220, 220, 220, 0.71);
       color: white;
       font-size: 14px;
       line-height: 250%;
+      cursor: $cursor;
     }
 
     .footerMiddleBox {
@@ -29,10 +31,17 @@ $color: rgba(220, 220, 220, 0.71);
       font-size: 13px;
       line-height: 250%;
       text-align: center;
+      cursor: $cursor;
 
       .help {
         color: white;
         font-size: 14px;
+      }
+
+      .helpDetail {
+        &:hover {
+          color: white;
+        }
       }
     }
 
@@ -41,14 +50,19 @@ $color: rgba(220, 220, 220, 0.71);
       margin-right: 55%;
       font-size: 13px;
       line-height: 250%;
+      cursor: $cursor;
 
-      .aboutNikeContainer {
+      .aboutNawekiContainer {
         color: white;
         font-size: 14px;
       }
 
-      .aboutNike {
+      .aboutNaweki {
         color: $color;
+
+        &:hover {
+          color: white;
+        }
       }
     }
   }
@@ -60,6 +74,7 @@ $color: rgba(220, 220, 220, 0.71);
     margin-top: -190px;
     margin-left: 1400px;
     text-align: right;
+    cursor: $cursor;
 
     .icon {
       width: 28px;
@@ -91,6 +106,10 @@ $color: rgba(220, 220, 220, 0.71);
       .country {
         display: flex;
         justify-content: space-between;
+        margin-top: -4px;
+        border: none;
+        background-color: transparent;
+        cursor: $cursor;
 
         .korea {
           color: white;
@@ -107,12 +126,19 @@ $color: rgba(220, 220, 220, 0.71);
       justify-content: space-between;
       width: 13%;
       margin-right: -5%;
+
       .termsOfService {
         color: $color;
+        cursor: $cursor;
+
+        &:hover {
+          color: white;
+        }
       }
 
       .privacyPolicy {
         color: white;
+        cursor: $cursor;
       }
     }
   }
@@ -141,8 +167,13 @@ $color: rgba(220, 220, 220, 0.71);
 
       .proprietorInfo {
         margin-left: 7px;
-        color: $color;
+        color: rgba(255, 255, 255, 0.78);
         text-decoration: underline;
+        cursor: $cursor;
+
+        &:hover {
+          color: white;
+        }
       }
     }
 
@@ -150,8 +181,13 @@ $color: rgba(220, 220, 220, 0.71);
       width: 50%;
 
       .deposit {
-        color: $color;
+        color: rgba(255, 255, 255, 0.78);
         text-decoration: underline;
+        cursor: $cursor;
+
+        &:hover {
+          color: white;
+        }
       }
     }
   }
@@ -174,8 +210,25 @@ $color: rgba(220, 220, 220, 0.71);
       .serviceNum {
         margin-right: 7px;
         margin-left: 7px;
-        color: $color;
+        color: rgba(255, 255, 255, 0.78);
         text-decoration: underline;
+        cursor: $cursor;
+
+        &:hover {
+          color: white;
+        }
+      }
+
+      .serviceEmail {
+        margin-right: 7px;
+        margin-left: 7px;
+        color: rgba(255, 255, 255, 0.78);
+        text-decoration: underline;
+        cursor: $cursor;
+
+        &:hover {
+          color: white;
+        }
       }
     }
 
@@ -183,15 +236,21 @@ $color: rgba(220, 220, 220, 0.71);
       position: absolute;
       width: 18%;
       margin-top: -2px;
-      margin-left: 37.4%;
+      margin-left: 37%;
     }
 
     .seeDetails {
       position: absolute;
-      margin-top: -2.5%;
+      margin-top: -2px;
       margin-left: 50.5%;
       color: $color;
+      color: rgba(255, 255, 255, 0.78);
       text-decoration: underline;
+      cursor: $cursor;
+
+      &:hover {
+        color: white;
+      }
     }
   }
 }

@@ -1,31 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ICON_DATA } from './data/iconData';
 import './Footer.scss';
+import Modal from './Modal/Modal';
 
 function Footer() {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const showModal = () => {
+    setModalOpen(true);
+  };
+
   return (
     <div className="footer">
       <div className="footerTextBox">
         <div className="footerLeftBox">
-          <div className="newsTopLeft">새로운 소식</div>
-          <div className="membership">멤버 가입</div>
-          <div className="storeInfo">매장 안내</div>
-          <div className="journal">나이키 저널</div>
+          <div className>새로운 소식</div>
+          <div className>멤버 가입</div>
+          <div className>매장 안내</div>
+          <div className>나이키 저널</div>
         </div>
         <ul className="footerMiddleBox">
           <li className="help">도움말</li>
-          <li>주문 배송 조회</li>
-          <li>반품 정책</li>
-          <li>결제 방법</li>
-          <li>공지사항</li>
-          <li>문의하기</li>
+          <li className="helpDetail">주문 배송 조회</li>
+          <li className="helpDetail">반품 정책</li>
+          <li className="helpDetail">결제 방법</li>
+          <li className="helpDetail">공지사항</li>
+          <li className="helpDetail">문의하기</li>
         </ul>
         <ul className="footerRightBox">
-          <li className="aboutNikeContainer">ABOUT Naweki</li>
-          <li className="aboutNike">소식</li>
-          <li className="aboutNike">채용</li>
-          <li className="aboutNike">투자자</li>
-          <li className="aboutNike">지속가능성</li>
+          <li className="aboutNawekiContainer">ABOUT Naweki</li>
+          <li className="aboutNaweki">소식</li>
+          <li className="aboutNaweki">채용</li>
+          <li className="aboutNaweki">투자자</li>
+          <li className="aboutNaweki">지속가능성</li>
         </ul>
       </div>
       <div className="iconBox">
@@ -35,14 +42,15 @@ function Footer() {
       </div>
       <div className="footerRow">
         <div className="countryBox">
-          <div className="country">
+          <button className="country" onClick={showModal}>
+            {modalOpen && <Modal />}
             <img
               className="mapIcon"
               src="https://cdn-icons-png.flaticon.com/128/2642/2642502.png"
               alt="위치"
             />
             <div className="korea">대한민국</div>
-          </div>
+          </button>
           <div className="copyright">
             © 2023 Naweki, Inc. All Rights Reserved
           </div>
@@ -64,15 +72,15 @@ function Footer() {
         <div className="footerPaymentInfo">
           현금 등으로 결제 시 안전 거래를 위해 나위키 쇼핑몰에서 가입하신
           한국결제네트웍스 유한회사의 구매안전 서비스(
-          <span className="deposit">결제대금예치</span>
-          )를 이용하실 수 있습니다.
+          <span className="deposit">결제대금예치</span>)를 이용하실 수 있습니다.
         </div>
       </div>
       <div className="footerInfoSectionSecond">
         <div className="footerServiceInfo">
           고객센터 전화 문의 <span className="serviceNum">010-123-4567</span>
-          FAX 01-2345-6789 | 이메일 service@naweki.co.kr | 호스팅서비스사업자
-          (유)나위키코리아
+          FAX 01-2345-6789 | 이메일
+          <span className="serviceEmail">service@naweki.co.kr </span>|
+          호스팅서비스사업자 (유)나위키코리아
         </div>
         <div className="footerLegalInfo">
           콘텐츠산업진흥법에 의한 콘텐츠 보호 안내
