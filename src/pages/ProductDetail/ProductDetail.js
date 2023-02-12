@@ -10,7 +10,7 @@ function ProductDetail() {
   const [heart, setHeart] = useState(false);
 
   const onClickBtn = () => {
-    setHeart(true);
+    setHeart(!heart);
   };
 
   return (
