@@ -7,78 +7,88 @@ $cursor: pointer;
   background-color: black;
   text-align: center;
 
-  .footerTextBox {
+  .menu-wrapper {
     display: flex;
-    justify-content: space-between;
 
-    .footerLeftBox {
-      display: inline-block;
-      width: 6%;
-      margin-top: 3%;
-      margin-left: 13%;
-      color: white;
-      font-size: 14px;
-      line-height: 250%;
-      cursor: $cursor;
-    }
+    .footerTextBox {
+      display: flex;
+      flex: 1;
+      justify-content: space-between;
 
-    .footerMiddleBox {
-      display: inline-block;
-      width: 6%;
-      margin-top: 3%;
-      margin-right: 28px;
-      color: $color;
-      font-size: 13px;
-      line-height: 250%;
-      text-align: center;
-      cursor: $cursor;
-
-      .help {
+      .footerLeftBox {
+        display: inline-block;
+        width: 6%;
+        margin-top: 3%;
+        margin-left: 13%;
         color: white;
         font-size: 14px;
+        line-height: 250%;
+        cursor: $cursor;
       }
 
-      .helpDetail {
-        &:hover {
-          color: white;
-        }
-      }
-    }
-
-    .footerRightBox {
-      margin-top: 3%;
-      margin-right: 55%;
-      font-size: 13px;
-      line-height: 250%;
-      cursor: $cursor;
-
-      .aboutNawekiContainer {
-        color: white;
-        font-size: 14px;
-      }
-
-      .aboutNaweki {
+      .footerMiddleBox {
+        display: inline-block;
+        width: 6%;
+        margin-top: 3%;
+        margin-right: 28px;
         color: $color;
+        font-size: 13px;
+        line-height: 250%;
+        text-align: center;
+        cursor: $cursor;
 
-        &:hover {
+        .help {
           color: white;
+          font-size: 14px;
+        }
+
+        .helpDetail {
+          &:hover {
+            color: white;
+          }
+        }
+      }
+
+      .footerRightBox {
+        margin-top: 3%;
+        margin-right: 55%;
+        font-size: 13px;
+        line-height: 250%;
+        cursor: $cursor;
+
+        .aboutNawekiContainer {
+          color: white;
+          font-size: 14px;
+        }
+
+        .aboutNaweki {
+          color: $color;
+
+          &:hover {
+            color: white;
+          }
         }
       }
     }
-  }
+    .iconBox {
+      display: flex;
+      justify-content: space-between;
+      width: 9%;
+      // margin-top: -190px;
+      // margin-left: 1400px;
+      padding-top: 3%;
+      padding-right: 20px;
+      text-align: right;
+      cursor: $cursor;
 
-  .iconBox {
-    display: flex;
-    justify-content: space-between;
-    width: 9%;
-    margin-top: -190px;
-    margin-left: 1400px;
-    text-align: right;
-    cursor: $cursor;
+      .icon {
+        width: 28px;
+        height: 28px;
 
-    .icon {
-      width: 28px;
-      height: 28px;
+        // &:not(:last-child) {
+        //   margin-right: 12px;
+        // }
+      }
     }
   }
 
