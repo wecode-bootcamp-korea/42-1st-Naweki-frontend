@@ -6,12 +6,41 @@
   width: 90%;
   padding: 50px;
 
+  .category {
+    font-weight: 400;
+    font-size: 25px;
+  }
+
   .functionWrapper {
     @include flex(space-between, center);
+    position: relative;
     gap: 40px;
 
-    span {
-      margin-right: 10px;
+    .function {
+      span {
+        margin-right: 10px;
+      }
+
+      .bannerIcon {
+        width: 16px;
+        height: 16px;
+      }
+
+      .sortListWrapper {
+        position: absolute;
+        top: 160%;
+        right: -5%;
+        width: 123px;
+        padding-top: 30px;
+        text-align: right;
+        background-color: white;
+        border-radius: 20px;
+
+        .sortList {
+          padding-bottom: 15px;
+          padding-right: 20px;
+        }
+      }
     }
   }
 }

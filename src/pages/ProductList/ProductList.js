@@ -6,6 +6,7 @@ import './ProductList.scss';
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
+  const [isFilterClicked, setIsFilterClicked] = useState(false);
 
   const getProducts = async api => {
     const response = await fetch(api);
@@ -16,11 +17,15 @@ const ProductList = () => {
     getProducts(`/data/productData.json`);
   }, []);
 
+  const onClickFilter = () => {
+    setIsFilterClicked(prev => !prev);
+  };
+
   return (
     <main className="productList">
-      <Banner />
+      <Banner onClickFilter={onClickFilter} />
       <div className="contentWrapper">
-        <Aside />
+        <Aside isFilterClicked={isFilterClicked} />
         <div className="productWrapper">
           {products.map(product => (
             <Product key={product.id} product={product} />
