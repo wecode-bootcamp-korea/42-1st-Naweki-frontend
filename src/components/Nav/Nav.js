@@ -13,21 +13,26 @@ const Nav = () => {
 
   return (
     <nav className="nav">
-      {clicked ? (
-        <Search searchClicked={searchClicked} />
-      ) : (
-        <>
-          <div className="logoWrapper">
-            <Link className="toMain" to="/">
-              <img className="logo" alt="Logo Img" src="images/logo.jpg" />
-            </Link>
-          </div>
+      <div className="nameWrapper">
+        <p> 님, 안녕하세요</p>
+      </div>
+      <div className="bottomWrapper">
+        {clicked ? (
+          <Search searchClicked={searchClicked} />
+        ) : (
+          <>
+            <div className="logoWrapper">
+              <Link className="toMain" to="/">
+                <img className="logo" alt="Logo Img" src="images/logo.jpg" />
+              </Link>
+            </div>
 
-          <Menu />
+            <Menu />
 
-          <Function searchClicked={searchClicked} />
-        </>
-      )}
+            <Function searchClicked={searchClicked} />
+          </>
+        )}
+      </div>
     </nav>
   );
 };

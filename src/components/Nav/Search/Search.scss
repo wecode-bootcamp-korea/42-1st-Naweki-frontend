@@ -31,8 +31,8 @@
   .filteredListWrapper {
     @include flex(space-around, center);
     position: absolute;
-    top: 10%;
-    left: 10%;
+    top: 15%;
+    left: 20%;
     padding: 50px 70px;
 
     .filteredItem {
@@ -61,8 +61,8 @@
 
   .mostSearchedWrapper {
     position: absolute;
-    top: 10%;
-    left: 30%;
+    top: 15%;
+    left: 35%;
 
     .mostSearchedTerm {
       margin-bottom: 15px;

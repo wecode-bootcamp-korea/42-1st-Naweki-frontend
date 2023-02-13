@@ -16,39 +16,39 @@ const NewMenuBox = ({ isShown, onMouseEnter, onMouseLeave }) => {
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      {isShown && (
-        <>
-          <div className="newMenuBoxWrapper">
-            <div className="itemWrapper">
-              {NEW_ITEMS.map(item => {
-                return <ItemLists key={item.id} item={item} />;
-              })}
-            </div>
-            <div className="itemWrapper">
-              {MEN_ITEMS.map(item => {
-                return <ItemLists key={item.id} item={item} />;
-              })}
-            </div>
-            <div className="itemWrapper">
-              {WOMEN_ITEMS.map(item => {
-                return <ItemLists key={item.id} item={item} />;
-              })}
-            </div>
-            <div className="itemWrapper">
-              {KIDS_ITEMS.map(item => {
-                return <ItemLists key={item.id} item={item} />;
-              })}
-            </div>
-            <div className="itemWrapper">
-              {ACC_ITEMS.map(item => {
-                return <ItemLists key={item.id} item={item} />;
-              })}
-            </div>
-          </div>
+      {/* {isShown && (
+        <> */}
+      <div className="newMenuBoxWrapper">
+        <div className="itemWrapper">
+          {NEW_ITEMS.map(item => {
+            return <ItemLists key={item.id} item={item} />;
+          })}
+        </div>
+        <div className="itemWrapper">
+          {MEN_ITEMS.map(item => {
+            return <ItemLists key={item.id} item={item} />;
+          })}
+        </div>
+        <div className="itemWrapper">
+          {WOMEN_ITEMS.map(item => {
+            return <ItemLists key={item.id} item={item} />;
+          })}
+        </div>
+        <div className="itemWrapper">
+          {KIDS_ITEMS.map(item => {
+            return <ItemLists key={item.id} item={item} />;
+          })}
+        </div>
+        <div className="itemWrapper">
+          {ACC_ITEMS.map(item => {
+            return <ItemLists key={item.id} item={item} />;
+          })}
+        </div>
+      </div>
 
-          <div className="blur" />
-        </>
-      )}
+      <div className="blur" />
+      {/* </>
+      )} */}
     </div>
   );
 };
