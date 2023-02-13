@@ -7,10 +7,10 @@ export const Input = () => {
   const onChange = e => {
     setUser(e.target.value);
   };
-  const [Error, setError] = useState(true);
+  const [isValid, setIsValid] = useState(true);
 
-  const is = () => {
-    return user.length > 0 ? setError(true) : setError(false);
+  const isName = () => {
+    return user.length > 0 ? setIsValid(true) : setIsValid(false);
   };
 
   return (
@@ -23,12 +23,12 @@ export const Input = () => {
             className={Error ? 'newUserInputValid' : 'newUserInputInvalid'}
             placeholder={list.placeholder}
             onChange={onChange}
-            onKeyUp={is}
+            onKeyUp={isName}
           />
         );
       })}
       <label htmlFor="newUser" />
-      <div className={Error ? 'None' : 'warning'}>필수</div>
+      <div className={isValid ? 'none' : 'warning'}>필수</div>
     </form>
   );
 };
