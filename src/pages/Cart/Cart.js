@@ -10,6 +10,7 @@ const Cart = () => {
       .then(res => res.json())
       .then(data => setCartList(data));
   }, []);
+  const 
 
   return (
     <main className="cart">

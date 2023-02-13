@@ -46,7 +46,7 @@ export const CartList = ({ list }) => {
         </div>
       </div>
       <div className="shippingInfo">
-        <div className="shipPrice">{list.delivery}</div>
+        <div className="shipPrice">무료배송</div>
         <div className="arrivalBox">
           도착 예정일: <div className="date">{list.date}</div>{' '}
           <button className="location">지역 수정</button>
