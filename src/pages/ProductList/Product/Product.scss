@@ -1,0 +1,47 @@
+@import '../../../styles/mixin.scss';
+
+.product {
+  margin-bottom: 130px;
+
+  .productImg {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+
+  .productDesc {
+    @include flex(left, left);
+    flex-direction: column;
+    height: 100px;
+    margin-bottom: 50px;
+    gap: 10px;
+
+    .new {
+      color: #992e00;
+    }
+
+    .name {
+      font-weight: 500;
+    }
+
+    .style,
+    .color {
+      color: gray;
+    }
+
+    .reducedPriceWrapper {
+      display: flex;
+      gap: 20px;
+
+      .reducedPrice {
+        font-weight: 500;
+      }
+
+      .price {
+        text-decoration: line-through;
+        color: gray;
+      }
+    }
+  }
+}
