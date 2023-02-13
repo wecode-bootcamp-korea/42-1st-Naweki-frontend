@@ -31,10 +31,14 @@ function RecommendItem() {
 
   return (
     <div className="container">
-      <div className="title-wrapper">
-        <div className="title">You Might Also Like</div>
-        <div className="button-wrapper">
-          <button onClick={onClickLeftBtn} disabled={!checkLeftBtnActive()}>
+      <div className="titleWrapper">
+        <div className="title">Recommend Items</div>
+        <div className="buttonWrapper">
+          <button
+            className="leftButton"
+            onClick={onClickLeftBtn}
+            disabled={!checkLeftBtnActive()}
+          >
             {'<'}
           </button>
           <button onClick={onClickRightBtn} disabled={!checkRightBtnActive()}>
@@ -42,7 +46,7 @@ function RecommendItem() {
           </button>
         </div>
       </div>
-      <div className="image-wrapper">
+      <div className="imageWrapper">
         <div
           className="image-mover"
           style={{ transform: `translateX(-${showStartIdx * (100 / 9)}%)` }}

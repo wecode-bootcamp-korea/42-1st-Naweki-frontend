@@ -26,16 +26,20 @@
 .container {
   width: 100%;
   padding-top: 40px;
+
+  .titleWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 48px;
+
+    .title {
+      font-size: 25px;
+    }
+  }
 }
 
-.title-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0 48px;
-}
-
-.image-wrapper {
+.imageWrapper {
   padding: 0 48px;
   padding-top: 16px;
   overflow-x: hidden;
