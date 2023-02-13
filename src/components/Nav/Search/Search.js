@@ -6,11 +6,9 @@ const Search = ({ searchClicked }) => {
   const [keyword, setKeyword] = useState('');
 
   useEffect(() => {
-    (async () => {
-      const res = await fetch('/data/productData.json');
-      const data = await res.json();
-      setProducts(data);
-    })();
+    fetch('/data/productData.json')
+      .then(res => res.json())
+      .then(data => setProducts(data));
   }, [keyword]);
 
   const onChange = e => {
