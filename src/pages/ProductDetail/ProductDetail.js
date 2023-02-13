@@ -108,18 +108,18 @@ function ProductDetail() {
 
               <div className="sizeContainer">
                 <div className="smallSize">
-                  <div className="size">220</div>
-                  <div className="size">225</div>
-                  <div className="size">230</div>
-                  <div className="size">235</div>
-                  <div className="size">240</div>
+                  <button className="size">220</button>
+                  <button className="size">225</button>
+                  <button className="size">230</button>
+                  <button className="size">235</button>
+                  <button className="size">240</button>
                 </div>
                 <div className="bigSize">
-                  <div className="size">245</div>
-                  <div className="size">250</div>
-                  <div className="size">255</div>
-                  <div className="size">260</div>
-                  <div className="size">265</div>
+                  <button className="size">245</button>
+                  <button className="size">250</button>
+                  <button className="size">255</button>
+                  <button className="size">260</button>
+                  <button className="size">265</button>
                 </div>
               </div>
             </div>
