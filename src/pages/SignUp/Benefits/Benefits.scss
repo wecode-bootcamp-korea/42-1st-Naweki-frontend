@@ -4,9 +4,6 @@
   word-spacing: 1px;
 }
 
-.benefitBox:hover {
-  cursor: pointer;
-}
 .benefitBox {
   @include flex(start);
   flex-direction: column;
@@ -21,6 +18,9 @@
       height: 100%;
       object-fit: cover;
     }
+  }
+  &:hover {
+    cursor: pointer;
   }
   .benefitInfo {
     width: 100%;
