@@ -13,8 +13,13 @@ const Nav = () => {
 
   return (
     <nav className="nav">
-      <div className="nameWrapper">
-        <p> 님, 안녕하세요</p>
+      <div className="profileWrapper">
+        <img
+          className="profileImg"
+          alt="Profile Img"
+          src="/images/profile.png"
+        />
+        <p> 김코딩님, 안녕하세요</p>
       </div>
       <div className="bottomWrapper">
         {clicked ? (
