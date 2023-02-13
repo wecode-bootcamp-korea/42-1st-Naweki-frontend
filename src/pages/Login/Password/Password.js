@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Password.scss';
 
 const Password = () => {
+  const onChange = e => {
+    setUserPw(e.target.value);
+  };
+  const [userPw, setUserPw] = useState('');
+  const navigate = useNavigate();
+  const goToLogin = () => {
+    navigate('/login');
+  };
+
+  // const getToken = () => {
+  //   fetch('http://:3000/users/login')
+  // }
+
   return (
     <div className="password">
       <div className="passwordBox">
@@ -18,10 +32,13 @@ const Password = () => {
         <div className="userEmailContainer">
           <div className="userEmailBox">
             <span className="userEmail">wecode@naver.com</span>
-            <button className="edit">편집</button>
+            <button onClick={goToLogin} className="edit">
+              편집
+            </button>
           </div>
           <div className="passwordInputBox">
             <input
+              onChange={onChange}
               type="text"
               className="passwordInput"
               id="password"

@@ -11,7 +11,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   const sendEmail = () => {
-    fetch('http://10.58.52.165:3000/users/lookup', {
+    fetch('http://10.58.52.150:3000/users/lookup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
@@ -20,8 +20,10 @@ const Login = () => {
     })
       .then(res => res.json())
       .then(response => {
-        if (response.message === 'EAMIL_IS_VERIFIED') {
+        if (response.message === 'EMAIL_IS_VERIFIED') {
           navigate('/newuser');
+        } else if (response.message === 'DUPLICATE_EMAIL') {
+          navigate('/password');
         }
       });
   };
@@ -61,7 +63,6 @@ const Login = () => {
             <input
               required
               type="text"
-              // onClick={isValid}
               onKeyUp={isValid}
               className={error ? 'emailInputValid' : 'emailInputInvalid'}
               id="email"
@@ -73,14 +74,14 @@ const Login = () => {
           </form>
           <div className="agreementBox">
             <div className="agreement">
-              계속 진행하면 나이키의
+              계속 진행하면 나이키의{' '}
               <Link
                 to="https://agreementservice.svs.nike.com/rest/agreement?agreementType=privacyPolicy&country=KR&language=ko&requestType=redirect&uxId=4fd2d5e7db76e0f85a6bb56721bd51df"
                 className="personalInfoAgreement"
               >
-                개인 정보 처리 방침
+                개인 정보 처리 방침{' '}
               </Link>
-              및
+              및{' '}
               <Link
                 to="https://agreementservice.svs.nike.com/rest/agreement?agreementType=termsOfUse&country=KR&language=ko&requestType=redirect&uxId=4fd2d5e7db76e0f85a6bb56721bd51df"
                 className="usingAgreement"
