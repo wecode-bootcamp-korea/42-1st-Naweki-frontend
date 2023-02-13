@@ -52,7 +52,7 @@ function RecommendItem() {
       </div>
       <div className="imageWrapper">
         <div
-          className="image-mover"
+          className="imageMover"
           style={{ transform: `translateX(-${showStartIdx * (100 / 9)}%)` }}
         >
           {recommendItem.map(imgUrl => {
