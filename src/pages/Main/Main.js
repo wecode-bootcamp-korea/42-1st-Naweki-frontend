@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import RecommendItem from '../../components/RecommendItem/RecommendItem';
-// import RecommendItem from '../../components/RecommendItem/RecommendItem';
 import './Main.scss';
 
 function Main() {
