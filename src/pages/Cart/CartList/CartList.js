@@ -2,6 +2,11 @@ import { useState } from 'react';
 import './CartList.scss';
 
 export const CartList = ({ list }) => {
+  const [heart, setHeart] = useState(true);
+  const handleLike = e => {
+    setHeart(previousImg => !previousImg);
+  };
+
   return (
     <div className="cartList">
       <div className="productContainer">
@@ -33,7 +38,11 @@ export const CartList = ({ list }) => {
           </div>
           <div className="btnWrapper">
             <button className="heartBtn">
-              <img src="images/heart-regular.png" />
+              {heart ? (
+                <img src="images/heart-regular.png" onClick={handleLike} />
+              ) : (
+                <img src="images/heart-solid.png" onClick={handleLike} />
+              )}
             </button>
             <button className="trashBtn">
               <img src="images/trash-can-regular.png" />

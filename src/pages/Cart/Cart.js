@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { CartList } from './CartList/CartList';
+import { Modal } from './Modal/Modal';
 import './Cart.scss';
 
 const Cart = () => {
@@ -16,6 +17,8 @@ const Cart = () => {
     .reduce((prev, curr) => prev + curr, 0);
 
   const totalPrice = price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+  const [modal, setModal] = useState(false);
 
   return (
     <main className="cart">
@@ -61,13 +64,22 @@ const Cart = () => {
         </div>
         <div className="productPriceBox">
           <div className="productPrice">상품 금액</div>
-          <img
-            src="images/circle-question-solid.png"
-            alt="?"
-            className="questionIcon"
-          />
+          <button
+            onClick={() => {
+              setModal(true);
+            }}
+            type="button"
+            className="questionIconBtn"
+          >
+            <img
+              src="images/circle-question-solid.png"
+              alt="?"
+              className="questionIcon"
+            />
+          </button>
           <div className="productPriceNumber">{totalPrice}원</div>
         </div>
+        {modal === true ? <Modal /> : null}
         <div className="shipPriceBox">
           <div className="shipPrice">배송비</div>
           <div className="shipPriceNumber">무료</div>

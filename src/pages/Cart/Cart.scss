@@ -95,15 +95,23 @@
 
       .productPrice {
       }
-
-      .questionIcon {
-        width: 23px;
-        height: 13px;
+      .questionIconBtn {
+        @include flex();
+        width: 15px;
+        height: 15px;
         padding: 0px 5px;
-        &:hover {
-          cursor: pointer;
+        border: none;
+        background-color: transparent;
+
+        .questionIcon {
+          width: 13px;
+          height: 13px;
+          &:hover {
+            cursor: pointer;
+          }
         }
       }
+
       .productPriceNumber {
         margin-left: auto;
       }
