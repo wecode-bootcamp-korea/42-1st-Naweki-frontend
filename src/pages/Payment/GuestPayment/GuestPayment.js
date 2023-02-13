@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import GuestStart from './GuestStart/GuestStart';
-import GuestShippingOptionInput from './GuestShippingOptionInput/GuestShippingOptionInput';
-import GuestShippingOption from './GuestShippingOption/GuestShippingOption';
+import ShippingOptionInput from '../ShippingOptionInput/ShippingOptionInput';
+import ShippingOption from '../ShippingOption/ShippingOption';
 import PaymentAside from '../PaymentAside/PaymentAside';
 import PaymentSelect from '../PaymentSelect/PaymentSelect';
 import PaymentCompleted from '../PaymentCompleted/PaymentCompleted';
@@ -55,14 +55,14 @@ const GuestPayment = () => {
           <p className="paymentParagraph">결제하기</p>
           <div className="guestPaymentWrapper">
             <div>
-              <GuestShippingOptionInput
+              <ShippingOptionInput
                 userData={userData}
                 onChangeInput={onChangeInput}
                 onClickToSelect={onClickToSelect}
               />
               {isFilled ? (
                 <>
-                  <GuestShippingOption userData={userData} />
+                  <ShippingOption userData={userData} />
                   <hr />
                   <PaymentSelect onClickToComplete={onClickToComplete} />
                   {isSelected ? (

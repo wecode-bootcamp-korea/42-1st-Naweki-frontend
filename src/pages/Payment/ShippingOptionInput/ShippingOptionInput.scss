@@ -1,6 +1,6 @@
-@import '../../../../styles/mixin.scss';
+@import '../../../styles/mixin.scss';
 
-.guestShippingOptionInput {
+.shippingOptionInput {
   @include flex(flex-start, left);
   flex-direction: column;
   width: 660px;

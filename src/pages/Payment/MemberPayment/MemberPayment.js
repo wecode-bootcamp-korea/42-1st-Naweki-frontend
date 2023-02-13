@@ -1,25 +1,37 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import MemberShippingOption from './MemberShippingOption/MemberShippingOption';
+import ShippingOptionInput from '../ShippingOptionInput/ShippingOptionInput';
+import ShippingOption from '../ShippingOption/ShippingOption';
+import PaymentAside from '../PaymentAside/PaymentAside';
 import PaymentSelect from '../PaymentSelect/PaymentSelect';
 import PaymentCompleted from '../PaymentCompleted/PaymentCompleted';
-import PaymentAside from '../PaymentAside/PaymentAside';
 import './MemberPayment.scss';
 
-const MemberPayment = () => {
-  const [memberData, setMemberData] = useState([]);
-
-  useEffect(() => {
-    (async () => {
-      const res = await fetch('data/memberData.json');
-      const data = await res.json();
-      setMemberData(data);
-    })();
-  }, []);
-
+const GuestPayment = () => {
+  const [userData, setUserData] = useState({
+    first_name: '',
+    last_name: '',
+    email: '',
+    phone_number: '',
+    province: '',
+    city: '',
+    zip_code: '',
+  });
+  const [isFilled, setIsFilled] = useState(false);
   const [isSelected, setIsSelected] = useState(false);
 
+  const onChangeInput = event => {
+    const { name, value } = event.target;
+    setUserData(prev => {
+      return { ...prev, [name]: value };
+    });
+  };
+
   const navigate = useNavigate();
+
+  const onClickToSelect = e => {
+    setIsFilled(true);
+  };
 
   const onClickToComplete = e => {
     e.preventDefault();
@@ -29,17 +41,26 @@ const MemberPayment = () => {
   const onClickToMain = () => navigate('/main');
 
   return (
-    <div className="memberPayment">
+    <div className="guestPayment">
       <p className="paymentParagraph">결제하기</p>
-      <div className="memberPaymentWrapper">
+      <div className="guestPaymentWrapper">
         <div>
-          <MemberShippingOption memberData={memberData} />
-          <hr />
-          <PaymentSelect onClickToComplete={onClickToComplete} />
-          {isSelected ? (
+          <ShippingOptionInput
+            userData={userData}
+            onChangeInput={onChangeInput}
+            onClickToSelect={onClickToSelect}
+          />
+          {isFilled ? (
             <>
+              <ShippingOption userData={userData} />
               <hr />
-              <PaymentCompleted onClickToMain={onClickToMain} />
+              <PaymentSelect onClickToComplete={onClickToComplete} />
+              {isSelected ? (
+                <>
+                  <hr />
+                  <PaymentCompleted onClickToMain={onClickToMain} />
+                </>
+              ) : null}
             </>
           ) : null}
         </div>
@@ -51,4 +72,4 @@ const MemberPayment = () => {
   );
 };
 
-export default MemberPayment;
+export default GuestPayment;

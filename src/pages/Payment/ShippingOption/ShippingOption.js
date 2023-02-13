@@ -1,9 +1,9 @@
 import React from 'react';
-import './GuestShippingOption.scss';
+import './ShippingOption.scss';
 
-const GuestShippingOption = ({ userData }) => {
+const ShippingOption = ({ userData }) => {
   return (
-    <div className="guestShippingOption">
+    <div className="shippingOption">
       <div className="shippingWrapper">
         <div className="nameWrapper">
           <p>
@@ -29,4 +29,4 @@ const GuestShippingOption = ({ userData }) => {
   );
 };
 
-export default GuestShippingOption;
+export default ShippingOption;

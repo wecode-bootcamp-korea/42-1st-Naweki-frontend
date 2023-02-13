@@ -1,14 +1,10 @@
 import React from 'react';
 import { PROVINCE_DATA } from './data/provinceData';
-import './GuestShippingOptionInput.scss';
+import './ShippingOptionInput.scss';
 
-const GuestShippingOptionInput = ({
-  userData,
-  onChangeInput,
-  onClickToSelect,
-}) => {
+const ShippingOptionInput = ({ userData, onChangeInput, onClickToSelect }) => {
   return (
-    <div className="guestShippingOptionInput">
+    <div className="shippingOptionInput">
       <div className="titleWrapper">
         <p className="paymentTitle">배송 옵션</p>
         <p className="edit">편집</p>
@@ -133,4 +129,4 @@ const GuestShippingOptionInput = ({
   );
 };
 
-export default GuestShippingOptionInput;
+export default ShippingOptionInput;
