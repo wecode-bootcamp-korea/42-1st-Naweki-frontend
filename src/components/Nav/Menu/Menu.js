@@ -7,46 +7,48 @@ import './Menu.scss';
 
 const Menu = () => {
   const [isShown, setIsShown] = useState(false);
-  const [isNew, setIsNew] = useState(true);
+  const [menuId, setMenuId] = useState(0);
 
   const onMouseEnter = () => setIsShown(true);
   const onMouseLeave = () => setIsShown(false);
-  const onMouseHover = () => setIsNew(false);
+  const onMouseEnterList = id => setMenuId(id);
 
   return (
     <div className="menu">
-      <div
-        className="menuWrapper"
-        onMouseEnter={onMouseEnter}
-        onMouseLeave={onMouseLeave}
-      >
+      <div className="menuWrapper">
         {MENU_DATA.map(menu => {
           return (
-            <>
-              <ul className="menuLists" key={menu.id}>
+            <div key={menu.id}>
+              <ul className="menuLists" onMouseEnter={onMouseEnter}>
                 <Link className="toProductList" to="/product-list">
-                  <li className="menuList" onMouseHover={onMouseHover}>
+                  <li
+                    className="menuList"
+                    onMouseEnter={() => onMouseEnterList(menu.id)}
+                    id={menu.id}
+                  >
                     {menu.name}
                   </li>
                 </Link>
               </ul>
 
-              <NewMenuBox className="menubox" isShown={isShown} isNew={isNew} />
-
-              {/* {menu.id === 1 ? (
+              {menuId === 1 ? (
                 <NewMenuBox
                   className="menubox"
                   isShown={isShown}
-                  isNew={isNew}
+                  onMouseLeave={onMouseLeave}
+                  onMouseEnter={onMouseEnter}
                 />
               ) : (
-                <OtherMenuBox
-                  className="menubox"
-                  isShown={isShown}
-                  isNew={isNew}
-                />
-              )} */}
-            </>
+                (menuId === 2 || menuId === 3 || menuId === 4) && (
+                  <OtherMenuBox
+                    className="menubox"
+                    isShown={isShown}
+                    onMouseLeave={onMouseLeave}
+                    onMouseEnter={onMouseEnter}
+                  />
+                )
+              )}
+            </div>
           );
         })}
       </div>
