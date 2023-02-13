@@ -16,17 +16,20 @@ const Banner = ({ onClickFilter }) => {
           <span className="filter">필터 숨기기</span>
           <img className="bannerIcon" alt="Icon Img" src="/images/filter.png" />
         </div>
-        <div className="function" onClick={onClickUp}>
-          <span className="sort">정렬 기준: </span>
-          <img
-            className="bannerIcon"
-            alt="Icon Img"
-            src={isUpClicked === false ? '/images/down.png' : '/images/up.png'}
-          />
+        <div className="function">
+          <div className="sortWrapper" onClick={onClickUp}>
+            <span className="sort">정렬 기준: </span>
+            <img
+              className="bannerIcon"
+              alt="Icon Img"
+              src={
+                isUpClicked === false ? '/images/down.png' : '/images/up.png'
+              }
+            />
+          </div>
           {isUpClicked === true && (
             <div className="sortListWrapper">
               <ul className="sortLists">
-                <li className="sortList">추천순</li>
                 <li className="sortList">최신순</li>
                 <li className="sortList">높은 가격순</li>
                 <li className="sortList">낮은 가격순</li>

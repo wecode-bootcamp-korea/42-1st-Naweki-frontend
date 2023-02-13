@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { CATEGORY_DATA } from './data/categoryData';
 import { COLOR_DATA } from './data/colorData';
+import { GENDER_DATA } from './data/genderData';
 import './Aside.scss';
 
 const Aside = ({ isFilterClicked }) => {
@@ -46,18 +47,16 @@ const Aside = ({ isFilterClicked }) => {
             </div>
             {isGenderClicked === false && (
               <>
-                <div>
-                  <input name="men" type="checkbox" />
-                  <label htmlFor="men">남성</label>
-                </div>
-                <div>
-                  <input name="women" type="checkbox" />
-                  <label htmlFor="women">여성</label>
-                </div>
-                <div>
-                  <input name="unisex" type="checkbox" />
-                  <label htmlFor="men">유니섹스</label>
-                </div>
+                {GENDER_DATA.map(gender => (
+                  <div key={gender.id}>
+                    <input
+                      className="gender"
+                      name={gender.name}
+                      type="checkbox"
+                    />
+                    <label htmlFor={gender.name}>{gender.name}</label>
+                  </div>
+                ))}
               </>
             )}
           </div>
