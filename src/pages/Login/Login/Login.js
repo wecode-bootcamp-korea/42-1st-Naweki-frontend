@@ -73,19 +73,18 @@ const Login = () => {
           </form>
           <div className="agreementBox">
             <div className="agreement">
-              계속 진행하면 나이키의{' '}
+              계속 진행하면 나이키의
               <Link
                 to="https://agreementservice.svs.nike.com/rest/agreement?agreementType=privacyPolicy&country=KR&language=ko&requestType=redirect&uxId=4fd2d5e7db76e0f85a6bb56721bd51df"
                 className="personalInfoAgreement"
               >
                 개인 정보 처리 방침
               </Link>
-              및{' '}
+              및
               <Link
                 to="https://agreementservice.svs.nike.com/rest/agreement?agreementType=termsOfUse&country=KR&language=ko&requestType=redirect&uxId=4fd2d5e7db76e0f85a6bb56721bd51df"
                 className="usingAgreement"
               >
-                {' '}
                 이용약관
               </Link>
               에 동의하게 됩니다.

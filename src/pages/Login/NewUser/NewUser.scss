@@ -62,218 +62,151 @@
       }
     }
 
-    .newUserInfoContainer {
+    .signupContainer {
       width: 100%;
       max-width: 460px;
 
-      .newUserInputBox {
+      .nameBox {
         display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        width: auto;
-        height: 380px;
-        padding-top: 5px;
+        justify-content: space-between;
+        max-width: 460px;
+      }
 
-        .newUserNameBox {
-          display: flex;
-          justify-content: space-between;
-          width: 99%;
+      .newUserPwdBox {
+        padding: 10px 0px;
 
-          .newUserNameInputValid {
-            width: 37%;
-            height: 50px;
-            padding-right: 40px;
-            padding-left: 10px;
-            border-width: 1px;
-            border-radius: 8px;
-            font-size: medium;
-            &:focus {
-              outline: none;
-            }
-          }
-
-          .newUserNameInputInvalid {
-            width: 37%;
-            height: 50px;
-            padding-right: 40px;
-            padding-left: 10px;
-            border-width: 1px;
-            border-radius: 8px;
-            border-color: red;
-            font-size: medium;
-            &:focus {
-              outline: none;
-            }
-          }
-
-          .newUserSurnameInputValid {
-            width: 37%;
-            height: 50px;
-            margin-left: auto;
-            padding-right: 40px;
-            padding-left: 10px;
-            border-width: 1px;
-            border-radius: 8px;
-            font-size: medium;
-            &:focus {
-              outline: none;
-            }
-          }
-
-          .newUserSurnameInputInvalid {
-            width: 37%;
-            height: 50px;
-            margin-left: auto;
-            padding-right: 40px;
-            padding-left: 10px;
-            border-width: 1px;
-            border-radius: 8px;
-            border-color: red;
-            font-size: medium;
-            &:focus {
-              outline: none;
-            }
-          }
-        }
-
-        .newUserPwdBox {
-          .newUserPwdInput {
-            width: 88%;
-            height: 50px;
-            padding: 1px 2px;
-            padding-right: 40px;
-            padding-left: 10px;
-            border-width: 1px;
-            border-radius: 8px;
-            background-image: url(/assets/eye-regular.png);
-            background-repeat: no-repeat;
-            background-position: 98%;
-            background-size: 20px;
-            font-size: medium;
-
-            &:focus {
-              outline: none;
-            }
-          }
-
-          .pwdRules {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            height: 50px;
-            margin: 10px 0px 0px 10px;
-            color: gray;
-            font-size: small;
-          }
-        }
-
-        .defaultShopping {
-          width: 100%;
-          select {
-            width: 88%;
-            height: 50px;
-            padding: 1px 2px;
-            padding-right: 40px;
-            padding-left: 10px;
-            border-width: 1px;
-            border-radius: 8px;
-            background-image: url(/assets/angle-down-solid.png);
-            background-repeat: no-repeat;
-            background-position: 98%;
-            background-size: 20px;
-            color: gray;
-            font-size: medium;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            &:focus {
-              outline: none;
-            }
-          }
-        }
-
-        .newUserBirthInput {
-          width: 88%;
-          height: 50px;
-          padding: 1px 2px;
-          padding-right: 40px;
-          padding-left: 10px;
-          border-width: 1px;
-          border-radius: 8px;
-          background-image: url(/assets/calendar-regular.png);
-          background-repeat: no-repeat;
-          background-position: 98%;
-          background-size: 20px;
-          color: gray;
-          font-size: medium;
-
-          &::-webkit-inner-spin-button,
-          &::-webkit-calendar-picker-indicator {
-            display: none;
-          }
-          &:focus {
-            outline: none;
-          }
-          &::before {
-            content: attr(placeholder);
+        .pwdInputBox {
+          .pwdInput {
             width: 100%;
-          }
-          &:focus::before,
-          &:valid::before {
-            display: none;
+            height: 50px;
+            padding-right: 40px;
+            padding-left: 10px;
+            border-width: 1px;
+            border-radius: 8px;
+            font-size: medium;
+            &:focus {
+              outline: none;
+            }
           }
         }
 
-        // .newUserBirthInput::placeholder {
-        //   font-size: medium;
-        // }
-        // TODO: 적용이 안되는 이유
-
-        .getReward {
+        .pwdRules {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          height: 50px;
           margin: 10px 0px 0px 10px;
           color: gray;
           font-size: small;
         }
       }
 
-      .agreeCheckBox {
-        display: flex;
-        align-items: center;
-        padding-top: 20px;
-        font-size: medium;
-
-        .agreeCheck {
-          width: 19px;
-          height: 19px;
-          margin: 0px 15px 0px 0px;
-          cursor: pointer;
-          accent-color: black;
-        }
-
-        .agreeGuide {
-          .personalInfoAgreement:visited,
-          .usingAgreement:visited {
-            color: black;
+      .defaultShopping {
+        padding: 10px 0px;
+        select {
+          width: 100%;
+          height: 50px;
+          padding: 1px 2px;
+          padding-right: 40px;
+          padding-left: 10px;
+          border-width: 1px;
+          border-radius: 8px;
+          background-image: url(/assets/angle-down-solid.png);
+          background-repeat: no-repeat;
+          background-position: 98%;
+          background-size: 20px;
+          color: gray;
+          font-size: medium;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          &:focus {
+            outline: none;
           }
         }
       }
-      .createUserBtnBox {
-        display: flex;
-        width: 100%;
-        padding: 30px 0px;
 
-        .createUserBtn {
-          margin-left: auto;
-          padding: 15px 20px;
-          border: none;
-          border-radius: 30px;
-          background-color: black;
-          color: white;
-          font-size: medium;
-          &:hover {
-            background-color: gray;
-            cursor: pointer;
-          }
+      .newUserBirthInput {
+        width: 100%;
+        height: 50px;
+        padding: 1px 2px;
+        padding-right: 40px;
+        padding-left: 10px;
+        border-width: 1px;
+        border-radius: 8px;
+        background-image: url(/assets/calendar-regular.png);
+        background-repeat: no-repeat;
+        background-position: 98%;
+        background-size: 20px;
+        color: gray;
+        font-size: medium;
+
+        &::-webkit-inner-spin-button,
+        &::-webkit-calendar-picker-indicator {
+          display: none;
+        }
+        &:focus {
+          outline: none;
+        }
+        &::before {
+          content: attr(placeholder);
+          width: 100%;
+        }
+        &:focus::before,
+        &:valid::before {
+          display: none;
+        }
+      }
+
+      // .newUserBirthInput::placeholder {
+      //   font-size: medium;
+      // }
+      // TODO: 적용이 안되는 이유
+
+      .getReward {
+        margin: 10px 0px 0px 10px;
+        color: gray;
+        font-size: small;
+      }
+    }
+
+    .agreeCheckBox {
+      display: flex;
+      align-items: center;
+      padding-top: 20px;
+      font-size: medium;
+
+      .agreeCheck {
+        width: 19px;
+        height: 19px;
+        margin: 0px 15px 0px 0px;
+        cursor: pointer;
+        accent-color: black;
+      }
+
+      .agreeGuide {
+        .personalInfoAgreement:visited,
+        .usingAgreement:visited {
+          color: black;
+        }
+      }
+    }
+    .createUserBtnBox {
+      display: flex;
+      width: 100%;
+      padding: 30px 0px;
+
+      .createUserBtn {
+        margin-left: auto;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 30px;
+        background-color: black;
+        color: white;
+        font-size: medium;
+        &:hover {
+          background-color: gray;
+          cursor: pointer;
         }
       }
     }
