@@ -1,28 +1,3 @@
-// .itemBox {
-//   font-size: 14px;
-
-//   .arrowBtn {
-//     background-color: gray;
-//   }
-
-//   .shoesImg {
-//     width: 500px;
-//     height: 500px;
-//   }
-
-//   .shoesInfo {
-//     display: flex;
-//     justify-content: space-between;
-//     width: 31%;
-//     margin-top: 13px;
-//   }
-
-//   .category {
-//     margin-top: 8px;
-//     color: rgb(105, 104, 104);
-//   }
-// }
-
 .container {
   width: 100%;
   padding-top: 40px;
@@ -36,41 +11,55 @@
     .title {
       font-size: 25px;
     }
-  }
-}
 
-.imageWrapper {
-  padding: 0 48px;
-  padding-top: 16px;
-  overflow-x: hidden;
+    .buttonWrapper {
+      margin-right: 100px;
+      .leftBtn {
+        width: 25px;
+        height: 25px;
+        margin-right: 25px;
+      }
 
-  .shoesImg {
-    width: 500px;
-    height: 500px;
-  }
-
-  .shoesInfo {
-    display: flex;
-    justify-content: space-between;
-    width: 31%;
-    margin-top: 13px;
+      .rightBtn {
+        width: 25px;
+        height: 25px;
+      }
+    }
   }
 
-  .category {
-    margin-top: 8px;
-    color: rgb(105, 104, 104);
+  .imageWrapper {
+    padding: 0 48px;
+    padding-top: 16px;
+    overflow-x: hidden;
+
+    .image-mover {
+      display: flex;
+      width: 300%;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .image {
+      flex: 1;
+      padding-right: 16px;
+
+      .shoesImg {
+        width: 500px;
+        height: 500px;
+      }
+
+      .shoesInfo {
+        display: flex;
+        justify-content: space-between;
+        width: 500px;
+        margin-top: 13px;
+      }
+
+      .category {
+        margin-top: 8px;
+        color: rgb(105, 104, 104);
+      }
+    }
   }
-}
-
-.image-mover {
-  display: flex;
-  width: 300%;
-  transition: transform 0.5s ease-in-out;
-}
-
-.image {
-  flex: 1;
-  padding-right: 16px;
 }
 
 .image:last-child {
