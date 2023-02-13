@@ -42,7 +42,7 @@ const Search = ({ searchClicked }) => {
                   src={product.img}
                 />
                 <p className="productName">{product.name}</p>
-                <p className="productGender">{product.gender} 신발</p>
+                <p className="productGender">{product.style}</p>
                 <p className="productPrice">{product.price}</p>
               </div>
             ))}
