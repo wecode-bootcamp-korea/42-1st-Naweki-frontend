@@ -10,7 +10,12 @@ const Cart = () => {
       .then(res => res.json())
       .then(data => setCartList(data));
   }, []);
-  const 
+
+  const price = cartList
+    .map(product => product.reducedPrice)
+    .reduce((prev, curr) => prev + curr, 0);
+
+  const totalPrice = price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
   return (
     <main className="cart">
@@ -61,7 +66,7 @@ const Cart = () => {
             alt="?"
             className="questionIcon"
           />
-          <div className="productPriceNumber">479,400원</div>
+          <div className="productPriceNumber">{totalPrice}원</div>
         </div>
         <div className="shipPriceBox">
           <div className="shipPrice">배송비</div>
@@ -69,7 +74,7 @@ const Cart = () => {
         </div>
         <div className="totalPriceBox">
           <div className="totalPrice">총 결제 금액</div>
-          <div className="totalPriceNumber">479,400원</div>
+          <div className="totalPriceNumber">{totalPrice}원</div>
         </div>
         <div className="btnWrapper">
           <button className="paymentBtn">주문결제</button>
