@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import './RecommendItem.scss';
 
 function RecommendItem() {
@@ -17,16 +17,22 @@ function RecommendItem() {
     }
   };
 
-  const onClickRightBtn = () => {
+  const onClickRightBtn = useCallback(() => {
     if (checkRightBtnActive()) {
-      setShowStartIdx(showStartIdx + 1);
+      setShowStartIdx(beforeShowStartIdx => beforeShowStartIdx + 1);
     }
-  };
+  }, []);
 
   useEffect(() => {
     fetch('/data/shoesData.json')
       .then(res => res.json())
       .then(data => setRecommendItem(data));
+  }, []);
+
+  useEffect(() => {
+    setInterval(() => {
+      onClickRightBtn();
+    }, 1000);
   }, []);
 
   return (
