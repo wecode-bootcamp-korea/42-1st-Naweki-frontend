@@ -1,1 +1,31 @@
+@import '../../styles/mixin.scss';
 
+.nav {
+  display: flex;
+  flex-direction: column;
+
+  .profileWrapper {
+    @include flex(right, center);
+    text-align: right;
+    width: 100vw;
+    padding: 10px 50px 10px 0px;
+    gap: 10px;
+    background-color: #f5f5f5;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .bottomWrapper {
+    @include flex(space-between, center);
+    padding: 0px 50px;
+    height: 80px;
+    margin-bottom: 90px;
+
+    .logoWrapper {
+      .logo {
+        width: 60px;
+        cursor: pointer;
+      }
+    }
+  }
+}

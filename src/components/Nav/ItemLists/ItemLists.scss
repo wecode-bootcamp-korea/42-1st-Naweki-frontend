@@ -1,0 +1,15 @@
+@import '../../../styles/mixin.scss';
+
+.itemLists {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .itemList {
+    cursor: pointer;
+
+    &[id='0'] {
+      font-weight: 400;
+    }
+  }
+}
