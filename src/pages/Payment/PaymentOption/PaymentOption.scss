@@ -1,0 +1,14 @@
+@import '../../../styles/mixin.scss';
+
+.paymentOption {
+  .shippingWrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+
+    .nameWrapper {
+      @include flex(space-between, center);
+    }
+  }
+}
