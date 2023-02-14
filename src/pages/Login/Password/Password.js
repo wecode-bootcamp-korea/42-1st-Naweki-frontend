@@ -5,16 +5,27 @@ import './Password.scss';
 const Password = () => {
   const onChange = e => {
     setUserPw(e.target.value);
+    console.log(userPw);
   };
   const [userPw, setUserPw] = useState('');
+
   const navigate = useNavigate();
   const goToLogin = () => {
     navigate('/login');
   };
 
   // const getToken = () => {
-  //   fetch('http://:3000/users/login')
-  // }
+  //   fetch('http://10.58.52.119:3000/users/login', {
+  //     method: 'POST',
+  //     mode: 'cors',
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //     },
+  //     body: JSON.stringify({ email: userEmail, password: userPw }),
+  //   })
+  //     .then(res => res.json())
+  //     .then(data => console.log(data));
+  // };
 
   return (
     <div className="password">

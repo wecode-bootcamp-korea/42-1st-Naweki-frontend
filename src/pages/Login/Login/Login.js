@@ -10,7 +10,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   const sendEmail = () => {
-    fetch('http://10.58.52.150:3000/users/lookup', {
+    fetch('http://10.58.52.119:3000/users/lookup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
