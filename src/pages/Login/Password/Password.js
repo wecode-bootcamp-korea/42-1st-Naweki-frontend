@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './Password.scss';
 
 const Password = () => {
   const onChange = e => {
     setUserPw(e.target.value);
-    console.log(userPw);
   };
   const [userPw, setUserPw] = useState('');
 
@@ -14,18 +13,36 @@ const Password = () => {
     navigate('/login');
   };
 
-  // const getToken = () => {
-  //   fetch('http://10.58.52.119:3000/users/login', {
-  //     method: 'POST',
-  //     mode: 'cors',
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //     },
-  //     body: JSON.stringify({ email: userEmail, password: userPw }),
-  //   })
-  //     .then(res => res.json())
-  //     .then(data => console.log(data));
-  // };
+  const location = useLocation();
+  const userEmail = location?.state?.title;
+
+  const getToken = () => {
+    fetch('http://10.58.52.119:3000/users/login', {
+      method: 'POST',
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email: userEmail, password: userPw }),
+    })
+      .then(res => {
+        if (res.ok === true) {
+          return res.json();
+        } else {
+          throw new Error('에러 발생!');
+        }
+      })
+      .catch(error => console.log(error))
+      .then(data => {
+        if (data.JWT) {
+          localStorage.setItem('USERTOKEN', data.JWT);
+          alert('로그인 성공! :)');
+          navigate('/main');
+        } else {
+          alert('로그인 실패 :(');
+        }
+      });
+  };
 
   return (
     <div className="password">
@@ -42,7 +59,7 @@ const Password = () => {
         </header>
         <div className="userEmailContainer">
           <div className="userEmailBox">
-            <span className="userEmail">wecode@naver.com</span>
+            <span className="userEmail">{userEmail}</span>
             <button onClick={goToLogin} className="edit">
               편집
             </button>
@@ -61,7 +78,9 @@ const Password = () => {
             <button className="findPwd">비밀번호 찾기</button>
           </div>
           <div className="loginBtnBox">
-            <button className="loginBtn">로그인</button>
+            <button onClick={getToken} className="loginBtn">
+              로그인
+            </button>
           </div>
         </div>
       </div>

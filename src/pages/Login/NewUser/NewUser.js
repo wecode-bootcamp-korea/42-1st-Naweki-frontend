@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation, Route } from 'react-router-dom';
 import { Input } from '../Input/Input.js';
 import './NewUser.scss';
 
@@ -8,6 +8,9 @@ const NewUser = () => {
   const goToLogin = () => {
     navigate('/login');
   };
+
+  const location = useLocation();
+  const userEmail = location?.state?.title;
 
   return (
     <div className="newUser">
@@ -24,7 +27,7 @@ const NewUser = () => {
           <div className="codeSent">인증코드를 전송했습니다.</div>
         </header>
         <div className="newUserEmailBox">
-          <span className="newUserEmail">wecode@naver.com</span>
+          <span className="newUserEmail">{userEmail}</span>
           <button onClick={goToLogin} className="edit">
             편집
           </button>

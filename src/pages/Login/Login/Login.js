@@ -20,9 +20,9 @@ const Login = () => {
       .then(res => res.json())
       .then(response => {
         if (response.message === 'EMAIL_IS_VERIFIED') {
-          navigate('/newuser');
+          navigate('/newuser', { state: { title: userEmail } });
         } else if (response.message === 'DUPLICATE_EMAIL') {
-          navigate('/password');
+          navigate('/password', { state: { title: userEmail } });
         }
       });
   };
