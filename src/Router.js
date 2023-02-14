@@ -7,6 +7,9 @@ import ProductList from './pages/ProductList/ProductList';
 import ProductDetail from './pages/ProductDetail/ProductDetail';
 import Cart from './pages/Cart/Cart';
 import Payment from './pages/Payment/Payment';
+import Nav from './components/Nav/Nav';
+import Footer from './components/Footer/Footer';
+import RecommendItem from './components/RecommendItem/RecommendItem';
 import Login from './pages/Login/Login/Login';
 import NewUser from './pages/Login/NewUser/NewUser';
 import Password from './pages/Login/Password/Password';
@@ -23,6 +26,7 @@ const Router = () => {
           <Route path="/cart" element={<Cart />} />
         </Route>
         <Route path="/payment" element={<Payment />} />
+        <Route path="/recommend-item" element={<RecommendItem />} />
         {/* TODO: 추후에 추가예정; Nav 변경, Footer는 포함 */}
         <Route path="/login" element={<Login />} />
         <Route path="/newuser" element={<NewUser />} />

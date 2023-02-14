@@ -1,0 +1,271 @@
+@import '../../styles/mixin';
+$cursor: pointer;
+.main {
+  .topVideo {
+    width: 85%;
+    height: 50%;
+    margin-left: 8%;
+  }
+
+  .topText {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .video {
+    width: 1000px;
+  }
+
+  .topTextDetailFirst {
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .topTextDetailSecond {
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .topTextDetailThird {
+    margin-bottom: 35px;
+    text-align: center;
+  }
+
+  .topBtnContainer {
+    @include flex(center, center);
+
+    .topDetailBtn {
+      width: 90px;
+      height: 35px;
+      border-radius: 50px;
+      background-color: black;
+      color: white;
+      cursor: pointer;
+    }
+
+    .topBuyBtn {
+      width: 70px;
+      height: 35px;
+      margin-left: 10px;
+      border-radius: 50px;
+      background-color: black;
+      color: white;
+      cursor: pointer;
+    }
+  }
+
+  .leggingsImg {
+    display: block;
+    width: 85%;
+    height: 30%;
+    margin: auto;
+    margin-top: 80px;
+  }
+
+  .leggingsText {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .leggingsTextDetail {
+    margin-bottom: 35px;
+    text-align: center;
+  }
+
+  .leggingsBuyBtn {
+    width: 70px;
+    height: 35px;
+    margin-left: 48%;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+  }
+
+  .infiniteVideo {
+    display: block;
+    width: 85%;
+    height: 30%;
+    margin: auto;
+    margin-top: 80px;
+  }
+
+  .experiment {
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .infiniteText {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .infiniteTextDetailFirst {
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .infiniteTextDetailSecond {
+    margin-bottom: 35px;
+    text-align: center;
+  }
+
+  .infiniteBuyBtn {
+    width: 70px;
+    height: 35px;
+    margin-left: 48%;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+  }
+
+  .methconImg {
+    margin-top: 80px;
+    text-align: center;
+  }
+
+  .methconImgLeft {
+    width: 43.6%;
+  }
+
+  .methconImgRight {
+    width: 40.2%;
+  }
+
+  .methconText {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .methconTextDetailFirst {
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .methconTextDetailSecond {
+    margin-bottom: 35px;
+    text-align: center;
+  }
+
+  .methconBuyBtn {
+    width: 70px;
+    height: 35px;
+    margin-left: 48%;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+  }
+
+  .danParis {
+    width: 85%;
+    margin-top: 80px;
+    margin-left: 8%;
+  }
+
+  .danText {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .danTextDetail {
+    margin-bottom: 35px;
+    text-align: center;
+  }
+
+  .danParisBuyBtn {
+    width: 70px;
+    height: 35px;
+    margin-left: 48%;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+  }
+
+  .trendingText {
+    margin-top: 80px;
+    margin-bottom: 20px;
+    margin-left: 8%;
+    font-size: 25px;
+  }
+
+  .trendingImgContainer {
+    @include flex(center, center);
+    position: relative;
+
+    .trendingImgLeft {
+      width: 44.5%;
+    }
+
+    .trendingBuyBtnLeft {
+      position: absolute;
+      width: 70px;
+      height: 35px;
+      margin-top: 800px;
+      margin-right: 1200px;
+      border-radius: 50px;
+      border-color: white;
+      background-color: white;
+      color: rgb(96, 96, 96);
+      cursor: pointer;
+    }
+
+    .comfortTop {
+      position: absolute;
+      margin-top: 710px;
+      margin-right: 1205px;
+      color: white;
+    }
+
+    .trendingBuyBtnRight {
+      position: absolute;
+      width: 70px;
+      height: 35px;
+      margin-top: 800px;
+      margin-left: 225px;
+      border-radius: 50px;
+      border-color: white;
+      background-color: white;
+      color: rgb(96, 96, 96);
+      cursor: pointer;
+    }
+
+    .blazer {
+      position: absolute;
+      margin-top: 710px;
+      margin-left: 220px;
+      color: white;
+    }
+
+    .trendingImgRight {
+      width: 39.7%;
+    }
+  }
+
+  .bottomCategory {
+    @include flex(center, center);
+
+    .categoryName {
+      margin-right: 100px;
+      float: left;
+      font-weight: bold;
+    }
+  }
+}

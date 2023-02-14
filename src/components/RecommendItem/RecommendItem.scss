@@ -1,0 +1,71 @@
+.container {
+  width: 100%;
+  padding-top: 40px;
+
+  .titleWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 48px;
+
+    .title {
+      font-size: 25px;
+    }
+
+    .buttonWrapper {
+      margin-right: 100px;
+      .leftBtn {
+        width: 25px;
+        height: 25px;
+        margin-right: 25px;
+      }
+
+      .rightBtn {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+
+  .imageWrapper {
+    padding: 0 48px;
+    padding-top: 16px;
+    overflow-x: hidden;
+
+    .imageMover {
+      display: flex;
+      width: 300%;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .image {
+      flex: 1;
+      padding-right: 16px;
+
+      .shoesImg {
+        width: 500px;
+        height: 500px;
+      }
+
+      .shoesInfo {
+        display: flex;
+        justify-content: space-between;
+        width: 500px;
+        margin-top: 13px;
+      }
+
+      .category {
+        margin-top: 8px;
+        color: rgb(105, 104, 104);
+      }
+    }
+  }
+}
+
+.image:last-child {
+  padding-right: 0;
+}
+
+.image > img {
+  width: 100%;
+}
