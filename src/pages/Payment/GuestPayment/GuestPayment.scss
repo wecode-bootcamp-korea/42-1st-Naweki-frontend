@@ -14,4 +14,10 @@
     width: 100vw;
     gap: 50px;
   }
+
+  .disabledTitle {
+    @include paymentTitle;
+    padding: 20px;
+    color: #757575;
+  }
 }

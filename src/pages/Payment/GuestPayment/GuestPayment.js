@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import GuestStart from './GuestStart/GuestStart';
 import ShippingOptionInput from '../ShippingOptionInput/ShippingOptionInput';
 import ShippingOption from '../ShippingOption/ShippingOption';
 import PaymentAside from '../PaymentAside/PaymentAside';
 import PaymentSelect from '../PaymentSelect/PaymentSelect';
+import PaymentSelected from '../PaymentSelected/PaymentSelected';
 import PaymentCompleted from '../PaymentCompleted/PaymentCompleted';
+import Disabled from '../Disabled/Disabled';
 import './GuestPayment.scss';
 
 const GuestPayment = () => {
@@ -21,6 +22,7 @@ const GuestPayment = () => {
   });
   const [isFilled, setIsFilled] = useState(false);
   const [isSelected, setIsSelected] = useState(false);
+  const [selectedRadio, setIsSelectedRadio] = useState('');
 
   const onClickToPayment = () => {
     setToShippingOption(true);
@@ -33,8 +35,6 @@ const GuestPayment = () => {
     });
   };
 
-  const navigate = useNavigate();
-
   const onClickToSelect = e => {
     setIsFilled(true);
   };
@@ -44,7 +44,10 @@ const GuestPayment = () => {
     setIsSelected(true);
   };
 
-  const onClickToMain = () => navigate('/main');
+  const onChangeSelectedRadio = e => {
+    const { value } = e.target;
+    setIsSelectedRadio(value);
+  };
 
   return (
     <div className="guestPayment">
@@ -52,27 +55,42 @@ const GuestPayment = () => {
         <GuestStart onClickToPayment={onClickToPayment} />
       ) : (
         <>
-          <p className="paymentParagraph">결제하기</p>
+          <div className="paymentParagraph">결제하기</div>
           <div className="guestPaymentWrapper">
             <div>
-              <ShippingOptionInput
-                userData={userData}
-                onChangeInput={onChangeInput}
-                onClickToSelect={onClickToSelect}
-              />
-              {isFilled ? (
+              {isFilled === false ? (
+                <>
+                  <ShippingOptionInput
+                    userData={userData}
+                    onChangeInput={onChangeInput}
+                    onClickToSelect={onClickToSelect}
+                  />
+                  <hr />
+                  <Disabled />
+                </>
+              ) : (
                 <>
                   <ShippingOption userData={userData} />
                   <hr />
-                  <PaymentSelect onClickToComplete={onClickToComplete} />
-                  {isSelected ? (
+                  {isSelected === false ? (
                     <>
+                      <PaymentSelect
+                        onClickToComplete={onClickToComplete}
+                        selectedRadio={selectedRadio}
+                        onChangeSelectedRadio={onChangeSelectedRadio}
+                      />
                       <hr />
-                      <PaymentCompleted onClickToMain={onClickToMain} />
+                      <div className="disabledTitle">주문 완료</div>
                     </>
-                  ) : null}
+                  ) : (
+                    <>
+                      <PaymentSelected selectedRadio={selectedRadio} />
+                      <hr />
+                      <PaymentCompleted />
+                    </>
+                  )}
                 </>
-              ) : null}
+              )}
             </div>
             <div>
               <PaymentAside />

@@ -5,9 +5,10 @@ import ShippingOption from '../ShippingOption/ShippingOption';
 import PaymentAside from '../PaymentAside/PaymentAside';
 import PaymentSelect from '../PaymentSelect/PaymentSelect';
 import PaymentCompleted from '../PaymentCompleted/PaymentCompleted';
+import Disabled from '../Disabled/Disabled';
 import './MemberPayment.scss';
 
-const GuestPayment = () => {
+const MemberPayment = () => {
   const [userData, setUserData] = useState({
     first_name: '',
     last_name: '',
@@ -27,8 +28,6 @@ const GuestPayment = () => {
     });
   };
 
-  const navigate = useNavigate();
-
   const onClickToSelect = e => {
     setIsFilled(true);
   };
@@ -38,12 +37,10 @@ const GuestPayment = () => {
     setIsSelected(true);
   };
 
-  const onClickToMain = () => navigate('/main');
-
   return (
-    <div className="guestPayment">
+    <div className="memberPayment">
       <p className="paymentParagraph">결제하기</p>
-      <div className="guestPaymentWrapper">
+      <div className="memberPaymentWrapper">
         <div>
           <ShippingOptionInput
             userData={userData}
@@ -55,14 +52,19 @@ const GuestPayment = () => {
               <ShippingOption userData={userData} />
               <hr />
               <PaymentSelect onClickToComplete={onClickToComplete} />
-              {isSelected ? (
+              {isSelected && (
                 <>
                   <hr />
-                  <PaymentCompleted onClickToMain={onClickToMain} />
+                  <PaymentCompleted />
                 </>
-              ) : null}
+              )}
             </>
-          ) : null}
+          ) : (
+            <>
+              <hr />
+              <Disabled />
+            </>
+          )}
         </div>
         <div>
           <PaymentAside />
@@ -72,4 +74,4 @@ const GuestPayment = () => {
   );
 };
 
-export default GuestPayment;
+export default MemberPayment;

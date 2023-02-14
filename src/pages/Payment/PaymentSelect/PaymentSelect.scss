@@ -25,7 +25,10 @@
   }
 
   .paymentOptionForm {
+    display: flex;
+    flex-direction: column;
     padding-left: 10px;
+    gap: 10px;
 
     .paymentOption {
       margin-right: 10px;

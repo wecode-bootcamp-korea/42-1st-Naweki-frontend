@@ -1,6 +1,8 @@
 @import '../../styles/mixin.scss';
 
 .payment {
+  padding-top: 300px;
+
   .paymentParagraph {
     @include paymentTitle;
     padding-bottom: 50px;

@@ -1,10 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './PaymentCompleted.scss';
 
-const PaymentCompleted = ({ onClickToMain }) => {
+const PaymentCompleted = () => {
+  const navigate = useNavigate();
+
+  const onClickToMain = () => navigate('/main');
+
   return (
     <div className="paymentCompleted">
-      <p className="paymentTitle">주문 완료</p>
+      <div className="paymentTitle">주문 완료</div>
       <form className="termsForm">
         <input className="termsInput" type="checkbox" />
         <label htmlFor="termsInput">
