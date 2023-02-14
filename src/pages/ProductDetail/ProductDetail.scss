@@ -14,10 +14,14 @@
 }
 
 .modal {
-  .modalClose {
-    position: absolute;
-    top: 40px;
-    right: 40px;
+  .modalBody {
+    @include flex() .location {
+    }
+    .modalClose {
+      position: absolute;
+      top: 40px;
+      right: 40px;
+    }
   }
 }
 
@@ -76,233 +80,229 @@
   .productInfoContainer {
     width: 100%;
 
-    .productInfo {
-      .productName {
-        width: 100%;
-        margin-bottom: 10px;
-        font-size: 27px;
-      }
-
-      .productCategory {
-        margin-bottom: 20px;
-        font-size: 14px;
-      }
-      .priceContainer {
-        display: flex;
-        justify-content: space-between;
-        width: 25%;
-
-        .productPrice {
-          font-size: 14px;
+    .productInfoContainer {
+      .productInfo {
+        .productName {
+          width: 100%;
+          margin-bottom: 10px;
+          font-size: 27px;
         }
 
-        .originalPrice {
-          color: rgba(100, 99, 99, 0.864);
-          font-size: 14px;
-          text-decoration: line-through;
-        }
-      }
-    }
-
-    .otherColorContainer {
-      margin-top: 3%;
-
-      .otherColorBlack {
-        width: 12%;
-        margin-right: 10px;
-        padding-top: 11px;
-        padding-bottom: 11px;
-        border: 1px solid rgba(0, 0, 0, 0.322);
-        border-radius: 25px;
-      }
-
-      .otherColorPink {
-        width: 12%;
-        margin-right: 10px;
-        border: 1px solid rgba(0, 0, 0, 0.322);
-        border-radius: 25px;
-      }
-
-      .otherColorBlue {
-        width: 12%;
-        padding-top: 12px;
-        padding-bottom: 12px;
-        border: 1px solid rgba(0, 0, 0, 0.322);
-        border-radius: 25px;
-      }
-    }
-
-    .sizeInfo {
-      width: 60%;
-      margin-top: 5%;
-
-      .sizeHeader {
-        display: flex;
-        justify-content: space-between;
-
-        .sizeChoice {
+        .productCategory {
+          margin-bottom: 20px;
           font-size: 14px;
         }
+        .priceContainer {
+          display: flex;
+          justify-content: space-between;
+          width: 25%;
 
-        .sizeGuide {
-          color: rgba(100, 99, 99, 0.864);
-          font-size: 14px;
+          .productPrice {
+            font-size: 14px;
+          }
+
+          .originalPrice {
+            color: rgba(100, 99, 99, 0.864);
+            font-size: 14px;
+            text-decoration: line-through;
+          }
         }
       }
 
-      .sizeContainer {
+      .otherColorContainer {
+        margin-top: 3%;
+
+        .otherColorBlack {
+          width: 12%;
+          margin-right: 10px;
+          padding-top: 11px;
+          padding-bottom: 11px;
+          border: 1px solid rgba(0, 0, 0, 0.322);
+          border-radius: 25px;
+        }
+
+        .otherColorPink {
+          width: 12%;
+          margin-right: 10px;
+          border: 1px solid rgba(0, 0, 0, 0.322);
+          border-radius: 25px;
+        }
+
+        .otherColorBlue {
+          width: 12%;
+          padding-top: 12px;
+          padding-bottom: 12px;
+          border: 1px solid rgba(0, 0, 0, 0.322);
+          border-radius: 25px;
+        }
+      }
+
+      .sizeInfo {
+        width: 60%;
+        margin-top: 5%;
+
+        .sizeHeader {
+          display: flex;
+          justify-content: space-between;
+
+          .sizeChoice {
+            font-size: 14px;
+          }
+
+          .sizeGuide {
+            color: rgba(100, 99, 99, 0.864);
+            font-size: 14px;
+          }
+        }
+
+        .sizeContainer {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          width: 100%;
+          margin-top: 3%;
+          gap: 3%;
+
+          .smallSize {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2%;
+
+            .size {
+              width: 18.5%;
+              padding-top: 4.5%;
+              padding-bottom: 4.5%;
+              border: 1px solid rgba(0, 0, 0, 0.182);
+              border-radius: 8px;
+              background-color: white;
+              color: rgb(59, 58, 58);
+              font-size: 14px;
+              text-align: center;
+            }
+          }
+
+          .bigSize {
+            display: flex;
+            justify-content: space-between;
+
+            .size {
+              width: 18.5%;
+              padding-top: 4.5%;
+              padding-bottom: 4.5%;
+              border: 1px solid rgba(0, 0, 0, 0.182);
+              border-radius: 8px;
+              background-color: white;
+              color: rgb(59, 58, 58);
+              font-size: 14px;
+              text-align: center;
+            }
+          }
+        }
+      }
+
+      .btnContainer {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 100%;
-        margin-top: 3%;
-        gap: 3%;
+        width: 60%;
+        margin-top: 5%;
 
-        .smallSize {
-          display: flex;
-          justify-content: space-between;
-          margin-bottom: 2%;
-
-          .size {
-            width: 18.5%;
-            padding-top: 4.5%;
-            padding-bottom: 4.5%;
-            border: 1px solid rgba(0, 0, 0, 0.182);
-            border-radius: 8px;
-            background-color: white;
-            color: rgb(59, 58, 58);
-            font-size: 14px;
-            text-align: center;
-          }
+        .cartBtn {
+          margin-bottom: 3%;
+          padding-top: 5.5%;
+          padding-bottom: 5.5%;
+          border-radius: 50px;
+          background-color: black;
+          color: white;
         }
 
-        .bigSize {
-          display: flex;
-          justify-content: space-between;
+        .wishListBtn {
+          padding-top: 5.5%;
+          padding-bottom: 5.5%;
+          border: 1px solid rgba(0, 0, 0, 0.322);
+          border-radius: 50px;
+          background-color: white;
 
-          .size {
-            width: 18.5%;
-            padding-top: 4.5%;
-            padding-bottom: 4.5%;
-            border: 1px solid rgba(0, 0, 0, 0.182);
-            border-radius: 8px;
-            background-color: white;
-            color: rgb(59, 58, 58);
-            font-size: 14px;
-            text-align: center;
+          .emptyHeartImg {
+            width: 10px;
           }
         }
       }
-    }
 
-    // .btnContainer {
-    //   display: flex;
-    //   flex-direction: column;
-    //   justify-content: space-between;
-    //   width: 60%;
-    //   margin-top: 5%;
+      .description {
+        width: 60%;
+        margin-top: 7%;
 
-    //   .cartBtn {
-    //     margin-bottom: 3%;
-    //     padding-top: 5.5%;
-    //     padding-bottom: 5.5%;
-    //     border-radius: 50px;
-    //     background-color: black;
-    //     color: white;
-    //   }
+        .descriptionTop {
+          color: rgb(59, 59, 59);
+          font-size: 14px;
+          line-height: 26px;
+        }
 
-    //   .wishListBtn {
-    //     padding-top: 5.5%;
-    //     padding-bottom: 5.5%;
-    //     border: 1px solid rgba(0, 0, 0, 0.322);
-    //     border-radius: 50px;
-    //     background-color: white;
-    //   }
+        .descriptionBottom {
+          margin-top: 10%;
+          margin-right: 23%;
+          float: right;
+          color: rgb(59, 59, 59);
+          font-size: 14px;
+          line-height: 26px;
 
-    //   .emptyHeartBtn {
-    //     width: 3%;
-    //     border: transparent;
-    //     background-color: white;
+          .colorDescription {
+            list-style-type: disc;
+          }
 
-    //     .emptyHeartImg {
-    //       width: 100%;
-    //     }
-    //   }
-    // }
-  }
-}
+          .styleDescription {
+            list-style-type: disc;
+          }
+        }
 
-.description {
-  width: 60%;
-  margin-top: 7%;
+        .detailDescription {
+          margin-top: 37%;
+          color: rgb(59, 59, 59);
+          font-size: 14px;
+          font-weight: bold;
+          text-decoration: underline;
+        }
 
-  .descriptionTop {
-    color: rgb(59, 59, 59);
-    font-size: 14px;
-    line-height: 26px;
-  }
+        .detailService {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin-top: 10%;
 
-  .descriptionBottom {
-    margin-top: 10%;
-    margin-right: 23%;
-    float: right;
-    color: rgb(59, 59, 59);
-    font-size: 14px;
-    line-height: 26px;
+          .freeDelivery {
+            padding-top: 7%;
+            padding-bottom: 7%;
+            border-top: 1px solid rgba(128, 128, 128, 0.601);
+            border-right: transparent;
+            border-bottom: transparent;
+            border-left: transparent;
+            background-color: transparent;
+            font-size: 17px;
+          }
 
-    .colorDescription {
-      list-style-type: disc;
-    }
+          .review {
+            padding-top: 7%;
+            padding-bottom: 7%;
+            border-top: 1px solid rgba(128, 128, 128, 0.601);
+            border-right: transparent;
+            border-bottom: transparent;
+            border-left: transparent;
+            background-color: transparent;
+            font-size: 17px;
+          }
 
-    .styleDescription {
-      list-style-type: disc;
-    }
-  }
-
-  .detailDescription {
-    margin-top: 37%;
-    color: rgb(59, 59, 59);
-    font-size: 14px;
-    font-weight: bold;
-    text-decoration: underline;
-  }
-
-  .detailService {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 10%;
-
-    .freeDelivery {
-      padding-top: 7%;
-      padding-bottom: 7%;
-      border-top: 1px solid rgba(128, 128, 128, 0.601);
-      border-right: transparent;
-      border-bottom: transparent;
-      border-left: transparent;
-      background-color: transparent;
-      font-size: 17px;
-    }
-
-    .review {
-      padding-top: 7%;
-      padding-bottom: 7%;
-      border-top: 1px solid rgba(128, 128, 128, 0.601);
-      border-right: transparent;
-      border-bottom: transparent;
-      border-left: transparent;
-      background-color: transparent;
-      font-size: 17px;
-    }
-
-    .moreInfo {
-      padding-top: 7%;
-      border-top: 1px solid rgba(128, 128, 128, 0.601);
-      border-right: transparent;
-      border-bottom: transparent;
-      border-left: transparent;
-      background-color: transparent;
-      font-size: 17px;
+          .moreInfo {
+            padding-top: 7%;
+            border-top: 1px solid rgba(128, 128, 128, 0.601);
+            border-right: transparent;
+            border-bottom: transparent;
+            border-left: transparent;
+            background-color: transparent;
+            font-size: 17px;
+          }
+        }
+      }
     }
   }
 }

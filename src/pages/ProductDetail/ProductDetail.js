@@ -7,16 +7,16 @@ import './ProductDetail.scss';
 
 Modal.setAppElement('#root');
 
-const customStyles = {
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-  },
-};
+// const customStyles = {
+//   content: {
+//     top: '50%',
+//     left: '50%',
+//     right: 'auto',
+//     bottom: 'auto',
+//     marginRight: '-50%',
+//     transform: 'translate(-50%, -50%)',
+//   },
+// };
 
 function ProductDetail() {
   const [visible, setVisible] = useState(false);
@@ -32,6 +32,38 @@ function ProductDetail() {
     setIsModalOpen(false);
   };
 
+  // 상세페이지 데이터 불러오기
+  // const colocClick = () => {
+  //   fetch(API, {
+  //     method: 'GET',
+  //     body: JSON.stringify({}),
+  //   })
+  //     .then(res => res.json())
+  //     .then();
+  // };
+
+  // 장바구니 담기
+  // const addProductToCart = () => {
+  //   if (!!token) {
+  //     fetch(API.cart, {
+  //       method : 'POST',
+  //       headers : {
+
+  //       },
+  //       body: JSON.stringify({
+  //         id:
+  //         name :
+  //         subName:
+  //         price:
+  //         currentColor:
+  //       }),
+  //     })
+  //       .then (res => res.json())
+  //       .then (res => {
+
+  //       })
+  //   }
+  // };
   return (
     <>
       <div className="productDetail">
@@ -123,14 +155,11 @@ function ProductDetail() {
                 </div>
               </div>
             </div>
-            {/* <div className="btnContainer" onClick={onClickBtn}>
-            {heart ? <FullHeartBtn /> : <EmptyHeartBtn />}
-          </div> */}
 
             <div className="btnContainer">
               <button className="cartBtn">장바구니</button>
               <button className="wishListBtn" onClick={onClickBtn}>
-                위시리스트
+                위시리스트 &nbsp;
                 <img
                   className="emptyHeartImg"
                   src={
@@ -182,11 +211,20 @@ function ProductDetail() {
       >
         <div className="modal">
           <div className="modalBody">
+            <div className="location">위시리스트에 추가되었습니다</div>
             <button className="modalClose" onClick={closeModal}>
               X
             </button>
-            <div className="location">현 위치를 선택하세요</div>
-            <div className="africa">Africa</div>
+
+            <img
+              className="wishListImg"
+              src="../../../images/에얼포스블랙.jpg"
+              alt="에얼포스 블랙"
+            />
+            <div className="wishListProduct">나위키 에얼포스 블랙</div>
+            <div className="wishlistCategory">남성 신발</div>
+            <div className="wishlistPrice">149,000원</div>
+            <button className="seeWishlist">위시리스트 보기</button>
           </div>
         </div>
       </Modal>
