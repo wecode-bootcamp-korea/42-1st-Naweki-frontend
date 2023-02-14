@@ -1,0 +1,20 @@
+.recommendItem {
+  font-size: 14px;
+
+  .shoesImg {
+    width: 500px;
+    height: 500px;
+  }
+
+  .shoesInfo {
+    display: flex;
+    justify-content: space-between;
+    width: 31%;
+    margin-top: 13px;
+  }
+
+  .category {
+    margin-top: 8px;
+    color: rgb(105, 104, 104);
+  }
+}

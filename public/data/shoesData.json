@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "shoesImg": "https://cdn.pixabay.com/photo/2020/07/15/18/31/sneakers-5408669_1280.png",
+    "shoesName": "나이키 에어 덩크 점보",
+    "category": "남성 신발",
+    "price": "149,000"
+  },
+  {
+    "id": 2,
+    "shoesImg": "https://cdn.pixabay.com/photo/2020/07/15/18/27/sneakers-5408646_1280.jpg",
+    "shoesName": "나이키 줌 머큐리얼 슈퍼플라이 9 엘리트 FG",
+    "category": "천연 잔디 클리트 축구화",
+    "price": "329,000"
+  },
+  {
+    "id": 3,
+    "shoesImg": "https://cdn.pixabay.com/photo/2020/07/15/18/32/sneakers-5408674_1280.png",
+    "shoesName": "나이키 에어 포스 1 '07",
+    "category": "남성 신발",
+    "price": "139,000"
+  },
+  {
+    "id": 4,
+    "shoesImg": "https://images.unsplash.com/photo-1608667508764-33cf0726b13a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+    "shoesName": "나이키 에어 포스 1 '07",
+    "category": "여성 신발",
+    "price": "185,100"
+  },
+  {
+    "id": 5,
+    "shoesImg": "https://cdn.pixabay.com/photo/2020/07/15/18/29/sneakers-5408659_1280.png",
+    "shoesName": "나이키 레볼루션 6 넥스트 네이처",
+    "category": "남성 로드 러닝화",
+    "price": "69,000"
+  },
+  {
+    "id": 6,
+    "shoesImg": "https://cdn.pixabay.com/photo/2014/06/18/18/41/running-shoe-371624_1280.jpg",
+    "shoesName": "나이키 메트콘 8",
+    "category": "남성 트레이닝화",
+    "price": "159,000"
+  },
+  {
+    "id": 7,
+    "shoesImg": "https://cdn.pixabay.com/photo/2014/06/18/18/42/running-shoe-371625__480.jpg",
+    "shoesName": "나이키 에어맥스 90 G",
+    "category": "골프화",
+    "price": "169,000"
+  },
+  {
+    "id": 8,
+    "shoesImg": "https://cdn.pixabay.com/photo/2020/07/15/18/26/sneakers-5408644_1280.png",
+    "shoesName": "카이리 로우 5 EP",
+    "category": "농구화",
+    "price": "129,000"
+  },
+  {
+    "id": 9,
+    "shoesImg": "https://images.unsplash.com/photo-1609250291996-fdebe6020a8f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjR8fG5pa2UlMjBzaG9lc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60",
+    "shoesName": "조던 시리즈 ES",
+    "category": "남성 신발",
+    "price": "99,000"
+  }
+]
