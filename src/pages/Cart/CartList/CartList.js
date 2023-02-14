@@ -1,10 +1,19 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './CartList.scss';
 
 export const CartList = ({ list }) => {
   const [heart, setHeart] = useState(true);
   const handleLike = e => {
     setHeart(previousImg => !previousImg);
+  };
+
+  const [items, setItems] = useState([]);
+
+  const deleteItem = () => {
+    fetch('URI', {
+      method: 'DELETE',
+      headers: { Authorization: localStorage.getItem('') },
+    }).then(res => {});
   };
 
   return (
