@@ -25,31 +25,29 @@ const NewUser = () => {
     setUserInfo({ ...userInfo, [name]: value });
   };
 
-  console.log(userInfo);
-
-  // const sendInfo = () => {
-  //   fetch('http://10.58.52.69:3000/users/signup', {
-  //     method: 'POST',
-  //     headers: {
-  //       'Content-Type': 'application/json;charset=utf-8',
-  //     },
-  //     body: JSON.stringify({
-  //       first_name: userName,
-  //       last_name: userSurname,
-  //       email: userEmail,
-  //       password: userPw,
-  //       shopping_reference: userPreference,
-  //       birthday: userBday
-  //    }),
-  //   })
-  //     .then(res => res.json())
-  //     .then(response =>  //       if (response.message === 'SIGNUP_SUCCESS') {
-  //         alert('회원가입 완료! :)');
-  //         navigate('/main');
-  //       }
-  //     });
-  // };
-  // };
+  const sendInfo = () => {
+    fetch('http://10.58.52.69:3000/users/signup', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+      },
+      body: JSON.stringify({
+        firstName: userInfo.userName,
+        lastName: userInfo.userSurname,
+        email: userEmail,
+        password: userInfo.userPw,
+        shoppingPreference: userInfo.userPreference,
+        birthday: userInfo.userBday,
+      }),
+    })
+      .then(res => res.json())
+      .then(response => {
+        if (response.message === 'SIGNUP_SUCCESS') {
+          alert('회원가입 완료! :)');
+          navigate('/main');
+        }
+      });
+  };
 
   return (
     <div className="newUser">
@@ -98,7 +96,7 @@ const NewUser = () => {
             </div>
           </div>
           <div className="defaultShopping">
-            <select>
+            <select name="userPreference" onChange={inputHandler}>
               <option value="">쇼핑 기본 설정</option>
               <option value="men">남성용</option>
               <option value="women">여성용</option>
@@ -138,7 +136,9 @@ const NewUser = () => {
             </span>
           </section>
           <div className="createUserBtnBox">
-            <button className="createUserBtn">계정 만들기</button>
+            <button onClick={sendInfo} className="createUserBtn">
+              계정 만들기
+            </button>
           </div>
         </div>
       </div>
