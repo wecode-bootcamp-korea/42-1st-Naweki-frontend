@@ -20,7 +20,7 @@ const Menu = () => {
           return (
             <div key={menu.id}>
               <ul className="menuLists" onMouseEnter={onMouseEnter}>
-                <Link className="toProductList" to="/product-list">
+                <Link className="toProductList" to={'/main'}>
                   <li
                     className="menuList"
                     onMouseEnter={() => onMouseEnterList(menu.id)}

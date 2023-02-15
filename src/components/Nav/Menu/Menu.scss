@@ -4,9 +4,8 @@
   .menuWrapper {
     @include flex(space-between, center);
     position: relative;
-    width: 750px;
+    width: 100%;
     height: 80px;
-    margin-left: 80px;
 
     .menuLists {
       @include flex(space-between, center);
