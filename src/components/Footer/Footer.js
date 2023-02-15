@@ -1,5 +1,7 @@
 import React from 'react';
+import { HELP_DATA } from './data/helpData';
 import { ICON_DATA } from './data/iconData';
+import { ABOUT_NAWEKI_DATA } from './data/aboutNawekiData';
 import './Footer.scss';
 
 function Footer() {
@@ -7,26 +9,27 @@ function Footer() {
     <div className="footer">
       <div className="menu-wrapper">
         <div className="footerTextBox">
-          <div className="footerLeftBox">
+          <div className="footerNewsBox">
             <div className>새로운 소식</div>
             <div className>멤버 가입</div>
             <div className>매장 안내</div>
             <div className>나이키 저널</div>
           </div>
-          <ul className="footerMiddleBox">
+          <ul className="footerHelpBox">
             <li className="help">도움말</li>
-            <li className="helpDetail">주문 배송 조회</li>
-            <li className="helpDetail">반품 정책</li>
-            <li className="helpDetail">결제 방법</li>
-            <li className="helpDetail">공지사항</li>
-            <li className="helpDetail">문의하기</li>
+            {HELP_DATA.map(title => (
+              <li className="helpDetail" key={title.id}>
+                {title.title}
+              </li>
+            ))}
           </ul>
-          <ul className="footerRightBox">
+          <ul className="nawekiInfoBox">
             <li className="aboutNawekiContainer">ABOUT Naweki</li>
-            <li className="aboutNaweki">소식</li>
-            <li className="aboutNaweki">채용</li>
-            <li className="aboutNaweki">투자자</li>
-            <li className="aboutNaweki">지속가능성</li>
+            {ABOUT_NAWEKI_DATA.map(data => (
+              <li className="aboutNaweki" key={data.id}>
+                {data.title}
+              </li>
+            ))}
           </ul>
         </div>
         <div className="iconBox">
@@ -56,7 +59,7 @@ function Footer() {
         </div>
       </div>
       <hr className="line" />
-      <div className="footerInfoSectionFirst">
+      <div className="footerInfoSection">
         <div className="footerBusinessInfo">
           (유)나위키코리아 대표 Yujinlee, 유진리 | 서울 강남구 나위키로 137
           강남파이낸셜센터 26층 | 통신판매업신고번호 2008-서울강남-03721 |
@@ -69,8 +72,8 @@ function Footer() {
           <span className="deposit">결제대금예치</span>)를 이용하실 수 있습니다.
         </div>
       </div>
-      <div className="footerInfoSectionSecond">
-        <div className="footerServiceInfo">
+      <div className="footerServiceInfo">
+        <div className="ServiceInfo">
           고객센터 전화 문의 <span className="serviceNum">010-123-4567</span>
           FAX 01-2345-6789 | 이메일
           <span className="serviceEmail">service@naweki.co.kr </span>|

@@ -16,7 +16,7 @@ $cursor: pointer;
       justify-content: space-between;
       margin-left: 120px;
 
-      .footerLeftBox {
+      .footerNewsBox {
         display: inline-block;
         width: 6%;
         margin-top: 3%;
@@ -27,7 +27,7 @@ $cursor: pointer;
         cursor: $cursor;
       }
 
-      .footerMiddleBox {
+      .footerHelpBox {
         display: inline-block;
         width: 6%;
         margin-top: 3%;
@@ -50,7 +50,7 @@ $cursor: pointer;
         }
       }
 
-      .footerRightBox {
+      .nawekiInfoBox {
         margin-top: 3%;
         margin-right: 55%;
         font-size: 13px;
@@ -75,7 +75,6 @@ $cursor: pointer;
       display: flex;
       justify-content: space-between;
       width: 10%;
-      // padding-right: 50px;
       margin-right: 320px;
       padding-top: 3%;
       text-align: right;
@@ -156,7 +155,7 @@ $cursor: pointer;
     color: $color;
   }
 
-  .footerInfoSectionFirst {
+  .footerInfoSection {
     display: flex;
     justify-content: space-between;
     width: 72%;
@@ -198,7 +197,7 @@ $cursor: pointer;
     }
   }
 
-  .footerInfoSectionSecond {
+  .footerServiceInfo {
     display: flex;
     justify-content: space-between;
     width: 72%;
@@ -209,7 +208,7 @@ $cursor: pointer;
     line-height: 20px;
     text-align: left;
 
-    .footerServiceInfo {
+    .ServiceInfo {
       width: 47.2%;
       text-align: left;
 
