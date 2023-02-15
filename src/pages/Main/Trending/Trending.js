@@ -25,14 +25,18 @@ function Trending() {
         />
       </div>
       <div className="trendingInfo">
-        <div className="comfortTop">Comfort Top</div>
-        <button className="trendingBuyBtnLeft" type="button">
-          구매하기
-        </button>
-        <div className="blazer">Blazer</div>
-        <button className="trendingBuyBtnRight" type="button">
-          구매하기
-        </button>
+        <div className="comfortTopContainer">
+          <div className="comfortTop">Comfort Top</div>
+          <button className="comfortTopBuyBtn" type="button">
+            구매하기
+          </button>
+        </div>
+        <div className="blazerContainer">
+          <div className="blazer">Blazer</div>
+          <button className="blazerBuyBtn" type="button">
+            구매하기
+          </button>
+        </div>
       </div>
     </div>
   );

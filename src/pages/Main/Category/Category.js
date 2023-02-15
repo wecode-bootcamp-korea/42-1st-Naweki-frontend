@@ -3,14 +3,7 @@ import './Category.scss';
 import HiddenCategory from '../HiddenCategory/HiddenCategory';
 
 function Category() {
-  // const [view, setView] = useState(false);
-
   return (
-    // <div
-    //   className="category"
-    //   onMouseEnter={() => setView(!view)}
-    //   onMouseLeave={() => setView(!view)}
-    // >
     <div className="category">
       <div className="defaultCategory">
         <div className="categoryBox">
@@ -53,7 +46,7 @@ function Category() {
           </ul>
         </div>
       </div>
-      {/* {view && <HiddenCategory />} */}
+
       <HiddenCategory />
     </div>
   );

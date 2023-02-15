@@ -3,13 +3,14 @@ $cursor: pointer;
 .dan {
   cursor: $cursor;
   .danParis {
-    width: 85%;
+    display: block;
+    width: 70%;
+    margin: auto;
     margin-top: 80px;
-    margin-left: 8%;
   }
 
   .danText {
-    margin-top: 50px;
+    margin-top: 80px;
     margin-bottom: 20px;
     font-size: 50px;
     font-weight: bold;
