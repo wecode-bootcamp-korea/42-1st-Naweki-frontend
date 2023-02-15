@@ -15,7 +15,6 @@ const Cart = () => {
   const price = cartList
     .map(product => product.reducedPrice)
     .reduce((prev, curr) => prev + curr, 0);
-
   const totalPrice = price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
   const [modal, setModal] = useState(false);

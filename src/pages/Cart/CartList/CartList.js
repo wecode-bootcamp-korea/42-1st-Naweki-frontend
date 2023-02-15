@@ -7,14 +7,22 @@ export const CartList = ({ list }) => {
     setHeart(previousImg => !previousImg);
   };
 
-  const [items, setItems] = useState([]);
-
-  const deleteItem = () => {
-    fetch('URI', {
-      method: 'DELETE',
-      headers: { Authorization: localStorage.getItem('') },
-    }).then(res => {});
+  const [size, setSize] = useState('');
+  const onSelectSize = e => {
+    setSize(e.target.value);
   };
+
+  const [howMany, setHowMany] = useState('');
+  const onSelectMany = e => {
+    setHowMany(e.target.value);
+  };
+
+  // const deleteItem = () => {
+  //   fetch('URI', {
+  //     method: 'DELETE',
+  //     headers: { Authorization: localStorage.getItem('') },
+  //   }).then(res => {});
+  // };
 
   return (
     <div className="cartList">
@@ -28,14 +36,27 @@ export const CartList = ({ list }) => {
           <div className="productDetail">{list.detail}</div>
           <div className="selectorWrapper">
             <div className="size">사이즈</div>
-            <select name="sizes" id="sizeSelect" className="productSize">
-              <option value="S">S</option>
-              <option value="M">M</option>
-              <option value="L">L</option>
-              <option value="XL">XL</option>
+            <select
+              onChange={onSelectSize}
+              name="sizes"
+              id="sizeSelect"
+              className="productSize"
+            >
+              {SIZE_LIST.map(data => {
+                return (
+                  <option key={data.id} value={data.size}>
+                    {data.size}
+                  </option>
+                );
+              })}
             </select>
             <div className="number">수량</div>
-            <select name="howMany" id="howMany" className="howManyProduct">
+            <select
+              onChange={onSelectMany}
+              name="howMany"
+              id="howMany"
+              className="howManyProduct"
+            >
               {HOW_MANY_LIST.map(data => {
                 return (
                   <option key={data.id} value={data.many}>
@@ -48,13 +69,21 @@ export const CartList = ({ list }) => {
           <div className="btnWrapper">
             <button className="heartBtn">
               {heart ? (
-                <img src="images/heart-regular.png" onClick={handleLike} />
+                <img
+                  src="images/heart-regular.png"
+                  alt="emptyHeart"
+                  onClick={handleLike}
+                />
               ) : (
-                <img src="images/heart-solid.png" onClick={handleLike} />
+                <img
+                  src="images/heart-solid.png"
+                  alt="fullHeart"
+                  onClick={handleLike}
+                />
               )}
             </button>
             <button className="trashBtn">
-              <img src="images/trash-can-regular.png" />
+              <img src="images/trash-can-regular.png" alt="deleteBtn" />
             </button>
           </div>
         </div>
@@ -90,4 +119,13 @@ const HOW_MANY_LIST = [
   { id: 8, many: '8' },
   { id: 9, many: '9' },
   { id: 10, many: '10' },
+];
+
+const SIZE_LIST = [
+  { id: 1, size: '250' },
+  { id: 2, size: '260' },
+  { id: 3, size: '270' },
+  { id: 4, size: '280' },
+  { id: 5, size: '290' },
+  { id: 6, size: '300' },
 ];
