@@ -1,10 +1,6 @@
 .inputBox {
-  display: flex;
-  gap: 5px;
-  width: 460px;
-
-  .newUserInputValid {
-    width: 100%;
+  height: 60px;
+  .inputValid {
     height: 60px;
     padding-right: 40px;
     padding-left: 10px;
@@ -16,7 +12,7 @@
     }
   }
 
-  .newUserInputInvalid {
+  .inputInvalid {
     height: 60px;
     padding-right: 40px;
     padding-left: 10px;
@@ -35,6 +31,7 @@
 
   .none {
     display: none;
+    padding: 5px;
   }
 
   .warning {

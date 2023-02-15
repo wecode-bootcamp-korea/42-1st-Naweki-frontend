@@ -59,13 +59,13 @@
     }
 
     .signupContainer {
-      width: 100%;
-      row-gap: 13px;
+      width: 460px;
+      gap: 13px;
 
       .nameBox {
         display: flex;
-        justify-content: space-between;
         max-width: 460px;
+        gap: 23px;
       }
 
       .newUserPwdBox {

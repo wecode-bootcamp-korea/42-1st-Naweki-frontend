@@ -1,6 +1,8 @@
+import { faList } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import { Link, useNavigate, useLocation, Route } from 'react-router-dom';
 import { Input } from '../Input/Input.js';
+import { INPUT_DATA } from '../Input/InputData/InputData.js';
 import './NewUser.scss';
 
 const NewUser = () => {
@@ -8,20 +10,22 @@ const NewUser = () => {
   const goToLogin = () => {
     navigate('/login');
   };
-
   const location = useLocation();
   const userEmail = location?.state?.title;
 
   const [userInfo, setUserInfo] = useState({
-    userName: '',
     userSurname: '',
+    userName: '',
     userPw: '',
     userPreference: '',
     userBday: '',
   });
   const inputHandler = e => {
-    const {}
-  }
+    const { name, value } = e.target;
+    setUserInfo({ ...userInfo, [name]: value });
+  };
+
+  console.log(userInfo);
 
   // const sendInfo = () => {
   //   fetch('http://10.58.52.69:3000/users/signup', {
@@ -62,18 +66,28 @@ const NewUser = () => {
           <div className="codeSent">인증코드를 전송했습니다.</div>
         </header>
         <div className="newUserEmailBox">
-          <span className="newUserEmail">{userEmail}</span>
+          <div className="newUserEmail">{userEmail}</div>
           <button onClick={goToLogin} className="edit">
             편집
           </button>
         </div>
         <div className="signupContainer">
           <div className="nameBox">
-            <Input />
+            {INPUT_DATA.map(list => {
+              return (
+                <Input key={list.id} list={list} inputHandler={inputHandler} />
+              );
+            })}
           </div>
           <div className="newUserPwdBox">
             <form className="pwdInputBox">
-              <input type="text" className="pwdInput" placeholder="비밀번호" />
+              <input
+                name="userPw"
+                onChange={inputHandler}
+                type="text"
+                className="pwdInput"
+                placeholder="비밀번호"
+              />
               <label htmlFor="newUserPwd" />
             </form>
             <div className="pwdRules">
@@ -92,6 +106,8 @@ const NewUser = () => {
           </div>
           <div className="newUserBirth">
             <input
+              onChange={inputHandler}
+              name="userBday"
               type="date"
               className="newUserBirthInput"
               placeholder="생년월일"
