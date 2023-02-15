@@ -7,40 +7,38 @@ import './ProductDetail.scss';
 
 Modal.setAppElement('#root');
 
-// const customStyles = {
-//   content: {
-//     top: '50%',
-//     left: '50%',
-//     right: 'auto',
-//     bottom: 'auto',
-//     marginRight: '-50%',
-//     transform: 'translate(-50%, -50%)',
-//   },
-// };
-
 function ProductDetail() {
   const [visible, setVisible] = useState(false);
   const [heart, setHeart] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isActive, setIsActive] = useState(false);
+  // const [thumbnailImage, setThumbnailImage] = useState('');
+  const [productData, setProductData] = useState({});
 
   const onClickBtn = () => {
     setHeart(!heart);
     setIsModalOpen(true);
+    setIsActive(true);
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
   };
 
-  // 상세페이지 데이터 불러오기
-  // const colocClick = () => {
-  //   fetch(API, {
-  //     method: 'GET',
-  //     body: JSON.stringify({}),
-  //   })
-  //     .then(res => res.json())
-  //     .then();
-  // };
+  // setThumbnailImage(data.product.thumbnailImage
+
+  //상세페이지 데이터 불러오기
+  useEffect(() => {
+    fetch('http://10.58.52.64:3000/products/1', {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(data => setProductData(data));
+  }, []);
+  // console.log(productData);
+
+  const product = productData.product;
+  // console.log(product);
 
   // 장바구니 담기
   // const addProductToCart = () => {
@@ -72,12 +70,15 @@ function ProductDetail() {
             <div className="detailImgsRow">
               <img
                 className="productImgRowTop"
-                src="https://cdn.pixabay.com/photo/2020/07/15/18/31/sneakers-5408669_1280.png"
+                src={product.thumbnailImage}
+                // src="https://cdn.pixabay.com/photo/2020/07/15/18/31/sneakers-5408669_1280.png"
                 alt="제품 상세 이미지"
+                // onClick={colorClick}
               />
               <img
                 className="productImgRowBottom"
-                src="/images/상세3.jpg"
+                src={product.imageUrl}
+                // src="/images/상세3.jpg"
                 alt="제품 상세 이미지"
               />
             </div>
@@ -95,12 +96,14 @@ function ProductDetail() {
           <div className="detailImgsColumn">
             <img
               className="detailImgColumnLeft"
-              src="/images/상세1.jpg"
+              src={product.imageUrl}
+              // src="/images/상세1.jpg"
               alt="제품 상세 이미지"
             />
             <img
               className="detailImgColumnRight"
-              src="/images/상세2.jpg"
+              src={product.imageUrl}
+              // src="/images/상세2.jpg"
               alt="제품 상세 이미지"
             />
           </div>
@@ -108,28 +111,37 @@ function ProductDetail() {
         <div className="productInfoContainer">
           <div className="productInfoContainer">
             <div className="productInfo">
-              <div className="productName">나위키 에얼 포스 1 '03</div>
-              <div className="productCategory">여성 신발</div>
+              <div className="productName">{product.name}</div>
+              {/* <div className="productName">나위키 에얼 포스 1 '03</div> */}
+              <div className="productCategory">{product.subName}</div>
+              {/* <div className="productCategory">여성 신발</div> */}
               <div className="priceContainer">
-                <div className="productPrice">125,100 원</div>
+                <div className="productPrice">{product.price}원</div>
+                {/* <div className="productPrice">125,100 원</div> */}
                 <div className="originalPrice">139,000 원</div>
               </div>
             </div>
             <div className="otherColorContainer">
               <img
                 className="otherColorBlack"
+                // src={product.thumbnailImage}
                 src="/images/에얼포스블랙.jpg"
                 alt="나위키 에얼 포스 1 '03 블랙"
+                // onClick={colorClick}
               />
               <img
                 className="otherColorPink"
+                // src={product.thumbnailImage}
                 src="https://images.unsplash.com/photo-1608667508764-33cf0726b13a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHNuZWFrZXJzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
                 alt="나위키 에얼 포스 1 '03 핑크"
+                // onClick={colorClick}
               />
               <img
                 className="otherColorBlue"
+                // src={product.thumbnailImage}
                 src="https://cdn.pixabay.com/photo/2020/07/15/18/32/sneakers-5408674_1280.png"
                 alt="나위키 에얼 포스 1 '03 블루"
+                // onClick={colorClick}
               />
             </div>
             <div className="sizeInfo">
@@ -140,6 +152,7 @@ function ProductDetail() {
 
               <div className="sizeContainer">
                 <div className="smallSize">
+                  {/* <button className="size">{product.size}</button> */}
                   <button className="size">220</button>
                   <button className="size">225</button>
                   <button className="size">230</button>
@@ -157,7 +170,12 @@ function ProductDetail() {
             </div>
 
             <div className="btnContainer">
-              <button className="cartBtn">장바구니</button>
+              <button
+                className={`cartBtn ${isActive ? 'avtice' : ''}`}
+                disabled={!isActive}
+              >
+                장바구니
+              </button>
               <button className="wishListBtn" onClick={onClickBtn}>
                 위시리스트 &nbsp;
                 <img
@@ -179,9 +197,11 @@ function ProductDetail() {
               </span>
               <ul className="descriptionBottom">
                 <li className="colorDescription">
-                  현재 컬러 : 화이트/화이트/화이트/화이트
+                  현재 컬러 : {product.currentColor}
                 </li>
-                <li className="styleDescription">스타일 : CC1928-100</li>
+                <li className="styleDescription">
+                  스타일 : {product.styleCode}
+                </li>
               </ul>
               <div className="detailDescription">상품 상세 정보 보기</div>
               <div className="detailService">

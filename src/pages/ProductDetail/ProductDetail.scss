@@ -13,17 +13,17 @@
   inset: 0 !important;
 }
 
-.modal {
-  .modalBody {
-    @include flex() .location {
-    }
-    .modalClose {
-      position: absolute;
-      top: 40px;
-      right: 40px;
-    }
-  }
-}
+// .modal {
+//   .modalBody {
+//     @include flex() .location {
+//     }
+//     .modalClose {
+//       position: absolute;
+//       top: 40px;
+//       right: 40px;
+//     }
+//   }
+// }
 
 .productDetail {
   display: flex;
@@ -214,6 +214,10 @@
           border-radius: 50px;
           background-color: black;
           color: white;
+        }
+
+        .active {
+          border: 1px solid gray;
         }
 
         .wishListBtn {
