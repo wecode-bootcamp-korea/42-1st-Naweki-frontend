@@ -1,0 +1,32 @@
+@import '../../../styles/mixin.scss';
+
+.menu {
+  .menuWrapper {
+    @include flex(space-between, center);
+    position: relative;
+    width: 100%;
+    height: 80px;
+
+    .menuLists {
+      @include flex(space-between, center);
+      gap: 25px;
+      list-style: none;
+
+      .toProductList {
+        color: black;
+
+        .menuList {
+          float: left;
+          padding: 10px;
+          font-weight: bold;
+          cursor: pointer;
+
+          &:hover {
+            padding-bottom: 5px;
+            border-bottom: 2px solid black;
+          }
+        }
+      }
+    }
+  }
+}
