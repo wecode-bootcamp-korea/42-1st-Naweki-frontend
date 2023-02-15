@@ -1,10 +1,10 @@
 import React from 'react';
 import './SearchBox.scss';
 
-const SearchBox = ({ keyword, filteredList }) => {
+const SearchBox = ({ filteredList }) => {
   return (
     <div className="searchBox">
-      {keyword.length > 0 ? (
+      {filteredList.index > 0 ? (
         <>
           <div className="filteredListWrapper">
             {filteredList.map(product => (

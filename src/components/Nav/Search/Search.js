@@ -38,7 +38,7 @@ const Search = ({ searchClicked }) => {
           취소
         </button>
       </div>
-      <SearchBox keyword={keyword} filteredList={filteredList} />
+      <SearchBox filteredList={filteredList} />
     </div>
   );
 };
