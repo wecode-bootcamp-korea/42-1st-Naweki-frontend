@@ -1,0 +1,31 @@
+@import '../../../styles/mixin.scss';
+
+.function {
+  @include flex(center, center);
+  gap: 20px;
+
+  .searchBar {
+    width: 180px;
+    height: 40px;
+    padding: 0px 10px 0px 60px;
+    border-radius: 100px;
+    border: none;
+    background: url('../Search/images/search.png') center no-repeat;
+    background-position: 10px;
+    background-color: #f5f5f5;
+    outline-style: none;
+    font-size: 17px;
+
+    &::placeholder {
+      font-size: 17px;
+    }
+
+    &:hover {
+      background-color: #e5e5e5;
+    }
+  }
+
+  .navIcon {
+    cursor: pointer;
+  }
+}
