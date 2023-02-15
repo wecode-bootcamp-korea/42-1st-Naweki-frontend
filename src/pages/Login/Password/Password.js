@@ -32,7 +32,6 @@ const Password = () => {
           throw new Error('에러 발생!');
         }
       })
-      .catch(error => console.log(error))
       .then(data => {
         if (data.JWT) {
           localStorage.setItem('USERTOKEN', data.JWT);

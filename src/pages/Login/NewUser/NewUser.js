@@ -12,6 +12,41 @@ const NewUser = () => {
   const location = useLocation();
   const userEmail = location?.state?.title;
 
+  const [userInfo, setUserInfo] = useState({
+    userName: '',
+    userSurname: '',
+    userPw: '',
+    userPreference: '',
+    userBday: '',
+  });
+  const inputHandler = e => {
+    const {}
+  }
+
+  // const sendInfo = () => {
+  //   fetch('http://10.58.52.69:3000/users/signup', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json;charset=utf-8',
+  //     },
+  //     body: JSON.stringify({
+  //       first_name: userName,
+  //       last_name: userSurname,
+  //       email: userEmail,
+  //       password: userPw,
+  //       shopping_reference: userPreference,
+  //       birthday: userBday
+  //    }),
+  //   })
+  //     .then(res => res.json())
+  //     .then(response =>  //       if (response.message === 'SIGNUP_SUCCESS') {
+  //         alert('회원가입 완료! :)');
+  //         navigate('/main');
+  //       }
+  //     });
+  // };
+  // };
+
   return (
     <div className="newUser">
       <div className="newUserBox">
