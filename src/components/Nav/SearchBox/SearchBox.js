@@ -14,9 +14,9 @@ const SearchBox = ({ keyword, filteredList }) => {
                   alt={product.name}
                   src={product.img}
                 />
-                <div className="productName">{product.name}</div>
-                <div className="productGender">{product.style}</div>
-                <div className="productPrice">{product.price}</div>
+                <p className="productName">{product.name}</p>
+                <p className="productGender">{product.style}</p>
+                <p className="productPrice">{product.price}</p>
               </div>
             ))}
           </div>
@@ -26,11 +26,11 @@ const SearchBox = ({ keyword, filteredList }) => {
         <>
           <div className="mostSearchedWrapper">
             <div className="termWrapper">
-              <div className="mostSearchedTerm">인기 검색어</div>
-              <div className="term">Force 1</div>
-              <div className="term">Michael</div>
-              <div className="term">Max</div>
-              <div className="term">Blazer</div>
+              <p className="mostSearchedTerm">인기 검색어</p>
+              <p className="term">Force 1</p>
+              <p className="term">Michael</p>
+              <p className="term">Max</p>
+              <p className="term">Blazer</p>
             </div>
           </div>
           <div className="blur" />

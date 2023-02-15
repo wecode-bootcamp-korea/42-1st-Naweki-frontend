@@ -42,7 +42,7 @@ const Nav = () => {
               alt="Profile Img"
               src="/images/nav/profile.png"
             />
-            <div> 고객님, 안녕하세요</div>
+            <p> 고객님, 안녕하세요</p>
           </>
         )}
       </div>
