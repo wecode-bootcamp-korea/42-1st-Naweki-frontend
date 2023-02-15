@@ -7,6 +7,7 @@ import './Nav.scss';
 
 const Nav = () => {
   const [clicked, setClicked] = useState(false);
+
   const [isMember, setIsMember] = useState(false);
 
   const searchClicked = () => {
@@ -18,8 +19,8 @@ const Nav = () => {
   }, []);
 
   const checkMember = () => {
-    const accessToken = localStorage.getItem('accessToken');
-    accessToken && setIsMember(true);
+    const userToken = localStorage.getItem('USERTOKEN');
+    userToken && setIsMember(true);
   };
 
   return (
