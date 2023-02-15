@@ -1,20 +1,21 @@
-@import '../../styles/mixin.scss';
+@import '../../styles/mixin';
 
 .productList {
-  width: 100vw;
-
   .contentWrapper {
     @include flex(space-between, null);
-    gap: 30px;
     z-index: -1;
+    height: 100vh;
+    gap: 30px;
 
     .productWrapper {
+      @include position(sticky, 20%, null, nul, null);
       display: grid;
+      grid-gap: 10px;
       grid-template-columns: repeat(3, 0.8fr);
       grid-template-rows: repeat(3, 1.5fr);
-      grid-gap: 10px;
+      margin-top: 100px;
       margin-left: 350px;
-      margin-top: 150px;
+      overflow-y: scroll;
     }
   }
 }

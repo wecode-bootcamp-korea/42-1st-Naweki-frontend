@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { CATEGORY_DATA } from './data/categoryData';
-import { COLOR_DATA } from './data/colorData';
 import { GENDER_DATA } from './data/genderData';
+import Color from '../Color/Color';
 import './Aside.scss';
 
 const Aside = ({ isFilterClicked }) => {
@@ -23,9 +24,13 @@ const Aside = ({ isFilterClicked }) => {
           <div className="categoryWrapper">
             <ul className="categorylists">
               {CATEGORY_DATA.map(category => (
-                <li key={category.id} className="categoryList">
-                  {category.name}
-                </li>
+                <Link
+                  className="categoryLink"
+                  key={category.id}
+                  to={`/products?category=${category.name}`}
+                >
+                  <li className="categoryList">{category.name}</li>
+                </Link>
               ))}
             </ul>
           </div>
@@ -76,16 +81,7 @@ const Aside = ({ isFilterClicked }) => {
                 />
               </button>
             </div>
-            {isColorClicked === false && (
-              <div className="color">
-                {COLOR_DATA.map(color => (
-                  <button key={color.id} className="colorBtn">
-                    <img className="colorImg" alt={color.alt} src={color.src} />
-                    <span>{color.name}</span>
-                  </button>
-                ))}
-              </div>
-            )}
+            {isColorClicked === false && <Color />}
           </div>
         </>
       )}

@@ -1,14 +1,14 @@
-@import '../../../styles/mixin.scss';
+@import '../../../styles/mixin';
 
 .banner {
   @include flex(space-between, center);
   position: fixed;
-  width: 93%;
-  padding: 50px;
+  width: 100vw;
+  padding: 0px 50px;
 
   .category {
-    font-weight: 400;
     font-size: 25px;
+    font-weight: 400;
   }
 
   .functionWrapper {
@@ -32,13 +32,13 @@
         right: -5%;
         width: 123px;
         padding-top: 30px;
-        text-align: right;
-        background-color: white;
         border-radius: 20px;
+        background-color: white;
+        text-align: right;
 
         .sortList {
-          padding-bottom: 15px;
           padding-right: 20px;
+          padding-bottom: 15px;
         }
       }
     }
