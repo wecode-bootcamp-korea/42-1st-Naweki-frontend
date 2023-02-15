@@ -28,11 +28,11 @@ const Cart = () => {
           <h3 className="freeShipDescript">
             나이키 멤버가 되어 무료배송 서비스를 비롯한 다양한 혜택을
             누려보세요.{' '}
-            <NavLink to="#" className="signup">
+            <NavLink to="#" className="linkSignup">
               가입하기
             </NavLink>{' '}
             또는{' '}
-            <NavLink to="#" className="login">
+            <NavLink to="#" className="linkLogin">
               로그인
             </NavLink>
           </h3>
@@ -45,11 +45,11 @@ const Cart = () => {
           <div className="wishList">위시리스트</div>
           <div className="wishListDescript">
             위시리스트 상품을 보시겠습니까?{' '}
-            <NavLink to="#" className="signup">
+            <NavLink to="#" className="linkSignup">
               가입하기
             </NavLink>{' '}
             또는{' '}
-            <NavLink to="#" className="login">
+            <NavLink to="#" className="linkLogin">
               로그인
             </NavLink>{' '}
           </div>
