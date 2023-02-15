@@ -1,10 +1,10 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './RecommendItem.scss';
 
 function RecommendItem() {
   const [recommendItem, setRecommendItem] = useState([]);
 
-  const [showStartIdx, setShowStartIdx] = useState(0);
+  const [showStartIdx, setshowStartIdx] = useState(0);
 
   const numOfShownCard = 3;
   const checkLeftBtnActive = () => showStartIdx > 0;
@@ -13,15 +13,15 @@ function RecommendItem() {
 
   const onClickLeftBtn = () => {
     if (checkLeftBtnActive()) {
-      setShowStartIdx(showStartIdx - 1);
+      setshowStartIdx(showStartIdx - 1);
     }
   };
 
-  const onClickRightBtn = useCallback(() => {
+  const onClickRightBtn = () => {
     if (checkRightBtnActive()) {
-      setShowStartIdx(beforeShowStartIdx => beforeShowStartIdx + 1);
+      setshowStartIdx(showStartIdx + 1);
     }
-  }, []);
+  };
 
   useEffect(() => {
     fetch('/data/shoesData.json')
@@ -29,26 +29,20 @@ function RecommendItem() {
       .then(data => setRecommendItem(data));
   }, []);
 
-  useEffect(() => {
-    setInterval(() => {
-      onClickRightBtn();
-    }, 1000);
-  }, []);
-
   return (
-    <div className="container">
+    <div className="recommendItem">
       <div className="titleWrapper">
-        <div className="title">Recommend Items</div>
+        <div className="sliderName">Recommend Items</div>
         <div className="buttonWrapper">
           <img
-            className="leftBtn"
+            className="leftArrow"
             src="../../images/왼쪽화살표.jpg"
             alt="왼쪽 화살표"
             onClick={onClickLeftBtn}
             disabled={!checkLeftBtnActive()}
           />
           <img
-            className="rightBtn"
+            className="rightArrow"
             src="../../images/오른쪽화살표.png"
             alt="오른쪽 화살표"
             onClick={onClickRightBtn}
@@ -63,7 +57,7 @@ function RecommendItem() {
         >
           {recommendItem.map(imgUrl => {
             return (
-              <div key={imgUrl.id} className="image">
+              <div key={imgUrl.id} className="itemImage">
                 <img
                   className="shoesImg"
                   src={imgUrl.shoesImg}

@@ -1,4 +1,4 @@
-.container {
+.recommendItem {
   width: 100%;
   padding-top: 40px;
 
@@ -8,19 +8,19 @@
     justify-content: space-between;
     padding: 0 48px;
 
-    .title {
+    .sliderName {
       font-size: 25px;
     }
 
     .buttonWrapper {
       margin-right: 100px;
-      .leftBtn {
+      .leftArrow {
         width: 25px;
         height: 25px;
         margin-right: 25px;
       }
 
-      .rightBtn {
+      .rightArrow {
         width: 25px;
         height: 25px;
       }
@@ -38,7 +38,7 @@
       transition: transform 0.5s ease-in-out;
     }
 
-    .image {
+    .itemImage {
       flex: 1;
       padding-right: 16px;
 
