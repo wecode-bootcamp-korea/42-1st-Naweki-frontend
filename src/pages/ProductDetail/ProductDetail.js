@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import EmptyHeartBtn from './EmptyHeartBtn/EmptyHeartBtn';
 import FreeDelivery from './FreeDelivery/FreeDelivery';
-import FullHeartBtn from './FullHeartBtn/FullHeartBtn';
 import Modal from 'react-modal';
 import './ProductDetail.scss';
 
@@ -33,35 +31,14 @@ function ProductDetail() {
       method: 'GET',
     })
       .then(res => res.json())
-      .then(data => setProductData(data));
+      .then(data => {
+        console.log(data);
+        setProductData(data);
+      });
   }, []);
-  // console.log(productData);
 
   const product = productData.product;
-  // console.log(product);
 
-  // 장바구니 담기
-  // const addProductToCart = () => {
-  //   if (!!token) {
-  //     fetch(API.cart, {
-  //       method : 'POST',
-  //       headers : {
-
-  //       },
-  //       body: JSON.stringify({
-  //         id:
-  //         name :
-  //         subName:
-  //         price:
-  //         currentColor:
-  //       }),
-  //     })
-  //       .then (res => res.json())
-  //       .then (res => {
-
-  //       })
-  //   }
-  // };
   return (
     <>
       <div className="productDetail">
@@ -152,12 +129,17 @@ function ProductDetail() {
 
               <div className="sizeContainer">
                 <div className="smallSize">
-                  {/* <button className="size">{product.size}</button> */}
-                  <button className="size">220</button>
+                  <button className="size">{product.stock.size}</button>
+                  {/* <button className="size">{</button> */}
                   <button className="size">225</button>
                   <button className="size">230</button>
                   <button className="size">235</button>
                   <button className="size">240</button>
+                  {/* <button className="size">220</button>
+                    <button className="size">225</button>
+                    <button className="size">230</button>
+                    <button className="size">235</button>
+                    <button className="size">240</button> */}
                 </div>
                 <div className="bigSize">
                   <button className="size">245</button>
@@ -251,5 +233,29 @@ function ProductDetail() {
     </>
   );
 }
+// const product = productData.product;
+
+// 장바구니 담기
+// const addProductToCart = () => {
+//   if (!!token) {
+//     fetch(API.cart, {
+//       method : 'POST',
+//       headers : {
+
+//       },
+//       body: JSON.stringify({
+//         id:
+//         name :
+//         subName:
+//         price:
+//         currentColor:
+//       }),
+//     })
+//       .then (res => res.json())
+//       .then (res => {
+
+//       })
+//   }
+// };
 
 export default ProductDetail;
