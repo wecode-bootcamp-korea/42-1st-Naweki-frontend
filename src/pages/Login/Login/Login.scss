@@ -1,0 +1,155 @@
+@mixin flex($justify: center, $align: center) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+.login {
+  @include flex();
+  width: 100%;
+  height: 100%;
+
+  .loginBox {
+    @include flex();
+    flex-direction: column;
+    width: 460px;
+
+    .header {
+      justify-content: center;
+      max-width: 460px;
+      height: 100%;
+
+      .logoBox {
+        margin: 24px 0px;
+        margin-right: auto;
+
+        .swooshLogo {
+          width: 50px;
+        }
+      }
+
+      .loginGuide {
+        margin-bottom: 12px;
+        font-size: 28px;
+        font-weight: normal;
+        line-height: 32px;
+      }
+    }
+
+    .loginInputBox {
+      flex-direction: column;
+      width: 100%;
+      max-width: 460px;
+
+      .regionBox {
+        margin-right: auto;
+        margin-bottom: 16px;
+
+        .selectedRegion {
+          font-size: medium;
+        }
+        .changeRegion {
+          padding: 0px 10px;
+          border: none;
+          background-color: transparent;
+          color: #8e8e8e;
+          font-size: medium;
+          text-align-last: center;
+          text-decoration-line: underline;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        .changeRegion:focus {
+          outline: none;
+        }
+      }
+
+      .emailInputBox {
+        width: 100%;
+        min-height: 84px;
+        padding-top: 20px;
+
+        .emailInputValid {
+          width: 98%;
+          height: 50px;
+          padding: 1px 0px 2px 10px;
+          border-width: 1px;
+          border-radius: 8px;
+          font-size: medium;
+          &:focus {
+            outline: none;
+          }
+        }
+
+        .emailInputInvalid {
+          width: 98%;
+          height: 50px;
+          padding: 1px 2px 0px 10px;
+          border-width: 1px;
+          border-radius: 8px;
+          border-color: red;
+          font-size: medium;
+          &:focus {
+            outline: none;
+          }
+          &::placeholder {
+            color: red;
+          }
+        }
+        .required {
+          padding: 10px 10px;
+          color: red;
+          font-size: small;
+        }
+        .valid {
+          display: none;
+        }
+      }
+
+      .agreementBox {
+        max-width: 368px;
+
+        .agreement {
+          color: #8e8e8e;
+          font-size: medium;
+          line-height: 1.5;
+
+          .personalInfoAgreement:visited {
+            color: gray;
+          }
+
+          .usingAgreement:visited {
+            color: gray;
+          }
+        }
+      }
+
+      .continueBtnBox {
+        display: flex;
+        width: 100%;
+        padding: 30px 0px;
+
+        .continueBtn {
+          margin-left: auto;
+          padding: 10.5px 20px;
+          border: none;
+          border-radius: 30px;
+          background-color: black;
+          color: white;
+          font-size: medium;
+        }
+
+        .continueBtn:hover {
+          background-color: gray;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
