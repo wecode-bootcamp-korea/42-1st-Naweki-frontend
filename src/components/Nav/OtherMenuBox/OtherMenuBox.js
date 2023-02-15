@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ItemLists from '../ItemLists/ItemLists';
 import {
   NEW_ITEMS,
@@ -20,22 +21,54 @@ const NewMenuBox = ({ isShown, onMouseEnter, onMouseLeave }) => {
           >
             <div className="itemWrapper">
               {NEW_ITEMS.map(item => {
-                return <ItemLists key={item.id} item={item} />;
+                return (
+                  <Link
+                    className="menuLink"
+                    key={item.id}
+                    to="/products?isNew=true"
+                  >
+                    <ItemLists item={item} />
+                  </Link>
+                );
               })}
             </div>
             <div className="itemWrapper">
               {SHOES_ITEMS.map(item => {
-                return <ItemLists key={item.id} item={item} />;
+                return (
+                  <Link
+                    className="menuLink"
+                    key={item.id}
+                    to="/products?sub_category=신발"
+                  >
+                    <ItemLists item={item} />
+                  </Link>
+                );
               })}
             </div>
             <div className="itemWrapper">
               {CLOTHING_ITEMS.map(item => {
-                return <ItemLists key={item.id} item={item} />;
+                return (
+                  <Link
+                    className="menuLink"
+                    key={item.id}
+                    to="/products?sub_category=의류"
+                  >
+                    <ItemLists item={item} />
+                  </Link>
+                );
               })}
             </div>
             <div className="itemWrapper">
               {ACC_ITEMS.map(item => {
-                return <ItemLists key={item.id} item={item} />;
+                return (
+                  <Link
+                    className="menuLink"
+                    key={item.id}
+                    to="/products?sub_category=용품"
+                  >
+                    <ItemLists item={item} />
+                  </Link>
+                );
               })}
             </div>
           </div>
