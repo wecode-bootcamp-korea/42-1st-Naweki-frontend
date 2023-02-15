@@ -14,6 +14,7 @@ $cursor: pointer;
       display: flex;
       flex: 1;
       justify-content: space-between;
+      margin-left: 120px;
 
       .footerLeftBox {
         display: inline-block;
@@ -73,9 +74,10 @@ $cursor: pointer;
     .iconBox {
       display: flex;
       justify-content: space-between;
-      width: 9%;
+      width: 10%;
+      // padding-right: 50px;
+      margin-right: 320px;
       padding-top: 3%;
-      padding-right: 20px;
       text-align: right;
       cursor: $cursor;
 
@@ -90,7 +92,7 @@ $cursor: pointer;
     display: flex;
     justify-content: space-between;
     width: 60%;
-    margin-top: 12%;
+    margin-top: 120px;
     margin-left: 20%;
     font-size: 12px;
 
