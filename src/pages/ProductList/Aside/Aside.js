@@ -5,7 +5,7 @@ import { GENDER_DATA } from './data/genderData';
 import Color from '../Color/Color';
 import './Aside.scss';
 
-const Aside = ({ isFilterClicked }) => {
+const Aside = ({ isFilterClicked, products }) => {
   const [isGenderClicked, setIsGenderClicked] = useState(false);
   const [isColorClicked, setIsColorClicked] = useState(false);
 
@@ -44,8 +44,8 @@ const Aside = ({ isFilterClicked }) => {
                   alt="Icon Img"
                   src={
                     isGenderClicked === false
-                      ? '/images/up.png'
-                      : '/images/down.png'
+                      ? '/images/productList/up.png'
+                      : '/images/productList/down.png'
                   }
                 />
               </button>
@@ -75,13 +75,13 @@ const Aside = ({ isFilterClicked }) => {
                   alt="Icon Img"
                   src={
                     isColorClicked === false
-                      ? '/images/up.png'
-                      : '/images/down.png'
+                      ? '/images/productList/up.png'
+                      : '/images/productList/down.png'
                   }
                 />
               </button>
             </div>
-            {isColorClicked === false && <Color />}
+            {isColorClicked === false && <Color products={products} />}
           </div>
         </>
       )}

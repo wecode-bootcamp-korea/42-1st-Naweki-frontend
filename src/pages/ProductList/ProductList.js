@@ -8,14 +8,27 @@ const ProductList = () => {
   const [products, setProducts] = useState([]);
   const [isFilterClicked, setIsFilterClicked] = useState(false);
 
-  const getProducts = async api => {
-    const response = await fetch(api);
-    const json = await response.json();
-    setProducts(json);
-  };
+  // TODO : mock data 사용 시
   useEffect(() => {
-    getProducts(`/data/productData.json`);
+    fetch('./data/productData.json', {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(data => {
+        setProducts(data);
+      });
   }, []);
+
+  // TODO : api 활용 시
+  // useEffect(() => {
+  //   fetch('http://10.58.52.69:3000/products', {
+  //     method: 'GET',
+  //   })
+  //     .then(res => res.json())
+  //     .then(data => {
+  //       setProducts(data.data);
+  //     });
+  // }, []);
 
   const onClickFilter = () => {
     setIsFilterClicked(prev => !prev);
@@ -25,12 +38,12 @@ const ProductList = () => {
     <main className="productList">
       <Banner onClickFilter={onClickFilter} />
       <div className="contentWrapper">
-        <Aside isFilterClicked={isFilterClicked} />
+        <Aside isFilterClicked={isFilterClicked} products={products} />
         <div className="productWrapper">
           {products.map(product => (
             <Product
               key={product.id}
-              {...product}
+              product={product}
               isFilterClicked={isFilterClicked}
             />
           ))}

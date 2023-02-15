@@ -7,7 +7,7 @@ const Color = () => {
     <div className="color">
       {COLOR_DATA.map(color => (
         <button key={color.id} className="colorBtn">
-          <img className="colorImg" alt={color.alt} src={color.src} />
+          <div className={color.name} id="colorImg" />
           <span>{color.name}</span>
         </button>
       ))}

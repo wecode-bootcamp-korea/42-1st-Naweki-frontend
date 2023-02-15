@@ -1,0 +1,36 @@
+@import '../../../styles/mixin';
+
+.color {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  .colorBtn {
+    @include flex(center, center);
+    flex-direction: column;
+    padding-bottom: 20px;
+    border: none;
+    background-color: white;
+    gap: 3px;
+
+    #colorImg {
+      width: 32px;
+      height: 32px;
+      margin: 0 auto;
+      border-radius: 50%;
+    }
+
+    .red {
+      background-color: red;
+    }
+
+    .black {
+      background-color: black;
+    }
+
+    .white {
+      border: 1px solid lightgray;
+      background-color: white;
+    }
+  }
+}

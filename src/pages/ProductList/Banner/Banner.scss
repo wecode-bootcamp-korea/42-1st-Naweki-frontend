@@ -16,14 +16,18 @@
     position: relative;
     gap: 40px;
 
-    .function {
-      span {
-        margin-right: 10px;
-      }
+    .functionIcon {
+      @include flex(center, center);
+      gap: 10px;
 
       .bannerIcon {
-        width: 16px;
-        height: 16px;
+        width: 20px;
+        height: 20px;
+      }
+
+      .sortWrapper {
+        @include flex(center, center);
+        gap: 10px;
       }
 
       .sortListWrapper {
