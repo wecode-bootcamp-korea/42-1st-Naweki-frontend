@@ -13,15 +13,19 @@ function ProductDetail() {
   const [productData, setProductData] = useState(null);
   const [size, setSize] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
+  const [selectedSize, setSelectedSize] = useState();
 
   const onClickBtn = () => {
     setHeart(!heart);
     setIsActive(true);
   };
-
   const sizeClick = event => {
-    const selectedSize = event.target.getAttribute('size');
+    setSelectedSize(event.target.getAttribute('size'));
   };
+
+  // const sizeClick = event => {
+  //   const selectedSize = event.target.getAttribute('size');
+  // };
 
   const cartBtnClick = () => {
     fetch('http://10.58.52.243:8000/products/1', {

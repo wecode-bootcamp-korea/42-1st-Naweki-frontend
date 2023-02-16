@@ -193,7 +193,6 @@
             grid-template-rows: 45px 45px;
 
             .size {
-              // text-align: center;
               display: flex;
               align-items: center;
               justify-content: center;
@@ -201,6 +200,7 @@
               border-radius: 8px;
               background-color: white;
               color: rgb(59, 58, 58);
+              cursor: pointer;
             }
           }
         }
@@ -221,10 +221,12 @@
         border-radius: 50px;
         background-color: black;
         color: white;
+        cursor: pointer;
       }
 
       .active {
         border: 1px solid gray;
+        cursor: pointer;
       }
 
       .wishListBtn {
@@ -233,9 +235,11 @@
         border: 1px solid rgba(0, 0, 0, 0.322);
         border-radius: 50px;
         background-color: white;
+        cursor: pointer;
 
         .emptyHeartImg {
           width: 10px;
+          cursor: pointer;
         }
       }
     }
