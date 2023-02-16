@@ -1,10 +1,10 @@
+@import '../../../styles/mixin';
 .category {
-  display: flex;
+  @include flex(center, null);
   flex-direction: column;
-  justify-content: center;
   width: 50%;
   margin-top: 170px;
-  margin-left: 24%;
+  margin-left: 28%;
   font-size: 16px;
 
   &:hover .hiddenCategory {
@@ -18,9 +18,8 @@
     }
 
     .categoryDetail {
-      display: flex;
+      @include flex(space-between, null);
       flex-direction: column;
-      justify-content: space-between;
       color: rgb(143, 143, 143);
       line-height: 37px;
     }

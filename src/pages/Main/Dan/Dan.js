@@ -12,7 +12,7 @@ function Dan() {
     <div className="dan">
       <img
         className="danParis"
-        src="https://images.unsplash.com/photo-1543728069-a3f97c5a2f32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80"
+        src="../../../../images/dan.png"
         alt="댄 X 밀라노 생제르망"
         onClick={onClickBtn}
       />
