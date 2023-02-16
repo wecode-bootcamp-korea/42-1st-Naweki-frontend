@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { CartList } from './CartList/CartList';
 import { Modal } from './Modal/Modal';
-import { API } from '../../config';
 import './Cart.scss';
 
 const Cart = () => {
@@ -16,7 +15,7 @@ const Cart = () => {
 
   // cart API 전달 받으면 데이터 조회용으로 사용 예정인 코드
   useEffect(() => {
-    fetch('http://10.58.52.243:3000/cart/', {
+    fetch('http://10.58.52.243:8000/cart/', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
@@ -42,18 +41,17 @@ const Cart = () => {
   // };
   // cart API 전달 받으면 데이터 삭제용으로 사용 예정인 코드
   const handleDelete = targetId => {
-    fetch(`http://10.58.52.243:3000/cart/${targetId}`, {
+    fetch(`http://10.58.52.243:8000/cart/${targetId}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
         Authorization: localStorage.getItem('userToken'),
       },
-    })
-      .then(res => res.json())
-      .then(data => {
-        const newCartList = cartList.filter(data => data.id !== targetId);
-        setCartList(newCartList);
-      });
+    }).then(res => {
+      if (res.status === 204) {
+        setCartList(res.data);
+      }
+    });
   };
 
   const [size, setSize] = useState('');
