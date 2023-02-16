@@ -5,7 +5,7 @@ function HiddenCategory() {
   return (
     <div className="hiddenCategory">
       <div className="categoryBox">
-        <ul className="categoryDetail">
+        <ul className="hiddenCategoryDetail">
           <li>블레이저 1</li>
           <li>리액트</li>
           <li>페가소스</li>
@@ -13,7 +13,7 @@ function HiddenCategory() {
       </div>
 
       <div className="categoryBox">
-        <ul className="categoryDetail">
+        <ul className="hiddenCategoryDetail">
           <li>테니스 신발</li>
           <li>트레이닝 신발</li>
           <li>Sale 신발</li>
@@ -21,7 +21,7 @@ function HiddenCategory() {
       </div>
 
       <div className="categoryBox">
-        <ul className="categoryDetail">
+        <ul className="hiddenCategoryDetail">
           <li>조거 & 스웻팬츠</li>
           <li>스포츠 브라</li>
           <li>팬츠 & 타이츠</li>
