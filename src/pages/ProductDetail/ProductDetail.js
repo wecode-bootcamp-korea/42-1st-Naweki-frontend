@@ -27,7 +27,7 @@ function ProductDetail() {
 
   //상세페이지 데이터 불러오기
   useEffect(() => {
-    fetch('http://10.58.52.64:3000/products/1', {
+    fetch('http://10.58.52.243:3000/products/1', {
       method: 'GET',
     })
       .then(res => res.json())
