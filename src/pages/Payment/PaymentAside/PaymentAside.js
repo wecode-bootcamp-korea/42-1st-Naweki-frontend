@@ -27,7 +27,10 @@ const PaymentAside = () => {
       },
     })
       .then(res => res.json())
-      .then(data => setCartList(data));
+      .then(data => {
+        console.log(data);
+        setCartList(data);
+      });
   }, []);
 
   const price = cartList

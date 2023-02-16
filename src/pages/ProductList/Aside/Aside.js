@@ -76,7 +76,7 @@ const Aside = ({ isFilterClicked }) => {
                 />
               </button>
             </div>
-            {isColorClicked === false && (
+            {/* {isColorClicked === false && (
               <div className="color">
                 {COLOR_DATA.map(color => (
                   <button key={color.id} className="colorBtn">
@@ -85,7 +85,7 @@ const Aside = ({ isFilterClicked }) => {
                   </button>
                 ))}
               </div>
-            )}
+            )} */}
           </div>
         </>
       )}
