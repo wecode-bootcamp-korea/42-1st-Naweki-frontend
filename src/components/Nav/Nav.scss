@@ -1,25 +1,30 @@
-@import '../../styles/mixin.scss';
+@import '../../styles/mixin';
 
 .nav {
-  display: flex;
-  flex-direction: column;
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+  background-color: white;
 
   .profileWrapper {
     @include flex(right, center);
-    text-align: right;
-    width: 100vw;
+    width: 100%;
     padding: 10px 50px 10px 0px;
-    gap: 10px;
     background-color: #f5f5f5;
     font-size: 13px;
     font-weight: 500;
+    text-align: right;
+    gap: 10px;
+
+    .guest {
+      color: black;
+      text-decoration: none;
+    }
   }
 
   .bottomWrapper {
     @include flex(space-between, center);
-    padding: 0px 50px;
-    height: 80px;
-    margin-bottom: 90px;
+    padding: 0px 40px;
 
     .logoWrapper {
       .logo {
