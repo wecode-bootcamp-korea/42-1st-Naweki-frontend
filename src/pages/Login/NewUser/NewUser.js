@@ -1,6 +1,5 @@
-import { faList } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
-import { Link, useNavigate, useLocation, Route } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Input } from '../Input/Input.js';
 import { INPUT_DATA } from '../Input/InputData/InputData.js';
 import './NewUser.scss';
@@ -14,8 +13,8 @@ const NewUser = () => {
   const userEmail = location?.state?.title;
 
   const [userInfo, setUserInfo] = useState({
-    userSurname: '',
-    userName: '',
+    lastName: '',
+    firstName: '',
     userPw: '',
     userPreference: '',
     userBday: '',
@@ -32,8 +31,8 @@ const NewUser = () => {
         'Content-Type': 'application/json;charset=utf-8',
       },
       body: JSON.stringify({
-        firstName: userInfo.userName,
-        lastName: userInfo.userSurname,
+        firstName: userInfo.firstName,
+        lastName: userInfo.lastName,
         email: userEmail,
         password: userInfo.userPw,
         shoppingPreference: userInfo.userPreference,

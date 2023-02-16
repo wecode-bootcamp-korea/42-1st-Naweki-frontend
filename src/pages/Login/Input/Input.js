@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { INPUT_DATA } from './InputData/InputData.js';
 import './Input.scss';
 
 export const Input = ({ list, inputHandler }) => {
