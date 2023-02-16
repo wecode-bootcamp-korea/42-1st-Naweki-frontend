@@ -19,12 +19,8 @@ function ProductDetail() {
     setIsActive(true);
   };
   const sizeClick = event => {
-    setSelectedSize(event.target.getAttribute('size'));
+    setSelectedSize(event.target.getAttribute('sizeId'));
   };
-
-  // const sizeClick = event => {
-  //   const selectedSize = event.target.getAttribute('size');
-  // };
 
   useEffect(() => {
     fetch('http://10.58.52.243:3000/products/1', {
@@ -51,8 +47,8 @@ function ProductDetail() {
       },
       body: JSON.stringify({
         productId: product.id,
-        sizeId: product.stock.id,
-        // sizeId: selectedSize,
+        // sizeId: product.stock.id,
+        sizeId: selectedSize,
         quantity: 1,
       })
         .then(res => res.json())
@@ -158,7 +154,8 @@ function ProductDetail() {
                     <div
                       key={size.id}
                       className="size"
-                      size={size.size}
+                      sizeId={size.id}
+                      // size={size.size}
                       onClick={sizeClick}
                     >
                       {size.size}
