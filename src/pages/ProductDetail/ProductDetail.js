@@ -16,22 +16,24 @@ function ProductDetail() {
 
   const onClickBtn = () => {
     setHeart(!heart);
-    setIsModalOpen(true);
     setIsActive(true);
+  };
+
+  const sizeClick = event => {
+    const selectedSize = event.target.getAttribute('size');
   };
 
   const cartBtnClick = () => {
     fetch('http://10.58.52.243:8000/products/1', {
-                    method: 'POST',
-                    body: JSON.stringify({
-                      currentColor : product.currentColor,
-                      size:
-                  })
-                  .then(res => res.json())
-                  .then(data => setModalOpen(true))
-                }
+      method: 'POST',
+      body: JSON.stringify({
+        currentColor: product.currentColor,
+        size: selectedSize,
+      })
+        .then(res => res.json())
+        .then(data => setModalOpen(true)),
+    });
   };
-
 
   useEffect(() => {
     fetch('http://10.58.52.243:8000/products/1', {
@@ -140,7 +142,12 @@ function ProductDetail() {
               <div className="sizeContainer">
                 <div className="sizeBox">
                   {product.stock.map(size => (
-                    <div key={size.id} className="size">
+                    <div
+                      key={size.id}
+                      className="size"
+                      size={size.size}
+                      onClick={sizeClick}
+                    >
                       {size.size}
                     </div>
                   ))}
