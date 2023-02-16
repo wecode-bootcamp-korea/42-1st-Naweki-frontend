@@ -11,7 +11,6 @@ function ProductDetail() {
   const [isActive, setIsActive] = useState(false);
   // const [thumbnailImage, setThumbnailImage] = useState('');
   const [productData, setProductData] = useState(null);
-  const [size, setSize] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedSize, setSelectedSize] = useState();
 
@@ -28,8 +27,12 @@ function ProductDetail() {
   // };
 
   const cartBtnClick = () => {
-    fetch('http://10.58.52.243:8000/products/1', {
+    fetch('http://10.58.52.243:3000/cart/', {
       method: 'POST',
+      header: {
+        'Content-Type': 'application/json;charset=utf-8',
+        authorization: localStorage.getItem('userToken'),
+      },
       body: JSON.stringify({
         currentColor: product.currentColor,
         size: selectedSize,
