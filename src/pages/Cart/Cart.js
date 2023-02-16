@@ -54,14 +54,25 @@ const Cart = () => {
   const [size, setSize] = useState('');
   const [howMany, setHowMany] = useState('');
 
-  const sendProductInfo = () => {
+  const sendProductSize = () => {
     fetch('', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
         Authorization: localStorage.getItem('userToken'),
       },
-      body: JSON.stringify({ size: size, stock: howMany }),
+      body: JSON.stringify({ size: size }),
+    }).then(res => res.json());
+  };
+
+  const sendProductStock = () => {
+    fetch('', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+        Authorization: localStorage.getItem('userToken'),
+      },
+      body: JSON.stringify({ stock: howMany }),
     }).then(res => res.json());
   };
 
@@ -91,7 +102,8 @@ const Cart = () => {
               handleDelete={handleDelete}
               setSize={setSize}
               setHowMany={setHowMany}
-              sendProductInfo={sendProductInfo}
+              sendProductSize={sendProductSize}
+              sendProductStock={sendProductStock}
             />
           );
         })}
