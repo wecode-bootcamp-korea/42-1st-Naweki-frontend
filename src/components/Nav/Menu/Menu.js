@@ -18,7 +18,7 @@ const Menu = () => {
       <ul className="menuLists" onMouseEnter={onMouseEnter}>
         {MENU_DATA.map(menu => {
           return (
-            <Link className="toProductList" key={menu.id} to="/main">
+            <Link className="toProductList" key={menu.id} to="/products">
               <li
                 className="menuList"
                 onMouseEnter={() => onMouseEnterList(menu.id)}
