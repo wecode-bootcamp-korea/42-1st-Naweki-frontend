@@ -28,7 +28,9 @@ const ProductList = () => {
     fetch(`http://10.58.52.214:3000/products${category}`, {
       method: 'GET',
     })
-      .then(res => res.json())
+      .then(res => {
+        res.json();
+      })
       .then(data => {
         setProducts(data.data);
       });
