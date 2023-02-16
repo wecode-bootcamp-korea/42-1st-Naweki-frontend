@@ -26,24 +26,8 @@ function ProductDetail() {
   //   const selectedSize = event.target.getAttribute('size');
   // };
 
-  const cartBtnClick = () => {
-    fetch('http://10.58.52.243:3000/cart/', {
-      method: 'POST',
-      header: {
-        'Content-Type': 'application/json;charset=utf-8',
-        authorization: localStorage.getItem('userToken'),
-      },
-      body: JSON.stringify({
-        currentColor: product.currentColor,
-        size: selectedSize,
-      })
-        .then(res => res.json())
-        .then(data => setModalOpen(true)),
-    });
-  };
-
   useEffect(() => {
-    fetch('http://10.58.52.243:8000/products/1', {
+    fetch('http://10.58.52.243:3000/products/1', {
       method: 'GET',
     })
       .then(res => res.json())
@@ -57,6 +41,28 @@ function ProductDetail() {
   }
 
   const product = productData.product;
+
+  const cartBtnClick = () => {
+    fetch('http://10.58.52.243:3000/cart/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+        Authorization: localStorage.getItem('userToken'),
+      },
+      body: JSON.stringify({
+        productId: product.id,
+        sizeId: product.stock.id,
+        // sizeId: selectedSize,
+        quantity: 1,
+      })
+        .then(res => res.json())
+        .then(res => {
+          if (res.status === 200) {
+            alert('성공! :)');
+          }
+        }),
+    });
+  };
 
   return (
     <div>
