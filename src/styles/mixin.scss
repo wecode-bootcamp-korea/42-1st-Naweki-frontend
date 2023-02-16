@@ -1,7 +1,15 @@
 @mixin flex($justify: center, $align: center) {
   display: flex;
-  justify-content: $justify;
   align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin position($position, $top, $right, $bottom, $left) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
 }
 
 @mixin paymentTitle {
@@ -9,15 +17,15 @@
   font-weight: bold;
 }
 @mixin edit {
-  font-weight: bold;
   border-bottom: 1px solid black;
+  font-weight: bold;
   cursor: pointer;
 }
 @mixin btn {
   padding: 15px;
+  border: none;
   border-radius: 30px;
   background-color: black;
-  border: none;
   color: white;
   cursor: pointer;
 }
