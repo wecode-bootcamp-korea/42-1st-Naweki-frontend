@@ -18,17 +18,12 @@ const ShippingOption = ({ userData }) => {
         <div className="nameWrapper">
           <div>
             <span className="result" name="last_name">
-              {userData.last_name}
+              {userData.lastName}
             </span>
             <span className="result" name="first)name">
-              {userData.first_name}
+              {userData.firstName}
             </span>
           </div>
-        </div>
-        <div>
-          <span className="result" name="address">
-            {userData.address}
-          </span>
         </div>
         <div>
           <span className="result" name="province">
@@ -39,13 +34,13 @@ const ShippingOption = ({ userData }) => {
           </span>
         </div>
         <div className="result" name="zip_code">
-          {userData.zip_code}
+          {userData.postalCode}
         </div>
         <div className="result" name="email">
           {userData.email}
         </div>
         <div className="result" name="phone_number">
-          {userData.phone_number}
+          {userData.phoneNumber}
         </div>
       </div>
 

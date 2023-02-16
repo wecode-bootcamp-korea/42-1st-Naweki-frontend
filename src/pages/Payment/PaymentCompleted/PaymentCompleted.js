@@ -1,12 +1,7 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import './PaymentCompleted.scss';
 
-const PaymentCompleted = () => {
-  const navigate = useNavigate();
-
-  const onClickToMain = () => navigate('/main');
-
+const PaymentCompleted = ({ onClickPayment }) => {
   return (
     <div className="paymentCompleted">
       <div className="paymentTitle">주문 완료</div>
@@ -17,7 +12,7 @@ const PaymentCompleted = () => {
         </label>
       </form>
       <div className="orderBtnWrapper">
-        <button className="orderBtn" onClick={onClickToMain}>
+        <button className="orderBtn" onClick={onClickPayment}>
           주문하기
         </button>
       </div>

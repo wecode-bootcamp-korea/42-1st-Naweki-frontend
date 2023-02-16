@@ -8,27 +8,18 @@ const ShippingOptionInput = ({
   onClickToSelect,
   isFilled,
 }) => {
-  const [isShown, setIsShown] = useState(false);
-  const [btnDisabled, setBtnDisabled] = useState(false);
   const {
-    first_name,
-    last_name,
+    firstName,
+    lastName,
     email,
-    phone_number,
+    phoneNumber,
     province,
     city,
-    zip_code,
-    address,
+    postalCode,
   } = userData;
 
-  const onFocusOut = e => {
-    if (e.target.value === '') {
-      setIsShown(true);
-    }
-  };
-
   return (
-    <div className={isFilled ? 'none' : 'shippingOptionInput'}>
+    <div className="shippingOptionInput">
       <div className="titleWrapper">
         <div className="paymentTitle">배송 옵션</div>
         <div className="edit">편집</div>
@@ -37,113 +28,81 @@ const ShippingOptionInput = ({
       <div className="infoWrapper">
         <div>
           <input
-            className={isShown ? 'requiredInfo' : 'infoInput'}
-            name="last_name"
+            className="infoInput"
+            name="lastName"
             type="text"
             placeholder="성*"
             onChange={onChangeInput}
-            value={userData.last_name}
-            onBlur={onFocusOut}
+            value={lastName}
           />
-          {isShown && <div className="required">성을 입력하세요.</div>}
         </div>
 
         <div>
           <input
-            className={isShown ? 'requiredInfo' : 'infoInput'}
-            name="first_name"
+            className="infoInput"
+            name="firstName"
             type="text"
             placeholder="이름*"
             onChange={onChangeInput}
-            value={userData.first_name}
+            value={firstName}
           />
-          {isShown && <div className="required">이름을 입력하세요.</div>}
         </div>
-      </div>
-
-      <div>
-        <input
-          className={isShown ? 'requiredPayment' : 'paymentInput'}
-          type="text"
-          placeholder="도로명 주소*"
-          onChange={onChangeInput}
-          value={userData.address}
-        />
-        {isShown && <div className="required">도로명 주소를 입력하세요.</div>}
       </div>
 
       <div>
         <input
           className="paymentInput"
-          type="text"
-          placeholder="건물/아파트, 층, 호수"
-        />
-        <div className="notRequired">선택사항</div>
-      </div>
-
-      <div>
-        <input
-          className={isShown ? 'requiredPayment' : 'paymentInput'}
+          name="province"
           type="text"
           placeholder="도/광역시*"
           onChange={onChangeInput}
-          value={userData.address}
+          value={province}
         />
-        {isShown && <div className="required">도/광역시를 입력하세요.</div>}
       </div>
 
       <div>
         <input
-          className={isShown ? 'requiredPayment' : 'paymentInput'}
+          className="paymentInput"
           name="city"
           type="text"
           placeholder="시/구/군*"
           onChange={onChangeInput}
-          value={userData.city}
+          value={city}
         />
-        {isShown && <div className="required">구를 입력하세요.</div>}
-      </div>
-
-      <div>
-        <input className="paymentInput" type="text" placeholder="읍/면/동" />
-        <div className="notRequired">선택사항</div>
       </div>
 
       <div>
         <input
-          className={isShown ? 'requiredPayment' : 'paymentInput'}
-          name="zip_code"
+          className="paymentInput"
+          name="postalCode"
           type="text"
           placeholder="우편번호*"
           onChange={onChangeInput}
-          value={userData.zip_code}
+          value={postalCode}
         />
-        {isShown && <div className="required">구를 입력하세요.</div>}
       </div>
 
       <div className="infoWrapper">
         <div>
           <input
-            className={isShown ? 'requiredInfo' : 'infoInput'}
-            name="phone_number"
+            className="infoInput"
+            name="phoneNumber"
             type="text"
             placeholder="전화번호* (- 포함 작성)"
             onChange={onChangeInput}
-            value={userData.phone_number}
+            value={phoneNumber}
           />
-          {isShown && <div className="required">전화번호를 입력하세요.</div>}
         </div>
 
         <div>
           <input
-            className={isShown ? 'requiredInfo' : 'infoInput'}
+            className="infoInput"
             name="email"
             type="text"
             placeholder="이메일*"
             onChange={onChangeInput}
-            value={userData.email}
+            value={email}
           />
-          {isShown && <div className="required">이메일 주소를 입력하세요.</div>}
         </div>
       </div>
 

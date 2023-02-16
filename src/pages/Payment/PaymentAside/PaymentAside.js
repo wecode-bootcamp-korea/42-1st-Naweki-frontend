@@ -1,37 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import CartProduct from './CartProduct/CartProduct';
 import './PaymentAside.scss';
 
-const PaymentAside = () => {
+const PaymentAside = ({ cartList }) => {
   const [tooltipClicked, setTooltipClicked] = useState(false);
-  const [cartList, setCartList] = useState([]);
 
   const onClickTooltip = () => {
     setTooltipClicked(prev => !prev);
   };
-
-  //TODO: mock data 연결
-  // useEffect(() => {
-  //   fetch('data/cartData.json')
-  //     .then(res => res.json())
-  //     .then(data => setCartList(data));
-  // }, []);
-
-  //TODO: api 연결
-  useEffect(() => {
-    fetch('http://10.58.52.243:8000/cart/', {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json;charset=utf-8',
-        Authorization: localStorage.getItem('userToken'),
-      },
-    })
-      .then(res => res.json())
-      .then(data => {
-        console.log(data);
-        setCartList(data);
-      });
-  }, []);
 
   const price = cartList
     .map(product => product.discountPrice)
