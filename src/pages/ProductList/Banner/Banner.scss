@@ -1,0 +1,51 @@
+@import '../../../styles/mixin';
+
+.banner {
+  @include flex(space-between, center);
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+  padding: 0px 50px;
+
+  .category {
+    font-size: 25px;
+    font-weight: 400;
+  }
+
+  .functionWrapper {
+    @include flex(space-between, center);
+    position: relative;
+    gap: 40px;
+
+    .functionIcon {
+      @include flex(center, center);
+      gap: 10px;
+
+      .bannerIcon {
+        width: 20px;
+        height: 20px;
+      }
+
+      .sortWrapper {
+        @include flex(center, center);
+        gap: 10px;
+      }
+
+      .sortListWrapper {
+        position: absolute;
+        top: 160%;
+        right: -5%;
+        width: 123px;
+        padding-top: 30px;
+        border-radius: 20px;
+        background-color: white;
+        text-align: right;
+      }
+
+      .sortList {
+        padding-right: 20px;
+        padding-bottom: 15px;
+      }
+    }
+  }
+}
