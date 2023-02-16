@@ -1,0 +1,17 @@
+@import '../../../styles/mixin';
+
+.itemLists {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .itemList {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .itemList[id='0'] {
+    font-weight: 600;
+  }
+}
