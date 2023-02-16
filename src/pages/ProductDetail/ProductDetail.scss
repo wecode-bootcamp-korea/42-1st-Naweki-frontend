@@ -163,148 +163,151 @@
           margin-top: 3%;
           gap: 3%;
 
-          .smallSize {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 2%;
+          // .smallSize {
+          //   display: flex;
+          //   justify-content: space-between;
+          //   margin-bottom: 2%;
+
+          // .size {
+          //   width: 18.5%;
+          //   padding-top: 4.5%;
+          //   padding-bottom: 4.5%;
+          //   border: 1px solid rgba(0, 0, 0, 0.182);
+          //   border-radius: 8px;
+          //   background-color: white;
+          //   color: rgb(59, 58, 58);
+          //   font-size: 14px;
+          //   text-align: center;
+          // }
+          // }
+
+          // .bigSize {
+          //   display: flex;
+          //   justify-content: space-between;
+
+          .sizeBox {
+            display: grid;
+            grid-column-gap: 8px;
+            grid-row-gap: 8px;
+            grid-template-columns: 65px 65px 65px 65px 65px;
+            grid-template-rows: 45px 45px;
 
             .size {
-              width: 18.5%;
-              padding-top: 4.5%;
-              padding-bottom: 4.5%;
               border: 1px solid rgba(0, 0, 0, 0.182);
               border-radius: 8px;
               background-color: white;
               color: rgb(59, 58, 58);
-              font-size: 14px;
-              text-align: center;
-            }
-          }
-
-          .bigSize {
-            display: flex;
-            justify-content: space-between;
-
-            .size {
-              width: 18.5%;
-              padding-top: 4.5%;
-              padding-bottom: 4.5%;
-              border: 1px solid rgba(0, 0, 0, 0.182);
-              border-radius: 8px;
-              background-color: white;
-              color: rgb(59, 58, 58);
-              font-size: 14px;
               text-align: center;
             }
           }
         }
       }
+    }
 
-      .btnContainer {
+    .btnContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 60%;
+      margin-top: 5%;
+
+      .cartBtn {
+        margin-bottom: 3%;
+        padding-top: 5.5%;
+        padding-bottom: 5.5%;
+        border-radius: 50px;
+        background-color: black;
+        color: white;
+      }
+
+      .active {
+        border: 1px solid gray;
+      }
+
+      .wishListBtn {
+        padding-top: 5.5%;
+        padding-bottom: 5.5%;
+        border: 1px solid rgba(0, 0, 0, 0.322);
+        border-radius: 50px;
+        background-color: white;
+
+        .emptyHeartImg {
+          width: 10px;
+        }
+      }
+    }
+
+    .description {
+      width: 60%;
+      margin-top: 7%;
+
+      .descriptionTop {
+        color: rgb(59, 59, 59);
+        font-size: 14px;
+        line-height: 26px;
+      }
+
+      .descriptionBottom {
+        margin-top: 10%;
+        margin-right: 23%;
+        float: right;
+        color: rgb(59, 59, 59);
+        font-size: 14px;
+        line-height: 26px;
+
+        .colorDescription {
+          list-style-type: disc;
+        }
+
+        .styleDescription {
+          list-style-type: disc;
+        }
+      }
+
+      .detailDescription {
+        margin-top: 37%;
+        color: rgb(59, 59, 59);
+        font-size: 14px;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+
+      .detailService {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        width: 60%;
-        margin-top: 5%;
+        justify-content: center;
+        margin-top: 10%;
 
-        .cartBtn {
-          margin-bottom: 3%;
-          padding-top: 5.5%;
-          padding-bottom: 5.5%;
-          border-radius: 50px;
-          background-color: black;
-          color: white;
+        .freeDelivery {
+          padding-top: 7%;
+          padding-bottom: 7%;
+          border-top: 1px solid rgba(128, 128, 128, 0.601);
+          border-right: transparent;
+          border-bottom: transparent;
+          border-left: transparent;
+          background-color: transparent;
+          font-size: 17px;
         }
 
-        .active {
-          border: 1px solid gray;
+        .review {
+          padding-top: 7%;
+          padding-bottom: 7%;
+          border-top: 1px solid rgba(128, 128, 128, 0.601);
+          border-right: transparent;
+          border-bottom: transparent;
+          border-left: transparent;
+          background-color: transparent;
+          font-size: 17px;
         }
 
-        .wishListBtn {
-          padding-top: 5.5%;
-          padding-bottom: 5.5%;
-          border: 1px solid rgba(0, 0, 0, 0.322);
-          border-radius: 50px;
-          background-color: white;
-
-          .emptyHeartImg {
-            width: 10px;
-          }
-        }
-      }
-
-      .description {
-        width: 60%;
-        margin-top: 7%;
-
-        .descriptionTop {
-          color: rgb(59, 59, 59);
-          font-size: 14px;
-          line-height: 26px;
-        }
-
-        .descriptionBottom {
-          margin-top: 10%;
-          margin-right: 23%;
-          float: right;
-          color: rgb(59, 59, 59);
-          font-size: 14px;
-          line-height: 26px;
-
-          .colorDescription {
-            list-style-type: disc;
-          }
-
-          .styleDescription {
-            list-style-type: disc;
-          }
-        }
-
-        .detailDescription {
-          margin-top: 37%;
-          color: rgb(59, 59, 59);
-          font-size: 14px;
-          font-weight: bold;
-          text-decoration: underline;
-        }
-
-        .detailService {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          margin-top: 10%;
-
-          .freeDelivery {
-            padding-top: 7%;
-            padding-bottom: 7%;
-            border-top: 1px solid rgba(128, 128, 128, 0.601);
-            border-right: transparent;
-            border-bottom: transparent;
-            border-left: transparent;
-            background-color: transparent;
-            font-size: 17px;
-          }
-
-          .review {
-            padding-top: 7%;
-            padding-bottom: 7%;
-            border-top: 1px solid rgba(128, 128, 128, 0.601);
-            border-right: transparent;
-            border-bottom: transparent;
-            border-left: transparent;
-            background-color: transparent;
-            font-size: 17px;
-          }
-
-          .moreInfo {
-            padding-top: 7%;
-            border-top: 1px solid rgba(128, 128, 128, 0.601);
-            border-right: transparent;
-            border-bottom: transparent;
-            border-left: transparent;
-            background-color: transparent;
-            font-size: 17px;
-          }
+        .moreInfo {
+          padding-top: 7%;
+          border-top: 1px solid rgba(128, 128, 128, 0.601);
+          border-right: transparent;
+          border-bottom: transparent;
+          border-left: transparent;
+          background-color: transparent;
+          font-size: 17px;
         }
       }
     }

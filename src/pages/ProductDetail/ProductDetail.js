@@ -27,7 +27,7 @@ function ProductDetail() {
 
   //상세페이지 데이터 불러오기
   useEffect(() => {
-    fetch('http://10.58.52.243:3000/products/1', {
+    fetch('http://10.58.52.243:8000/products/1', {
       method: 'GET',
     })
       .then(res => res.json())
@@ -132,26 +132,39 @@ function ProductDetail() {
               </div>
 
               <div className="sizeContainer">
-                <div className="smallSize">
-                  <button className="size">{product.stock.size}</button>
-                  {/* <button className="size">{</button> */}
-                  <button className="size">225</button>
+                <div className="sizeBox">
+                  {product.stock.map(size => (
+                    <div key={size.id} className="size">
+                      {size.size}
+                    </div>
+                  ))}
+                </div>
+                {/* <div className="smallSize"> */}
+                {/* <button className="size">{product.stock.size}</button> */}
+                {/* {product.stock.map(size => (
+                  <button key={size.id} className="size">
+                    {size.size}
+                  </button>
+                ))} */}
+                {/* <button className="size">{</button> */}
+
+                {/* <button className="size">225</button>
                   <button className="size">230</button>
                   <button className="size">235</button>
-                  <button className="size">240</button>
-                  {/* <button className="size">220</button>
+                  <button className="size">240</button> */}
+                {/* <button className="size">220</button>
                     <button className="size">225</button>
                     <button className="size">230</button>
                     <button className="size">235</button>
                     <button className="size">240</button> */}
-                </div>
-                <div className="bigSize">
+                {/* </div> */}
+                {/* <div className="bigSize">
                   <button className="size">245</button>
                   <button className="size">250</button>
                   <button className="size">255</button>
                   <button className="size">260</button>
                   <button className="size">265</button>
-                </div>
+                </div> */}
               </div>
             </div>
 
