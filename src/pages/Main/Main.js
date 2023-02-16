@@ -5,7 +5,7 @@ import Leggings from './Leggings/Leggings';
 import Infinite from './Infinite/Infinite';
 import Methcon from './Methcon/Methcon';
 import Dan from './Dan/Dan';
-import Trending from './Trending/Trending';
+// import Trending from './Trending/Trending';
 import './Main.scss';
 
 function Main() {
@@ -16,7 +16,7 @@ function Main() {
       <Infinite />
       <Methcon />
       <Dan />
-      <Trending />
+      {/* <Trending /> */}
       <Category />
     </div>
   );

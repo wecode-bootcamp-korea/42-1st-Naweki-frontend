@@ -9,18 +9,21 @@ function Dan() {
     productNavigate('/productList');
   };
   return (
-    <div className="dan" onClick={onClickBtn}>
+    <div className="dan">
       <img
         className="danParis"
         src="https://images.unsplash.com/photo-1543728069-a3f97c5a2f32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80"
         alt="댄 X 밀라노 생제르망"
+        onClick={onClickBtn}
       />
-      <div className="danText">댄 X 파리 생제르망</div>
-      <div className="danTextDetail">
+      <div className="danText" onClick={onClickBtn}>
+        댄 X 파리 생제르망
+      </div>
+      <div className="danTextDetail" onClick={onClickBtn}>
         세계 무대에서 빛나고 있는 파리를 조명한 새로운 댄 x 파리 생제르망
         컬렉션을 지금 만나보세요.
       </div>
-      <button className="danParisBuyBtn" type="button">
+      <button className="danParisBuyBtn" type="button" onClick={onClickBtn}>
         구매하기
       </button>
     </div>

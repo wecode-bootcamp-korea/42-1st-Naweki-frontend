@@ -2,19 +2,20 @@
 $cursor: pointer;
 
 .infinite {
-  cursor: $cursor;
   .infiniteVideo {
     display: block;
     width: 70%;
     height: 30%;
     margin: auto;
     margin-top: 80px;
+    cursor: $cursor;
   }
 
   .experiment {
     margin-top: 80px;
     margin-bottom: 22px;
     text-align: center;
+    cursor: $cursor;
   }
 
   .infiniteText {
@@ -23,16 +24,19 @@ $cursor: pointer;
     font-size: 50px;
     font-weight: bold;
     text-align: center;
+    cursor: $cursor;
   }
 
   .infiniteTextDetailFirst {
     margin-bottom: 8px;
     text-align: center;
+    cursor: $cursor;
   }
 
   .infiniteTextDetailSecond {
     margin-bottom: 35px;
     text-align: center;
+    cursor: $cursor;
   }
 
   .infiniteBuyBtn {

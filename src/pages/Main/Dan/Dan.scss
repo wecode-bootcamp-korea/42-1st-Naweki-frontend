@@ -1,12 +1,12 @@
 @import '../../../styles/mixin';
 $cursor: pointer;
 .dan {
-  cursor: $cursor;
   .danParis {
     display: block;
     width: 70%;
     margin: auto;
     margin-top: 80px;
+    cursor: $cursor;
   }
 
   .danText {
@@ -15,11 +15,13 @@ $cursor: pointer;
     font-size: 50px;
     font-weight: bold;
     text-align: center;
+    cursor: $cursor;
   }
 
   .danTextDetail {
     margin-bottom: 35px;
     text-align: center;
+    cursor: $cursor;
   }
 
   .danParisBuyBtn {
