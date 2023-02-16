@@ -8,12 +8,11 @@ Modal.setAppElement('#root');
 function ProductDetail() {
   const [visible, setVisible] = useState(false);
   const [heart, setHeart] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [isActive, setIsActive] = useState(false);
   // const [thumbnailImage, setThumbnailImage] = useState('');
   const [productData, setProductData] = useState(null);
-  // const [addToCart, setAddToCart] = useState(false);
-  const [size, setSize] = useState()
+  const [size, setSize] = useState(null);
+  const [modalOpen, setModalOpen] = useState(false);
 
   const onClickBtn = () => {
     setHeart(!heart);
@@ -21,15 +20,18 @@ function ProductDetail() {
     setIsActive(true);
   };
 
-  const closeModal = () => {
-    setIsModalOpen(false);
+  const cartBtnClick = () => {
+    fetch('http://10.58.52.243:8000/products/1', {
+                    method: 'POST',
+                    body: JSON.stringify({
+                      currentColor : product.currentColor,
+                      size:
+                  })
+                  .then(res => res.json())
+                  .then(data => setModalOpen(true))
+                }
   };
 
-  // const addToCart = () => {
-  //   setAddToCart(true);
-  // };
-
-  // setThumbnailImage(data.product.thumbnailImage
 
   useEffect(() => {
     fetch('http://10.58.52.243:8000/products/1', {
@@ -48,7 +50,6 @@ function ProductDetail() {
   const product = productData.product;
 
   return (
-    <>
     <div>
       <div className="productDetail">
         <div className="productDetailImges">
@@ -151,18 +152,20 @@ function ProductDetail() {
               <button
                 className={`cartBtn ${isActive ? 'avtice' : ''}`}
                 disabled={!isActive}
-                onClick={
-                  fetch('http://10.58.52.243:8000/products/1', {
-                    method: 'POST',
-                    body: JSON.stringify({
-                      currentColor : product.currentColor,
-                      size:
-                  })
-                  .then(res => res.json())
-                  .then(data => )
-                }
+                onClick={cartBtnClick}
+                // onClick={
+                //   fetch('http://10.58.52.243:8000/products/1', {
+                //     method: 'POST',
+                //     body: JSON.stringify({
+                //       currentColor : product.currentColor,
+                //       size:
+                //   })
+                //   .then(res => res.json())
+                //   .then(data => )
+                // }
               >
                 장바구니
+                {modalOpen && <Modal />}
               </button>
               <button className="wishListBtn" onClick={onClickBtn}>
                 위시리스트 &nbsp;
@@ -211,57 +214,8 @@ function ProductDetail() {
           </div>
         </div>
       </div>
-      <Modal
-        isOpen={isModalOpen}
-        onRequestclose={() => setIsModalOpen(false)}
-        contentLabel="Example Modal"
-        className="cart-modal-wrapper"
-      >
-        <div className="modal">
-          <div className="modalBody">
-            <div className="location">위시리스트에 추가되었습니다</div>
-            <button className="modalClose" onClick={closeModal}>
-              X
-            </button>
-
-            <img
-              className="wishListImg"
-              src="../../../images/에얼포스블랙.jpg"
-              alt="에얼포스 블랙"
-            />
-            <div className="wishListProduct">나위키 에얼포스 블랙</div>
-            <div className="wishlistCategory">남성 신발</div>
-            <div className="wishlistPrice">149,000원</div>
-            <button className="seeWishlist">위시리스트 보기</button>
-          </div>
-        </div>
-      </Modal>
-    </>
+    </div>
   );
 }
-// const product = productData.product;
-
-// 장바구니 담기
-// const addProductToCart = () => {
-//   if (!!token) {
-//     fetch(API.cart, {
-//       method : 'POST',
-//       headers : {
-
-//       },
-//       body: JSON.stringify({
-//         id:
-//         name :
-//         subName:
-//         price:
-//         currentColor:
-//       }),
-//     })
-//       .then (res => res.json())
-//       .then (res => {
-
-//       })
-//   }
-// };
 
 export default ProductDetail;
