@@ -4,6 +4,7 @@ import Aside from './Aside/Aside';
 import Banner from './Banner/Banner';
 import Product from './Product/Product';
 import { CATEGORY_DATA } from './Aside/data/categoryData';
+import React from 'react';
 import './ProductList.scss';
 
 const ProductList = () => {
