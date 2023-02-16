@@ -1,0 +1,27 @@
+@import '../../../styles/mixin';
+
+.menu {
+  @include flex(center, center);
+  height: 75px;
+  gap: 20px;
+
+  .menuLists {
+    @include flex(space-between, center);
+    gap: 25px;
+    padding-left: 210px;
+    list-style: none;
+
+    .menuList {
+      padding: 10px;
+      float: left;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .menuList:hover {
+      padding-bottom: 5px;
+      border-bottom: 2px solid black;
+    }
+  }
+}
