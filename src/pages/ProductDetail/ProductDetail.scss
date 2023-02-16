@@ -1,0 +1,310 @@
+.ReactModal__Overlay--after-open {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.cart-modal-wrapper {
+  position: relative;
+  box-sizing: border-box;
+  width: 600px;
+  height: 400px;
+  margin-top: 30px;
+  margin-left: calc(100vw - 650px);
+  background-color: #ffffff;
+  inset: 0 !important;
+}
+
+.productDetail {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  margin-left: 20%;
+
+  .productDetailImges {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    margin-right: 10%;
+
+    .detailImgVideo {
+      display: flex;
+      justify-content: center;
+
+      .detailImgsRow {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 70%;
+        margin-right: 2%;
+
+        .productImgRowTop {
+          margin-bottom: 2.5%;
+        }
+      }
+
+      .productVideo {
+        width: 50%;
+      }
+    }
+
+    .detailImgsColumn {
+      display: flex;
+      justify-content: center;
+      width: 60%;
+      margin-top: 2%;
+      margin-left: 20%;
+
+      .detailImgColumnLeft {
+        width: 100%;
+        margin-right: 3.5%;
+      }
+
+      .detailImgColumnRight {
+        width: 100%;
+      }
+    }
+  }
+
+  .productInfoContainer {
+    width: 100%;
+
+    .productInfoContainer {
+      .productInfo {
+        .productName {
+          width: 100%;
+          margin-bottom: 10px;
+          font-size: 27px;
+        }
+
+        .productCategory {
+          margin-bottom: 20px;
+          font-size: 14px;
+        }
+        .priceContainer {
+          display: flex;
+          justify-content: space-between;
+          width: 25%;
+
+          .productPrice {
+            font-size: 14px;
+          }
+
+          .originalPrice {
+            color: rgba(100, 99, 99, 0.864);
+            font-size: 14px;
+            text-decoration: line-through;
+          }
+        }
+      }
+
+      .otherColorContainer {
+        margin-top: 3%;
+
+        .otherColorBlack {
+          width: 12%;
+          margin-right: 10px;
+          padding-top: 11px;
+          padding-bottom: 11px;
+          border: 1px solid rgba(0, 0, 0, 0.322);
+          border-radius: 25px;
+        }
+
+        .otherColorPink {
+          width: 12%;
+          margin-right: 10px;
+          border: 1px solid rgba(0, 0, 0, 0.322);
+          border-radius: 25px;
+        }
+
+        .otherColorBlue {
+          width: 12%;
+          padding-top: 12px;
+          padding-bottom: 12px;
+          border: 1px solid rgba(0, 0, 0, 0.322);
+          border-radius: 25px;
+        }
+      }
+
+      .sizeInfo {
+        width: 60%;
+        margin-top: 5%;
+
+        .sizeHeader {
+          display: flex;
+          justify-content: space-between;
+
+          .sizeChoice {
+            font-size: 14px;
+          }
+
+          .sizeGuide {
+            color: rgba(100, 99, 99, 0.864);
+            font-size: 14px;
+          }
+        }
+
+        .sizeContainer {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          width: 100%;
+          margin-top: 3%;
+          gap: 3%;
+
+          // .smallSize {
+          //   display: flex;
+          //   justify-content: space-between;
+          //   margin-bottom: 2%;
+
+          // .size {
+          //   width: 18.5%;
+          //   padding-top: 4.5%;
+          //   padding-bottom: 4.5%;
+          //   border: 1px solid rgba(0, 0, 0, 0.182);
+          //   border-radius: 8px;
+          //   background-color: white;
+          //   color: rgb(59, 58, 58);
+          //   font-size: 14px;
+          //   text-align: center;
+          // }
+          // }
+
+          // .bigSize {
+          //   display: flex;
+          //   justify-content: space-between;
+
+          .sizeBox {
+            display: grid;
+            grid-column-gap: 8px;
+            grid-row-gap: 8px;
+            grid-template-columns: 65px 65px 65px 65px 65px;
+            grid-template-rows: 45px 45px;
+
+            .size {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 1px solid rgba(0, 0, 0, 0.182);
+              border-radius: 8px;
+              background-color: white;
+              color: rgb(59, 58, 58);
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+
+    .btnContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 60%;
+      margin-top: 5%;
+
+      .cartBtn {
+        margin-bottom: 3%;
+        padding-top: 5.5%;
+        padding-bottom: 5.5%;
+        border-radius: 50px;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+      }
+
+      .active {
+        border: 1px solid gray;
+        cursor: pointer;
+      }
+
+      .wishListBtn {
+        padding-top: 5.5%;
+        padding-bottom: 5.5%;
+        border: 1px solid rgba(0, 0, 0, 0.322);
+        border-radius: 50px;
+        background-color: white;
+        cursor: pointer;
+
+        .emptyHeartImg {
+          width: 10px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .description {
+      width: 60%;
+      margin-top: 7%;
+
+      .descriptionTop {
+        color: rgb(59, 59, 59);
+        font-size: 14px;
+        line-height: 26px;
+      }
+
+      .descriptionBottom {
+        margin-top: 10%;
+        margin-right: 26%;
+        float: right;
+        color: rgb(59, 59, 59);
+        font-size: 14px;
+        line-height: 26px;
+
+        .colorDescription {
+          list-style-type: disc;
+        }
+
+        .styleDescription {
+          list-style-type: disc;
+        }
+      }
+
+      .detailDescription {
+        margin-top: 37%;
+        color: rgb(59, 59, 59);
+        font-size: 14px;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+
+      .detailService {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 10%;
+
+        .freeDelivery {
+          padding-top: 7%;
+          padding-bottom: 7%;
+          border-top: 1px solid rgba(128, 128, 128, 0.601);
+          border-right: transparent;
+          border-bottom: transparent;
+          border-left: transparent;
+          background-color: transparent;
+          font-size: 17px;
+        }
+
+        .review {
+          padding-top: 7%;
+          padding-bottom: 7%;
+          border-top: 1px solid rgba(128, 128, 128, 0.601);
+          border-right: transparent;
+          border-bottom: transparent;
+          border-left: transparent;
+          background-color: transparent;
+          font-size: 17px;
+        }
+
+        .moreInfo {
+          padding-top: 7%;
+          border-top: 1px solid rgba(128, 128, 128, 0.601);
+          border-right: transparent;
+          border-bottom: transparent;
+          border-left: transparent;
+          background-color: transparent;
+          font-size: 17px;
+        }
+      }
+    }
+  }
+}

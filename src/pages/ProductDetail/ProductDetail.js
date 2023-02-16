@@ -1,7 +1,8 @@
 import React from 'react';
+import './ProductDetail.scss';
 
-const ProductDatail = () => {
+const ProductDetail = () => {
   return <p>안녕하세요</p>;
 };
 
-export default ProductDatail;
+export default ProductDetail;
