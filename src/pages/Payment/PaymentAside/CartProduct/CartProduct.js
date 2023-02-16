@@ -2,7 +2,7 @@ import React from 'react';
 import './CartProduct.scss';
 
 const CartProduct = ({ cart }) => {
-  const { style_id, size, color, quantity, price } = cart;
+  const { styleCode, size, color, quantity, price } = cart;
 
   return (
     <div className="cartProduct">
@@ -10,7 +10,7 @@ const CartProduct = ({ cart }) => {
       <div className="productDescWrapper">
         <div className="productName">나이키 마이클 러닝화</div>
         <ul>
-          <li>스타일번호 : {style_id}</li>
+          <li>스타일번호 : {styleCode}</li>
           <li>사이즈 : {size}</li>
           <li>컬러 : {color}</li>
           <li>

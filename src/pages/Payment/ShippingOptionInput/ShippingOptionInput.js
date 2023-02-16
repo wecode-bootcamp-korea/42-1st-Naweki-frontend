@@ -2,9 +2,14 @@ import React, { useState } from 'react';
 import { PROVINCE_DATA } from './data/provinceData';
 import './ShippingOptionInput.scss';
 
-const ShippingOptionInput = ({ userData, onChangeInput, onClickToSelect }) => {
+const ShippingOptionInput = ({
+  userData,
+  onChangeInput,
+  onClickToSelect,
+  isFilled,
+}) => {
   const [isShown, setIsShown] = useState(false);
-  const [btnDisabled, setBtnDisabled] = useState(true);
+  const [btnDisabled, setBtnDisabled] = useState(false);
   const {
     first_name,
     last_name,
@@ -16,12 +21,14 @@ const ShippingOptionInput = ({ userData, onChangeInput, onClickToSelect }) => {
     address,
   } = userData;
 
-  const onKeyUpRequiredInput = () => {
-    setIsShown(true);
+  const onFocusOut = e => {
+    if (e.target.value === '') {
+      setIsShown(true);
+    }
   };
 
   return (
-    <div className="shippingOptionInput">
+    <div className={isFilled ? 'none' : 'shippingOptionInput'}>
       <div className="titleWrapper">
         <div className="paymentTitle">배송 옵션</div>
         <div className="edit">편집</div>
@@ -30,25 +37,24 @@ const ShippingOptionInput = ({ userData, onChangeInput, onClickToSelect }) => {
       <div className="infoWrapper">
         <div>
           <input
-            className={isShown ? 'requiredInput' : 'infoInput'}
+            className={isShown ? 'requiredInfo' : 'infoInput'}
             name="last_name"
             type="text"
             placeholder="성*"
             onChange={onChangeInput}
-            onKeyUp={onKeyUpRequiredInput}
             value={userData.last_name}
+            onBlur={onFocusOut}
           />
           {isShown && <div className="required">성을 입력하세요.</div>}
         </div>
 
         <div>
           <input
-            className={isShown ? 'requiredInput' : 'infoInput'}
+            className={isShown ? 'requiredInfo' : 'infoInput'}
             name="first_name"
             type="text"
             placeholder="이름*"
             onChange={onChangeInput}
-            onKeyUp={onKeyUpRequiredInput}
             value={userData.first_name}
           />
           {isShown && <div className="required">이름을 입력하세요.</div>}
@@ -57,9 +63,11 @@ const ShippingOptionInput = ({ userData, onChangeInput, onClickToSelect }) => {
 
       <div>
         <input
-          className={isShown ? 'requiredInput' : 'infoInput'}
+          className={isShown ? 'requiredPayment' : 'paymentInput'}
           type="text"
           placeholder="도로명 주소*"
+          onChange={onChangeInput}
+          value={userData.address}
         />
         {isShown && <div className="required">도로명 주소를 입력하세요.</div>}
       </div>
@@ -73,29 +81,24 @@ const ShippingOptionInput = ({ userData, onChangeInput, onClickToSelect }) => {
         <div className="notRequired">선택사항</div>
       </div>
 
-      <select className="paymentInput">
-        {PROVINCE_DATA.map(province => (
-          <option
-            className="provinceOption"
-            name={province}
-            key={province.id}
-            onChange={onChangeInput}
-            onKeyUp={onKeyUpRequiredInput}
-            value={userData.province}
-          >
-            {province.name}
-          </option>
-        ))}
-      </select>
+      <div>
+        <input
+          className={isShown ? 'requiredPayment' : 'paymentInput'}
+          type="text"
+          placeholder="도/광역시*"
+          onChange={onChangeInput}
+          value={userData.address}
+        />
+        {isShown && <div className="required">도/광역시를 입력하세요.</div>}
+      </div>
 
       <div>
         <input
-          className="paymentInput"
+          className={isShown ? 'requiredPayment' : 'paymentInput'}
           name="city"
           type="text"
           placeholder="시/구/군*"
           onChange={onChangeInput}
-          onKeyUp={onKeyUpRequiredInput}
           value={userData.city}
         />
         {isShown && <div className="required">구를 입력하세요.</div>}
@@ -108,12 +111,11 @@ const ShippingOptionInput = ({ userData, onChangeInput, onClickToSelect }) => {
 
       <div>
         <input
-          className="paymentInput"
+          className={isShown ? 'requiredPayment' : 'paymentInput'}
           name="zip_code"
           type="text"
           placeholder="우편번호*"
           onChange={onChangeInput}
-          onKeyUp={onKeyUpRequiredInput}
           value={userData.zip_code}
         />
         {isShown && <div className="required">구를 입력하세요.</div>}
@@ -122,12 +124,11 @@ const ShippingOptionInput = ({ userData, onChangeInput, onClickToSelect }) => {
       <div className="infoWrapper">
         <div>
           <input
-            className="infoInput"
+            className={isShown ? 'requiredInfo' : 'infoInput'}
             name="phone_number"
             type="text"
             placeholder="전화번호* (- 포함 작성)"
             onChange={onChangeInput}
-            onKeyUp={onKeyUpRequiredInput}
             value={userData.phone_number}
           />
           {isShown && <div className="required">전화번호를 입력하세요.</div>}
@@ -135,12 +136,11 @@ const ShippingOptionInput = ({ userData, onChangeInput, onClickToSelect }) => {
 
         <div>
           <input
-            className="infoInput"
+            className={isShown ? 'requiredInfo' : 'infoInput'}
             name="email"
             type="text"
             placeholder="이메일*"
             onChange={onChangeInput}
-            onKeyUp={onKeyUpRequiredInput}
             value={userData.email}
           />
           {isShown && <div className="required">이메일 주소를 입력하세요.</div>}

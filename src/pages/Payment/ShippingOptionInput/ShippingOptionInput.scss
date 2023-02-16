@@ -1,4 +1,8 @@
-@import '../../../styles/mixin.scss';
+@import '../../../styles/mixin';
+
+.none {
+  display: none;
+}
 
 .shippingOptionInput {
   @include flex(flex-start, left);
@@ -29,8 +33,8 @@
     outline: none;
   }
 
-  .requiredInput {
-    width: 320px;
+  .requiredPayment {
+    width: 660px;
     height: 50px;
     padding-left: 10px;
     border: 1px solid #d43f22;
@@ -58,6 +62,15 @@
       height: 50px;
       padding-left: 10px;
       border: 1px solid black;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    .requiredInfo {
+      width: 320px;
+      height: 50px;
+      padding-left: 10px;
+      border: 1px solid #d43f22;
       border-radius: 8px;
       outline: none;
     }

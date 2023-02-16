@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import ShippingOptionInput from '../ShippingOptionInput/ShippingOptionInput';
 import ShippingOption from '../ShippingOption/ShippingOption';
 import PaymentAside from '../PaymentAside/PaymentAside';
@@ -43,6 +42,7 @@ const MemberPayment = () => {
       <div className="memberPaymentWrapper">
         <div>
           <ShippingOptionInput
+            isFilled={isFilled}
             userData={userData}
             onChangeInput={onChangeInput}
             onClickToSelect={onClickToSelect}
@@ -52,6 +52,8 @@ const MemberPayment = () => {
               <ShippingOption userData={userData} />
               <hr />
               <PaymentSelect onClickToComplete={onClickToComplete} />
+              <hr />
+              <div className="disabledTitle">주문 완료</div>
               {isSelected && (
                 <>
                   <hr />
