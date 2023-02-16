@@ -1,0 +1,9 @@
+@import '../../../styles/mixin.scss';
+
+.disabled {
+  .disabledTitle {
+    @include paymentTitle;
+    padding: 20px 0px;
+    color: #757575;
+  }
+}

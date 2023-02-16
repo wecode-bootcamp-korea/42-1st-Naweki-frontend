@@ -1,16 +1,17 @@
-@import '../../../styles/mixin.scss';
+@import '../../../styles/mixin';
 
 .aside {
-  @include flex(null, null);
+  display: flex;
   position: fixed;
   flex-direction: column;
   width: 240px;
   height: 100%;
-  gap: 20px;
+  margin-top: 80px;
   margin-left: 50px;
-  margin-top: 150px;
   padding-bottom: 30px;
   overflow: auto;
+  gap: 20px;
+  overflow-y: scroll;
 
   &::-webkit-scrollbar {
     width: 5px;
@@ -21,11 +22,16 @@
   }
 
   .categoryWrapper {
-    padding-bottom: 20px;
+    padding: 20px 0px;
     border-bottom: 1px solid lightgray;
 
-    .categoryList {
-      margin-bottom: 10px;
+    .categoryLink {
+      color: black;
+      text-decoration: none;
+
+      .categoryList {
+        margin-bottom: 10px;
+      }
     }
   }
 
@@ -38,39 +44,18 @@
     padding-bottom: 20px;
     border-bottom: 1px solid lightgray;
   }
-
   .colorWrapper {
     @include flex(null, null);
     flex-direction: column;
     width: 240px;
     padding-bottom: 20px;
     border-bottom: 1px solid lightgray;
-
-    .color {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(3, 1fr);
-
-      .colorBtn {
-        @include flex(center, center);
-        flex-direction: column;
-        padding-bottom: 20px;
-        gap: 3px;
-        background-color: white;
-        border: none;
-
-        .colorImg {
-          width: 26px;
-          height: 26px;
-        }
-      }
-    }
   }
 
   .asideBtn {
-    background-color: white;
     border-style: none;
     outline: none;
+    background-color: white;
 
     .asideIcon {
       width: 16px;

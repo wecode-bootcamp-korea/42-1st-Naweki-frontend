@@ -1,4 +1,4 @@
-@import '../../../styles/mixin.scss';
+@import '../../../styles/mixin';
 
 .itemLists {
   display: flex;
@@ -6,10 +6,12 @@
   gap: 10px;
 
   .itemList {
+    color: black;
+    text-decoration: none;
     cursor: pointer;
+  }
 
-    &[id='0'] {
-      font-weight: 400;
-    }
+  .itemList[id='0'] {
+    font-weight: 600;
   }
 }

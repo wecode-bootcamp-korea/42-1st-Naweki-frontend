@@ -7,7 +7,7 @@ const PaymentNav = () => {
     <nav className="paymentNav">
       <div className="logoWrapper">
         <Link className="toMain" to="/">
-          <img className="logo" alt="Logo Img" src="images/logo.jpg" />
+          <img className="logo" alt="Logo Img" src="images/nav/logo.jpg" />
         </Link>
       </div>
 
@@ -15,9 +15,9 @@ const PaymentNav = () => {
         <img
           className="profileImg"
           alt="Profile Img"
-          src="/images/profile.png"
+          src="/images/nav/profile.png"
         />
-        <p>김코딩님</p>
+        <p>고객님</p>
       </div>
     </nav>
   );

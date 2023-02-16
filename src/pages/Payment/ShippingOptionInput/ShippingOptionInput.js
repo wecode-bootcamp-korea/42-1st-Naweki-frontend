@@ -1,73 +1,64 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { PROVINCE_DATA } from './data/provinceData';
 import './ShippingOptionInput.scss';
 
-const ShippingOptionInput = ({ userData, onChangeInput, onClickToSelect }) => {
+const ShippingOptionInput = ({
+  userData,
+  onChangeInput,
+  onClickToSelect,
+  isFilled,
+}) => {
+  const {
+    firstName,
+    lastName,
+    email,
+    phoneNumber,
+    province,
+    city,
+    postalCode,
+  } = userData;
+
   return (
     <div className="shippingOptionInput">
       <div className="titleWrapper">
-        <p className="paymentTitle">배송 옵션</p>
-        <p className="edit">편집</p>
+        <div className="paymentTitle">배송 옵션</div>
+        <div className="edit">편집</div>
       </div>
 
       <div className="infoWrapper">
         <div>
           <input
             className="infoInput"
-            name="last_name"
+            name="lastName"
             type="text"
             placeholder="성*"
             onChange={onChangeInput}
-            value={userData.last_name}
+            value={lastName}
           />
-          <p className="required">성을 입력하세요.</p>
         </div>
 
         <div>
           <input
             className="infoInput"
-            name="first_name"
+            name="firstName"
             type="text"
             placeholder="이름*"
             onChange={onChangeInput}
-            value={userData.first_name}
+            value={firstName}
           />
-          <p className="required">이름을 입력하세요.</p>
         </div>
       </div>
-      <div>
-        <input
-          className="paymentInput"
-          type="text"
-          placeholder="도로명 주소*"
-          onChange={onChangeInput}
-        />
-        <p className="required">유효한 주소를 입력하세요.</p>
-      </div>
 
       <div>
         <input
           className="paymentInput"
+          name="province"
           type="text"
-          placeholder="건물/아파트, 층, 호수"
+          placeholder="도/광역시*"
           onChange={onChangeInput}
+          value={province}
         />
-        <p className="notRequired">선택사항</p>
       </div>
-
-      <select className="paymentInput">
-        {PROVINCE_DATA.map(province => (
-          <option
-            className="provinceOption"
-            name={province}
-            key={province.id}
-            onChange={onChangeInput}
-            value={userData.province}
-          >
-            {province.name}
-          </option>
-        ))}
-      </select>
 
       <div>
         <input
@@ -76,35 +67,31 @@ const ShippingOptionInput = ({ userData, onChangeInput, onClickToSelect }) => {
           type="text"
           placeholder="시/구/군*"
           onChange={onChangeInput}
-          value={userData.city}
+          value={city}
         />
-        <p className="required">구를 입력하세요.</p>
       </div>
 
       <div>
-        <input className="paymentInput" type="text" placeholder="읍/면/동" />
-        <p className="notRequired">선택사항</p>
+        <input
+          className="paymentInput"
+          name="postalCode"
+          type="text"
+          placeholder="우편번호*"
+          onChange={onChangeInput}
+          value={postalCode}
+        />
       </div>
 
-      <input
-        className="paymentInput"
-        name="zip_code"
-        type="text"
-        placeholder="우편번호*"
-        onChange={onChangeInput}
-        value={userData.zip_code}
-      />
       <div className="infoWrapper">
         <div>
           <input
             className="infoInput"
-            name="phone_number"
+            name="phoneNumber"
             type="text"
             placeholder="전화번호* (- 포함 작성)"
             onChange={onChangeInput}
-            value={userData.phone_number}
+            value={phoneNumber}
           />
-          <p className="required">필수 작성 항목입니다.</p>
         </div>
 
         <div>
@@ -114,9 +101,8 @@ const ShippingOptionInput = ({ userData, onChangeInput, onClickToSelect }) => {
             type="text"
             placeholder="이메일*"
             onChange={onChangeInput}
-            value={userData.email}
+            value={email}
           />
-          <p className="required">유효한 이메일 주소를 입력하세요.</p>
         </div>
       </div>
 

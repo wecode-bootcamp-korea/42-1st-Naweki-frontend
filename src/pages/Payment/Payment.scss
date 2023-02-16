@@ -1,26 +1,13 @@
-@import '../../styles/mixin.scss';
+<<<<<<< HEAD
+@import '../../styles/mixin';
 
 .payment {
-  .paymentParagraph {
-    @include paymentTitle;
-    padding-bottom: 50px;
-  }
-
-  .titleWrapper {
-    @include flex(space-between, center);
-
-    .paymentTitle {
-      @include paymentTitle;
-      padding-bottom: 20px;
-    }
-
-    .edit {
-      @include edit;
-    }
-  }
+  padding-top: 300px;
 
   .contentWrapper {
     @include flex(space-around, flex-start);
     width: 100%;
   }
 }
+=======
+>>>>>>> main

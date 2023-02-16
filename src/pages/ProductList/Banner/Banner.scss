@@ -1,14 +1,15 @@
-@import '../../../styles/mixin.scss';
+@import '../../../styles/mixin';
 
 .banner {
   @include flex(space-between, center);
   position: fixed;
-  width: 93%;
-  padding: 50px;
+  z-index: 1;
+  width: 100vw;
+  padding: 0px 50px;
 
   .category {
-    font-weight: 400;
     font-size: 25px;
+    font-weight: 400;
   }
 
   .functionWrapper {
@@ -16,14 +17,18 @@
     position: relative;
     gap: 40px;
 
-    .function {
-      span {
-        margin-right: 10px;
-      }
+    .functionIcon {
+      @include flex(center, center);
+      gap: 10px;
 
       .bannerIcon {
-        width: 16px;
-        height: 16px;
+        width: 20px;
+        height: 20px;
+      }
+
+      .sortWrapper {
+        @include flex(center, center);
+        gap: 10px;
       }
 
       .sortListWrapper {
@@ -32,14 +37,14 @@
         right: -5%;
         width: 123px;
         padding-top: 30px;
-        text-align: right;
-        background-color: white;
         border-radius: 20px;
+        background-color: white;
+        text-align: right;
+      }
 
-        .sortList {
-          padding-bottom: 15px;
-          padding-right: 20px;
-        }
+      .sortList {
+        padding-right: 20px;
+        padding-bottom: 15px;
       }
     }
   }

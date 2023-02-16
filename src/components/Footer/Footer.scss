@@ -1,3 +1,261 @@
-p {
-  display: none;
+$color: rgba(220, 220, 220, 0.71);
+$cursor: pointer;
+
+.footer {
+  min-height: 50vh;
+  margin-top: 77%;
+  background-color: black;
+  text-align: center;
+
+  .menu-wrapper {
+    display: flex;
+
+    .footerTextBox {
+      display: flex;
+      flex: 1;
+      justify-content: space-between;
+      margin-left: 120px;
+
+      .footerNewsBox {
+        display: inline-block;
+        width: 6%;
+        margin-top: 3%;
+        margin-left: 13%;
+        color: white;
+        font-size: 14px;
+        line-height: 250%;
+        cursor: $cursor;
+      }
+
+      .footerHelpBox {
+        display: inline-block;
+        width: 6%;
+        margin-top: 3%;
+        margin-right: 28px;
+        color: $color;
+        font-size: 13px;
+        line-height: 250%;
+        text-align: center;
+        cursor: $cursor;
+
+        .help {
+          color: white;
+          font-size: 14px;
+        }
+
+        .helpDetail {
+          &:hover {
+            color: white;
+          }
+        }
+      }
+
+      .nawekiInfoBox {
+        margin-top: 3%;
+        margin-right: 55%;
+        font-size: 13px;
+        line-height: 250%;
+        cursor: $cursor;
+
+        .aboutNawekiContainer {
+          color: white;
+          font-size: 14px;
+        }
+
+        .aboutNaweki {
+          color: $color;
+
+          &:hover {
+            color: white;
+          }
+        }
+      }
+    }
+    .iconBox {
+      display: flex;
+      justify-content: space-between;
+      width: 10%;
+      margin-right: 320px;
+      padding-top: 3%;
+      text-align: right;
+      cursor: $cursor;
+
+      .icon {
+        width: 28px;
+        height: 28px;
+      }
+    }
+  }
+
+  .footerRow {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin-top: 120px;
+    margin-left: 20%;
+    font-size: 12px;
+
+    .mapIcon {
+      width: 15px;
+      height: 15px;
+      margin-top: -2.5px;
+      margin-left: -9%;
+    }
+
+    .countryBox {
+      display: flex;
+      justify-content: space-between;
+      width: 25%;
+      margin-left: -8%;
+
+      .country {
+        display: flex;
+        justify-content: space-between;
+        margin-top: -4px;
+        border: none;
+        background-color: transparent;
+        cursor: $cursor;
+
+        .korea {
+          color: white;
+        }
+      }
+
+      .copyright {
+        color: $color;
+      }
+    }
+
+    .service {
+      display: flex;
+      justify-content: space-between;
+      width: 13%;
+      margin-right: -5%;
+
+      .termsOfService {
+        color: $color;
+        cursor: $cursor;
+
+        &:hover {
+          color: white;
+        }
+      }
+
+      .privacyPolicy {
+        color: white;
+        cursor: $cursor;
+      }
+    }
+  }
+
+  .line {
+    width: 72%;
+    margin-top: 15px;
+    margin-left: 13%;
+    color: $color;
+  }
+
+  .footerInfoSection {
+    display: flex;
+    justify-content: space-between;
+    width: 72%;
+    margin-top: 15px;
+    margin-left: 14%;
+    color: $color;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: left;
+
+    .footerBusinessInfo {
+      width: 50%;
+      margin-right: 40px;
+
+      .proprietorInfo {
+        margin-left: 7px;
+        color: rgba(255, 255, 255, 0.78);
+        text-decoration: underline;
+        cursor: $cursor;
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+
+    .footerPaymentInfo {
+      width: 50%;
+
+      .deposit {
+        color: rgba(255, 255, 255, 0.78);
+        text-decoration: underline;
+        cursor: $cursor;
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+
+  .footerServiceInfo {
+    display: flex;
+    justify-content: space-between;
+    width: 72%;
+    margin-top: 25px;
+    margin-left: 14%;
+    color: $color;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: left;
+
+    .ServiceInfo {
+      width: 47.2%;
+      text-align: left;
+
+      .serviceNum {
+        margin-right: 7px;
+        margin-left: 7px;
+        color: rgba(255, 255, 255, 0.78);
+        text-decoration: underline;
+        cursor: $cursor;
+
+        &:hover {
+          color: white;
+        }
+      }
+
+      .serviceEmail {
+        margin-right: 7px;
+        margin-left: 7px;
+        color: rgba(255, 255, 255, 0.78);
+        text-decoration: underline;
+        cursor: $cursor;
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+
+    .footerLegalInfo {
+      position: absolute;
+      width: 18%;
+      margin-top: -2px;
+      margin-left: 37%;
+    }
+
+    .seeDetails {
+      position: absolute;
+      margin-top: -2px;
+      margin-left: 50.5%;
+      color: $color;
+      color: rgba(255, 255, 255, 0.78);
+      text-decoration: underline;
+      cursor: $cursor;
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
 }
