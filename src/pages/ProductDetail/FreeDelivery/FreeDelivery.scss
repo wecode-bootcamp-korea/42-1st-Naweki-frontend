@@ -1,0 +1,30 @@
+.freeDelivery {
+  line-height: 26px;
+  text-align: left;
+
+  .deliveryInfo {
+    margin-bottom: 7%;
+    font-size: 14px;
+
+    .deliveryDetail {
+      text-decoration: underline;
+    }
+  }
+
+  .todayDeliveryInfo {
+    margin-bottom: 7%;
+    font-size: 14px;
+
+    .todayDeliveryDetail {
+      text-decoration: underline;
+    }
+  }
+
+  .afterServiceInfo {
+    font-size: 14px;
+
+    .serviceDetail {
+      text-decoration: underline;
+    }
+  }
+}
