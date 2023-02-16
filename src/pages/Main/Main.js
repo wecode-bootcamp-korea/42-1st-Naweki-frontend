@@ -1,6 +1,4 @@
 import React from 'react';
-// import { useNavigate } from 'react-router-dom';
-// import RecommendItem from '../../components/RecommendItem/RecommendItem';
 import Category from './Category/Category';
 import Feel from './Feel/Feel';
 import Leggings from './Leggings/Leggings';

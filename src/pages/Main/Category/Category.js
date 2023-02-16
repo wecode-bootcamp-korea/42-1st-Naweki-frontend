@@ -1,6 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Category.scss';
 import HiddenCategory from '../HiddenCategory/HiddenCategory';
+import {
+  SHOES_CATEGORY_DATA,
+  SPORTS_SHOES_CATEGORY_DATA,
+  CLOTHES_CATEGORY_DATA,
+  KIDS_CATEGORY_DATA,
+} from './categoryData';
 
 function Category() {
   return (
@@ -9,36 +15,36 @@ function Category() {
         <div className="categoryBox">
           <div className="categoryName">Featured</div>
           <ul className="categoryDetail">
-            <li>에얼 포스 1</li>
-            <li>댄 1</li>
-            <li>에얼 맥스 98</li>
-            <li>에얼 맥스 90</li>
+            {SHOES_CATEGORY_DATA.map(category => (
+              <li key={category.id}>{category.title}</li>
+            ))}
           </ul>
         </div>
 
         <div className="categoryBox">
           <div className="categoryName">신발</div>
           <ul className="categoryDetail">
-            <li>전체 보기</li>
-            <li>댄 신발</li>
-            <li>러닝 신발</li>
-            <li>농구 신발</li>
+            {SPORTS_SHOES_CATEGORY_DATA.map(category => (
+              <li key={category.id}>{category.title}</li>
+            ))}
           </ul>
         </div>
 
         <div className="categoryBox">
           <div className="categoryName">의류</div>
           <ul className="categoryDetail">
-            <li>전체 보기</li>
-            <li>탐 & 티셔츠</li>
-            <li>쇼츠</li>
-            <li>후디 % 풀오버</li>
+            {CLOTHES_CATEGORY_DATA.map(category => (
+              <li key={category.id}>{category.title}</li>
+            ))}
           </ul>
         </div>
 
         <div className="categoryBox">
           <div className="categoryName">Kids</div>
           <ul className="categoryDetail">
+            {KIDS_CATEGORY_DATA.map(category => (
+              <li key={category.id}>{category.title}</li>
+            ))}
             <li>베이비 신발</li>
             <li>키즈 신발</li>
             <li>키즈 농구 신발</li>
