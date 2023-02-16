@@ -25,7 +25,7 @@ const ProductList = () => {
 
   // TODO: api 연결 시
   useEffect(() => {
-    fetch('http://10.58.52.214:3000/products', {
+    fetch(`http://10.58.52.214:3000/products${category}`, {
       method: 'GET',
     })
       .then(res => res.json())
@@ -48,13 +48,7 @@ const ProductList = () => {
           CATEGORY_DATA={CATEGORY_DATA}
         />
         <div className="productWrapper">
-          {products.map(product => (
-            <Product
-              key={product.id}
-              product={product}
-              isFilterClicked={isFilterClicked}
-            />
-          ))}
+          <Product products={products} isFilterClicked={isFilterClicked} />
         </div>
       </div>
     </main>
