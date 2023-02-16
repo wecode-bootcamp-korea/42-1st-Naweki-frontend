@@ -35,6 +35,7 @@ const ProductList = () => {
         setProducts(data.data);
       });
   }, []);
+  console.log(products);
 
   const onClickFilter = () => {
     setIsFilterClicked(prev => !prev);
