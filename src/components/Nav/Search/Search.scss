@@ -1,22 +1,30 @@
-@import '../../../styles/mixin.scss';
+@import '../../../styles/mixin';
 
 .search {
+  display: flex;
+  @include position(fixed, 0%, null, null, 0%);
+  flex-direction: column;
+  border: 1px solid black;
+  background-color: white;
   @include flex(space-between, center);
-  width: 100%;
-  height: 400px;
+
+  .searchTop {
+    @include flex(space-between, center);
+    width: 100vw;
+    padding: 20px;
+  }
 
   .searchBarWide {
-    position: relative;
     align-items: center;
     width: 670px;
     height: 40px;
     padding: 0px 10px 0px 50px;
-    border-radius: 100px;
     border: none;
-    background: url(../Search/images/search.png) center no-repeat;
-    background-position: 10px;
-    background-color: #f5f5f5;
+    border-radius: 100px;
     outline-style: none;
+    background: url(../Search/images/search.png) center no-repeat;
+    background-color: #f5f5f5;
+    background-position: 10px;
     font-size: 17px;
 
     &::placeholder {
@@ -28,58 +36,9 @@
     }
   }
 
-  .filteredListWrapper {
-    @include flex(space-around, center);
-    position: absolute;
-    top: 15%;
-    left: 20%;
-    padding: 50px 70px;
-
-    .filteredItem {
-      @include flex(center, left);
-      flex-direction: column;
-      width: 20%;
-      height: 60%;
-      gap: 10px;
-
-      .productImg {
-        width: 50%;
-        padding-bottom: 40px;
-      }
-
-      .productImg .productPrice {
-        font-weight: bold;
-        font-size: 13px;
-      }
-
-      .productGender {
-        color: gray;
-        font-size: 12px;
-      }
-    }
-  }
-
-  .mostSearchedWrapper {
-    position: absolute;
-    top: 15%;
-    left: 30%;
-
-    .mostSearchedTerm {
-      margin-bottom: 15px;
-      font-size: 15px;
-      color: gray;
-    }
-
-    .term {
-      margin-bottom: 15px;
-      font-weight: bold;
-      font-size: 20px;
-    }
-  }
-
   .back {
-    background-color: white;
     border: none;
+    background-color: white;
     font-size: 17px;
     font-weight: 600;
     cursor: pointer;

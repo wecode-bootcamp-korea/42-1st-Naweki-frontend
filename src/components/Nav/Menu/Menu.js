@@ -15,43 +15,38 @@ const Menu = () => {
 
   return (
     <div className="menu">
-      <div className="menuWrapper">
+      <ul className="menuLists" onMouseEnter={onMouseEnter}>
         {MENU_DATA.map(menu => {
           return (
-            <div key={menu.id}>
-              <ul className="menuLists" onMouseEnter={onMouseEnter}>
-                <Link className="toProductList" to={'/main'}>
-                  <li
-                    className="menuList"
-                    onMouseEnter={() => onMouseEnterList(menu.id)}
-                    id={menu.id}
-                  >
-                    {menu.name}
-                  </li>
-                </Link>
-              </ul>
-
-              {menuId === 1 ? (
-                <NewMenuBox
-                  className="menubox"
-                  isShown={isShown}
-                  onMouseLeave={onMouseLeave}
-                  onMouseEnter={onMouseEnter}
-                />
-              ) : (
-                (menuId === 2 || menuId === 3 || menuId === 4) && (
-                  <OtherMenuBox
-                    className="menubox"
-                    isShown={isShown}
-                    onMouseLeave={onMouseLeave}
-                    onMouseEnter={onMouseEnter}
-                  />
-                )
-              )}
-            </div>
+            <Link className="toProductList" key={menu.id} to="/main">
+              <li
+                className="menuList"
+                onMouseEnter={() => onMouseEnterList(menu.id)}
+                id={menu.id}
+              >
+                {menu.name}
+              </li>
+            </Link>
           );
         })}
-      </div>
+      </ul>
+      {menuId === 1 ? (
+        <NewMenuBox
+          className="menubox"
+          isShown={isShown}
+          onMouseLeave={onMouseLeave}
+          onMouseEnter={onMouseEnter}
+        />
+      ) : (
+        (menuId === 2 || menuId === 3 || menuId === 4) && (
+          <OtherMenuBox
+            className="menubox"
+            isShown={isShown}
+            onMouseLeave={onMouseLeave}
+            onMouseEnter={onMouseEnter}
+          />
+        )
+      )}
     </div>
   );
 };
