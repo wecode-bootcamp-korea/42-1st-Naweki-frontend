@@ -9,7 +9,7 @@ import {
 } from '../data/otherMenuBoxData';
 import './OtherMenuBox.scss';
 
-const NewMenuBox = ({ isShown, onMouseEnter, onMouseLeave }) => {
+const OtherMenuBox = ({ isShown, onMouseEnter, onMouseLeave }) => {
   return (
     <div className="otherMenuBox">
       {isShown && (
@@ -80,4 +80,4 @@ const NewMenuBox = ({ isShown, onMouseEnter, onMouseLeave }) => {
   );
 };
 
-export default NewMenuBox;
+export default OtherMenuBox;

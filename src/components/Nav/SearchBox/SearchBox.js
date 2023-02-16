@@ -1,10 +1,10 @@
 import React from 'react';
 import './SearchBox.scss';
 
-const SearchBox = ({ filteredList }) => {
+const SearchBox = ({ filteredList, keyword }) => {
   return (
     <div className="searchBox">
-      {filteredList.index > 0 ? (
+      {filteredList.length >= 1 && keyword !== '' ? (
         <>
           <div className="filteredListWrapper">
             {filteredList.map(product => (
@@ -15,7 +15,7 @@ const SearchBox = ({ filteredList }) => {
                   src={product.img}
                 />
                 <p className="productName">{product.name}</p>
-                <p className="productGender">{product.style}</p>
+                <p className="productGender">{product.gender} 신발</p>
                 <p className="productPrice">{product.price}</p>
               </div>
             ))}

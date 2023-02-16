@@ -7,26 +7,16 @@ import './Nav.scss';
 
 const Nav = () => {
   const [clicked, setClicked] = useState(false);
-
-  const [isMember, setIsMember] = useState(false);
+  const userToken = localStorage.getItem('USERTOKEN');
 
   const searchClicked = () => {
     setClicked(prev => !prev);
   };
 
-  useEffect(() => {
-    checkMember();
-  }, []);
-
-  const checkMember = () => {
-    const userToken = localStorage.getItem('USERTOKEN');
-    userToken && setIsMember(true);
-  };
-
   return (
     <nav className="nav">
       <div className="profileWrapper">
-        {isMember ? (
+        {userToken === null ? (
           <>
             <Link className="guest" to="/signup">
               가입하기

@@ -6,11 +6,23 @@ const Search = ({ searchClicked }) => {
   const [products, setProducts] = useState([]);
   const [keyword, setKeyword] = useState('');
 
+  // TODO: mock 데이터 연결
   useEffect(() => {
     fetch('/data/productData.json')
       .then(res => res.json())
       .then(data => setProducts(data));
   }, [keyword]);
+
+  // TODO: api 활용 시
+  // useEffect(() => {
+  //   fetch('http://10.58.52.69:3000/products', {
+  //     method: 'GET',
+  //   })
+  //     .then(res => res.json())
+  //     .then(data => {
+  //       setProducts(data.data);
+  //     });
+  // }, []);
 
   const onChange = e => {
     setKeyword(e.target.value);
@@ -38,7 +50,7 @@ const Search = ({ searchClicked }) => {
           취소
         </button>
       </div>
-      <SearchBox filteredList={filteredList} />
+      <SearchBox filteredList={filteredList} keyword={keyword} />
     </div>
   );
 };
