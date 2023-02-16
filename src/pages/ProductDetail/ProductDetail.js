@@ -23,7 +23,7 @@ function ProductDetail() {
   };
 
   useEffect(() => {
-    fetch('http://10.58.52.243:3000/products/1', {
+    fetch('http://10.58.52.118:8000/products/1', {
       method: 'GET',
     })
       .then(res => res.json())
@@ -39,7 +39,7 @@ function ProductDetail() {
   const product = productData.product;
 
   const cartBtnClick = () => {
-    fetch('http://10.58.52.243:3000/cart/', {
+    fetch('http://10.58.52.118:8000/cart/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
@@ -49,7 +49,6 @@ function ProductDetail() {
         productId: product.id,
         // sizeId: product.stock.id,
         sizeId: selectedSize,
-        quantity: 1,
       })
         .then(res => res.json())
         .then(res => {
