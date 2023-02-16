@@ -12,6 +12,8 @@ function ProductDetail() {
   const [isActive, setIsActive] = useState(false);
   // const [thumbnailImage, setThumbnailImage] = useState('');
   const [productData, setProductData] = useState(null);
+  // const [addToCart, setAddToCart] = useState(false);
+  const [size, setSize] = useState()
 
   const onClickBtn = () => {
     setHeart(!heart);
@@ -23,16 +25,18 @@ function ProductDetail() {
     setIsModalOpen(false);
   };
 
+  // const addToCart = () => {
+  //   setAddToCart(true);
+  // };
+
   // setThumbnailImage(data.product.thumbnailImage
 
-  //상세페이지 데이터 불러오기
   useEffect(() => {
     fetch('http://10.58.52.243:8000/products/1', {
       method: 'GET',
     })
       .then(res => res.json())
       .then(data => {
-        console.log(data);
         setProductData(data);
       });
   }, []);
@@ -45,6 +49,7 @@ function ProductDetail() {
 
   return (
     <>
+    <div>
       <div className="productDetail">
         <div className="productDetailImges">
           <div className="detailImgVideo">
@@ -139,32 +144,6 @@ function ProductDetail() {
                     </div>
                   ))}
                 </div>
-                {/* <div className="smallSize"> */}
-                {/* <button className="size">{product.stock.size}</button> */}
-                {/* {product.stock.map(size => (
-                  <button key={size.id} className="size">
-                    {size.size}
-                  </button>
-                ))} */}
-                {/* <button className="size">{</button> */}
-
-                {/* <button className="size">225</button>
-                  <button className="size">230</button>
-                  <button className="size">235</button>
-                  <button className="size">240</button> */}
-                {/* <button className="size">220</button>
-                    <button className="size">225</button>
-                    <button className="size">230</button>
-                    <button className="size">235</button>
-                    <button className="size">240</button> */}
-                {/* </div> */}
-                {/* <div className="bigSize">
-                  <button className="size">245</button>
-                  <button className="size">250</button>
-                  <button className="size">255</button>
-                  <button className="size">260</button>
-                  <button className="size">265</button>
-                </div> */}
               </div>
             </div>
 
@@ -172,6 +151,16 @@ function ProductDetail() {
               <button
                 className={`cartBtn ${isActive ? 'avtice' : ''}`}
                 disabled={!isActive}
+                onClick={
+                  fetch('http://10.58.52.243:8000/products/1', {
+                    method: 'POST',
+                    body: JSON.stringify({
+                      currentColor : product.currentColor,
+                      size:
+                  })
+                  .then(res => res.json())
+                  .then(data => )
+                }
               >
                 장바구니
               </button>
