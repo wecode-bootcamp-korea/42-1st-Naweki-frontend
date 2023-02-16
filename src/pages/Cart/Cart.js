@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { CartList } from './CartList/CartList';
 import { Modal } from './Modal/Modal';
+import { API } from '../../config';
 import './Cart.scss';
 
 const Cart = () => {
@@ -12,12 +13,47 @@ const Cart = () => {
       .then(data => setCartList(data));
   }, []);
 
+  // cart API 전달 받으면 데이터 조회용으로 사용 예정인 코드
+  // useEffect(() => {
+  //   fetch('', {
+  //     method: 'GET',
+  //     headers: {
+  //       'Content-Type': 'application/json;charset=utf-8',
+  //       Authorization: localStorage.getItem('userToken'),
+  //     },
+  //     body: JSON.stringify({}),
+  //   })
+  //     .then(res => res.json())
+  //     .then(data => setCartList(data));
+  // });
+  // console.log(cartList);
+
   const price = cartList
     .map(product => product.reducedPrice)
     .reduce((prev, curr) => prev + curr, 0);
   const totalPrice = price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
   const [modal, setModal] = useState(false);
+
+  // cart API 전달 받으면 데이터 삭제용으로 사용 예정인 코드
+  // const handleDelete = targetId => {
+  //   fetch('', {
+  //     method: 'DELETE',
+  //     headers: {
+  //       'Content-Type': 'application/json;charset=utf-8',
+  //       Authorization: localStorage.getItem('userToken'),
+  //     },
+  //     body: JSON.stringify({}),
+  //   })
+  //     .then(res => res.json())
+  //     .then(data => {
+  //       const newCartList = cartList.filter(data => data.id !== targetId);
+  //       setCartList(newCartList);
+  //     });
+  // };
+
+  const [size, setSize] = useState('');
+  const [howMany, setHowMany] = useState('');
 
   return (
     <main className="cart">
@@ -38,7 +74,15 @@ const Cart = () => {
         </div>
         <div className="cartTitle">장바구니</div>
         {cartList.map(list => {
-          return <CartList key={list.id} list={list} />;
+          return (
+            <CartList
+              key={list.id}
+              list={list}
+              handleDelete={handleDelete}
+              setSize={setSize}
+              setHowMany={setHowMany}
+            />
+          );
         })}
         <div className="wishListBox">
           <div className="wishList">위시리스트</div>

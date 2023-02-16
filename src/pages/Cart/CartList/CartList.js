@@ -1,28 +1,20 @@
 import { useState, useEffect } from 'react';
 import './CartList.scss';
 
-export const CartList = ({ list }) => {
+// 백엔드 통신 시에는 {list.key}명 서버에서 명시한대로 바꿔줘야 함
+export const CartList = ({ list, handleDelete, setSize, setHowMany }) => {
   const [heart, setHeart] = useState(true);
   const handleLike = e => {
     setHeart(previousImg => !previousImg);
   };
 
-  const [size, setSize] = useState('');
   const onSelectSize = e => {
     setSize(e.target.value);
   };
 
-  const [howMany, setHowMany] = useState('');
   const onSelectMany = e => {
     setHowMany(e.target.value);
   };
-
-  // const deleteItem = () => {
-  //   fetch('URI', {
-  //     method: 'DELETE',
-  //     headers: { Authorization: localStorage.getItem('') },
-  //   }).then(res => {});
-  // };
 
   return (
     <div className="cartList">
@@ -82,7 +74,7 @@ export const CartList = ({ list }) => {
                 />
               )}
             </button>
-            <button className="trashBtn">
+            <button onClick={() => handleDelete(list.id)} className="trashBtn">
               <img src="images/trash-can-regular.png" alt="deleteBtn" />
             </button>
           </div>
