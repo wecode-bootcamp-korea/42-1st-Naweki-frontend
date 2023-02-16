@@ -26,6 +26,11 @@ const ShippingOption = ({ userData }) => {
           </div>
         </div>
         <div>
+          <span className="result" name="address">
+            {userData.address}
+          </span>
+        </div>
+        <div>
           <span className="result" name="province">
             {userData.province}
           </span>

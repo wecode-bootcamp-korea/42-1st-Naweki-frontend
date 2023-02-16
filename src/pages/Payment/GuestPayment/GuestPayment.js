@@ -19,6 +19,7 @@ const GuestPayment = () => {
     province: '',
     city: '',
     zip_code: '',
+    address: '',
   });
   const [isFilled, setIsFilled] = useState(false);
   const [isSelected, setIsSelected] = useState(false);

@@ -4,6 +4,17 @@ import './ShippingOptionInput.scss';
 
 const ShippingOptionInput = ({ userData, onChangeInput, onClickToSelect }) => {
   const [isShown, setIsShown] = useState(false);
+  const [btnDisabled, setBtnDisabled] = useState(true);
+  const {
+    first_name,
+    last_name,
+    email,
+    phone_number,
+    province,
+    city,
+    zip_code,
+    address,
+  } = userData;
 
   const onKeyUpRequiredInput = () => {
     setIsShown(true);
@@ -45,8 +56,12 @@ const ShippingOptionInput = ({ userData, onChangeInput, onClickToSelect }) => {
       </div>
 
       <div>
-        <input className="paymentInput" type="text" placeholder="도로명 주소" />
-        <div className="notRequired">선택사항</div>
+        <input
+          className={isShown ? 'requiredInput' : 'infoInput'}
+          type="text"
+          placeholder="도로명 주소*"
+        />
+        {isShown && <div className="required">도로명 주소를 입력하세요.</div>}
       </div>
 
       <div>

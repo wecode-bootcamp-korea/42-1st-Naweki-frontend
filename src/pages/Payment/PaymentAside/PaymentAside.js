@@ -10,11 +10,19 @@ const PaymentAside = () => {
     setTooltipClicked(prev => !prev);
   };
 
+  //TODO: mock data 연결
   useEffect(() => {
     fetch('data/cartData.json')
       .then(res => res.json())
       .then(data => setCartData(data));
   }, []);
+
+  //TODO: api 연결
+  // useEffect(() => {
+  //   fetch('data/cartData.json')
+  //     .then(res => res.json())
+  //     .then(data => setCartData(data));
+  // }, []);
 
   return (
     <aside className="paymentAside">
