@@ -47,11 +47,8 @@ const Cart = () => {
         'Content-Type': 'application/json;charset=utf-8',
         Authorization: localStorage.getItem('userToken'),
       },
-    }).then(res => {
-      if (res.status === 204) {
-        setCartList(res.data);
-      }
     });
+    setCartList(cartList.filter(cart => cart.cartItemId !== targetId));
   };
 
   const [size, setSize] = useState('');
