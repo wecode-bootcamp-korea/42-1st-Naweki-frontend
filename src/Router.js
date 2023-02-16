@@ -6,6 +6,7 @@ import SignUp from './pages/SignUp/SignUp';
 
 import ProductDetail from './pages/ProductDetail/ProductDetail';
 import Cart from './pages/Cart/Cart';
+import PaymentContainer from './components/Container/PaymentContainer';
 import Payment from './pages/Payment/Payment';
 import RecommendItem from './components/RecommendItem/RecommendItem';
 

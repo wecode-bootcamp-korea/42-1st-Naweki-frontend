@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Main = () => {
-  return <p>안녕하세용</p>;
+  return <p />;
 };
 
 export default Main;
