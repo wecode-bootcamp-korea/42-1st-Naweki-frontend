@@ -11,7 +11,7 @@ function ProductDetail() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isActive, setIsActive] = useState(false);
   // const [thumbnailImage, setThumbnailImage] = useState('');
-  const [productData, setProductData] = useState({});
+  const [productData, setProductData] = useState(null);
 
   const onClickBtn = () => {
     setHeart(!heart);
@@ -36,6 +36,10 @@ function ProductDetail() {
         setProductData(data);
       });
   }, []);
+
+  if (productData === null) {
+    return <div>Data Loding...</div>;
+  }
 
   const product = productData.product;
 
