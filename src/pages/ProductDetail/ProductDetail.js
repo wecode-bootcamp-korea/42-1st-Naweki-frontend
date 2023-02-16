@@ -173,16 +173,6 @@ function ProductDetail() {
                 className={`cartBtn ${isActive ? 'avtice' : ''}`}
                 disabled={!isActive}
                 onClick={cartBtnClick}
-                // onClick={
-                //   fetch('http://10.58.52.243:8000/products/1', {
-                //     method: 'POST',
-                //     body: JSON.stringify({
-                //       currentColor : product.currentColor,
-                //       size:
-                //   })
-                //   .then(res => res.json())
-                //   .then(data => )
-                // }
               >
                 장바구니
                 {modalOpen && <Modal />}
@@ -222,9 +212,7 @@ function ProductDetail() {
                     setVisible(!visible);
                   }}
                 >
-                  {visible
-                    ? '무료 배송 및 반품 위쪽 화살표'
-                    : '무료 배송 및 반품 아래 화살표'}
+                  {visible ? '무료 배송 및 반품' : '무료 배송 및 반품'}
                   {visible && <FreeDelivery />}
                 </button>
                 <button className="review">리뷰 (3712) </button>

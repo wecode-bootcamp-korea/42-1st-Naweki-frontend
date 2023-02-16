@@ -13,18 +13,6 @@
   inset: 0 !important;
 }
 
-// .modal {
-//   .modalBody {
-//     @include flex() .location {
-//     }
-//     .modalClose {
-//       position: absolute;
-//       top: 40px;
-//       right: 40px;
-//     }
-//   }
-// }
-
 .productDetail {
   display: flex;
   justify-content: center;
@@ -256,7 +244,7 @@
 
       .descriptionBottom {
         margin-top: 10%;
-        margin-right: 23%;
+        margin-right: 26%;
         float: right;
         color: rgb(59, 59, 59);
         font-size: 14px;
