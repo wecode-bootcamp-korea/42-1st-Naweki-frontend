@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { INPUT_DATA } from './InputData/InputData.js';
 import './Input.scss';
 
-export const Input = () => {
+export const Input = ({ list, inputHandler }) => {
   const [user, setUser] = useState('');
   const onChange = e => {
     setUser(e.target.value);
+    inputHandler(e);
   };
   const [isValid, setIsValid] = useState(true);
 
@@ -14,21 +14,17 @@ export const Input = () => {
   };
 
   return (
-    <form className="inputBox">
-      {INPUT_DATA.map(list => {
-        return (
-          <input
-            key={list.id}
-            type="text"
-            className={Error ? 'newUserInputValid' : 'newUserInputInvalid'}
-            placeholder={list.placeholder}
-            onChange={onChange}
-            onKeyUp={isName}
-          />
-        );
-      })}
+    <div className="inputBox">
+      <input
+        type="text"
+        className={isValid ? 'inputValid' : 'inputInvalid'}
+        placeholder={list.placeholder}
+        onChange={onChange}
+        onKeyUp={isName}
+        name={list.name}
+      />
       <label htmlFor="newUser" />
       <div className={isValid ? 'none' : 'warning'}>필수</div>
-    </form>
+    </div>
   );
 };

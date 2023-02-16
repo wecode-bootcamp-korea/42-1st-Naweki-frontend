@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { CATEGORY_DATA } from './data/categoryData';
-import { COLOR_DATA } from './data/colorData';
+import { Link } from 'react-router-dom';
 import { GENDER_DATA } from './data/genderData';
+import Color from '../Color/Color';
 import './Aside.scss';
 
-const Aside = ({ isFilterClicked }) => {
+const Aside = ({ isFilterClicked, products, CATEGORY_DATA }) => {
   const [isGenderClicked, setIsGenderClicked] = useState(false);
   const [isColorClicked, setIsColorClicked] = useState(false);
 
@@ -23,9 +23,13 @@ const Aside = ({ isFilterClicked }) => {
           <div className="categoryWrapper">
             <ul className="categorylists">
               {CATEGORY_DATA.map(category => (
-                <li key={category.id} className="categoryList">
-                  {category.name}
-                </li>
+                <Link
+                  className="categoryLink"
+                  key={category.id}
+                  to={`/products?subCategory=${category.subCategory}`}
+                >
+                  <li className="categoryList">{category.subCategory}</li>
+                </Link>
               ))}
             </ul>
           </div>
@@ -39,8 +43,8 @@ const Aside = ({ isFilterClicked }) => {
                   alt="Icon Img"
                   src={
                     isGenderClicked === false
-                      ? '/images/up.png'
-                      : '/images/down.png'
+                      ? '/images/productList/up.png'
+                      : '/images/productList/down.png'
                   }
                 />
               </button>
@@ -70,22 +74,13 @@ const Aside = ({ isFilterClicked }) => {
                   alt="Icon Img"
                   src={
                     isColorClicked === false
-                      ? '/images/up.png'
-                      : '/images/down.png'
+                      ? '/images/productList/up.png'
+                      : '/images/productList/down.png'
                   }
                 />
               </button>
             </div>
-            {/* {isColorClicked === false && (
-              <div className="color">
-                {COLOR_DATA.map(color => (
-                  <button key={color.id} className="colorBtn">
-                    <img className="colorImg" alt={color.alt} src={color.src} />
-                    <span>{color.name}</span>
-                  </button>
-                ))}
-              </div>
-            )} */}
+            {isColorClicked === false && <Color products={products} />}
           </div>
         </>
       )}
