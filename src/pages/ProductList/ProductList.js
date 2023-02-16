@@ -25,13 +25,14 @@ const ProductList = () => {
 
   // TODO: api 연결 시
   useEffect(() => {
-    fetch(`http://10.58.52.214:3000/products${category}`, {
+    fetch('http://10.58.52.243:3000/products', {
       method: 'GET',
     })
       .then(res => {
-        res.json();
+        return res.json();
       })
       .then(data => {
+        console.log(data);
         setProducts(data.data);
       });
   }, []);
