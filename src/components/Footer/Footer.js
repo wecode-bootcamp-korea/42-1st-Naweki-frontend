@@ -5,3 +5,4 @@ const Footer = () => {
 };
 
 export default Footer;
+<div className="footerNewsBox">
