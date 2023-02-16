@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { CATEGORY_DATA } from './data/categoryData';
 import { GENDER_DATA } from './data/genderData';
 import Color from '../Color/Color';
 import './Aside.scss';
 
-const Aside = ({ isFilterClicked, products }) => {
+const Aside = ({ isFilterClicked, products, CATEGORY_DATA }) => {
   const [isGenderClicked, setIsGenderClicked] = useState(false);
   const [isColorClicked, setIsColorClicked] = useState(false);
 
@@ -27,9 +26,9 @@ const Aside = ({ isFilterClicked, products }) => {
                 <Link
                   className="categoryLink"
                   key={category.id}
-                  to={`/products?category=${category.name}`}
+                  to={`/products?subCategory=${category.subCategory}`}
                 >
-                  <li className="categoryList">{category.name}</li>
+                  <li className="categoryList">{category.subCategory}</li>
                 </Link>
               ))}
             </ul>
