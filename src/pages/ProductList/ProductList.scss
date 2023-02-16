@@ -1,6 +1,8 @@
 @import '../../styles/mixin';
 
 .productList {
+  padding-top: 200px;
+
   .contentWrapper {
     @include flex(space-between, null);
     z-index: -1;
