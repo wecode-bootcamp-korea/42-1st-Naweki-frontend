@@ -1,8 +1,13 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './CartList.scss';
 
-// 백엔드 통신 시에는 {list.key}명 서버에서 명시한대로 바꿔줘야 함
-export const CartList = ({ list, handleDelete, setSize, setHowMany }) => {
+export const CartList = ({
+  list,
+  handleDelete,
+  setSize,
+  setHowMany,
+  sendProductInfo,
+}) => {
   const [heart, setHeart] = useState(true);
   const handleLike = e => {
     setHeart(previousImg => !previousImg);
@@ -20,16 +25,20 @@ export const CartList = ({ list, handleDelete, setSize, setHowMany }) => {
     <div className="cartList">
       <div className="productContainer">
         <div className="imgWrapper">
-          <img src={list.image} alt="something" className="cartImage" />
+          <img
+            src={list.thumbnailImage}
+            alt="something"
+            className="cartImage"
+          />
         </div>
         <div className="productInfoWrapper">
-          <div className="productName">{list.name}</div>
-          <div className="productCategory">{list.category}</div>
-          <div className="productDetail">{list.detail}</div>
+          <div className="productName">{list.productName}</div>
+          <div className="productCategory">{list.subName}</div>
+          <div className="productDetail">{list.color}</div>
           <div className="selectorWrapper">
             <div className="size">사이즈</div>
             <select
-              onChange={onSelectSize}
+              onChange={(onSelectSize, sendProductInfo)}
               name="sizes"
               id="sizeSelect"
               className="productSize"
@@ -44,7 +53,7 @@ export const CartList = ({ list, handleDelete, setSize, setHowMany }) => {
             </select>
             <div className="number">수량</div>
             <select
-              onChange={onSelectMany}
+              onChange={(onSelectMany, sendProductInfo)}
               name="howMany"
               id="howMany"
               className="howManyProduct"
@@ -74,17 +83,24 @@ export const CartList = ({ list, handleDelete, setSize, setHowMany }) => {
                 />
               )}
             </button>
-            <button onClick={() => handleDelete(list.id)} className="trashBtn">
+            <button
+              onClick={() => handleDelete(list.cartItemId)}
+              className="trashBtn"
+            >
               <img src="images/trash-can-regular.png" alt="deleteBtn" />
             </button>
           </div>
         </div>
         <div className="priceWrapper">
           <div className="originPrice">
-            {list.originPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+            {list.price}
+            {/* {list.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} */}
           </div>
           <div className="reducedPrice">
-            {list.reducedPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+            {list.discountPrice}
+            {/* {list.discountPrice
+              .toString()
+              .replace(/\B(?=(\d{3})+(?!\d))/g, ',')} */}
             원
           </div>
         </div>
@@ -92,7 +108,7 @@ export const CartList = ({ list, handleDelete, setSize, setHowMany }) => {
       <div className="shippingInfo">
         <div className="shipPrice">무료배송</div>
         <div className="arrivalBox">
-          도착 예정일: <div className="date">{list.date}</div>{' '}
+          도착 예정일: <div className="date">{list.createdAt}</div>{' '}
           <button className="location">지역 수정</button>
         </div>
       </div>
