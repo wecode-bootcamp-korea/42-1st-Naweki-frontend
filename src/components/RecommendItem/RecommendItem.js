@@ -1,10 +1,17 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './RecommendItem.scss';
 
 function RecommendItem() {
   const [recommendItem, setRecommendItem] = useState([]);
 
   const [showStartIdx, setshowStartIdx] = useState(0);
+
+  const productDetailNavigate = useNavigate();
+
+  const onClickImg = () => {
+    productDetailNavigate('/product-detail');
+  };
 
   const numOfShownCard = 3;
   const checkLeftBtnActive = () => showStartIdx > 0;
@@ -62,12 +69,19 @@ function RecommendItem() {
                   className="shoesImg"
                   src={imgUrl.shoesImg}
                   alt="{imgUrl.shoesName}"
+                  onClick={onClickImg}
                 />
                 <div className="shoesInfo">
-                  <div className="shoesName">{imgUrl.shoesName}</div>
-                  <div className="price">{imgUrl.price} 원</div>
+                  <div className="shoesName" onClick={onClickImg}>
+                    {imgUrl.shoesName}
+                  </div>
+                  <div className="price" onClick={onClickImg}>
+                    {imgUrl.price} 원
+                  </div>
                 </div>
-                <div className="category">{imgUrl.category}</div>
+                <div className="category" onClick={onClickImg}>
+                  {imgUrl.category}
+                </div>
               </div>
             );
           })}
