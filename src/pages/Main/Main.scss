@@ -1,0 +1,13 @@
+@import '../../styles/mixin';
+$cursor: pointer;
+.main {
+  .bottomCategory {
+    @include flex(center, center);
+
+    .categoryName {
+      margin-right: 100px;
+      float: left;
+      font-weight: bold;
+    }
+  }
+}

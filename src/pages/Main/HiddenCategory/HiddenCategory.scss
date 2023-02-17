@@ -1,0 +1,19 @@
+.hiddenCategory {
+  display: none;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 16px;
+
+  .categoryBox {
+    width: 25%;
+
+    .hiddenCategoryDetail {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-top: -150px;
+      color: rgb(143, 143, 143);
+      line-height: 37px;
+    }
+  }
+}

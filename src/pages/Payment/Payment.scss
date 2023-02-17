@@ -1,0 +1,13 @@
+<<<<<<< HEAD
+@import '../../styles/mixin';
+
+.payment {
+  padding-top: 300px;
+
+  .contentWrapper {
+    @include flex(space-around, flex-start);
+    width: 100%;
+  }
+}
+=======
+>>>>>>> main

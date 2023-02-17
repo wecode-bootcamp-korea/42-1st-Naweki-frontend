@@ -1,0 +1,36 @@
+@import '../../../styles/mixin';
+
+.memberPayment {
+  @include flex(center, center);
+  flex-direction: column;
+
+  .paymentParagraph {
+    @include paymentTitle;
+    padding-bottom: 50px;
+
+    .titleWrapper {
+      @include flex(space-between, center);
+
+      .paymentTitle {
+        @include paymentTitle;
+        padding-bottom: 20px;
+      }
+
+      .edit {
+        @include edit;
+      }
+    }
+  }
+
+  .memberPaymentWrapper {
+    @include flex(center, flex-start);
+    width: 100vw;
+    gap: 100px;
+
+    .disabledTitle {
+      @include paymentTitle;
+      padding: 20px 20px;
+      color: #757575;
+    }
+  }
+}
