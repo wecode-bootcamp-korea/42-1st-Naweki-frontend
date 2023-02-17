@@ -1,9 +1,8 @@
-@import '../../../styles/mixin.scss';
-
+@import '../../../styles/mixin';
 .paymentNav {
   @include flex(space-between, center);
-  padding: 10px 20px;
   margin-bottom: 80px;
+  padding: 10px 20px;
 
   .logoWrapper {
     .logo {
@@ -11,7 +10,6 @@
       cursor: pointer;
     }
   }
-
   .paymentProfileWrapper {
     display: flex;
     gap: 10px;

@@ -1,10 +1,10 @@
 import React from 'react';
 import './PaymentCompleted.scss';
 
-const PaymentCompleted = ({ onClickToMain }) => {
+const PaymentCompleted = ({ onClickPayment }) => {
   return (
     <div className="paymentCompleted">
-      <p className="paymentTitle">주문 완료</p>
+      <div className="paymentTitle">주문 완료</div>
       <form className="termsForm">
         <input className="termsInput" type="checkbox" />
         <label htmlFor="termsInput">
@@ -12,7 +12,7 @@ const PaymentCompleted = ({ onClickToMain }) => {
         </label>
       </form>
       <div className="orderBtnWrapper">
-        <button className="orderBtn" onClick={onClickToMain}>
+        <button className="orderBtn" onClick={onClickPayment}>
           주문하기
         </button>
       </div>

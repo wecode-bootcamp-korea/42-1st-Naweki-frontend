@@ -1,6 +1,5 @@
 import React from 'react';
 import './ItemLists.scss';
-
 const ItemLists = ({ item }) => {
   return (
     <ul className="itemLists" key={item.id}>
@@ -10,5 +9,4 @@ const ItemLists = ({ item }) => {
     </ul>
   );
 };
-
 export default ItemLists;

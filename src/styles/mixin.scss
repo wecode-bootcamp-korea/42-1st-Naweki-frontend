@@ -4,15 +4,25 @@
   justify-content: $justify;
 }
 
+@mixin position($position, $top, $right, $bottom, $left) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
 @mixin paymentTitle {
   font-size: 23px;
   font-weight: bold;
 }
+
 @mixin edit {
   border-bottom: 1px solid black;
   font-weight: bold;
   cursor: pointer;
 }
+
 @mixin btn {
   padding: 15px;
   border: none;
@@ -21,14 +31,25 @@
   color: white;
   cursor: pointer;
 }
+
 @mixin btnHover {
   opacity: 0.3;
 }
+
 @mixin labelMargin {
   margin-right: 10px;
 }
+
 @mixin inputCheck {
   padding-top: 10px;
   padding-left: 10px;
   font-size: 12px;
+}
+
+@mixin position($position, $top, $right, $bottom, $left) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
 }

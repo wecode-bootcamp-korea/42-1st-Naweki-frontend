@@ -1,0 +1,19 @@
+.cartProduct {
+  display: flex;
+  width: 360px;
+  margin-bottom: 20px;
+
+  .productImg {
+    margin-right: 30px;
+  }
+
+  .productDescWrapper {
+    .productName {
+      padding-bottom: 10px;
+    }
+
+    li {
+      color: gray;
+    }
+  }
+}
