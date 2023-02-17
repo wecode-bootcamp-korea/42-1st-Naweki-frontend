@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import { PROVINCE_DATA } from './data/provinceData';
 import './ShippingOptionInput.scss';
 
 const ShippingOptionInput = ({
