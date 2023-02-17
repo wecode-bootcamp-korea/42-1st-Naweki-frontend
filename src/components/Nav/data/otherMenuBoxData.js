@@ -9,7 +9,6 @@ export const NEW_ITEMS = [
   { id: 7, name: '지속 가능 컬렉션' },
   { id: 8, name: 'Sale' },
 ];
-
 export const SHOES_ITEMS = [
   { id: 0, name: '신발' },
   { id: 1, name: '신발 전체' },
@@ -25,7 +24,6 @@ export const SHOES_ITEMS = [
   { id: 11, name: '샌들 & 슬리퍼' },
   { id: 12, name: 'Sale' },
 ];
-
 export const CLOTHING_ITEMS = [
   { id: 0, name: '의류' },
   { id: 1, name: '의류 전체' },
@@ -39,7 +37,6 @@ export const CLOTHING_ITEMS = [
   { id: 9, name: '셋업' },
   { id: 10, name: 'Sale' },
 ];
-
 export const ACC_ITEMS = [
   { id: 0, name: '용품' },
   { id: 1, name: '모자 & 헤드밴드' },

@@ -9,7 +9,6 @@ export const NEW_ITEMS = [
   { id: 7, name: 'ACG' },
   { id: 8, name: 'NawekiLab' },
 ];
-
 export const MEN_ITEMS = [
   { id: 0, name: '남성' },
   { id: 1, name: '신발' },
@@ -17,7 +16,6 @@ export const MEN_ITEMS = [
   { id: 3, name: '용품' },
   { id: 4, name: '전체보기' },
 ];
-
 export const WOMEN_ITEMS = [
   { id: 0, name: '여성' },
   { id: 1, name: '신발' },
@@ -25,7 +23,6 @@ export const WOMEN_ITEMS = [
   { id: 3, name: '용품' },
   { id: 4, name: '전체보기' },
 ];
-
 export const KIDS_ITEMS = [
   { id: 0, name: '키즈' },
   { id: 1, name: '신발' },
@@ -33,7 +30,6 @@ export const KIDS_ITEMS = [
   { id: 3, name: '용품' },
   { id: 4, name: '전체보기' },
 ];
-
 export const ACC_ITEMS = [
   { id: 0, name: '용품' },
   { id: 1, name: '모자 & 헤드밴드' },

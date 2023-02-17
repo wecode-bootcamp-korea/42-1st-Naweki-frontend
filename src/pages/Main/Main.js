@@ -1,8 +1,16 @@
 import React from 'react';
-import './Main.scss';
 
-const Main = () => {
-  return <p />;
-};
+function Main() {
+  return (
+    <div className="main">
+      <Feel />
+      <Leggings />
+      <Infinite />
+      <Methcon />
+      <Dan />
+      <Category />
+    </div>
+  );
+}
 
 export default Main;
