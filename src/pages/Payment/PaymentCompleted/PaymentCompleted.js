@@ -1,5 +1,5 @@
 import React from 'react';
-// import './PaymentCompleted.scss';
+import './PaymentCompleted.scss';
 
 const PaymentCompleted = ({ onClickPayment }) => {
   return (
