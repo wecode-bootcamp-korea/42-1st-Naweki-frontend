@@ -1,12 +1,51 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Input } from '../Input/Input.js';
+import { INPUT_DATA } from '../Input/InputData/InputData.js';
 import './NewUser.scss';
 
 const NewUser = () => {
   const navigate = useNavigate();
   const goToLogin = () => {
     navigate('/login');
+  };
+  const location = useLocation();
+  const userEmail = location?.state?.title;
+
+  const [userInfo, setUserInfo] = useState({
+    lastName: '',
+    firstName: '',
+    userPw: '',
+    userPreference: '',
+    userBday: '',
+  });
+  const inputHandler = e => {
+    const { name, value } = e.target;
+    setUserInfo({ ...userInfo, [name]: value });
+  };
+
+  const sendInfo = () => {
+    fetch('http://10.58.52.69:3000/users/signup', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+      },
+      body: JSON.stringify({
+        firstName: userInfo.firstName,
+        lastName: userInfo.lastName,
+        email: userEmail,
+        password: userInfo.userPw,
+        shoppingPreference: userInfo.userPreference,
+        birthday: userInfo.userBday,
+      }),
+    })
+      .then(res => res.json())
+      .then(response => {
+        if (response.message === 'SIGNUP_SUCCESS') {
+          alert('회원가입 완료! :)');
+          navigate('/main');
+        }
+      });
   };
 
   return (
@@ -24,18 +63,28 @@ const NewUser = () => {
           <div className="codeSent">인증코드를 전송했습니다.</div>
         </header>
         <div className="newUserEmailBox">
-          <span className="newUserEmail">wecode@naver.com</span>
+          <div className="newUserEmail">{userEmail}</div>
           <button onClick={goToLogin} className="edit">
             편집
           </button>
         </div>
         <div className="signupContainer">
           <div className="nameBox">
-            <Input />
+            {INPUT_DATA.map(list => {
+              return (
+                <Input key={list.id} list={list} inputHandler={inputHandler} />
+              );
+            })}
           </div>
           <div className="newUserPwdBox">
             <form className="pwdInputBox">
-              <input type="text" className="pwdInput" placeholder="비밀번호" />
+              <input
+                name="userPw"
+                onChange={inputHandler}
+                type="text"
+                className="pwdInput"
+                placeholder="비밀번호"
+              />
               <label htmlFor="newUserPwd" />
             </form>
             <div className="pwdRules">
@@ -46,7 +95,7 @@ const NewUser = () => {
             </div>
           </div>
           <div className="defaultShopping">
-            <select>
+            <select name="userPreference" onChange={inputHandler}>
               <option value="">쇼핑 기본 설정</option>
               <option value="men">남성용</option>
               <option value="women">여성용</option>
@@ -54,6 +103,8 @@ const NewUser = () => {
           </div>
           <div className="newUserBirth">
             <input
+              onChange={inputHandler}
+              name="userBday"
               type="date"
               className="newUserBirthInput"
               placeholder="생년월일"
@@ -84,7 +135,9 @@ const NewUser = () => {
             </span>
           </section>
           <div className="createUserBtnBox">
-            <button className="createUserBtn">계정 만들기</button>
+            <button onClick={sendInfo} className="createUserBtn">
+              계정 만들기
+            </button>
           </div>
         </div>
       </div>

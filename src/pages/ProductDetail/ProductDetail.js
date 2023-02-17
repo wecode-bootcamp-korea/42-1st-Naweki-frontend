@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import FreeDelivery from './FreeDelivery/FreeDelivery';
-import Modal from 'react-modal';
 import './ProductDetail.scss';
 
 Modal.setAppElement('#root');

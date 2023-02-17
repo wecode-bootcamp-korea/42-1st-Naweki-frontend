@@ -10,7 +10,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   const sendEmail = () => {
-    fetch('http://10.58.52.150:3000/users/lookup', {
+    fetch('http://10.58.52.69:3000/users/lookup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
@@ -20,9 +20,9 @@ const Login = () => {
       .then(res => res.json())
       .then(response => {
         if (response.message === 'EMAIL_IS_VERIFIED') {
-          navigate('/newuser');
+          navigate('/newuser', { state: { title: userEmail } });
         } else if (response.message === 'DUPLICATE_EMAIL') {
-          navigate('/password');
+          navigate('/password', { state: { title: userEmail } });
         }
       });
   };
