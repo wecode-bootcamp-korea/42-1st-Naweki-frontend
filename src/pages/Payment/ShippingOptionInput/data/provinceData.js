@@ -1,0 +1,17 @@
+export const PROVINCE_DATA = [
+  { id: 'default', name: '도/광역시*' },
+  { id: 1, name: '부산광역시' },
+  { id: 2, name: '충청도' },
+  { id: 3, name: '대구광역시' },
+  { id: 4, name: '대전광역시' },
+  { id: 5, name: '강원도' },
+  { id: 6, name: '광주광역시' },
+  { id: 7, name: '경기도' },
+  { id: 8, name: '경상도' },
+  { id: 9, name: '안천광역시' },
+  { id: 10, name: '제주특별자치도' },
+  { id: 11, name: '전라도' },
+  { id: 12, name: '세종특별자치시' },
+  { id: 13, name: '서울특별시' },
+  { id: 14, name: '울산광역시' },
+];
