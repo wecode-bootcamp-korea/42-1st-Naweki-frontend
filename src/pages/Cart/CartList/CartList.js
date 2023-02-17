@@ -6,7 +6,8 @@ export const CartList = ({
   handleDelete,
   setSize,
   setHowMany,
-  sendProductInfo,
+  sendProductSize,
+  sendProductStock,
 }) => {
   const [heart, setHeart] = useState(true);
   const handleLike = e => {
@@ -38,7 +39,7 @@ export const CartList = ({
           <div className="selectorWrapper">
             <div className="size">사이즈</div>
             <select
-              onChange={(onSelectSize, sendProductInfo)}
+              onChange={(onSelectSize, sendProductSize)}
               name="sizes"
               id="sizeSelect"
               className="productSize"
@@ -53,7 +54,7 @@ export const CartList = ({
             </select>
             <div className="number">수량</div>
             <select
-              onChange={(onSelectMany, sendProductInfo)}
+              onChange={(onSelectMany, sendProductStock)}
               name="howMany"
               id="howMany"
               className="howManyProduct"
