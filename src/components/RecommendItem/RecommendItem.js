@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './RecommendItem.scss';
 
-function RecommendItem() {
+const RecommendItem = () => {
   const [recommendItem, setRecommendItem] = useState([]);
 
   const [showStartIdx, setshowStartIdx] = useState(0);
@@ -89,6 +89,6 @@ function RecommendItem() {
       </div>
     </div>
   );
-}
+};
 
 export default RecommendItem;

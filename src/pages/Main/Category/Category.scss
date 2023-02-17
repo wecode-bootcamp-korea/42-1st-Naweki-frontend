@@ -1,0 +1,32 @@
+@import '../../../styles/mixin';
+.category {
+  @include flex(center, null);
+  flex-direction: column;
+  width: 50%;
+  margin-top: 170px;
+  margin-left: 28%;
+  font-size: 16px;
+
+  &:hover .hiddenCategory {
+    display: flex;
+  }
+
+  .categoryBox {
+    width: 25%;
+    .categoryName {
+      margin-bottom: 24px;
+    }
+
+    .categoryDetail {
+      @include flex(space-between, null);
+      flex-direction: column;
+      color: rgb(143, 143, 143);
+      line-height: 37px;
+    }
+  }
+
+  .defaultCategory {
+    display: flex;
+    justify-content: space-between;
+  }
+}

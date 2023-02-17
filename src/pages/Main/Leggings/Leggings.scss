@@ -1,0 +1,37 @@
+@import '../../../styles/mixin';
+$cursor: pointer;
+
+.leggings {
+  .leggingsImg {
+    display: block;
+    width: 70%;
+    margin: auto;
+    margin-top: 80px;
+    cursor: $cursor;
+  }
+
+  .leggingsText {
+    margin-top: 80px;
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    cursor: $cursor;
+  }
+
+  .leggingsTextDetail {
+    margin-bottom: 35px;
+    text-align: center;
+    cursor: $cursor;
+  }
+
+  .leggingsBuyBtn {
+    width: 70px;
+    height: 35px;
+    margin-left: 48%;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+    cursor: $cursor;
+  }
+}
