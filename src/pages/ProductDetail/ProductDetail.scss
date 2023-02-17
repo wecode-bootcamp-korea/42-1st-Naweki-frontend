@@ -155,6 +155,10 @@
               background-color: white;
               color: rgb(59, 58, 58);
               cursor: pointer;
+
+              &:hover {
+                background-color: rgb(237, 235, 235);
+              }
             }
           }
         }
