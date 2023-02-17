@@ -1,0 +1,16 @@
+@import '../../../styles/mixin';
+.paymentNav {
+  @include flex(space-between, center);
+  margin-bottom: 80px;
+  padding: 10px 20px;
+  .logoWrapper {
+    .logo {
+      width: 60px;
+      cursor: pointer;
+    }
+  }
+  .paymentProfileWrapper {
+    display: flex;
+    gap: 10px;
+  }
+}

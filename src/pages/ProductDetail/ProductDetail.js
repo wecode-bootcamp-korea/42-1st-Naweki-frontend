@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './ProductDetail.scss';
-
-Modal.setAppElement('#root');
+import FreeDelivery from './FreeDelivery/FreeDelivery';
 
 function ProductDetail() {
   const [visible, setVisible] = useState(false);
@@ -169,7 +168,6 @@ function ProductDetail() {
                 onClick={cartBtnClick}
               >
                 장바구니
-                {modalOpen && <Modal />}
               </button>
               <button className="wishListBtn" onClick={onClickBtn}>
                 위시리스트 &nbsp;
