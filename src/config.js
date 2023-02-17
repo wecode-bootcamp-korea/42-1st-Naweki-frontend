@@ -1,6 +1,6 @@
 const BASE_URL = 'http://';
 
-const API = {
+export const API = {
   LOOKUP: `${BASE_URL}/users/lookup`,
   LOGIN: `${BASE_URL}/users/login`,
   SIGNUP: `${BASE_URL}/users/signup`,
