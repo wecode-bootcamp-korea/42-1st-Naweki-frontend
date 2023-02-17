@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './ProductDetail.scss';
 import FreeDelivery from './FreeDelivery/FreeDelivery';
+import { useLocation } from 'react-router-dom';
 
 function ProductDetail() {
   const [visible, setVisible] = useState(false);
@@ -10,6 +11,9 @@ function ProductDetail() {
   const [productData, setProductData] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedSize, setSelectedSize] = useState();
+  const location = useLocation();
+  const path = location.pathname;
+  const productId = path.split('/')[2];
 
   const onClickBtn = () => {
     setHeart(!heart);
@@ -20,23 +24,18 @@ function ProductDetail() {
   };
 
   useEffect(() => {
-    fetch('http://10.58.52.118:3000/products/1', {
+    fetch(`http://10.58.52.118:8000/products/${productId}`, {
       method: 'GET',
+      headers: { 'Content-Type': 'application/json;charset=utf-8' },
     })
       .then(res => res.json())
-      .then(data => {
-        setProductData(data);
-      });
+      .then(data => setProductData(data));
   }, []);
 
-  if (productData === null) {
-    return <div>Data Loding...</div>;
-  }
-
-  const product = productData.product;
+  const product = productData?.product;
 
   const cartBtnClick = () => {
-    fetch('http://10.58.52.118:3000/cart/', {
+    fetch('http://10.58.52.118:8000/cart/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
@@ -55,6 +54,10 @@ function ProductDetail() {
         }),
     });
   };
+
+  if (productData === null) {
+    return <div>Data Loding...</div>;
+  }
 
   return (
     <div>
