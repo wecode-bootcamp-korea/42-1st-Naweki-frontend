@@ -1,7 +1,16 @@
 import React from 'react';
 
-const Main = () => {
-  return <p>안녕하세요</p>;
-};
+function Main() {
+  return (
+    <div className="main">
+      <Feel />
+      <Leggings />
+      <Infinite />
+      <Methcon />
+      <Dan />
+      <Category />
+    </div>
+  );
+}
 
 export default Main;
