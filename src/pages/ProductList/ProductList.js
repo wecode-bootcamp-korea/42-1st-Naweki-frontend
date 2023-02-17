@@ -15,53 +15,18 @@ const ProductList = () => {
   const limit = searchParams.get('limit');
   const page = searchParams.get('page');
 
-  // TODO: mock data 사용 시
-  // useEffect(() => {
-  //   fetch('./data/productData.json', {
-  //     method: 'GET',
-  //   })
-  //     .then(res => res.json())
-  //     .then(data => {
-  //       setProducts(data);
-  //     });
-  // }, []);
-
-  // TODO: api 연결 시
-  // useEffect(() => {
-  //   fetch(
-  //     `http://10.58.52.114:3000/products${category}?page=${page}&limit=${limit}`,
-  //     {
-  //       method: 'GET',
-  //     }
-  //   )
-  //     .then(res => {
-  //       return res.json();
-  //     })
-  //     .then(data => {
-  //       setProducts(data.data);
-  //       setPosts(data);
-  //     });
-  // }, [page, limit, category]);
-
   useEffect(() => {
-<<<<<<< HEAD
     fetch(
       `http://10.58.52.114:3000/products${category}?page=${page}&limit=${limit}`,
       {
         method: 'GET',
       }
     )
-=======
-    fetch('http://10.58.52.114:3000/products', {
-      method: 'GET',
-    })
->>>>>>> main
       .then(res => {
         return res.json();
       })
       .then(data => {
         setProducts(data.data);
-        setPosts(data);
       });
   }, [page, limit, category]);
 

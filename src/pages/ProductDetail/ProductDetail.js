@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './ProductDetail.scss';
-
-Modal.setAppElement('#root');
+import FreeDelivery from './FreeDelivery/FreeDelivery';
 
 function ProductDetail() {
   const [visible, setVisible] = useState(false);
@@ -21,7 +20,7 @@ function ProductDetail() {
   };
 
   useEffect(() => {
-    fetch('http://10.58.52.118:8000/products/1', {
+    fetch('http://10.58.52.118:3000/products/1', {
       method: 'GET',
     })
       .then(res => res.json())
@@ -37,7 +36,7 @@ function ProductDetail() {
   const product = productData.product;
 
   const cartBtnClick = () => {
-    fetch('http://10.58.52.118:8000/cart/', {
+    fetch('http://10.58.52.118:3000/cart/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
@@ -169,7 +168,6 @@ function ProductDetail() {
                 onClick={cartBtnClick}
               >
                 장바구니
-                {modalOpen && <Modal />}
               </button>
               <button className="wishListBtn" onClick={onClickBtn}>
                 위시리스트 &nbsp;
