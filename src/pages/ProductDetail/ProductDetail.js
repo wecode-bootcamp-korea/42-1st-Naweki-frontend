@@ -79,7 +79,7 @@ function ProductDetail() {
 
             <video
               className="productVideo"
-              autoplay="autoplay"
+              autoPlay="autoplay"
               muted="muted"
               loop=""
             >

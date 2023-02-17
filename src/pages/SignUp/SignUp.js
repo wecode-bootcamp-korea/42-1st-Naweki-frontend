@@ -34,7 +34,7 @@ const SignUp = () => {
       <div className="videoBox">
         <video
           src="images/signup/nike_signup.mp4"
-          autoplay="autoplay"
+          autoPlay="autoplay"
           muted="muted"
           loop
           className="nikeVideo"
@@ -65,7 +65,7 @@ const SignUp = () => {
           <div className="videoWrapper">
             <video
               src="images/signup/nike_signup_store.mp4"
-              autoplay="autoplay"
+              autoPlay="autoplay"
               muted="muted"
               loop
               className="nikeStoreVideo"

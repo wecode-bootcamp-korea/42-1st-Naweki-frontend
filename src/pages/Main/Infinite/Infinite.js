@@ -13,7 +13,7 @@ function Infinite() {
     <div className="infinite">
       <video
         className="infiniteVideo"
-        autoplay="autoplay"
+        autoPlay="autoplay"
         muted="muted"
         loop
         onClick={onClickBtn}
