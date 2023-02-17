@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 import Footer from '../Footer/Footer';
 import PaymentNav from '../Nav/PaymentNav/PaymentNav';
 
-const Container = () => {
+const PaymentContainer = () => {
   return (
     <>
       <PaymentNav />
@@ -13,4 +13,4 @@ const Container = () => {
   );
 };
 
-export default Container;
+export default PaymentContainer;
