@@ -28,22 +28,6 @@ const ProductList = () => {
   // }, []);
 
   // TODO: api 연결 시
-  // useEffect(() => {
-  //   fetch(
-  //     `http://10.58.52.114:3000/products${category}?page=${page}&limit=${limit}`,
-  //     {
-  //       method: 'GET',
-  //     }
-  //   )
-  //     .then(res => {
-  //       return res.json();
-  //     })
-  //     .then(data => {
-  //       setProducts(data.data);
-  //       setPosts(data);
-  //     });
-  // }, [page, limit, category]);
-
   useEffect(() => {
     fetch(
       `http://10.58.52.114:3000/products${category}?page=${page}&limit=${limit}`,
