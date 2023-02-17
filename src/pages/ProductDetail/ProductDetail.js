@@ -71,7 +71,7 @@ function ProductDetail() {
               />
               <img
                 className="productImgRowBottom"
-                src={product.imageUrl}
+                src={product.imageUrl[0].url}
                 // src="/images/상세3.jpg"
                 alt="제품 상세 이미지"
               />
@@ -90,13 +90,13 @@ function ProductDetail() {
           <div className="detailImgsColumn">
             <img
               className="detailImgColumnLeft"
-              src={product.imageUrl}
+              src={product.imageUrl[1].url}
               // src="/images/상세1.jpg"
               alt="제품 상세 이미지"
             />
             <img
               className="detailImgColumnRight"
-              src={product.imageUrl}
+              src={product.imageUrl[2].url}
               // src="/images/상세2.jpg"
               alt="제품 상세 이미지"
             />

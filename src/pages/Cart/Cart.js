@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { CartList } from './CartList/CartList';
 import { Modal } from './Modal/Modal';
 import '../../components/RecommendItem/RecommendItem';
@@ -8,14 +8,6 @@ import RecommendItem from '../../components/RecommendItem/RecommendItem';
 
 const Cart = () => {
   const [cartList, setCartList] = useState([]);
-  // mock data용 fetch
-  // useEffect(() => {
-  //   fetch('/data/cartData.json')
-  //     .then(res => res.json())
-  //     .then(data => setCartList(data));
-  // }, []);
-
-  // cart API 전달 받으면 데이터 조회용으로 사용 예정인 코드
   useEffect(() => {
     fetch('http://10.58.52.243:8000/cart/', {
       method: 'GET',
@@ -27,7 +19,6 @@ const Cart = () => {
       .then(res => res.json())
       .then(data => setCartList(data));
   }, []);
-  console.log(cartList);
 
   const price = cartList
     .map(product => product.discountPrice)
@@ -36,12 +27,6 @@ const Cart = () => {
 
   const [modal, setModal] = useState(false);
 
-  // mock data용 handleDelete
-  // const handleDelete = targetId => {
-  //   const newCartList = cartList.filter(data => data.cartItemId !== targetId);
-  //   setCartList(newCartList);
-  // };
-  // cart API 전달 받으면 데이터 삭제용으로 사용 예정인 코드
   const handleDelete = targetId => {
     fetch(`http://10.58.52.243:8000/cart/${targetId}`, {
       method: 'DELETE',
@@ -65,6 +50,10 @@ const Cart = () => {
       },
       body: JSON.stringify({ size: size }),
     }).then(res => res.json());
+  };
+  const navigate = useNavigate();
+  const goToPayment = () => {
+    navigate('/payment');
   };
 
   const sendProductStock = () => {
@@ -158,7 +147,9 @@ const Cart = () => {
             <div className="totalPriceNumber">{totalPrice}원</div>
           </div>
           <div className="btnWrapper">
-            <button className="paymentBtn">주문결제</button>
+            <button onClick={goToPayment} className="paymentBtn">
+              주문결제
+            </button>
           </div>
         </section>
       </main>
