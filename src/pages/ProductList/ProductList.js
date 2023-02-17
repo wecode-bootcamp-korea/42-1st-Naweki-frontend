@@ -4,7 +4,6 @@ import Aside from './Aside/Aside';
 import Banner from './Banner/Banner';
 import Product from './Product/Product';
 import { CATEGORY_DATA } from './Aside/data/categoryData';
-import React from 'react';
 import './ProductList.scss';
 
 const ProductList = () => {
@@ -18,7 +17,7 @@ const ProductList = () => {
 
   useEffect(() => {
     fetch(
-      `http://10.58.52.114:3000/products${category}?page=${page}&limit=${limit}`,
+      `http://10.58.52.114:3100/products${category}?page=${page}&limit=${limit}`,
       {
         method: 'GET',
       }
