@@ -67,7 +67,7 @@ ___
 
 <br/>
 
-##프로젝트 결과물
+## 프로젝트 결과물
 ---
 #### 메인 & Nav & Footer
 ![main](https://user-images.githubusercontent.com/84219519/219610952-2940b085-bcfe-417b-8c15-52ca0d763ecd.gif)
