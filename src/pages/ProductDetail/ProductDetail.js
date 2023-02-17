@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './ProductDetail.scss';
 import FreeDelivery from './FreeDelivery/FreeDelivery';
 import { useLocation } from 'react-router-dom';
@@ -8,56 +8,54 @@ function ProductDetail() {
   const [heart, setHeart] = useState(false);
   const [isActive, setIsActive] = useState(false);
   // const [thumbnailImage, setThumbnailImage] = useState('');
-  const [productData, setProductData] = useState(null);
-  const [modalOpen, setModalOpen] = useState(false);
-  const [selectedSize, setSelectedSize] = useState();
-  const location = useLocation();
-  const path = location.pathname;
-  const productId = path.split('/')[2];
+  // const [productData, setProductData] = useState({});
+  // const [selectedSize, setSelectedSize] = useState();
+  // const location = useLocation();
+  // const path = location.pathname;
+  // const productId = path.split('/')[2];
 
   const onClickBtn = () => {
     setHeart(!heart);
     setIsActive(true);
   };
-  const sizeClick = event => {
-    setSelectedSize(event.target.getAttribute('sizeId'));
-  };
+  // const sizeClick = event => {
+  //   setSelectedSize(event.target.getAttribute('sizeId'));
+  // };
 
-  useEffect(() => {
-    fetch(`http://10.58.52.118:8000/products/${productId}`, {
-      method: 'GET',
-      headers: { 'Content-Type': 'application/json;charset=utf-8' },
-    })
-      .then(res => res.json())
-      .then(data => setProductData(data));
-  }, []);
+  // useEffect(() => {
+  //   fetch(`http://10.58.52.118:8000/products/${productId}`, {
+  //     method: 'GET',
+  //     headers: { 'Content-Type': 'application/json;charset=utf-8' },
+  //   })
+  //     .then(res => res.json())
+  //     .then(data => setProductData(data));
+  // }, []);
 
-  const product = productData?.product;
+  // const product = productData.product;
 
-  const cartBtnClick = () => {
-    fetch('http://10.58.52.118:8000/cart/', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json;charset=utf-8',
-        Authorization: localStorage.getItem('userToken'),
-      },
-      body: JSON.stringify({
-        productId: product.id,
-        // sizeId: product.stock.id,
-        sizeId: selectedSize,
-      })
-        .then(res => res.json())
-        .then(res => {
-          if (res.status === 200) {
-            alert('성공! :)');
-          }
-        }),
-    });
-  };
+  // const cartBtnClick = () => {
+  //   fetch('http://10.58.52.118:8000/cart/', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json;charset=utf-8',
+  //       Authorization: localStorage.getItem('userToken'),
+  //     },
+  //     body: JSON.stringify({
+  //       productId: product.id,
+  //       sizeId: selectedSize,
+  //     }),
+  //   })
+  //     .then(res => res.json())
+  //     .then(res => {
+  //       if (res.status === 200) {
+  //         alert('성공! :)');
+  //       }
+  //     });
+  // };
 
-  if (productData === null) {
-    return <div>Data Loding...</div>;
-  }
+  // if (productData === null) {
+  //   return <div>Data Loding...</div>;
+  // }
 
   return (
     <div>
@@ -67,15 +65,15 @@ function ProductDetail() {
             <div className="detailImgsRow">
               <img
                 className="productImgRowTop"
-                src={product.thumbnailImage}
-                // src="https://cdn.pixabay.com/photo/2020/07/15/18/31/sneakers-5408669_1280.png"
+                // src={product.thumbnailImage}
+                src="https://cdn.pixabay.com/photo/2020/07/15/18/31/sneakers-5408669_1280.png"
                 alt="제품 상세 이미지"
                 // onClick={colorClick}
               />
               <img
                 className="productImgRowBottom"
-                src={product.imageUrl[0].url}
-                // src="/images/상세3.jpg"
+                // src={product.imageUrl[0].url}
+                src="/images/상세3.jpg"
                 alt="제품 상세 이미지"
               />
             </div>
@@ -86,21 +84,21 @@ function ProductDetail() {
               muted="muted"
               loop=""
             >
-              <source src="images/downdetail.mp4" type="video/mp4" />
+              <source src="../images/downdetail.mp4" type="video/mp4" />
             </video>
           </div>
 
           <div className="detailImgsColumn">
             <img
               className="detailImgColumnLeft"
-              src={product.imageUrl[1].url}
-              // src="/images/상세1.jpg"
+              // src={product.imageUrl[1].url}
+              src="/images/상세1.jpg"
               alt="제품 상세 이미지"
             />
             <img
               className="detailImgColumnRight"
-              src={product.imageUrl[2].url}
-              // src="/images/상세2.jpg"
+              // src={product.imageUrl[2].url}
+              src="/images/상세2.jpg"
               alt="제품 상세 이미지"
             />
           </div>
@@ -108,13 +106,13 @@ function ProductDetail() {
         <div className="productInfoContainer">
           <div className="productInfoContainer">
             <div className="productInfo">
-              <div className="productName">{product.name}</div>
-              {/* <div className="productName">나위키 에얼 포스 1 '03</div> */}
-              <div className="productCategory">{product.subName}</div>
-              {/* <div className="productCategory">여성 신발</div> */}
+              {/* <div className="productName">{product.name}</div> */}
+              <div className="productName">나위키 에얼 포스 1 '03</div>
+              {/* <div className="productCategory">{product.subName}</div> */}
+              <div className="productCategory">여성 신발</div>
               <div className="priceContainer">
-                <div className="productPrice">{product.price}원</div>
-                {/* <div className="productPrice">125,100 원</div> */}
+                {/* <div className="productPrice">{product.price}원</div> */}
+                <div className="productPrice">125,100 원</div>
                 <div className="originalPrice">139,000 원</div>
               </div>
             </div>
@@ -148,7 +146,7 @@ function ProductDetail() {
               </div>
 
               <div className="sizeContainer">
-                <div className="sizeBox">
+                {/* <div className="sizeBox">
                   {product.stock.map(size => (
                     <div
                       key={size.id}
@@ -160,7 +158,7 @@ function ProductDetail() {
                       {size.size}
                     </div>
                   ))}
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -168,7 +166,7 @@ function ProductDetail() {
               <button
                 className={`cartBtn ${isActive ? 'avtice' : ''}`}
                 disabled={!isActive}
-                onClick={cartBtnClick}
+                // onClick={cartBtnClick}
               >
                 장바구니
               </button>
@@ -193,10 +191,12 @@ function ProductDetail() {
               </span>
               <ul className="descriptionBottom">
                 <li className="colorDescription">
-                  현재 컬러 : {product.currentColor}
+                  {/* 현재 컬러 : {product.currentColor} */}
+                  현재 컬러 : 화이트/화이트
                 </li>
                 <li className="styleDescription">
-                  스타일 : {product.styleCode}
+                  {/* 스타일 : {product.styleCode} */}
+                  스타일: dc-10000
                 </li>
               </ul>
               <div className="detailDescription">상품 상세 정보 보기</div>
