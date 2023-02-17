@@ -1,8 +1,12 @@
 import React from 'react';
-import './Payment.scss';
+import MemberPayment from './MemberPayment/MemberPayment';
 
 const Payment = () => {
-  return <p>안녕하세요</p>;
+  const userToken = localStorage.getItem('userToken');
+
+  return (
+    <div className="payment">{userToken !== null && <MemberPayment />}</div>
+  );
 };
 
 export default Payment;

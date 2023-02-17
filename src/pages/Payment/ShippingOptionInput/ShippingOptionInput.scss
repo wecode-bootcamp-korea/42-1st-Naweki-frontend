@@ -1,0 +1,92 @@
+@import '../../../styles/mixin';
+
+.none {
+  display: none;
+}
+
+.shippingOptionInput {
+  @include flex(flex-start, left);
+  flex-direction: column;
+  width: 660px;
+  gap: 20px;
+  padding: 20px 0px;
+
+  .titleWrapper {
+    @include flex(space-between, center);
+
+    .paymentTitle {
+      @include paymentTitle;
+      padding-bottom: 20px;
+    }
+
+    .edit {
+      @include edit;
+    }
+  }
+
+  .paymentInput {
+    width: 660px;
+    height: 50px;
+    padding-left: 10px;
+    border: 1px solid black;
+    border-radius: 8px;
+    outline: none;
+  }
+
+  .requiredPayment {
+    width: 660px;
+    height: 50px;
+    padding-left: 10px;
+    border: 1px solid #d43f22;
+    border-radius: 8px;
+    outline: none;
+  }
+
+  .required {
+    @include inputCheck;
+    color: #d43f22;
+  }
+
+  .notRequired {
+    @include inputCheck;
+    padding-top: 10px;
+    color: gray;
+  }
+
+  .infoWrapper {
+    display: flex;
+    gap: 19px;
+
+    .infoInput {
+      width: 320px;
+      height: 50px;
+      padding-left: 10px;
+      border: 1px solid black;
+      border-radius: 8px;
+      outline: none;
+      background-color: white;
+    }
+
+    .requiredInfo {
+      width: 320px;
+      height: 50px;
+      padding-left: 10px;
+      border: 1px solid #d43f22;
+      border-radius: 8px;
+      outline: none;
+    }
+  }
+
+  .btnWrapper {
+    @include flex(right, center);
+
+    .paymentOptionBtn {
+      @include btn;
+      width: 120px;
+
+      &:hover {
+        @include btnHover;
+      }
+    }
+  }
+}
