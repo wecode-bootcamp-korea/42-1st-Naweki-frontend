@@ -9,7 +9,7 @@
   @include flex(space-between, center);
 
   .searchTop {
-    @include flex(space-between, center);
+    @include flex(space-around, center);
     width: 100vw;
     padding: 20px;
   }
