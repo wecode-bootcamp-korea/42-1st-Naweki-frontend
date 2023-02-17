@@ -12,8 +12,8 @@ ___
 
 ## 깃허브 레파지토리
 ___
-* 프론트엔드 Github Repository
-* 백엔드 Github Repository
+* [프론트엔드 Github Repository](https://github.com/wecode-bootcamp-korea/42-1st-Naweki-frontend)
+* [백엔드 Github Repository](https://github.com/wecode-bootcamp-korea/42-1st-Naweki-backend)
 
 <br/>
 
