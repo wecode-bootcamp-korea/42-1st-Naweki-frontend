@@ -1,6 +1,7 @@
 @import '../../styles/mixin';
 $cursor: pointer;
 .main {
+  // padding-top: 100px;
   .bottomCategory {
     @include flex(center, center);
 
