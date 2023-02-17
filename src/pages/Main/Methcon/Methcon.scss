@@ -1,0 +1,50 @@
+@import '../../../styles/mixin';
+$cursor: pointer;
+
+.methcon {
+  .methconImg {
+    margin-top: 80px;
+    text-align: center;
+
+    .methconImgLeft {
+      width: 35.9%;
+      cursor: $cursor;
+    }
+
+    .methconImgRight {
+      width: 33.1%;
+      cursor: $cursor;
+    }
+  }
+
+  .methconText {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    cursor: $cursor;
+  }
+
+  .methconTextDetailFirst {
+    margin-bottom: 8px;
+    text-align: center;
+    cursor: $cursor;
+  }
+
+  .methconTextDetailSecond {
+    margin-bottom: 35px;
+    text-align: center;
+    cursor: $cursor;
+  }
+
+  .methconBuyBtn {
+    width: 70px;
+    height: 35px;
+    margin-left: 48%;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+    cursor: $cursor;
+  }
+}
