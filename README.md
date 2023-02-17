@@ -32,8 +32,8 @@ ___
 |팀원|구현 기능|GitHub
 |---|---|---|
 |**신혜린 (Project Manager)**|로그인, 회원가입, 장바구니|<a href="https://github.com/shinheylynn"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white&link=https://github.com/shinheylynn"/></a>
-|성은정|제품목록, 결제페이지, Nav|<a href="https://github.com/yujinni"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white&link=https://github.com/yujinni"/></a>|
-|이유진|메인, 제품상세, Footer|<a href="https://github.com/eejungee"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white&link=https://github.com/eejungee"/></a>|
+|성은정|제품목록, 결제페이지, Nav|<a href="https://github.com/eejungee"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white&link=https://github.com/eejungee"/></a>|
+|이유진|메인, 제품상세, Footer|<a href="https://github.com/yujinni"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white&link=https://github.com/yujinni"/></a>|
 
 
 #### 👥 Back-End Developers
