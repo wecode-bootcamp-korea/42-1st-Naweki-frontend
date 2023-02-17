@@ -69,35 +69,35 @@ ___
 
 ## 프로젝트 결과물
 ---
-### 메인 & Nav & Footer
+### 메인(유진님) & Nav(은정님) & Footer(유진님)
 ![main](https://user-images.githubusercontent.com/84219519/219610952-2940b085-bcfe-417b-8c15-52ca0d763ecd.gif)
 <br/>
 
 ---
 
-### 로그인
+### 로그인(혜린님)
 ![login](https://user-images.githubusercontent.com/84219519/219603997-0ccf9f1d-d198-4de8-a141-a5f2a13bc8f3.gif)
 <br/>
 
 ---
 
-### 회원가입
+### 회원가입(혜린님)
 ![logintosignup](https://user-images.githubusercontent.com/84219519/219610868-20f3bb37-52ad-4615-9d90-2f37db55dcad.gif)
 <br/>
 
 ---
 
-### 상품 목록
+### 상품 목록(은정님)
 ![productlist](https://user-images.githubusercontent.com/84219519/219604155-77b27b5b-8df3-42df-b837-babef7e08f93.gif)
 <br/>
 
 ---
 
-### 장바구니
+### 장바구니(혜린님)
 ![cart](https://user-images.githubusercontent.com/84219519/219604174-1f74c1fe-2ed3-4e44-b92d-6b5699754092.gif)
 <br/>
 
 ---
 
-### 결제
+### 결제(은정님)
 ![payment](https://user-images.githubusercontent.com/84219519/219610213-39078ab4-bb1c-4031-82e1-8b6da556143b.gif)
