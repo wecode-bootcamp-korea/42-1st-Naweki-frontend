@@ -11,9 +11,17 @@ const Function = ({ searchClicked }) => {
         placeholder="검색"
         onClick={searchClicked}
       />
-      <img className="navIcon" alt="Heart Img" src="images/nav/heart.png" />
+      <img
+        className="navIcon"
+        alt="Heart Img"
+        src="../../../images/nav/heart.png"
+      />
       <Link to="/cart">
-        <img className="navIcon" alt="Cart Img" src="images/nav/cart.png" />
+        <img
+          className="navIcon"
+          alt="Cart Img"
+          src="../../../images/nav/cart.png"
+        />
       </Link>
     </div>
   );

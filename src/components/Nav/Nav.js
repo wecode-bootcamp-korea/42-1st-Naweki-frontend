@@ -47,7 +47,7 @@ const Nav = () => {
                 <img
                   className="logo"
                   alt="Logo Img"
-                  src="images/nav/logo.jpg"
+                  src="../../../images/nav/logo.jpg"
                 />
               </Link>
             </div>

@@ -106,7 +106,7 @@ function ProductDetail() {
               <div className="productCategory">{product.subName}</div>
               <div className="priceContainer">
                 <div className="productPrice">{product.price}원</div>
-                <div className="originalPrice">139,000 원</div>
+                <div className="originalPrice">150,000 원</div>
               </div>
             </div>
             <div className="otherColorContainer">

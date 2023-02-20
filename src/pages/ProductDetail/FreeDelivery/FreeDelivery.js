@@ -3,7 +3,7 @@ import './FreeDelivery.scss';
 
 function FreeDelivery() {
   return (
-    <div className="freeDelivery">
+    <div className="freeDeliveryComponent">
       <div className="deliveryInfo">
         <p className="delivery">일반 배송</p>
         <p>• 배송지역: 전국 (일부 지역 제외)</p>
