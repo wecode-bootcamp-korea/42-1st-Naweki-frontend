@@ -81,7 +81,7 @@
 ## 프로젝트 결과물
 
 ### 메인(유진님) & Nav(은정님) & Footer(유진님)
-![main](https://user-images.githubusercontent.com/84219519/219610952-2940b085-bcfe-417b-8c15-52ca0d763ecd.gif)
+![main_page_AdobeExpress](https://user-images.githubusercontent.com/97745006/220005940-3ae426da-6043-45fb-a62e-6d1f611c527f.gif)
 <br/>
 
 ---
