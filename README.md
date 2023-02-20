@@ -81,7 +81,7 @@
 ## 프로젝트 결과물
 
 ### 메인(유진님) & Nav(은정님) & Footer(유진님)
-![mainmain](https://user-images.githubusercontent.com/97745006/220008167-14538aa6-3c36-45bf-8a76-22656822c4b9.gif)
+![nike main page](https://user-images.githubusercontent.com/97745006/220011058-17b43441-33c1-427d-a115-0d5f08f46046.gif)
 
 * nav
 * mouse enter 시 드롭다운 메뉴 보여주기
