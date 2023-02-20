@@ -81,7 +81,8 @@
 ## 프로젝트 결과물
 
 ### 메인(유진님) & Nav(은정님) & Footer(유진님)
-![nike main page](https://user-images.githubusercontent.com/97745006/220011058-17b43441-33c1-427d-a115-0d5f08f46046.gif)
+![project main](https://user-images.githubusercontent.com/97745006/220022016-d102694a-d1f6-4e8b-83b3-d41fd625f7e2.gif)
+
 
 [nav]
 * mouse enter 시 드롭다운 메뉴 보여주기
@@ -91,6 +92,7 @@
 
 [main page]
 * 배너 이미지 또는 텍스트, 구매하기 버튼 클릭 시 제품 목록 페이지 이동
+* 하단 카테고리 컴포넌트를 활용한 드롭다운 구현
 * 추천 상품 리스트 캐러셀 구현
 
 [footer]
