@@ -1,14 +1,21 @@
-@import '../../styles/mixin';
-$cursor: pointer;
-.main {
-  // padding-top: 100px;
-  .bottomCategory {
-    @include flex(center, center);
+// @import '../../styles/mixin';
+// $cursor: pointer;
+// .main {
+//   // padding-top: 100px;
+//   .bottomCategory {
+//     @include flex(center, center);
 
-    .categoryName {
-      margin-right: 100px;
-      float: left;
-      font-weight: bold;
-    }
+//     .categoryName {
+//       margin-right: 100px;
+//       float: left;
+//       font-weight: bold;
+//     }
+//   }
+// }
+
+.main {
+  .recommendItem {
+    margin-top: 10px;
+    margin-bottom: 200px;
   }
 }
