@@ -116,6 +116,7 @@ const MemberPayment = () => {
       <div className="memberPaymentWrapper">
         <div>
           <ShippingOptionInput
+            className={isFilled && 'none'}
             isFilled={isFilled}
             userData={userData}
             onChangeInput={onChangeInput}
