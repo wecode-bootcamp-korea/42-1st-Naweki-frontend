@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Search from './Search/Search';
 import Menu from './Menu/Menu';
@@ -17,15 +17,15 @@ const Nav = () => {
     <nav className="nav">
       <div className="profileWrapper">
         {userToken === null ? (
-          <>
+          <div className="textWrapper">
             <Link className="guest" to="/signup">
               가입하기
             </Link>
-            <span> | </span>
+            |
             <Link className="guest" to="/login">
               로그인
             </Link>
-          </>
+          </div>
         ) : (
           <>
             <img

@@ -1,13 +1,13 @@
 @import '../../../styles/mixin';
 
 .banner {
-  @include flex(space-between, center);
+  @include flex(space-between, flex-start);
   position: fixed;
   z-index: 1;
   width: 100vw;
-  padding: 0px 50px;
 
-  .category {
+  .categoryTitle {
+    padding-left: 40px;
     font-size: 25px;
     font-weight: 400;
   }
@@ -16,6 +16,7 @@
     @include flex(space-between, center);
     position: relative;
     gap: 40px;
+    padding-right: 40px;
 
     .functionIcon {
       @include flex(center, center);

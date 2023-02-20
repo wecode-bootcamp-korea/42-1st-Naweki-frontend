@@ -3,35 +3,36 @@ $cursor: pointer;
 
 .footer {
   min-height: 50vh;
-  margin-top: 77%;
+  margin-top: 9%;
   background-color: black;
   text-align: center;
 
   .menu-wrapper {
     display: flex;
+    padding-left: 70px;
 
     .footerTextBox {
       display: flex;
       flex: 1;
       justify-content: space-between;
-      margin-left: 120px;
 
       .footerNewsBox {
         display: inline-block;
-        width: 6%;
+        width: 13%;
         margin-top: 3%;
-        margin-left: 13%;
+        // margin-left: 13%;
         color: white;
         font-size: 14px;
         line-height: 250%;
         cursor: $cursor;
       }
+      margin-left: 120px;
 
       .footerHelpBox {
         display: inline-block;
-        width: 6%;
+        width: 13%;
         margin-top: 3%;
-        margin-right: 28px;
+        // margin-right: 28px;
         color: $color;
         font-size: 13px;
         line-height: 250%;
@@ -75,7 +76,7 @@ $cursor: pointer;
       display: flex;
       justify-content: space-between;
       width: 10%;
-      margin-right: 320px;
+      margin-right: 250px;
       padding-top: 3%;
       text-align: right;
       cursor: $cursor;
@@ -105,7 +106,7 @@ $cursor: pointer;
     .countryBox {
       display: flex;
       justify-content: space-between;
-      width: 25%;
+      width: 35%;
       margin-left: -8%;
 
       .country {
@@ -129,7 +130,7 @@ $cursor: pointer;
     .service {
       display: flex;
       justify-content: space-between;
-      width: 13%;
+      width: 19%;
       margin-right: -5%;
 
       .termsOfService {

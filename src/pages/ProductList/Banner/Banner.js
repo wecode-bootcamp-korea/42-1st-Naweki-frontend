@@ -10,7 +10,7 @@ const Banner = ({ onClickFilter }) => {
 
   return (
     <div className="banner">
-      <h1 className="category">남성신발</h1>
+      <h1 className="categoryTitle">남성신발</h1>
       <div className="functionWrapper">
         <div className="functionIcon" onClick={onClickFilter}>
           <span className="filter">필터 숨기기</span>

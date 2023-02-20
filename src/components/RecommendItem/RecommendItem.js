@@ -71,6 +71,7 @@ const RecommendItem = () => {
                   alt="{imgUrl.shoesName}"
                   onClick={onClickImg}
                 />
+
                 <div className="shoesInfo">
                   <div className="shoesName" onClick={onClickImg}>
                     {imgUrl.shoesName}

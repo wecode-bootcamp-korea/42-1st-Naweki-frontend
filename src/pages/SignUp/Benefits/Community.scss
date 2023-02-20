@@ -1,0 +1,56 @@
+@import 'src/styles/mixin';
+@mixin spacing {
+  letter-spacing: 1px;
+  word-spacing: 1px;
+}
+
+.communityBox:hover {
+  cursor: pointer;
+}
+.communityBox {
+  @include flex(start);
+  flex-direction: column;
+
+  .imageWrapper {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+
+    .communityImage {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .communityInfo {
+    width: 100%;
+    max-width: 600px;
+
+    .communityTitle {
+      justify-content: start;
+      margin: 20px 0px;
+      font-size: 30px;
+      font-weight: 600;
+    }
+    .communityPara {
+      max-width: 500px;
+      @include spacing();
+      line-height: 130%;
+    }
+
+    .communityBtn {
+      padding: 10.5px 20px;
+      border: none;
+      border-radius: 30px;
+      background-color: black;
+      color: white;
+      font-size: medium;
+      &:hover {
+        transition: 0.5s;
+        background-color: gray;
+        cursor: pointer;
+      }
+    }
+  }
+}

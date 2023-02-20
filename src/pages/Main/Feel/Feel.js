@@ -13,7 +13,7 @@ function Feel() {
     <div className="feel">
       <video
         className="topVideo"
-        autoplay="autoplay"
+        autoPlay="autoplay"
         muted="muted"
         loop
         onClick={onClickBtn}
