@@ -17,9 +17,9 @@ const Aside = ({ isFilterClicked, products, CATEGORY_DATA }) => {
   };
 
   return (
-    <aside className="aside">
+    <>
       {isFilterClicked === false && (
-        <>
+        <aside className="aside">
           <div className="categoryWrapper">
             <ul className="categorylists">
               {CATEGORY_DATA.map(category => (
@@ -82,9 +82,9 @@ const Aside = ({ isFilterClicked, products, CATEGORY_DATA }) => {
             </div>
             {isColorClicked === false && <Color products={products} />}
           </div>
-        </>
+        </aside>
       )}
-    </aside>
+    </>
   );
 };
 

@@ -3,8 +3,11 @@
 .banner {
   @include flex(space-between, flex-start);
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   width: 100vw;
+  height: 100px;
+  padding-top: 20px;
+  background-color: white;
 
   .categoryTitle {
     padding-left: 40px;
@@ -35,7 +38,7 @@
       .sortListWrapper {
         position: absolute;
         top: 160%;
-        right: -5%;
+        right: 10%;
         width: 123px;
         padding-top: 30px;
         border-radius: 20px;

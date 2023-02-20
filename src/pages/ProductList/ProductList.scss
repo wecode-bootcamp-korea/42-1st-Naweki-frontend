@@ -16,8 +16,27 @@
       grid-template-columns: repeat(3, 0.8fr);
       grid-template-rows: repeat(3, 1.5fr);
       margin-top: 100px;
-      margin-left: 350px;
+      margin-right: 20px;
       overflow-y: scroll;
+    }
+
+    .clickedWrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-bottom: 30px;
+      margin-left: 40px;
+      overflow-y: scroll;
+    }
+  }
+
+  .buttonWrapper {
+    @include flex(center, center);
+    padding-top: 30px;
+
+    button {
+      border-style: none;
+      background-color: white;
+      font-size: 16px;
     }
   }
 }

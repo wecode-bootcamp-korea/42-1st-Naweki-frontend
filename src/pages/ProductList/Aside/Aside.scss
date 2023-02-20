@@ -2,7 +2,7 @@
 
 .aside {
   display: flex;
-  position: fixed;
+  z-index: 1;
   flex-direction: column;
   width: 240px;
   height: 100%;
@@ -10,15 +10,12 @@
   margin-left: 50px;
   padding-bottom: 30px;
   overflow: auto;
-  gap: 20px;
   overflow-y: scroll;
+  background-color: white;
+  gap: 20px;
 
-  &::-webkit-scrollbar {
+  .aside::-webkit-scrollbar {
     width: 5px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: #eeeeee;
   }
 
   .categoryWrapper {

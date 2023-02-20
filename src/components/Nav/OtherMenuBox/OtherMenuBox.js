@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import ItemLists from '../ItemLists/ItemLists';
 import {
   NEW_ITEMS,
   SHOES_ITEMS,
@@ -8,6 +6,7 @@ import {
   ACC_ITEMS,
 } from '../data/otherMenuBoxData';
 import './OtherMenuBox.scss';
+import MenuLink from '../MenuLink/MenuLink';
 
 const OtherMenuBox = ({ isShown, onMouseEnter, onMouseLeave }) => {
   return (
@@ -21,54 +20,22 @@ const OtherMenuBox = ({ isShown, onMouseEnter, onMouseLeave }) => {
           >
             <div className="itemWrapper">
               {NEW_ITEMS.map(item => {
-                return (
-                  <Link
-                    className="menuLink"
-                    key={item.id}
-                    to="/products?isNew=true"
-                  >
-                    <ItemLists item={item} />
-                  </Link>
-                );
+                return <MenuLink key={item.id} item={item} />;
               })}
             </div>
             <div className="itemWrapper">
               {SHOES_ITEMS.map(item => {
-                return (
-                  <Link
-                    className="menuLink"
-                    key={item.id}
-                    to="/products?sub_category=신발"
-                  >
-                    <ItemLists item={item} />
-                  </Link>
-                );
+                return <MenuLink key={item.id} item={item} />;
               })}
             </div>
             <div className="itemWrapper">
               {CLOTHING_ITEMS.map(item => {
-                return (
-                  <Link
-                    className="menuLink"
-                    key={item.id}
-                    to="/products?sub_category=의류"
-                  >
-                    <ItemLists item={item} />
-                  </Link>
-                );
+                return <MenuLink key={item.id} item={item} />;
               })}
             </div>
             <div className="itemWrapper">
               {ACC_ITEMS.map(item => {
-                return (
-                  <Link
-                    className="menuLink"
-                    key={item.id}
-                    to="/products?sub_category=용품"
-                  >
-                    <ItemLists item={item} />
-                  </Link>
-                );
+                return <MenuLink key={item.id} item={item} />;
               })}
             </div>
           </div>

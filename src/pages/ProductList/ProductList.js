@@ -15,20 +15,34 @@ const ProductList = () => {
   const limit = searchParams.get('limit');
   const page = searchParams.get('page');
 
+  //TODO: api 연결 시
+  // useEffect(() => {
+  //   fetch(
+  //     `http://10.58.52.114:3000/products${category}?page=${page}&limit=${limit}`,
+  //     {
+  //       method: 'GET',
+  //     }
+  //   )
+  //     .then(res => {
+  //       return res.json();
+  //     })
+  //     .then(data => {
+  //       setProducts(data.data);
+  //     });
+  // }, [page, limit, category]);
+
+  //TODO: mock data 연결 시
   useEffect(() => {
-    fetch(
-      `http://10.58.52.114:3000/products${category}?page=${page}&limit=${limit}`,
-      {
-        method: 'GET',
-      }
-    )
+    fetch('data/productData.json', {
+      method: 'GET',
+    })
       .then(res => {
         return res.json();
       })
       .then(data => {
-        setProducts(data.data);
+        setProducts(data);
       });
-  }, [page, limit, category]);
+  }, []);
 
   const onClickFilter = () => {
     setIsFilterClicked(prev => !prev);
@@ -48,11 +62,11 @@ const ProductList = () => {
           products={products}
           CATEGORY_DATA={CATEGORY_DATA}
         />
-        <div className="productWrapper">
+        <div className={isFilterClicked ? 'clickedWrapper' : 'productWrapper'}>
           <Product products={products} isFilterClicked={isFilterClicked} />
         </div>
       </div>
-      <div>
+      <div className="buttonWrapper">
         <button onClick={() => movePage(1)}>1</button>
         <button onClick={() => movePage(2)}>2</button>
         <button onClick={() => movePage(3)}>3</button>
