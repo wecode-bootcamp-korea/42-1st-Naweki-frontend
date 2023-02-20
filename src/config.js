@@ -1,4 +1,4 @@
-const BASE_URL = 'http://';
+const BASE_URL = 'http://18.181.84.85:3000';
 
 export const API = {
   LOOKUP: `${BASE_URL}/users/lookup`,
@@ -6,4 +6,5 @@ export const API = {
   SIGNUP: `${BASE_URL}/users/signup`,
   PRODUCTS: `${BASE_URL}/products`,
   CHECKOUT: `${BASE_URL}/checkout`,
+  CART: `${BASE_URL}/cart`
 };
