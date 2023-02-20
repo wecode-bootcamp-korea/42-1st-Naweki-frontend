@@ -6,7 +6,7 @@ function Feel() {
   const productNavigate = useNavigate();
 
   const onClickBtn = () => {
-    productNavigate('/productList');
+    productNavigate('/products');
   };
 
   return (

@@ -12,9 +12,7 @@ function Leggings() {
     <div className="leggings">
       <img
         className="leggingsImg"
-        src="../../../../images/leggings.png"
-        // src="https://images.unsplash.com/photo-1552196527-bffef41ef674?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1452&q=80"
-        alt="나위키 컴피 레깅스"
+        src="https://images.unsplash.com/photo-1603988363607-e1e4a66962c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fHN0cmV0Y2hpbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
         onClick={onClickBtn}
       />
       <div className="leggingsText" onClick={onClickBtn}>

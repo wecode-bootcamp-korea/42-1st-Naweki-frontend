@@ -2,14 +2,13 @@ import React, { useEffect, useState } from 'react';
 import './ProductDetail.scss';
 import FreeDelivery from './FreeDelivery/FreeDelivery';
 import Modal from './Modal/Modal';
+import RecommendItem from '../../components/RecommendItem/RecommendItem';
 
 function ProductDetail() {
   const [visible, setVisible] = useState(false);
   const [heart, setHeart] = useState(false);
   const [isActive, setIsActive] = useState(false);
-  // const [thumbnailImage, setThumbnailImage] = useState('');
   const [productData, setProductData] = useState(null);
-  // const [modalOpen, setModalOpen] = useState(false);
   const [selectedSize, setSelectedSize] = useState();
 
   const onClickBtn = () => {
@@ -22,7 +21,7 @@ function ProductDetail() {
   };
 
   useEffect(() => {
-    fetch('http://10.58.52.118:3000/products/1', {
+    fetch('http://10.58.52.155:8000/products/1', {
       method: 'GET',
     })
       .then(res => res.json())
@@ -38,7 +37,7 @@ function ProductDetail() {
   const product = productData.product;
 
   const cartBtnClick = () => {
-    fetch('http://10.58.52.118:3000/cart/', {
+    fetch('http://10.58.52.155:8000/cart/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
@@ -46,7 +45,6 @@ function ProductDetail() {
       },
       body: JSON.stringify({
         productId: product.id,
-        // sizeId: product.stock.id,
         sizeId: selectedSize,
       }),
     })
@@ -67,11 +65,10 @@ function ProductDetail() {
                 src={product.thumbnailImage}
                 // src="https://cdn.pixabay.com/photo/2020/07/15/18/31/sneakers-5408669_1280.png"
                 alt="제품 상세 이미지"
-                // onClick={colorClick}
               />
               <img
                 className="productImgRowBottom"
-                src={product.imageUrl}
+                src={product.imageUrl[0].url}
                 // src="/images/상세3.jpg"
                 alt="제품 상세 이미지"
               />
@@ -83,20 +80,20 @@ function ProductDetail() {
               muted="muted"
               loop=""
             >
-              <source src="images/downdetail.mp4" type="video/mp4" />
+              <source src="../../../images/downdetail.mp4" type="video/mp4" />
             </video>
           </div>
 
           <div className="detailImgsColumn">
             <img
               className="detailImgColumnLeft"
-              src={product.imageUrl}
+              src={product.imageUrl[1].url}
               // src="/images/상세1.jpg"
               alt="제품 상세 이미지"
             />
             <img
               className="detailImgColumnRight"
-              src={product.imageUrl}
+              src={product.imageUrl[2].url}
               // src="/images/상세2.jpg"
               alt="제품 상세 이미지"
             />
@@ -106,36 +103,27 @@ function ProductDetail() {
           <div className="productInfoContainer">
             <div className="productInfo">
               <div className="productName">{product.name}</div>
-              {/* <div className="productName">나위키 에얼 포스 1 '03</div> */}
               <div className="productCategory">{product.subName}</div>
-              {/* <div className="productCategory">여성 신발</div> */}
               <div className="priceContainer">
                 <div className="productPrice">{product.price}원</div>
-                {/* <div className="productPrice">125,100 원</div> */}
                 <div className="originalPrice">139,000 원</div>
               </div>
             </div>
             <div className="otherColorContainer">
               <img
                 className="otherColorBlack"
-                // src={product.thumbnailImage}
                 src="/images/에얼포스블랙.jpg"
                 alt="나위키 에얼 포스 1 '03 블랙"
-                // onClick={colorClick}
               />
               <img
                 className="otherColorPink"
-                // src={product.thumbnailImage}
                 src="https://images.unsplash.com/photo-1608667508764-33cf0726b13a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHNuZWFrZXJzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
                 alt="나위키 에얼 포스 1 '03 핑크"
-                // onClick={colorClick}
               />
               <img
                 className="otherColorBlue"
-                // src={product.thumbnailImage}
                 src="https://cdn.pixabay.com/photo/2020/07/15/18/32/sneakers-5408674_1280.png"
                 alt="나위키 에얼 포스 1 '03 블루"
-                // onClick={colorClick}
               />
             </div>
             <div className="sizeInfo">
@@ -151,7 +139,6 @@ function ProductDetail() {
                       key={size.id}
                       className="size"
                       sizeId={size.id}
-                      // size={size.size}
                       onClick={sizeClick}
                     >
                       {size.size}
@@ -164,7 +151,6 @@ function ProductDetail() {
             <div className="btnContainer">
               <button
                 className={`cartBtn ${isActive ? 'active' : ''}`}
-                // disabled={!isActive}
                 onClick={cartBtnClick}
               >
                 장바구니
@@ -213,6 +199,9 @@ function ProductDetail() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="imgSlider">
+        <RecommendItem />
       </div>
     </div>
   );
