@@ -19,8 +19,8 @@
 
 ## 깃허브 레파지토리
 
-* [프론트엔드 Github Repository](https://github.com/wecode-bootcamp-korea/42-1st-Naweki-frontend)
-* [백엔드 Github Repository](https://github.com/wecode-bootcamp-korea/42-1st-Naweki-backend)
+* <a href="https://github.com/wecode-bootcamp-korea/42-1st-Naweki-frontend"><img src="https://img.shields.io/badge/FrontEnd Repo-181717?style=flat-square&logo=GitHub&logoColor=white&link=https://github.com/wecode-bootcamp-korea/42-1st-Naweki-frontend"/></a>
+* <a href="https://github.com/wecode-bootcamp-korea/42-1st-Naweki-backend"><img src="https://img.shields.io/badge/BackEnd Repo-181717?style=flat-square&logo=GitHub&logoColor=white&link=https://github.com/wecode-bootcamp-korea/42-1st-Naweki-backend"/></a>
 
 <br/>
 
