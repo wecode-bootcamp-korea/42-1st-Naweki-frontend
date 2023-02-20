@@ -81,7 +81,7 @@
 ## 프로젝트 결과물
 
 ### 메인(유진님) & Nav(은정님) & Footer(유진님)
-![mainmain](https://user-images.githubusercontent.com/97745006/220008167-14538aa6-3c36-45bf-8a76-22656822c4b9.gif)
+![nike main page](https://user-images.githubusercontent.com/97745006/220010082-6650c4ae-101f-4e7c-95ff-9453e2f6baeb.gif)
 
 ---
 
