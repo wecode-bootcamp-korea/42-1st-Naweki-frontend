@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './ProductDetail.scss';
 import FreeDelivery from './FreeDelivery/FreeDelivery';
+import Modal from './Modal/Modal';
 
 function ProductDetail() {
   const [visible, setVisible] = useState(false);
@@ -51,10 +52,7 @@ function ProductDetail() {
     })
       .then(res => res.json())
       .then(data => {
-        console.log(data);
-        if (data.status === 200) {
-          alert('성공! :)');
-        }
+        <Modal />;
       });
   };
 
