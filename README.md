@@ -1,7 +1,6 @@
 ![nike_signup_join](https://user-images.githubusercontent.com/84219519/219575120-0058c92e-3555-47a5-bc63-813880821db7.png)
 
 # ✔️ Team NaWeKi
-### [📓 velog 프로젝트 회고록 읽어보기 📖](https://velog.io/@heylub/%EC%9C%84%EC%BD%94%EB%93%9C-1%EC%B0%A8-%ED%8C%80%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9A%8C%EA%B3%A0%EB%A1%9D-team-NaWeKi)
 
 ## 프로젝트 소개 - ‘도전’을 판매하는 NaWeKi
 **Nike motive coding** <br/>
