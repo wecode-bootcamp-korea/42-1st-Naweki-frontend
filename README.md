@@ -1,8 +1,7 @@
 ![nike_signup_join](https://user-images.githubusercontent.com/84219519/219575120-0058c92e-3555-47a5-bc63-813880821db7.png)
 
 # ✔️ Team NaWeKi
-
-<br/>
+### [📓 velog 프로젝트 회고록 읽어보기 📖](https://velog.io/@heylub/%EC%9C%84%EC%BD%94%EB%93%9C-1%EC%B0%A8-%ED%8C%80%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9A%8C%EA%B3%A0%EB%A1%9D-team-NaWeKi)
 
 ## 프로젝트 소개 - ‘도전’을 판매하는 NaWeKi
 **Nike motive coding** <br/>
@@ -10,17 +9,17 @@
 따라서 저희 나위키 팀도 나이키의 제품적 가치를 생각하면서 프로젝트를 진행하고자 하였습니다.<br/>
 <br/>
 프로젝트 진행 기간은 약 2주로, 필수 기능 구현 작업을 우선적으로 진행했습니다.<br/>
-|필수 기능 구현 목록||||||
-|---|---|---|---|---|---|
-|1)로그인/회원가입|2)메인페이지|3)상세페이지|4)제품 필터링|5)장바구니|6)매장안내|
+|필수 기능 구현 목록|||||
+|---|---|---|---|---|
+|1)로그인/회원가입|2)메인페이지|3)상세페이지|4)제품 필터링|5)장바구니|
 
 
 <br/>
 
 ## 깃허브 레파지토리
 
-* [프론트엔드 Github Repository](https://github.com/wecode-bootcamp-korea/42-1st-Naweki-frontend)
-* [백엔드 Github Repository](https://github.com/wecode-bootcamp-korea/42-1st-Naweki-backend)
+* <a href="https://github.com/wecode-bootcamp-korea/42-1st-Naweki-frontend"><img src="https://img.shields.io/badge/FrontEnd Repo-181717?style=flat-square&logo=GitHub&logoColor=white&link=https://github.com/wecode-bootcamp-korea/42-1st-Naweki-frontend"/></a>
+* <a href="https://github.com/wecode-bootcamp-korea/42-1st-Naweki-backend"><img src="https://img.shields.io/badge/BackEnd Repo-181717?style=flat-square&logo=GitHub&logoColor=white&link=https://github.com/wecode-bootcamp-korea/42-1st-Naweki-backend"/></a>
 
 <br/>
 
@@ -32,7 +31,8 @@
 
 ## 팀원 소개 및 협업 툴
 
-![00A30B10-5010-4DDE-8C94-F3D52B5146B6](https://user-images.githubusercontent.com/84219519/219599794-43f1bddb-4465-4faa-bfd8-649600d2bd5b.JPEG)
+![B26B8B13-E307-4EFA-8612-BF6A065A0815](https://user-images.githubusercontent.com/84219519/220323622-e37026c6-6900-4eb6-a9d8-57545cb9c7b5.jpg)
+
 
 #### 👥 Front-End Developers
 
@@ -79,6 +79,10 @@
 <br/>
 
 ## 프로젝트 결과물
+
+### [📽️ 전체 시연 영상 링크](https://drive.google.com/file/d/1Ty319a3M-4uUE6HzIb-SrUPNVda3baqJ/view?usp=sharing)
+
+<br/>
 
 ### 메인(유진님) & Nav(은정님) & Footer(유진님)
 ![project main](https://user-images.githubusercontent.com/97745006/220022016-d102694a-d1f6-4e8b-83b3-d41fd625f7e2.gif)
