@@ -80,6 +80,10 @@
 
 ## 프로젝트 결과물
 
+### [전체 시연 영상 링크](https://drive.google.com/file/d/1Ty319a3M-4uUE6HzIb-SrUPNVda3baqJ/view?usp=sharing)
+
+<br/>
+
 ### 메인(유진님) & Nav(은정님) & Footer(유진님)
 ![project main](https://user-images.githubusercontent.com/97745006/220022016-d102694a-d1f6-4e8b-83b3-d41fd625f7e2.gif)
 
