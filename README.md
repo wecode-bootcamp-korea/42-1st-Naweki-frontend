@@ -80,7 +80,7 @@
 
 ## 프로젝트 결과물
 
-### [전체 시연 영상 링크](https://drive.google.com/file/d/1Ty319a3M-4uUE6HzIb-SrUPNVda3baqJ/view?usp=sharing)
+### [📽️ 전체 시연 영상 링크](https://drive.google.com/file/d/1Ty319a3M-4uUE6HzIb-SrUPNVda3baqJ/view?usp=sharing)
 
 <br/>
 
