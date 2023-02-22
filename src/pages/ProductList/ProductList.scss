@@ -23,6 +23,7 @@
     .clickedWrapper {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      margin-top: 100px;
       margin-bottom: 30px;
       margin-left: 40px;
       overflow-y: scroll;
